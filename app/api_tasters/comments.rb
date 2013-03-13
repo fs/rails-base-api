@@ -1,16 +1,17 @@
 ApiTaster::RouteCollector.route do
   desc <<-markdown.strip_heredoc
-    ## List posts
+    ## List comments
   markdown
 
-  get '/posts'
+  get '/comments'
+
 
   desc <<-markdown.strip_heredoc
-    ## Show post
+    ## Show comment
 
     * `:id` - post ID
   markdown
 
-  get '/posts/:id',
-    id: Examples.post.id
+  get '/comments/:id',
+    id: Examples.comment.id
 end

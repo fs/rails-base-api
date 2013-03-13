@@ -1,12 +1,12 @@
 require 'spec_helper'
 
-describe PostsController do
-  let(:post) { FactoryGirl.build(:post) }
-  let(:posts) { [post] }
+describe CommentsController do
+  let(:comment) { FactoryGirl.build(:comment) }
+  let(:comments) { [comment] }
 
   before do
-    posts.stub(:find) { post }
-    Post.stub(:scoped) { posts }
+    comments.stub(:find) { comment }
+    Comment.stub(:scoped) { comments }
   end
 
   describe 'GET #index' do
@@ -20,8 +20,8 @@ describe PostsController do
       expect(response.code).to eq('200')
     end
 
-    it 'assigns posts' do
-      expect(controller.posts).to match_array(posts)
+    it 'assigns comments' do
+      expect(controller.comments).to match_array(comments)
     end
   end
 
@@ -38,7 +38,8 @@ describe PostsController do
     end
 
     it 'assigns post' do
-      expect(controller.post).to eq(post)
+      expect(controller.comment).to eq(comment)
     end
   end
+
 end

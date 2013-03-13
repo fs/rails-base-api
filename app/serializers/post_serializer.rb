@@ -1,4 +1,4 @@
-class PostSerializer < ActiveModel::Serializer
-  root false
+class PostSerializer < BaseSerializer
   attributes :id, :title, :text
+  has_many :comments
 end

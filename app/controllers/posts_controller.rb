@@ -1,7 +1,12 @@
 class PostsController < ApplicationController
-  expose(:posts) { Post.all }
+  expose(:post)
+  expose(:posts)
 
   def index
-    respond_with(posts)
+    respond_with(posts, include: [:comments])
+  end
+
+  def show
+    respond_with(post)
   end
 end
