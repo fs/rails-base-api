@@ -5,7 +5,7 @@ ENV["RAILS_ENV"] ||= 'test'
 
 require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
-require 'rspec/autorun'
+# require 'rspec/autorun' should be diabled with guard
 
 paths = Dir[Rails.root.join('spec/**/{support,extensions}/**/*.rb')]
 paths.each { |file| require file }

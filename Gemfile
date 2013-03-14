@@ -16,6 +16,10 @@ group :development do
   gem 'letter_opener'
   gem 'foreman'
   gem 'bullet'
+
+  gem 'guard-rspec'
+  gem 'rb-fsevent', require: false
+  gem 'zeus'
 end
 
 group :development, :test do
