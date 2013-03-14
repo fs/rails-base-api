@@ -1,5 +1,10 @@
 Rails3BaseApi::Application.routes.draw do
-  resources :posts, only: [:index, :show]
+  resources :posts, only: [:index, :show] do
+    resources :comments,
+      only: [:index],
+      controller: :post_comments
+  end
+
   resources :comments, only: [:index, :show]
 
   mount ApiTaster::Engine => '/api_taster' if defined? ApiTaster::Engine

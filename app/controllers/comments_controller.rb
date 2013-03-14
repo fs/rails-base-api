@@ -1,6 +1,6 @@
 class CommentsController < ApplicationController
-  expose(:comment)
   expose(:comments)
+  expose(:comment)
 
   def index
     respond_with(comments, include: [:post])
