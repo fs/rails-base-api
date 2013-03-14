@@ -4,7 +4,10 @@
 
 Status of the API could be checked at http://localhost:5000/api_taster
 
-* GET `/posts.json`: returns list of posts
+* GET `/posts.json`: list posts
+* GET `/posts/:id.json`: get a single post
+* GET `/comments.json`: list comments
+* GET `/comments/:id.json`: get a single comment
 
 ## What's included
 
