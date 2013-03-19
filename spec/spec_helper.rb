@@ -12,9 +12,11 @@ paths.each { |file| require file }
 
 RSpec.configure do |config|
   config.use_transactional_fixtures = true
+
   config.include Rails.application.routes.url_helpers
   config.include EmailSpec::Helpers
   config.include EmailSpec::Matchers
+  config.include Devise::TestHelpers, type: :controller
   config.include Helpers
 
   config.infer_base_class_for_anonymous_controllers = false

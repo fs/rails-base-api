@@ -44,6 +44,7 @@ GEM
       sass-rails
     arel (3.0.2)
     awesome_print (1.1.0)
+    bcrypt-ruby (3.0.1)
     bootstrap-sass (2.3.0.1)
       sass (~> 3.2)
     bourne (1.1.2)
@@ -87,6 +88,11 @@ GEM
       debugger-ruby_core_source (>= 1.1.1)
     debugger-ruby_core_source (1.2.0)
     decent_exposure (2.1.0)
+    devise (2.2.3)
+      bcrypt-ruby (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (~> 3.1)
+      warden (~> 1.2.1)
     diff-lcs (1.2.1)
     dotenv (0.5.0)
     email_spec (1.4.0)
@@ -143,6 +149,7 @@ GEM
       metaclass (~> 0.0.1)
     multi_json (1.6.1)
     nokogiri (1.5.6)
+    orm_adapter (0.4.0)
     pg (0.14.1)
     polyglot (0.3.3)
     pry (0.9.12)
@@ -252,6 +259,8 @@ GEM
       polyglot (>= 0.3.1)
     tzinfo (0.3.37)
     uniform_notifier (1.2.0)
+    warden (1.2.1)
+      rack (>= 1.0)
     webmock (1.11.0)
       addressable (>= 2.2.7)
       crack (>= 0.3.2)
@@ -274,6 +283,7 @@ DEPENDENCIES
   database_cleaner
   debugger
   decent_exposure
+  devise
   dotenv
   email_spec
   factory_girl_rails

@@ -68,6 +68,10 @@ module Rails3BaseApi
     # If you are deploying Rails 3.1+ on Heroku, you may want to set:
     config.assets.initialize_on_precompile = false
 
+    # By default Rails API does not include the session middleware.
+    # Add the middleware back in to application b/c it requred by Devise and Warden
+    config.middleware.use ActionDispatch::Session::CookieStore
+
     # Default host for action mailer, initializers/mailer.rb
     config.host = 'localhost:5000'
   end
