@@ -69,6 +69,9 @@ module Rails3BaseApi
     # Add the middleware back in to application b/c it requred by Devise and Warden
     config.middleware.use ActionDispatch::Session::CookieStore
 
+    # Parameter keys that are not explicitly permitted will be raised as exception
+    config.action_controller.action_on_unpermitted_parameters = :raise
+
     # Default host for action mailer, initializers/mailer.rb
     config.host = 'localhost:5000'
   end

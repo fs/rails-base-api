@@ -18,6 +18,6 @@ class User::CommentsController < User::BaseController
   private
 
   def comment_params
-    params.permit(:title, :text)
+    params.require(:comment).permit(:title, :text)
   end
 end

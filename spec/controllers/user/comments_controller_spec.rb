@@ -5,7 +5,7 @@ describe User::CommentsController do
     sign_in(FactoryGirl.create(:user))
   end
 
-  describe 'GET #index' do
+  describe '#index' do
     let(:comments) { FactoryGirl.build_list :comment, 2 }
 
     before do
@@ -25,7 +25,7 @@ describe User::CommentsController do
     end
   end
 
-  describe 'POST #create' do
+  describe '#create' do
     before do
       post :create,
         format: :json,

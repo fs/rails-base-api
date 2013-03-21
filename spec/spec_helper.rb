@@ -31,4 +31,10 @@ RSpec.configure do |config|
   config.before do
     ActionMailer::Base.deliveries.clear
   end
+
+  # Make sure we will send all requests with correct content type
+  #
+  config.before(type: :controller) do
+    request.env['CONTENT_TYPE'] = 'application/json'
+  end
 end

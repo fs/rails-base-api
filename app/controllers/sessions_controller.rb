@@ -1,6 +1,5 @@
 class SessionsController < Devise::SessionsController
-  wrap_parameters :user,
-    include: [:email, :password]
+  wrap_parameters :user
 
   def create
     user = AuthenticationService.new(warden).authenticate!
@@ -10,10 +9,4 @@ class SessionsController < Devise::SessionsController
       location: false
     )
   end
-
-  private
-
-  # def params
-  #   super.require(:user).permit(:email, :password)
-  # end
 end
