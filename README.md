@@ -11,7 +11,8 @@ Status of the API could be checked at http://localhost:5000/api_taster
 
 ### Authenticated as user:
 
-* GET `/comments.json`: list comments for currently authenticated user
+* GET `/user/comments.json`: list comments for currently authenticated user
+* POST `/user/comments.json`: create comment
 
 ## What's included
 

@@ -9,7 +9,7 @@ Rails3BaseApi::Application.routes.draw do
   # Resources require authenticated user
   #
   namespace :user do
-    resources :comments, only: [:index]
+    resources :comments, only: [:index, :create]
   end
 
   # Public resources
