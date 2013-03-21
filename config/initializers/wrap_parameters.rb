@@ -3,5 +3,8 @@ ActiveSupport.on_load(:action_controller) do
   ActionController::API.send(:include, ActionController::ParamsWrapper)
 
   # Enable parameter wrapping for JSON
-  wrap_parameters format: [:json, :url_encoded_form] if respond_to?(:wrap_parameters)
+  wrap_parameters(
+    format: [:json, :url_encoded_form],
+    exclude: [:authentication_token]
+  )
 end
