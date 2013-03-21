@@ -4,6 +4,10 @@ Rails3BaseApi::Application.routes.draw do
     post 'users/sign_in', to: 'sessions#create'
   end
 
+  namespace :user do
+    resources :comments, only: [:index]
+  end
+
   resources :posts, only: [:index, :show] do
     resources :comments,
       only: [:index],

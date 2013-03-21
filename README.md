@@ -4,11 +4,17 @@
 
 Status of the API could be checked at http://localhost:5000/api_taster
 
+### Unauthenticated user:
+
 * GET `/posts.json`: list posts
 * GET `/posts/:id.json`: get a single post
 * GET `/posts/:post_id/comments.json`: list comments for a post
 * GET `/comments.json`: list comments
 * GET `/comments/:id.json`: get a single comment
+
+### Authenticated as user:
+
+* GET `/comments.json`: list comments for currently authenticated user
 
 ## What's included
 
