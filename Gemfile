@@ -11,6 +11,7 @@ gem 'decent_exposure'
 gem 'active_model_serializers'
 gem 'seedbank'
 gem 'dotenv'
+gem 'strong_parameters'
 gem 'devise'
 
 group :development do

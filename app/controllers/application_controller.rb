@@ -1,5 +1,9 @@
 class ApplicationController < ActionController::API
   include ActionController::MimeResponds
 
+  decent_configuration do
+    strategy DecentExposure::StrongParametersStrategy
+  end
+
   respond_to :json
 end
