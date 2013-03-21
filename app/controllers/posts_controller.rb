@@ -3,7 +3,13 @@ class PostsController < ApplicationController
   expose(:posts)
 
   def index
-    respond_with(posts)
+    respond_with(
+      posts,
+      serializer_includes: {
+        post: [:comments],
+        comment: [:user]
+      }
+    )
   end
 
   def show

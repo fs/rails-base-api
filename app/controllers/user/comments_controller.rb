@@ -3,7 +3,12 @@ class User::CommentsController < User::BaseController
   expose(:comment, attributes: :comment_params)
 
   def index
-    respond_with(comments)
+    respond_with(
+      comments,
+      serializer_includes: {
+        comment: [:post, :user]
+      }
+    )
   end
 
   def create
