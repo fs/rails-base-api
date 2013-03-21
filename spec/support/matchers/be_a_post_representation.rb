@@ -4,7 +4,6 @@ RSpec::Matchers.define :be_a_post_representation do |post|
       id
       title
       text
-      comment_ids
     ]
 
     expect(json).to be

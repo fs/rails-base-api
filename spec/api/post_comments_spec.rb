@@ -9,13 +9,9 @@ describe '/posts/:post_id/comments' do
       get "/posts/#{post.id}/comments.json"
     end
 
-    subject(:json) { json_response_body }
+    subject { json_response_body }
 
-    describe 'comments collection' do
-      subject { json['comments'] }
-
-      it { should be_a_kind_of(Array) }
-      its(:first) { should be_a_comment_representation(comment) }
-    end
+    it { should be_a_kind_of(Array) }
+    its(:first) { should be_a_comment_representation(comment) }
   end
 end

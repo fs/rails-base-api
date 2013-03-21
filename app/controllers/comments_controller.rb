@@ -3,7 +3,7 @@ class CommentsController < ApplicationController
   expose(:comment)
 
   def index
-    respond_with(comments, include: [:post])
+    respond_with(comments)
   end
 
   def show
