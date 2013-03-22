@@ -43,7 +43,7 @@ group :test do
 end
 
 group :development, :staging do
-  gem 'api_taster'
+  gem 'api_taster', github: 'fredwu/api_taster'
 end
 
 group :development, :test, :staging do

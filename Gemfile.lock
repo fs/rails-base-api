@@ -1,3 +1,15 @@
+GIT
+  remote: git://github.com/fredwu/api_taster.git
+  revision: 62b5e1ce70adedf42305fc1ac4eb35f9e5c0f8cb
+  specs:
+    api_taster (0.6.0)
+      bootstrap-sass (~> 2.1)
+      jquery-rails
+      rails (>= 3.1.0)
+      redcarpet
+      remotipart (~> 1.0)
+      sass-rails
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -35,17 +47,10 @@ GEM
       activesupport
       builder
       json
-    api_taster (0.6.0)
-      bootstrap-sass (~> 2.1)
-      jquery-rails
-      rails (>= 3.1.0)
-      redcarpet
-      remotipart (~> 1.0)
-      sass-rails
     arel (3.0.2)
     awesome_print (1.1.0)
     bcrypt-ruby (3.0.1)
-    bootstrap-sass (2.3.0.1)
+    bootstrap-sass (2.3.1.0)
       sass (~> 3.2)
     bourne (1.1.2)
       mocha (= 0.10.5)
@@ -280,7 +285,7 @@ PLATFORMS
 DEPENDENCIES
   active_model_serializers
   airbrake
-  api_taster
+  api_taster!
   brakeman
   bullet
   capybara
