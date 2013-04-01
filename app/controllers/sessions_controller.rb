@@ -4,9 +4,6 @@ class SessionsController < Devise::SessionsController
   def create
     user = AuthenticationService.new(warden).authenticate!
 
-    respond_with(
-      user,
-      location: false
-    )
+    respond_with(user)
   end
 end
