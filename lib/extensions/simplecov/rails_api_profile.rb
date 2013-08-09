@@ -1,8 +1,11 @@
-require 'simplecov'
+begin
+  require 'simplecov'
 
-SimpleCov.adapters.define 'rails-api' do
-  load_adapter 'rails'
-  add_filter 'api_taster'
-  add_filter 'examples'
-  add_filter 'serializers/'
+  SimpleCov.adapters.define 'rails-api' do
+    load_adapter 'rails'
+    add_filter 'api_taster'
+    add_filter 'examples'
+    add_filter 'serializers/'
+  end
+rescue LoadError
 end
