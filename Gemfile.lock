@@ -80,6 +80,13 @@ GEM
     code_analyzer (0.3.1)
       sexp_processor
     coderay (1.0.9)
+    coffee-rails (3.2.2)
+      coffee-script (>= 2.2.0)
+      railties (~> 3.2.0)
+    coffee-script (2.2.0)
+      coffee-script-source
+      execjs
+    coffee-script-source (1.6.3)
     colored (1.2)
     columnize (0.3.6)
     crack (0.3.2)
@@ -105,6 +112,8 @@ GEM
       mail (~> 2.2)
     erubis (2.7.0)
     eventmachine (1.0.3)
+    execjs (1.4.0)
+      multi_json (~> 1.0)
     factory_girl (4.2.0)
       activesupport (>= 3.0.0)
     factory_girl_rails (4.2.1)
@@ -139,6 +148,7 @@ GEM
       addressable (~> 2.3)
     letter_opener (1.1.0)
       launchy (~> 2.2.0)
+    libv8 (3.11.8.17)
     listen (0.7.3)
     lumberjack (1.0.2)
     mail (2.4.4)
@@ -200,6 +210,7 @@ GEM
     rdoc (3.12.2)
       json (~> 1.4)
     redcarpet (2.2.2)
+    ref (1.0.5)
     remotipart (1.0.5)
     rspec (2.13.0)
       rspec-core (~> 2.13.0)
@@ -257,6 +268,9 @@ GEM
       railties (~> 3.0)
     temple (0.5.5)
     terminal-table (1.4.5)
+    therubyracer (0.11.4)
+      libv8 (~> 3.11.8.12)
+      ref
     thin (1.5.0)
       daemons (>= 1.0.9)
       eventmachine (>= 0.12.6)
@@ -267,6 +281,9 @@ GEM
       polyglot
       polyglot (>= 0.3.1)
     tzinfo (0.3.37)
+    uglifier (2.1.2)
+      execjs (>= 0.3.0)
+      multi_json (~> 1.0, >= 1.0.2)
     uniform_notifier (1.2.0)
     warden (1.2.1)
       rack (>= 1.0)
@@ -289,6 +306,7 @@ DEPENDENCIES
   brakeman
   bullet
   capybara
+  coffee-rails (~> 3.2.1)
   database_cleaner
   debugger
   decent_exposure
@@ -307,10 +325,13 @@ DEPENDENCIES
   rails_best_practices
   rb-fsevent
   rspec-rails
+  sass-rails (~> 3.2.3)
   seedbank
   shoulda-matchers
   simplecov
   strong_parameters
+  therubyracer
   thin
+  uglifier (>= 1.0.3)
   webmock
   zeus
