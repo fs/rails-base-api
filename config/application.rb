@@ -49,9 +49,6 @@ module Rails3BaseApi
     # like if you have constraints or database-specific column types
     # config.active_record.schema_format = :sql
 
-    # We use ActiveModel::ForbiddenAttributesProtection instead
-    config.active_record.whitelist_attributes = false
-
     # Enable the asset pipeline
     config.assets.enabled = true
 
