@@ -61,6 +61,7 @@ module Rails3BaseApi
     # By default Rails API does not include the session middleware.
     # Add the middleware back in to application b/c it requred by Devise and Warden
     config.middleware.use ActionDispatch::Session::CookieStore
+    config.middleware.use Rack::MethodOverride
 
     # Parameter keys that are not explicitly permitted will be raised as exception
     config.action_controller.action_on_unpermitted_parameters = :raise

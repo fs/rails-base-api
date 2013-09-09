@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::API
-  include ActionController::MimeResponds
+  include ActionController::MimeResponds, ActionController::ImplicitRender
 
   self.responder = ApiResponder
 
