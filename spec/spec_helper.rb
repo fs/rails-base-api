@@ -32,6 +32,14 @@ RSpec.configure do |config|
     ActionMailer::Base.deliveries.clear
   end
 
+  config.before(:each) do
+    DatabaseCleaner.start
+  end
+
+  config.after(:each) do
+    DatabaseCleaner.clean
+  end
+
   # Make sure we will send all requests with correct content type
   #
   config.before(type: :controller) do

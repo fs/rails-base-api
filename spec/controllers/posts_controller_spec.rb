@@ -6,7 +6,7 @@ describe PostsController do
 
   before do
     posts.stub(:find) { post }
-    Post.stub(:scoped) { posts }
+    Post.stub(:all) { posts }
   end
 
   describe 'GET #index' do

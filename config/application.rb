@@ -4,15 +4,11 @@ require File.expand_path('../boot', __FILE__)
 require 'active_record/railtie'
 require 'action_controller/railtie'
 require 'action_mailer/railtie'
-require 'active_resource/railtie'
 require 'sprockets/railtie'
 # require "rails/test_unit/railtie"
 
 if defined?(Bundler)
-  # If you precompile assets before deploying to production, use this line
-  Bundler.require(*Rails.groups(:assets => %w(development test)))
-  # If you want your assets lazily compiled in production, use this line
-  # Bundler.require(:default, :assets, Rails.env)
+  Bundler.require(:default, Rails.env)
 end
 
 module Rails3BaseApi
@@ -53,9 +49,6 @@ module Rails3BaseApi
     # like if you have constraints or database-specific column types
     # config.active_record.schema_format = :sql
 
-    # We use ActiveModel::ForbiddenAttributesProtection instead
-    config.active_record.whitelist_attributes = false
-
     # Enable the asset pipeline
     config.assets.enabled = true
 
@@ -68,6 +61,7 @@ module Rails3BaseApi
     # By default Rails API does not include the session middleware.
     # Add the middleware back in to application b/c it requred by Devise and Warden
     config.middleware.use ActionDispatch::Session::CookieStore
+    config.middleware.use Rack::MethodOverride
 
     # Parameter keys that are not explicitly permitted will be raised as exception
     config.action_controller.action_on_unpermitted_parameters = :raise

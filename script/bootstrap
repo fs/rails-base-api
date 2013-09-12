@@ -72,12 +72,18 @@ def migrate_db
   end
 end
 
+def prepare_test_db
+  system('bundle exec rake db:setup')
+  system('bundle exec rake db:test:prepare')
+end
+
 is_ci = ARGV.shift == 'ci'
 
 setup_database_yml
 setup_dotenv
 install_bundler
 install_gems(is_ci ? 'development' : '')
-migrate_db
+
+is_ci ? prepare_test_db : migrate_db
 
 puts 'Everything is up to date.'
