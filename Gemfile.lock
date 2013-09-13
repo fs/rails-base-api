@@ -180,6 +180,9 @@ GEM
       actionpack (>= 3.2.11)
       railties (>= 3.2.11)
       tzinfo (~> 0.3.31)
+    rails_12factor (0.0.2)
+      rails_serve_static_assets
+      rails_stdout_logging
     rails_best_practices (1.14.3)
       activesupport
       awesome_print
@@ -189,6 +192,8 @@ GEM
       i18n
       require_all
       ruby-progressbar
+    rails_serve_static_assets (0.0.1)
+    rails_stdout_logging (0.0.2)
     railties (4.0.0)
       actionpack (= 4.0.0)
       activesupport (= 4.0.0)
@@ -303,6 +308,7 @@ DEPENDENCIES
   pg
   rails (= 4.0.0)
   rails-api
+  rails_12factor
   rails_best_practices
   rb-fsevent
   rspec-rails

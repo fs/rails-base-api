@@ -14,6 +14,7 @@ gem 'active_model_serializers'
 gem 'seedbank', github: 'james2m/seedbank'
 gem 'dotenv'
 gem 'devise', '~> 3.1.0'
+gem 'rails_12factor', group: [:production, :staging]
 
 group :development do
   gem 'letter_opener'
