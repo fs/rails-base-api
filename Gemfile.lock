@@ -85,6 +85,13 @@ GEM
     code_analyzer (0.4.2)
       sexp_processor
     coderay (1.0.9)
+    coffee-rails (4.0.0)
+      coffee-script (>= 2.2.0)
+      railties (>= 4.0.0.beta, < 5.0)
+    coffee-script (2.2.0)
+      coffee-script-source
+      execjs
+    coffee-script-source (1.6.3)
     colored (1.2)
     columnize (0.3.6)
     crack (0.3.2)
@@ -110,6 +117,7 @@ GEM
       mail (~> 2.2)
     erubis (2.7.0)
     eventmachine (1.0.3)
+    execjs (2.0.1)
     factory_girl (4.2.0)
       activesupport (>= 3.0.0)
     factory_girl_rails (4.2.1)
@@ -271,6 +279,9 @@ GEM
       polyglot
       polyglot (>= 0.3.1)
     tzinfo (0.3.37)
+    uglifier (2.2.1)
+      execjs (>= 0.3.0)
+      multi_json (~> 1.0, >= 1.0.2)
     uniform_notifier (1.2.0)
     warden (1.2.3)
       rack (>= 1.0)
@@ -293,6 +304,7 @@ DEPENDENCIES
   brakeman
   bullet
   capybara
+  coffee-rails
   database_cleaner
   debugger
   decent_exposure
@@ -312,9 +324,11 @@ DEPENDENCIES
   rails_best_practices
   rb-fsevent
   rspec-rails
+  sass-rails
   seedbank!
   shoulda-matchers
   simplecov
   thin
+  uglifier
   webmock
   zeus

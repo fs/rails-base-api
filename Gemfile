@@ -53,3 +53,9 @@ group :development, :test, :staging do
   gem 'faker'
   gem 'factory_girl_rails'
 end
+
+group :staging do
+  gem 'sass-rails'
+  gem 'uglifier'
+  gem 'coffee-rails'
+end
