@@ -25,5 +25,9 @@ Rails3BaseApi::Application.configure do
   # Expands the lines which load the assets
   config.assets.debug = true
 
+  # Do not eager load code on boot.
   config.eager_load = false
+
+  # Raise an error on page load if there are pending migrations
+  config.active_record.migration_error = :page_load
 end

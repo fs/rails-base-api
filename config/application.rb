@@ -7,9 +7,7 @@ require 'action_mailer/railtie'
 require 'sprockets/railtie'
 # require "rails/test_unit/railtie"
 
-if defined?(Bundler)
-  Bundler.require(:default, Rails.env)
-end
+Bundler.require(:default, Rails.env)
 
 module Rails3BaseApi
   class Application < Rails::Application
@@ -38,9 +36,6 @@ module Rails3BaseApi
     # Configure the default encoding used in templates for Ruby 1.9.
     config.encoding = 'utf-8'
 
-    # Configure sensitive parameters which will be filtered from the log file.
-    config.filter_parameters += [:password]
-
     # Enable escaping HTML in JSON.
     config.active_support.escape_html_entities_in_json = true
 
@@ -54,9 +49,6 @@ module Rails3BaseApi
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
-
-    # If you are deploying Rails 3.1+ on Heroku, you may want to set:
-    config.assets.initialize_on_precompile = false
 
     # By default Rails API does not include the session middleware.
     # Add the middleware back in to application b/c it requred by Devise and Warden
