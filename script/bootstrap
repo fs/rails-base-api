@@ -45,7 +45,7 @@ def install_bundler
   end
 end
 
-def install_gems(without = 'production staging')
+def install_gems(without: 'production staging')
   check(:gemfile) do |old_version|
     # check both Gemfile and Gemfile.lock as there might be local changes that hasn't been bundled yet
     version = File.read('Gemfile') + File.read('Gemfile.lock')
@@ -82,7 +82,7 @@ is_ci = ARGV.shift == 'ci'
 setup_database_yml
 setup_dotenv
 install_bundler
-install_gems(is_ci ? 'development' : '')
+install_gems(without: is_ci ? 'development' : '')
 
 is_ci ? prepare_test_db : migrate_db
 
