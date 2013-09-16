@@ -9,7 +9,7 @@ describe User::CommentsController do
     let(:comments) { FactoryGirl.build_list :comment, 2 }
 
     before do
-      controller.current_user.stub(:comments) { double(scoped: comments) }
+      controller.current_user.stub(:comments) { double(all: comments) }
 
       get :index,
         format: :json
