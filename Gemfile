@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.12'
+ruby '2.0.0'
+
+gem 'rails', '4.0.0'
 
 gem 'rails-api'
 
@@ -9,10 +11,9 @@ gem 'airbrake'
 gem 'thin'
 gem 'decent_exposure'
 gem 'active_model_serializers'
-gem 'seedbank'
+gem 'seedbank', github: 'james2m/seedbank'
 gem 'dotenv'
-gem 'strong_parameters'
-gem 'devise'
+gem 'devise', '~> 3.1.0'
 
 group :development do
   gem 'letter_opener'
@@ -43,10 +44,21 @@ group :test do
 end
 
 group :development, :staging do
-  gem 'api_taster', git: 'git@github.com:fredwu/api_taster.git'
+  gem 'api_taster', github: 'vast/api_taster', branch: 'rails4'
+  # gem 'api_taster', path: '../api_taster' # for local development
 end
 
 group :development, :test, :staging do
   gem 'faker'
   gem 'factory_girl_rails'
+end
+
+group :staging do
+  gem 'sass-rails'
+  gem 'uglifier'
+  gem 'coffee-rails'
+end
+
+group :staging, :production do
+  gem 'rails_12factor'
 end
