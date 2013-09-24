@@ -26,7 +26,7 @@ group :development do
 end
 
 group :development, :test do
-  gem 'debugger'
+  gem 'byebug'
   gem 'rspec-rails'
   gem 'mail_safe'
   gem 'rails_best_practices'
