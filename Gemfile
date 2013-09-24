@@ -26,7 +26,7 @@ group :development do
 end
 
 group :development, :test do
-  gem 'byebug'
+  gem 'byebug', '~> 1.8.2'
   gem 'rspec-rails'
   gem 'mail_safe'
   gem 'rails_best_practices'
