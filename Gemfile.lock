@@ -1,21 +1,20 @@
 GIT
-  remote: git://github.com/james2m/seedbank.git
-  revision: c7a272751336f0d17103028f45b88eac62cbedd7
-  specs:
-    seedbank (0.3.0.pre2)
-
-GIT
-  remote: git://github.com/vast/api_taster.git
-  revision: a1561f51645abe90d64b867b5b9329cee89f19da
-  branch: rails4
+  remote: git://github.com/fs/api_taster.git
+  revision: 751ec7872a9d9d44d49e7746a36b23c48552b5ad
   specs:
     api_taster (0.7.0)
       bootstrap-sass (~> 2.1)
       jquery-rails
-      rails (~> 4.0.0)
+      rails (>= 3.2)
       redcarpet
       remotipart (~> 1.0)
       sass-rails
+
+GIT
+  remote: git://github.com/james2m/seedbank.git
+  revision: c7a272751336f0d17103028f45b88eac62cbedd7
+  specs:
+    seedbank (0.3.0.pre2)
 
 GEM
   remote: https://rubygems.org/
