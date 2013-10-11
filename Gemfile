@@ -44,8 +44,7 @@ group :test do
 end
 
 group :development, :staging do
-  gem 'api_taster', github: 'vast/api_taster', branch: 'rails4'
-  # gem 'api_taster', path: '../api_taster' # for local development
+  gem 'api_taster', github: 'fs/api_taster'
 end
 
 group :development, :test, :staging do
