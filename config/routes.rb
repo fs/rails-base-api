@@ -1,4 +1,4 @@
-Rails3BaseApi::Application.routes.draw do
+RailsBaseApi::Application.routes.draw do
   # Devise
   #
   devise_for :users, only: []

@@ -1,7 +1,7 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: rails3_base_api_dev
+  database: rails_base_api_dev
   pool: 5
   username: postgres
   password: postgres
@@ -12,7 +12,7 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: rails3_base_api_test
+  database: rails_base_api_test
   pool: 5
   username: postgres
   password: postgres
