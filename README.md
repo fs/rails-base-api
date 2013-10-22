@@ -17,7 +17,7 @@ Status of the API could be checked at http://localhost:5000/api_taster
 
 ## What's included
 
-Application currently based on Rails 3.2 stable branch and Ruby 1.9
+Application currently based on Rails 4 and Ruby 2
 
 ### Application gems:
 
@@ -54,4 +54,3 @@ Application currently based on Rails 3.2 stable branch and Ruby 1.9
 * `script/bootstrap` - setup required gems and migrate db if needed
 * `script/quality` - runs brakeman and rails_best_practices for the app
 * `script/ci` - should be used in the CI, checkout .travis.yml for example
-* `script/ci_deploy` - should be used in [Semaphoreapp CI to deploy code to Heroku](http://tatsoft.ru/ci-semaphoreapp)

@@ -1,4 +1,4 @@
-Rails3BaseApi::Application.routes.draw do
+RailsBaseApi::Application.routes.draw do
   # Devise
   #
   devise_for :users, only: []
@@ -16,7 +16,10 @@ Rails3BaseApi::Application.routes.draw do
   #
   resources :posts, only: [:index, :show]
 
-  root :to => 'posts#index'
-
-  mount ApiTaster::Engine => '/api_taster' if defined? ApiTaster::Engine
+  if defined? ApiTaster::Engine
+    mount ApiTaster::Engine => '/api_taster'
+    root to: redirect('/api_taster')
+  else
+    root to: 'posts#index'
+  end
 end
