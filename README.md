@@ -1,6 +1,6 @@
 # Example of Rails app with API
 
-[![Code Climate](https://codeclimate.com/repos/5272552e13d6371dbc03a57e/badges/b9cf56f8fedaf54ada6b/gpa.png)](https://codeclimate.com/repos/5272552e13d6371dbc03a57e/feed)
+[![Code Climate](https://codeclimate.com/github/fs/rails-base-api.png)](https://codeclimate.com/github/fs/rails-base-api)
 
 ## API
 
