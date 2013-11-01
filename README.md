@@ -1,5 +1,7 @@
 # Example of Rails app with API
 
+[![Code Climate](https://codeclimate.com/github/fs/rails-base-api.png)](https://codeclimate.com/github/fs/rails-base-api)
+
 ## API
 
 Status of the API could be checked at http://localhost:5000/api_taster
