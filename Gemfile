@@ -7,7 +7,7 @@ gem 'rails', '4.0.0'
 gem 'rails-api'
 
 gem 'pg'
-gem 'airbrake'
+gem 'rollbar'
 gem 'thin'
 gem 'decent_exposure'
 gem 'active_model_serializers'
