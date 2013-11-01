@@ -108,7 +108,7 @@ GEM
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
     diff-lcs (1.2.1)
-    dotenv (0.5.0)
+    dotenv (0.9.0)
     email_spec (1.4.0)
       launchy (~> 2.1)
       mail (~> 2.2)
