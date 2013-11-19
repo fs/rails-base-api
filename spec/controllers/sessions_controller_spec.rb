@@ -7,9 +7,8 @@ describe SessionsController do
 
   describe 'POST #create' do
     before do
-      AuthenticationService.
-        any_instance.
-        should_receive(:authenticate!) { FactoryGirl.build :user }
+      AuthenticateUser.
+        should_receive(:perform) { double(user: FactoryGirl.build(:user)) }
 
       post :create,
         format: :json
