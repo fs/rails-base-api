@@ -9,6 +9,7 @@ class ApplicationController < ActionController::API
 
   respond_to :json
 
+  # TODO: move to separate class
   def authenticate_user!
     authenticate_user_from_token!
     super
@@ -18,8 +19,6 @@ class ApplicationController < ActionController::API
     user_token = params[:authentication_token].presence
     user = user_token && User.where(authentication_token: user_token).first
 
-    if user
-      sign_in user, store: false
-    end
+    sign_in(user, store: false) if user
   end
 end
