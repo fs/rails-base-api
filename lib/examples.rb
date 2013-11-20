@@ -1,5 +1,5 @@
 module Examples
-  extend self
+  module_function
 
   def post
     Post.first
