@@ -24,22 +24,22 @@ describe User do
   end
 
   describe '#ensure_authentication_token!' do
+    let(:user) { described_class.new(authentication_token: token) }
+    let(:callback) { ->{ user.ensure_authentication_token! } }
+
     context 'when token exists' do
+      let(:token) { 'token' }
+
       it 'leaves it as is' do
-        user = described_class.new(authentication_token: 'foo')
-        expect {
-          user.ensure_authentication_token!
-        }.not_to change(user, 'authentication_token')
+        expect(callback).not_to change(user, 'authentication_token')
       end
     end
 
     context 'when token does NOT exist' do
-      it 'generates new authentication_token' do
-        user = described_class.new(authentication_token: '')
+      let(:token) { '' }
 
-        expect {
-          user.ensure_authentication_token!
-        }.to change(user, 'authentication_token')
+      it 'generates new authentication_token' do
+        expect(callback).to change(user, 'authentication_token')
       end
     end
   end
