@@ -6,7 +6,7 @@ class User::CommentsController < User::BaseController
     respond_with(
       comments,
       serializer_includes: {
-        comment: [:post, :user]
+        comment: %i[post user]
       }
     )
   end
