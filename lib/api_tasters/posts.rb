@@ -1,15 +1,15 @@
 ApiTaster.routes do
-  desc <<-markdown.strip_heredoc
+  desc '
     ## List posts
-  markdown
+  '.strip_heredoc
 
   get '/posts'
 
-  desc <<-markdown.strip_heredoc
+  desc '
     ## Show post
 
     * `:id` - post ID
-  markdown
+  '.strip_heredoc
 
   get '/posts/:id',
     id: Examples.post.id

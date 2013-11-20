@@ -1,10 +1,10 @@
 ApiTaster.routes do
-  desc <<-markdown.strip_heredoc
+  desc '
     ## Visitor signs in
-  markdown
+  '.strip_heredoc
 
   post '/users/sign_in', user: {
-    :email => Examples.user.email,
-    :password => Examples.password
+    email: Examples.user.email,
+    password: Examples.password
   }
 end
