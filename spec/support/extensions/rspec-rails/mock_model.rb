@@ -1,7 +1,5 @@
 module RSpec::Rails::Mocks
-  def mock_model_with_read_attribute_for_serialization(string_or_model_class, \
-    stubs = {})
-
+  def mock_model_with_read_attribute_for_serialization(string_or_model_class, stubs = {})
     stubs = stubs.update(read_attribute_for_serialization: 'attribute')
 
     mock_model_without_read_attribute_for_serialization(
