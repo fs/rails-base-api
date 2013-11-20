@@ -15,3 +15,6 @@ Documentation:
 SymbolArray:
   Description: 'Use %i or %I for arrays of symbols.'
   Enabled: true
+
+AlignParameters:
+  Enabled: false
