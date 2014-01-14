@@ -1,6 +1,8 @@
 class ApplicationController < ActionController::API
   include ActionController::MimeResponds, ActionController::ImplicitRender
 
+  prepend_before_filter :skip_trackable
+
   self.responder = ApiResponder
 
   decent_configuration do
@@ -21,5 +23,9 @@ class ApplicationController < ActionController::API
     if user
       sign_in user, store: false
     end
+  end
+
+  def skip_trackable
+    request.env['devise.skip_trackable'] = true
   end
 end
