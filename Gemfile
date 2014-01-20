@@ -13,7 +13,7 @@ gem 'decent_exposure'
 gem 'active_model_serializers'
 gem 'interactor-rails'
 gem 'seedbank', github: 'james2m/seedbank'
-gem 'dotenv'
+gem 'dotenv-rails'
 gem 'devise', '~> 3.1.0'
 
 group :development do
