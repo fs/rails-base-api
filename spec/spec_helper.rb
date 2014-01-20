@@ -1,4 +1,8 @@
-require 'simplecov'
+# Do not run simplecov on CI
+unless ENV['CI']
+  require 'simplecov'
+  SimpleCov.start 'rails'
+end
 
 ENV['RAILS_ENV'] ||= 'test'
 

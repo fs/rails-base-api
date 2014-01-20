@@ -33,4 +33,7 @@ module ActiveModel::Serializer::IncludeOnlyDeclaredAssociations
   end
 end
 
-ActiveModel::Serializer.send(:include, ActiveModel::Serializer::IncludeOnlyDeclaredAssociations)
+ActiveModel::Serializer.send(
+  :include,
+  ActiveModel::Serializer::IncludeOnlyDeclaredAssociations
+)

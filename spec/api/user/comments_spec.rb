@@ -28,7 +28,7 @@ describe 'GET /user/comments.json' do
     end
   end
 
-  describe "create comment" do
+  describe 'create comment' do
     context 'without authentication token' do
       before do
         post '/user/comments.json'

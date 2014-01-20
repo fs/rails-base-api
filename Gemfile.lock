@@ -47,6 +47,7 @@ GEM
       tzinfo (~> 0.3.37)
     addressable (2.3.5)
     arel (4.0.1)
+    ast (1.1.0)
     atomic (1.1.14)
     awesome_print (1.2.0)
     bcrypt-ruby (3.1.2)
@@ -166,8 +167,12 @@ GEM
     nokogiri (1.6.0)
       mini_portile (~> 0.5.0)
     orm_adapter (0.4.0)
+    parser (2.0.0)
+      ast (~> 1.1)
+      slop (~> 3.4, >= 3.4.5)
     pg (0.17.0)
     polyglot (0.3.3)
+    powerpack (0.0.9)
     pry (0.9.12.2)
       coderay (~> 1.0.5)
       method_source (~> 0.8)
@@ -206,6 +211,7 @@ GEM
       activesupport (= 4.0.0)
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
+    rainbow (1.1.4)
     rake (10.1.0)
     rb-fsevent (0.9.3)
     rb-inotify (0.9.2)
@@ -230,6 +236,10 @@ GEM
       rspec-core (~> 2.14.0)
       rspec-expectations (~> 2.14.0)
       rspec-mocks (~> 2.14.0)
+    rubocop (0.15.0)
+      parser (~> 2.0)
+      powerpack (~> 0.0.6)
+      rainbow (>= 1.1.4)
     ruby-progressbar (1.2.0)
     ruby2ruby (2.0.6)
       ruby_parser (~> 3.1)
@@ -322,6 +332,7 @@ DEPENDENCIES
   rb-fsevent
   rollbar
   rspec-rails
+  rubocop
   sass-rails
   seedbank!
   shoulda-matchers

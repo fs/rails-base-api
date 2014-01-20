@@ -2,5 +2,6 @@
 
 set -e
 
-bin/brakeman --quiet --skip-libs --except ForgerySetting
-bin/rails_best_practices --silent --spec --features -x lib/templates
+bin/rubocop
+bin/brakeman --quiet --skip-libs
+bin/rails_best_practices --silent --spec --features -x lib/templates, config

@@ -2,6 +2,5 @@
 
 set -e
 
-bundle exec rspec spec
-
+bin/rspec spec
 bin/quality
