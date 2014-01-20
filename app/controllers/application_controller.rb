@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::API
   include ActionController::MimeResponds, ActionController::ImplicitRender
+  include SkipTrackable
 
   self.responder = ApiResponder
 
