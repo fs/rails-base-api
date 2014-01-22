@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe PostsController do
+describe Api::V1::PostsController do
   let(:post) { FactoryGirl.build(:post) }
   let(:posts) { [post] }
 

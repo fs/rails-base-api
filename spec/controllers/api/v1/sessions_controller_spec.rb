@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe SessionsController do
+describe Api::V1::SessionsController do
   before do
     set_devise_mapping(:user)
   end

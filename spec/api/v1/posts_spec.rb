@@ -1,12 +1,12 @@
 require 'spec_helper'
 
-describe '/posts' do
+describe '/api/v1/posts' do
   describe 'list posts' do
     let!(:post) { FactoryGirl.create :post }
     let!(:comment) { FactoryGirl.create :comment, post: post }
 
     before do
-      get '/posts.json'
+      get '/api/v1/posts'
     end
 
     subject { json_response_body }
@@ -19,7 +19,7 @@ describe '/posts' do
     let!(:post) { FactoryGirl.create :post }
 
     before do
-      get "/posts/#{post.id}.json"
+      get "/api/v1/posts/#{post.id}"
     end
 
     subject { json_response_body }
