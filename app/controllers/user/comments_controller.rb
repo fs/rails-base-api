@@ -4,7 +4,7 @@ class User::CommentsController < User::BaseController
 
   def index
     respond_with(
-      comments,
+      comments.includes(:user, :post),
       serializer_includes: {
         comment: %i[post user]
       }
