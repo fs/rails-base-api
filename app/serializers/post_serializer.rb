@@ -4,6 +4,6 @@ class PostSerializer < BaseSerializer
   has_many :comments
 
   def comments
-    Comment.includes(:user)
+    object.comments.includes(:user)
   end
 end
