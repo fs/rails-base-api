@@ -9,7 +9,7 @@ describe User::CommentsController do
     let(:comments) { build_list :comment, 2 }
 
     before do
-      controller.current_user.stub(:comments) { double(all: comments) }
+      controller.current_user.stub(:comments) { double(all: double(with_posts_and_users: comments)) }
 
       get :index,
         format: :json
