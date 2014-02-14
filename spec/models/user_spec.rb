@@ -25,7 +25,7 @@ describe User do
 
   describe '#ensure_authentication_token!' do
     let(:user) { described_class.new(authentication_token: token) }
-    let(:callback) { ->{ user.ensure_authentication_token! } }
+    let(:callback) { -> { user.ensure_authentication_token! } }
 
     context 'when token exists' do
       let(:token) { 'token' }
