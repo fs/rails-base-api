@@ -45,13 +45,11 @@ group :test do
   gem 'json_spec'
 end
 
-group :development, :staging do
-  gem 'api_taster', github: 'fs/api_taster'
-end
-
 group :development, :test, :staging do
   gem 'faker'
   gem 'factory_girl_rails'
+  gem 'rspec_api_documentation'
+  gem 'apitome'
 end
 
 group :staging do

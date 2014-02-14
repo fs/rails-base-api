@@ -4,6 +4,8 @@ module Helpers
   end
 
   def json_response_body
-    JSON.parse(response.body)
+    # TODO: rewrite after remove spec/api
+    # JSON.parse(response_body)
+    respond_to?(:response) ? parse_json(response.body) : parse_json(response_body)
   end
 end

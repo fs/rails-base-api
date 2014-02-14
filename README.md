@@ -9,7 +9,7 @@ Application currently based on Rails 4 stable branch and Ruby 2.1.0
 
 ## API
 
-Status of the API could be checked at [http://localhost:5000/api_taster](http://localhost:5000/api_taster)
+Status of the API could be checked at [http://localhost:5000/docs](http://localhost:5000/docs)
 
 ### Unauthenticated user:
 
@@ -45,7 +45,11 @@ Status of the API could be checked at [http://localhost:5000/api_taster](http://
 * [RSpec](https://github.com/rspec/rspec) for awesome, readable isolation testing
 * [Shoulda Matchers](http://github.com/thoughtbot/shoulda-matchers) for frequently needed Rails and RSpec matchers
 * [Email Spec](https://github.com/bmabey/email-spec) Collection of rspec matchers and cucumber steps for testing emails
-* [ApiTaster](https://github.com/fredwu/api_taster) A quick and easy way to visually test your Rails application's API.
+* [Rspec Api Documentation](https://github.com/zipmark/rspec_api_documentation) Generate pretty API docs for your Rails APIs
+
+# This is the 2nd commit message:
+
+change config
 
 ### Initializes
 
