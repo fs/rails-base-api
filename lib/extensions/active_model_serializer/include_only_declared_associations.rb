@@ -16,10 +16,10 @@ module ActiveModel::Serializer::IncludeOnlyDeclaredAssociations
   def include_only_declared_associations!
     associations_inclusion_options.each do |association|
       include!(association)
-    end if has_associations_inclusion_options?
+    end if associations_inclusion_options?
   end
 
-  def has_associations_inclusion_options?
+  def associations_inclusion_options?
     options.include?(:serializer_includes) &&
       associations_inclusion_options.present?
   end
