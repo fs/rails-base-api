@@ -10,6 +10,7 @@ describe User::CommentsController do
 
     before do
       controller.current_user.stub(:comments) { double(all: comments) }
+      comments.stub(:includes)
 
       get :index,
         format: :json
