@@ -9,7 +9,7 @@ Application currently based on Rails 4 stable branch and Ruby 2.1.0
 
 ## API
 
-Status of the API could be checked at [](http://localhost:5000/api_taster)
+Status of the API could be checked at [http://localhost:5000/api_taster](http://localhost:5000/api_taster)
 
 ### Unauthenticated user:
 
