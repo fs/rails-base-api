@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe SessionsController do
   before do
-    prepare_devise_mapping
+    setup_devise_mapping
   end
 
   describe 'POST #create' do
