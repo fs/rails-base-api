@@ -1,11 +1,15 @@
-# Example of Rails app with API
+# Skeleton for new Rails 4 application for REST API
 
 [![Code Climate](https://codeclimate.com/github/fs/rails-base-api.png)](https://codeclimate.com/github/fs/rails-base-api)
 [![Semaphore](https://semaphoreapp.com/api/v1/projects/0e00006725dcea00b179fab81a1b1bdaf9a64816/106819/shields_badge.png)](https://semaphoreapp.com/fs/rails-base-api)
 
+This simple application includes ruby/rails technology which we use at FlatStack for new REST API projects.
+
+Application currently based on Rails 4 stable branch and Ruby 2.1.0
+
 ## API
 
-Status of the API could be checked at http://localhost:5000/api_taster
+Status of the API could be checked at [http://localhost:5000/api_taster](http://localhost:5000/api_taster)
 
 ### Unauthenticated user:
 
@@ -19,8 +23,6 @@ Status of the API could be checked at http://localhost:5000/api_taster
 * POST `/user/comments.json`: create comment
 
 ## What's included
-
-Application currently based on Rails 4 and Ruby 2
 
 ### Application gems:
 
@@ -54,6 +56,39 @@ Application currently based on Rails 4 and Ruby 2
 
 ### Scripts
 
-* `script/bootstrap` - setup required gems and migrate db if needed
-* `script/quality` - runs brakeman and rails_best_practices for the app
-* `script/ci` - should be used in the CI, checkout .travis.yml for example
+* `bin/bootstrap` - setup required gems and migrate db if needed
+* `bin/quality` - runs brakeman and rails_best_practices for the app
+* `bin/ci` - should be used in the CI or locally
+* `bin/server` - to run server locally
+
+## Quick start
+
+Clone application as new project with original repository named "rails-base-api"
+
+    git clone git://github.com/fs/rails-base-api.git --origin rails-base-api [MY-NEW-PROJECT]
+
+Create your new repo on GitHub and push master into it.
+Make sure master branch is tracking origin repo.
+
+    git remote add origin git@github.com:[MY-GITHUB-ACCOUNT]/[MY-NEW-PROJECT].git
+    git push -u origin master
+
+Run bootstrap script
+
+    bin/bootstrap
+
+Make sure all test are green
+
+    bin/ci
+
+Run app
+
+    bin/server
+
+**Do not forget to update this file!**
+
+    mv doc/README_TEMPLATE.md README.md
+    # update README.md
+    git commit -am "Update README.md"
+
+P.S. Possibly you'll need to remove existing endpoints (e.g. `/posts`) :stuck_out_tongue_closed_eyes:

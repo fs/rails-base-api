@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe SessionsController do
   before do
-    set_devise_mapping(:user)
+    setup_devise_mapping
   end
 
   describe 'POST #create' do
@@ -10,8 +10,7 @@ describe SessionsController do
       AuthenticateUser
         .should_receive(:perform) { double(user: FactoryGirl.build(:user)) }
 
-      post :create,
-        format: :json
+      post :create, format: :json
     end
 
     it 'responds successfully with an HTTP 201 status code' do
