@@ -3,8 +3,9 @@ require 'spec_helper'
 describe UserSerializer do
   let(:user) { build :user, id: 1, authentication_token: 'token' }
   let(:json) { UserSerializer.new(user).to_json }
+  let(:user_json) { parse_json(json) }
 
-  subject { JSON.parse(json) }
-
-  it { should be_a_user_representation(user) }
+  it 'returns user' do
+    expect(user_json).to be_a_user_representation(user)
+  end
 end

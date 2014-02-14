@@ -6,8 +6,6 @@ describe 'comments API' do
   let(:auth_header) { { 'X-AUTH-TOKEN' => user.authentication_token } }
   let(:comment_params) { { title: 'Title', text: 'Text' } }
 
-  subject { json_response_body }
-
   describe 'GET /user/comments.json' do
     context 'without authentication token' do
       before do
@@ -24,8 +22,12 @@ describe 'comments API' do
         get '/user/comments.json', {}, auth_header
       end
 
-      it { should be_a_kind_of Array }
-      its(:first) { should be_a_comment_representation(comment) }
+      it 'returns comments list' do
+        comments_json = json_response_body
+
+        expect(comments_json).to be_a_kind_of Array
+        expect(comments_json.first).to be_a_comment_representation(comment)
+      end
     end
   end
 
@@ -45,7 +47,9 @@ describe 'comments API' do
         post '/user/comments.json', comment_params, auth_header
       end
 
-      it { should be_a_comment_representation(user.comments.last) }
+      it 'returns comment' do
+        expect(json_response_body).to be_a_comment_representation(user.comments.last)
+      end
     end
   end
 end

@@ -42,6 +42,7 @@ group :test do
   gem 'database_cleaner'
   gem 'email_spec'
   gem 'shoulda-matchers'
+  gem 'json_spec'
 end
 
 group :development, :staging do

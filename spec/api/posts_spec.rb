@@ -9,10 +9,12 @@ describe '/posts' do
       get '/posts.json'
     end
 
-    subject { json_response_body }
+    it 'returns posts list' do
+      posts_json = json_response_body
 
-    it { should be_a_kind_of Array }
-    its(:first) { should be_a_post_representation(post) }
+      expect(posts_json).to be_a_kind_of Array
+      expect(posts_json.first).to be_a_post_representation(post)
+    end
   end
 
   describe 'show post' do
@@ -22,7 +24,8 @@ describe '/posts' do
       get "/posts/#{post.id}.json"
     end
 
-    subject { json_response_body }
-    it { should be_a_post_representation(post) }
+    it 'returns post' do
+      expect(json_response_body).to be_a_post_representation(post)
+    end
   end
 end
