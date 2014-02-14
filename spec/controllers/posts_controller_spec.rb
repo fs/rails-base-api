@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe PostsController do
-  let(:post) { FactoryGirl.build(:post) }
+  let(:post) { build :post }
   let(:posts) { [post] }
 
   before do

@@ -2,11 +2,11 @@ require 'spec_helper'
 
 describe User::CommentsController do
   before do
-    sign_in(FactoryGirl.create(:user))
+    sign_in(create :user)
   end
 
   describe '#index' do
-    let(:comments) { FactoryGirl.build_list :comment, 2 }
+    let(:comments) { build_list :comment, 2 }
 
     before do
       controller.current_user.stub(:comments) { double(all: comments) }

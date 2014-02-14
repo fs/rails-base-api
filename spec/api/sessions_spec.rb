@@ -3,7 +3,7 @@ require 'spec_helper'
 describe '/users/sign_in' do
   describe 'sign in' do
     context 'with valid credentials' do
-      let(:user) { FactoryGirl.create :user, password: '123456' }
+      let(:user) { create :user, password: '123456' }
 
       before do
         post '/users/sign_in.json',
