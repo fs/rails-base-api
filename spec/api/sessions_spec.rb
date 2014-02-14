@@ -11,8 +11,9 @@ describe '/users/sign_in' do
           password: '123456'
       end
 
-      subject { json_response_body }
-      it { should be_a_user_representation(user) }
+      it 'returns user' do
+        expect(json_response_body).to be_a_user_representation(user)
+      end
     end
 
     context 'with invalid credentials' do

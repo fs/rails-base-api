@@ -6,7 +6,7 @@ RSpec::Matchers.define :be_a_comment_representation do |comment|
       text
     ]
 
-    json.should be
-    json.should include_attributes(response_attributes)
+    expect(json).to be
+    expect(json).to include_attributes(response_attributes)
   end
 end
