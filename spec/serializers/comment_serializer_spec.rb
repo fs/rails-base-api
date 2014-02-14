@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe CommentSerializer do
-  let(:comment) { FactoryGirl.build :comment }
+  let(:comment) { build :comment }
   let(:json) { CommentSerializer.new(comment).to_json }
 
   subject { JSON.parse(json) }

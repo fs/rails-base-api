@@ -3,7 +3,7 @@ require 'spec_helper'
 describe User do
   describe 'validations' do
     context 'uniqueness' do
-      subject { FactoryGirl.create :user }
+      subject { create :user }
       it { should validate_uniqueness_of :email }
     end
   end
@@ -15,7 +15,7 @@ describe User do
   describe 'callbacks' do
     describe 'before save' do
       it 'calls #ensure_authentication_token!' do
-        u = FactoryGirl.build(:user)
+        u = build :user
         u.should_receive(:ensure_authentication_token!)
 
         u.save

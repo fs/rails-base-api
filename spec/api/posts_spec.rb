@@ -2,8 +2,8 @@ require 'spec_helper'
 
 describe '/posts' do
   describe 'list posts' do
-    let!(:post) { FactoryGirl.create :post }
-    let!(:comment) { FactoryGirl.create :comment, post: post }
+    let!(:post) { create :post }
+    let!(:comment) { create :comment, post: post }
 
     before do
       get '/posts.json'
@@ -16,7 +16,7 @@ describe '/posts' do
   end
 
   describe 'show post' do
-    let!(:post) { FactoryGirl.create :post }
+    let!(:post) { create :post }
 
     before do
       get "/posts/#{post.id}.json"

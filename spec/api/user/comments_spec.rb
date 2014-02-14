@@ -1,8 +1,8 @@
 require 'spec_helper'
 
 describe 'comments API' do
-  let!(:user) { FactoryGirl.create :user }
-  let!(:comment) { FactoryGirl.create :comment, user: user }
+  let!(:user) { create :user }
+  let!(:comment) { create :comment, user: user }
   let(:auth_header) { { 'X-AUTH-TOKEN' => user.authentication_token } }
   let(:comment_params) { { title: 'Title', text: 'Text' } }
 
