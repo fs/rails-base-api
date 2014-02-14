@@ -1,12 +1,12 @@
 require 'spec_helper'
 
-describe '/users/sign_in' do
+describe '/api/v1/users/sign_in' do
   describe 'sign in' do
     context 'with valid credentials' do
       let(:user) { FactoryGirl.create :user, password: '123456' }
 
       before do
-        post '/users/sign_in.json',
+        post '/api/v1/users/sign_in',
           email: user.email,
           password: '123456'
       end
@@ -17,7 +17,7 @@ describe '/users/sign_in' do
 
     context 'with invalid credentials' do
       before do
-        post '/users/sign_in.json'
+        post '/api/v1/users/sign_in'
       end
 
       it 'responds unauthorized with an HTTP 401 status code' do

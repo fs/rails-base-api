@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe User::CommentsController do
+describe Api::V1::User::CommentsController do
   before do
     sign_in(FactoryGirl.create(:user))
   end

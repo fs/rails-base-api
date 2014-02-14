@@ -1,10 +1,10 @@
 require 'spec_helper'
 
-describe 'GET /user/comments.json' do
+describe 'GET /api/v1/user/comments' do
   describe  "list user's comments" do
     context 'without authentication token' do
       before do
-        get '/user/comments.json'
+        get '/api/v1/user/comments'
       end
 
       it 'responds unauthorized with an HTTP 401 status code' do
@@ -17,7 +17,7 @@ describe 'GET /user/comments.json' do
       let!(:comment) { FactoryGirl.create :comment, user: user }
 
       before do
-        get '/user/comments.json',
+        get '/api/v1/user/comments',
           authentication_token: user.authentication_token
       end
 
@@ -31,7 +31,7 @@ describe 'GET /user/comments.json' do
   describe 'create comment' do
     context 'without authentication token' do
       before do
-        post '/user/comments.json'
+        post '/api/v1/user/comments'
       end
 
       it 'responds unauthorized with an HTTP 401 status code' do
@@ -43,7 +43,7 @@ describe 'GET /user/comments.json' do
       let!(:user) { FactoryGirl.create :user }
 
       before do
-        post '/user/comments.json',
+        post '/api/v1/user/comments',
           authentication_token: user.authentication_token,
           title: 'Title',
           text: 'Text'
