@@ -15,11 +15,4 @@ RailsBaseApi::Application.routes.draw do
   # Public resources
   #
   resources :posts, only: [:index, :show]
-
-  if defined? ApiTaster::Engine
-    mount ApiTaster::Engine => '/api_taster'
-    root to: redirect('/api_taster')
-  else
-    root to: 'posts#index'
-  end
 end
