@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   expose(:post)
-  expose(:posts)
+  expose(:posts) { |scope| scope.with_comments_and_users }
 
   def index
     respond_with(
