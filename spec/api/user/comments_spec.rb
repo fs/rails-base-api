@@ -32,7 +32,7 @@ describe 'comments API' do
 
     context 'with authentication token in request params' do
       before do
-        get '/user/comments.json', { auth_token: user.authentication_token }
+        get '/user/comments.json', auth_token: user.authentication_token
       end
 
       it 'returns comments list' do
