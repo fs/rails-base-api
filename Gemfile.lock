@@ -60,9 +60,9 @@ GEM
     bullet (4.8.0)
       activesupport
       uniform_notifier (>= 1.4.0)
-    byebug (1.8.2)
-      columnize (~> 0.3.6)
-      debugger-linecache (~> 1.2.0)
+    byebug (2.7.0)
+      columnize (~> 0.3)
+      debugger-linecache (~> 1.2)
     celluloid (0.15.2)
       timers (~> 1.1.0)
     code_analyzer (0.4.3)
@@ -300,7 +300,7 @@ DEPENDENCIES
   apitome
   brakeman
   bullet
-  byebug (~> 1.8.2)
+  byebug
   coffee-rails
   database_cleaner
   decent_exposure
