@@ -82,7 +82,7 @@ GEM
     database_cleaner (1.2.0)
     debugger-linecache (1.2.0)
     decent_exposure (2.3.1)
-    devise (3.1.2)
+    devise (3.2.3)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.1)
       railties (>= 3.2.6, < 5)
@@ -303,7 +303,7 @@ DEPENDENCIES
   coffee-rails
   database_cleaner
   decent_exposure
-  devise (~> 3.1.0)
+  devise
   dotenv-rails
   email_spec
   factory_girl_rails

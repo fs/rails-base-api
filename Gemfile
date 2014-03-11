@@ -13,7 +13,7 @@ gem 'active_model_serializers'
 gem 'interactor-rails'
 gem 'seedbank', github: 'james2m/seedbank'
 gem 'dotenv-rails'
-gem 'devise', '~> 3.1.0'
+gem 'devise'
 
 group :development do
   gem 'letter_opener'
