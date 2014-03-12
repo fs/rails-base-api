@@ -17,9 +17,22 @@ describe 'comments API' do
       end
     end
 
-    context 'with authentication token' do
+    context 'with authentication token in http headers' do
       before do
         get '/user/comments.json', {}, auth_header
+      end
+
+      it 'returns comments list' do
+        comments_json = json_response_body
+
+        expect(comments_json).to be_a_kind_of Array
+        expect(comments_json.first).to be_a_comment_representation(comment)
+      end
+    end
+
+    context 'with authentication token in request params' do
+      before do
+        get '/user/comments.json', auth_token: user.authentication_token
       end
 
       it 'returns comments list' do
