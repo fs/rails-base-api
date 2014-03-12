@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby '2.1.0'
 
-gem 'rails', '4.0.0'
+gem 'rails', '4.0.3'
 
 gem 'rails-api'
 
@@ -13,7 +13,7 @@ gem 'active_model_serializers'
 gem 'interactor-rails'
 gem 'seedbank', github: 'james2m/seedbank'
 gem 'dotenv-rails'
-gem 'devise', '~> 3.1.0'
+gem 'devise'
 
 group :development do
   gem 'letter_opener'
@@ -26,7 +26,7 @@ group :development do
 end
 
 group :development, :test do
-  gem 'byebug', '~> 1.8.2'
+  gem 'byebug'
   gem 'rspec-rails'
   gem 'mail_safe'
 
