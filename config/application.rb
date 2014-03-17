@@ -45,7 +45,7 @@ module RailsBaseApi
     # config.active_record.schema_format = :sql
 
     # Enable the asset pipeline
-    config.assets.enabled = true
+    config.assets.enabled = false
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
@@ -60,5 +60,12 @@ module RailsBaseApi
 
     # Default host for action mailer, initializers/mailer.rb
     config.host = 'localhost:5000'
+
+    config.middleware.use Rack::Cors do
+      allow do
+        origins '*'
+        resource '*', :headers => :any, :methods => [:get, :post, :put, :delete, :patch, :options]
+      end
+    end
   end
 end

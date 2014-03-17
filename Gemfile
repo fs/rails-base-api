@@ -5,6 +5,7 @@ ruby '2.1.0'
 gem 'rails', '4.0.3'
 
 gem 'rails-api'
+gem 'rack-cors', :require => 'rack/cors'
 
 gem 'pg'
 gem 'thin'
