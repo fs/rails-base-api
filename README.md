@@ -48,10 +48,6 @@ Status of the API could be checked at [http://localhost:5000/docs](http://localh
 * [Email Spec](https://github.com/bmabey/email-spec) Collection of rspec matchers and cucumber steps for testing emails
 * [Rspec Api Documentation](https://github.com/zipmark/rspec_api_documentation) Generate pretty API docs for your Rails APIs
 
-# This is the 2nd commit message:
-
-change config
-
 ### Initializes
 
 * `01_config.rb` - shortcut for getting application config with `app_config`
