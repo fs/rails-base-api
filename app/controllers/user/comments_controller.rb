@@ -7,7 +7,7 @@ class User
       respond_with(
         comments,
         serializer_includes: {
-          comment: %i[post user]
+          comment: %i(post user)
         }
       )
     end
