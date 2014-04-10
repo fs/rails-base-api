@@ -1,0 +1,4 @@
+---
+:quiet: true
+:skip_checks:
+- CheckForgerySetting

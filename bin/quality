@@ -3,5 +3,5 @@
 set -e
 
 bin/rubocop
-bin/brakeman --quiet --skip-libs
+bin/brakeman --exit-on-warn
 bin/rails_best_practices --silent --spec --features -x lib/templates, config
