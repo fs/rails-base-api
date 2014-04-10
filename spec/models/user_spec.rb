@@ -8,10 +8,6 @@ describe User do
     end
   end
 
-  describe 'associations' do
-    it { should have_many :comments }
-  end
-
   describe 'callbacks' do
     describe 'before save' do
       it 'calls #ensure_authentication_token!' do
