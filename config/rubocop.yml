@@ -1,6 +1,6 @@
 AllCops:
   RunRailsCops: true
-  Excludes:
+  Exclude:
     - bin/**
     - db/**
     - config/**
