@@ -12,17 +12,6 @@ Application currently based on Rails 4 stable branch and Ruby 2.1.0
 
 Status of the API could be checked at [http://localhost:5000/docs](http://localhost:5000/docs)
 
-### Unauthenticated user:
-
-* POST `/users/sign_in.json`: Authenticate user with given email and password
-* GET `/posts.json`: list posts
-* GET `/posts/:id.json`: get a single post
-
-### Authenticated as user:
-
-* GET `/user/comments.json`: list comments for currently authenticated user
-* POST `/user/comments.json`: create comment
-
 ## What's included
 
 ### Application gems:
@@ -92,4 +81,7 @@ Run app
     # update README.md
     git commit -am "Update README.md"
 
-P.S. Possibly you'll need to remove existing endpoints (e.g. `/posts`) :stuck_out_tongue_closed_eyes:
+## Examples
+
+Please check how to build API endpoints and test them properly in the
+[examples branch](https://github.com/fs/rails-base-api/tree/examples)
