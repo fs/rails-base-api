@@ -1,67 +1,46 @@
 require 'spec_helper'
+require 'rspec_api_documentation/dsl'
 
-describe 'comments API' do
+resource 'Comments' do
   let!(:user) { create :user }
-  let!(:comment) { create :comment, user: user }
-  let(:auth_header) { { 'X-AUTH-TOKEN' => user.authentication_token } }
-  let(:comment_params) { { title: 'Title', text: 'Text' } }
+  subject { json_response_body }
 
-  describe 'GET /user/comments.json' do
-    context 'without authentication token' do
-      before do
-        get '/user/comments.json'
-      end
+  get '/user/comments.json' do
+    let!(:comment) { create :comment, user: user }
 
-      it 'responds unauthorized with an HTTP 401 status code' do
-        expect(response.code).to eq('401')
+    context 'with valid token' do
+      before { header 'X-AUTH-TOKEN', user.authentication_token }
+
+      example_request 'List of comments' do
+        expect(subject.first).to be_a_comment_representation(comment)
       end
     end
 
-    context 'with authentication token in http headers' do
-      before do
-        get '/user/comments.json', {}, auth_header
-      end
-
-      it 'returns comments list' do
-        comments_json = json_response_body
-
-        expect(comments_json).to be_a_kind_of Array
-        expect(comments_json.first).to be_a_comment_representation(comment)
-      end
-    end
-
-    context 'with authentication token in request params' do
-      before do
-        get '/user/comments.json', auth_token: user.authentication_token
-      end
-
-      it 'returns comments list' do
-        comments_json = json_response_body
-
-        expect(comments_json).to be_a_kind_of Array
-        expect(comments_json.first).to be_a_comment_representation(comment)
+    context 'without token' do
+      example_request 'List of comments authorization error' do
+        expect(response_status).to eq 401
       end
     end
   end
 
-  describe 'POST /user/comments.json' do
-    context 'without authentication token' do
-      before do
-        post '/user/comments.json'
-      end
+  post 'user/comments.json' do
+    let(:params) { { title: 'Title', text: 'Text' } }
+    let(:comment) { user.comments.first }
 
-      it 'responds unauthorized with an HTTP 401 status code' do
-        expect(response.code).to eq('401')
+    parameter :title, 'Title', required: true
+    parameter :text, 'Text', required: true
+
+    context 'with valid token' do
+      before { header 'X-AUTH-TOKEN', user.authentication_token }
+
+      example_request 'Create comment' do
+        expect(subject).to be_a_comment_representation(comment)
       end
     end
 
-    context 'with authentication token' do
-      before do
-        post '/user/comments.json', comment_params, auth_header
-      end
-
-      it 'returns comment' do
-        expect(json_response_body).to be_a_comment_representation(user.comments.last)
+    context 'without token' do
+      example_request 'Create comment authorization error' do
+        expect(response_status).to eq 401
       end
     end
   end

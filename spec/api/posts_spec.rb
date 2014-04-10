@@ -1,31 +1,22 @@
 require 'spec_helper'
+require 'rspec_api_documentation/dsl'
 
-describe '/posts' do
-  describe 'list posts' do
-    let!(:post) { create :post }
-    let!(:comment) { create :comment, post: post }
+resource 'Posts' do
+  let!(:posts) { create_list :post, 2 }
+  let(:post) { posts.first }
+  let!(:comments) { create_list :comment, 2, post: post }
+  let!(:id) { post.id }
+  subject { json_response_body }
 
-    before do
-      get '/posts.json'
-    end
-
-    it 'returns posts list' do
-      posts_json = json_response_body
-
-      expect(posts_json).to be_a_kind_of Array
-      expect(posts_json.first).to be_a_post_representation(post)
+  get '/posts.json' do
+    example_request 'Listing posts' do
+      expect(subject.first).to be_a_post_representation(post)
     end
   end
 
-  describe 'show post' do
-    let!(:post) { create :post }
-
-    before do
-      get "/posts/#{post.id}.json"
-    end
-
-    it 'returns post' do
-      expect(json_response_body).to be_a_post_representation(post)
+  get '/posts/:id.json' do
+    example_request 'Single post' do
+      expect(subject).to be_a_post_representation(post)
     end
   end
 end

@@ -1,28 +1,25 @@
 require 'spec_helper'
+require 'rspec_api_documentation/dsl'
 
-describe '/users/sign_in' do
-  describe 'sign in' do
+resource 'Sessions' do
+  post '/users/sign_in.json' do
+    let!(:user) { create :user }
+    subject { json_response_body }
+
+    parameter :email, 'Email', required: true
+    parameter :password, 'Password', required: true
+
     context 'with valid credentials' do
-      let(:user) { create :user, password: '123456' }
+      let(:params) { { email: user.email, password: '123456' } }
 
-      before do
-        post '/users/sign_in.json',
-          email: user.email,
-          password: '123456'
-      end
-
-      it 'returns user' do
-        expect(json_response_body).to be_a_user_representation(user)
+      example_request 'Sign in' do
+        expect(subject).to be_a_user_representation(user)
       end
     end
 
     context 'with invalid credentials' do
-      before do
-        post '/users/sign_in.json'
-      end
-
-      it 'responds unauthorized with an HTTP 401 status code' do
-        expect(response.code).to eq('401')
+      example_request 'Sign in\'s errors' do
+        expect(response_status).to eq 401
       end
     end
   end
