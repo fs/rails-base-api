@@ -6,7 +6,7 @@
 
 This simple application includes ruby/rails technology which we use at FlatStack for new REST API projects.
 
-Application currently based on Rails 4 stable branch and Ruby 2.1.0
+Application currently based on Rails 4 stable branch and Ruby 2.1
 
 ## API
 
