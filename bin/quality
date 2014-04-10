@@ -4,4 +4,4 @@ set -e
 
 bin/rubocop --config config/rubocop.yml
 bin/brakeman --exit-on-warn
-bin/rails_best_practices --silent --spec --features -x lib/templates, config
+bin/rails_best_practices --silent --spec
