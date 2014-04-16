@@ -11,7 +11,7 @@
 coverage/*
 rerun.txt
 config/database.yml
-public/doc/**/*
+doc/api/*
 vendor/bundle
 vendor/cache
 vendor/ruby
