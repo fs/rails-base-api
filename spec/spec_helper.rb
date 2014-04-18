@@ -45,9 +45,8 @@ RSpec.configure do |config|
     DatabaseCleaner.clean
   end
 
-  # Make sure we will send all requests with correct content type
-  #
-  config.before(type: :controller) do
-    request.env['CONTENT_TYPE'] = 'application/json'
+  # Setup requried headers for RSpecApiDocumentation Specs
+  config.before(type: :api) do
+    header 'Accept', 'application/json'
   end
 end
