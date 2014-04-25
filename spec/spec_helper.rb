@@ -44,9 +44,4 @@ RSpec.configure do |config|
   config.after(:each) do
     DatabaseCleaner.clean
   end
-
-  # Setup requried headers for RSpecApiDocumentation Specs
-  config.before(type: :api) do
-    header 'Accept', 'application/json'
-  end
 end
