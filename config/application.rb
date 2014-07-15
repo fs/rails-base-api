@@ -61,11 +61,8 @@ module RailsBaseApi
     # Default host for action mailer, initializers/mailer.rb
     config.host = 'localhost:5000'
 
-    config.middleware.use Rack::Cors do
-      allow do
-        origins '*'
-        resource '*', :headers => :any, :methods => [:get, :post, :put, :delete, :patch, :options]
-      end
-    end
+    # Allow cross-origin resource sharing with
+    #
+    config.allow_requests_from = ENV['ALLOW_REQUESTS_FROM']
   end
 end

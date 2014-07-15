@@ -5,7 +5,6 @@ ruby '2.1.0'
 gem 'rails', '4.0.3'
 
 gem 'rails-api'
-gem 'rack-cors', :require => 'rack/cors'
 
 gem 'pg'
 gem 'thin'
@@ -15,6 +14,7 @@ gem 'interactor-rails'
 gem 'seedbank', github: 'james2m/seedbank'
 gem 'dotenv-rails'
 gem 'devise'
+gem 'rack-cors', require: 'rack/cors'
 
 group :development do
   gem 'letter_opener'
