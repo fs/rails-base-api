@@ -6,22 +6,11 @@
 
 This simple application includes ruby/rails technology which we use at FlatStack for new REST API projects.
 
-Application currently based on Rails 4 stable branch and Ruby 2.1.0
+Application currently based on Rails 4 stable branch and Ruby 2.1
 
 ## API
 
 Status of the API could be checked at [http://localhost:5000/docs](http://localhost:5000/docs)
-
-### Unauthenticated user:
-
-* POST `/users/sign_in.json`: Authenticate user with given email and password
-* GET `/posts.json`: list posts
-* GET `/posts/:id.json`: get a single post
-
-### Authenticated as user:
-
-* GET `/user/comments.json`: list comments for currently authenticated user
-* POST `/user/comments.json`: create comment
 
 ## What's included
 
@@ -48,10 +37,6 @@ Status of the API could be checked at [http://localhost:5000/docs](http://localh
 * [Shoulda Matchers](http://github.com/thoughtbot/shoulda-matchers) for frequently needed Rails and RSpec matchers
 * [Email Spec](https://github.com/bmabey/email-spec) Collection of rspec matchers and cucumber steps for testing emails
 * [Rspec Api Documentation](https://github.com/zipmark/rspec_api_documentation) Generate pretty API docs for your Rails APIs
-
-# This is the 2nd commit message:
-
-change config
 
 ### Initializes
 
@@ -98,4 +83,7 @@ Run app
     # update README.md
     git commit -am "Update README.md"
 
-P.S. Possibly you'll need to remove existing endpoints (e.g. `/posts`) :stuck_out_tongue_closed_eyes:
+## Examples
+
+Please check how to build API endpoints and test them properly in the
+[examples branch](https://github.com/fs/rails-base-api/tree/examples)
