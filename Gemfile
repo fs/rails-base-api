@@ -20,14 +20,14 @@ group :development do
   gem 'foreman'
   gem 'bullet'
 
-  gem 'guard-rspec'
+  gem 'guard-rspec'#, require: false
   gem 'rb-fsevent', require: false
   gem 'zeus'
 end
 
 group :development, :test do
   gem 'byebug'
-  gem 'rspec-rails'
+  gem 'rspec-rails', '~> 3.0.0'
   gem 'mail_safe'
 
   gem 'rails_best_practices'
