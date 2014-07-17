@@ -5,3 +5,6 @@ set -e
 bin/rubocop
 bin/brakeman --exit-on-warn
 bin/rails_best_practices --silent --spec
+
+bin/bundle-audit update
+bin/bundle-audit
