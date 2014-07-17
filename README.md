@@ -28,6 +28,7 @@ Status of the API could be checked at [http://localhost:5000/docs](http://localh
 * [Bullet](https://github.com/flyerhzm/bullet) gem to kill N+1 queries and unused eager loading
 * [Rails Best Practices](https://github.com/railsbp/rails_best_practices) code metric tool
 * [Brakeman](https://github.com/presidentbeef/brakeman) static analysis security vulnerability scanner
+* [Bundler Audit](https://github.com/rubysec/bundler-audit) Patch-level verification for Gems
 
 ### Testing gems
 
@@ -47,7 +48,7 @@ Status of the API could be checked at [http://localhost:5000/docs](http://localh
 ### Scripts
 
 * `bin/bootstrap` - setup required gems and migrate db if needed
-* `bin/quality` - runs brakeman and rails_best_practices for the app
+* `bin/quality` - runs rubocop, brakeman, rails_best_practices and bundle-audit for the app
 * `bin/ci` - should be used in the CI or locally
 * `bin/server` - to run server locally
 
