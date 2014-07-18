@@ -75,26 +75,4 @@ RSpec.configure do |config|
     mocks.verify_partial_doubles = true
   end
 =end
-  #config.use_transactional_fixtures = true
-
-  #config.infer_base_class_for_anonymous_controllers = false
-  #config.infer_spec_type_from_file_location!
-  config.order = 'random'
-
-  config.before :suite do
-    DatabaseCleaner.strategy = :transaction
-    DatabaseCleaner.clean_with :truncation
-  end
-
-  config.before do
-    ActionMailer::Base.deliveries.clear
-  end
-
-  config.before(:each) do
-    DatabaseCleaner.start
-  end
-
-  config.after(:each) do
-    DatabaseCleaner.clean
-  end
 end
