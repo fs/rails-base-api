@@ -236,7 +236,7 @@ GEM
       json (~> 1.4, >= 1.4.6)
       mustache (~> 0.99, >= 0.99.4)
       rspec (~> 3.0.0, >= 3.0.0)
-    rubocop (0.20.1)
+    rubocop (0.24.1)
       json (>= 1.7.7, < 2)
       parser (~> 2.1.7)
       powerpack (~> 0.0.6)
