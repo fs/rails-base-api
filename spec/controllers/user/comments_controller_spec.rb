@@ -29,8 +29,10 @@ describe User::CommentsController do
     before do
       post :create,
         format: :json,
-        title: 'Title',
-        text: 'Text'
+        comment: {
+          title: 'Title',
+          text: 'Text'
+        }
     end
 
     it 'responds successfully with an HTTP 201 status code' do

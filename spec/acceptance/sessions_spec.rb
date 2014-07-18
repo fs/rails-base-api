@@ -2,25 +2,22 @@ require 'spec_helper'
 require 'rspec_api_documentation/dsl'
 
 resource 'Sessions' do
-  post '/users/sign_in.json' do
-    let!(:user) { create :user }
-    subject { json_response_body }
+  let(:json_response) { json_response_body }
+
+  post '/users/sign_in' do
+    let(:user) { create :user, password: '123456' }
 
     parameter :email, 'Email', required: true
     parameter :password, 'Password', required: true
 
-    context 'with valid credentials' do
-      let(:params) { { email: user.email, password: '123456' } }
+    let(:email) { user.email }
 
-      example_request 'Sign in' do
-        expect(subject).to be_a_user_representation(user)
-      end
+    example_request 'Sign in with valid password', password: '123456' do
+      expect(json_response).to be_a_user_representation(user)
     end
 
-    context 'with invalid credentials' do
-      example_request 'Sign in\'s errors' do
-        expect(response_status).to eq 401
-      end
+    example_request 'Sign in with invalid password', password: '' do
+      expect(response_status).to eq 401
     end
   end
 end
