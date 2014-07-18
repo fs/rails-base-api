@@ -231,12 +231,11 @@ GEM
       rspec-mocks (~> 3.0.0)
       rspec-support (~> 3.0.0)
     rspec-support (3.0.2)
-    rspec_api_documentation (3.0.0)
+    rspec_api_documentation (4.0.0)
       activesupport (>= 3.0.0)
-      i18n (>= 0.1.0)
-      json (>= 1.4.6)
-      mustache (>= 0.99.4)
-      rspec (>= 2.14.0)
+      json (~> 1.4, >= 1.4.6)
+      mustache (~> 0.99, >= 0.99.4)
+      rspec (~> 3.0.0, >= 3.0.0)
     rubocop (0.20.1)
       json (>= 1.7.7, < 2)
       parser (~> 2.1.7)
@@ -333,7 +332,7 @@ DEPENDENCIES
   rb-fsevent
   rollbar
   rspec-rails (~> 3.0.0)
-  rspec_api_documentation
+  rspec_api_documentation (~> 4.0.0)
   rubocop
   sass-rails
   seedbank!

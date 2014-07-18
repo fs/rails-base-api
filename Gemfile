@@ -48,7 +48,7 @@ end
 group :development, :test, :staging do
   gem 'faker'
   gem 'factory_girl_rails'
-  gem 'rspec_api_documentation'
+  gem 'rspec_api_documentation', '~> 4.0.0'
   gem 'apitome'
 end
 
