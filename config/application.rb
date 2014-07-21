@@ -58,6 +58,9 @@ module RailsBaseApi
     # Parameter keys that are not explicitly permitted will be raised as exception
     config.action_controller.action_on_unpermitted_parameters = :raise
 
+    # Default e-mail address which will be shown in the "from" devise emails, initializers/devise.rb.
+    config.noreply = 'noreply@fs-rails-base-api.heroku.com'
+
     # Default host for action mailer, initializers/mailer.rb
     config.host = 'localhost:5000'
   end

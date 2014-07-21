@@ -3,8 +3,5 @@ ActiveSupport.on_load(:action_controller) do
   ActionController::API.send(:include, ActionController::ParamsWrapper)
 
   # Enable parameter wrapping for JSON
-  wrap_parameters(
-    format: [:json, :url_encoded_form],
-    exclude: [Devise.token_authentication_key]
-  )
+  wrap_parameters(format: [:json, :url_encoded_form])
 end
