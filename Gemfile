@@ -12,7 +12,7 @@ gem 'thin'
 gem 'decent_exposure'
 gem 'active_model_serializers'
 gem 'interactor-rails'
-gem 'seedbank', github: 'james2m/seedbank'
+gem 'seedbank'
 gem 'dotenv-rails'
 gem 'devise'
 
@@ -39,6 +39,7 @@ group :development, :test do
   gem 'rails_best_practices'
   gem 'brakeman'
   gem 'rubocop'
+  gem 'bundler-audit'
 end
 
 group :test do
