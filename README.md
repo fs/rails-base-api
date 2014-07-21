@@ -2,7 +2,6 @@
 
 [![Code Climate](https://codeclimate.com/github/fs/rails-base-api.png)](https://codeclimate.com/github/fs/rails-base-api)
 [![Semaphore](https://semaphoreapp.com/api/v1/projects/0e00006725dcea00b179fab81a1b1bdaf9a64816/106819/shields_badge.png)](https://semaphoreapp.com/fs/rails-base-api)
-[![Dependency Status](https://gemnasium.com/fs/rails-base-api.png)](https://gemnasium.com/fs/rails-base-api)
 
 This simple application includes ruby/rails technology which we use at FlatStack for new REST API projects.
 
@@ -29,6 +28,7 @@ Status of the API could be checked at [http://localhost:5000/docs](http://localh
 * [Bullet](https://github.com/flyerhzm/bullet) gem to kill N+1 queries and unused eager loading
 * [Rails Best Practices](https://github.com/railsbp/rails_best_practices) code metric tool
 * [Brakeman](https://github.com/presidentbeef/brakeman) static analysis security vulnerability scanner
+* [Bundler Audit](https://github.com/rubysec/bundler-audit) Patch-level verification for Gems
 
 ### Testing gems
 
@@ -42,14 +42,13 @@ Status of the API could be checked at [http://localhost:5000/docs](http://localh
 
 * `01_config.rb` - shortcut for getting application config with `app_config`
 * `mailer.rb` - setup default hosts for mailer from configuration
-* `time_formats.rb` - setup default time formats, so you can use them like object.create_at.to_s(:us_time)
 * `requires.rb` - automatically requires everything in lib/ & lib/extensions
 * `rack_cors.rb` - setup whitelist of domains to allow cross-origin resource sharing
 
 ### Scripts
 
 * `bin/bootstrap` - setup required gems and migrate db if needed
-* `bin/quality` - runs brakeman and rails_best_practices for the app
+* `bin/quality` - runs rubocop, brakeman, rails_best_practices and bundle-audit for the app
 * `bin/ci` - should be used in the CI or locally
 * `bin/server` - to run server locally
 
