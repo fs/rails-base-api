@@ -2,9 +2,10 @@ source 'https://rubygems.org'
 
 ruby '2.1.1'
 
-gem 'rails', '4.0.3'
+gem 'rails', '4.1.4'
 
-gem 'rails-api'
+# https://github.com/rails-api/rails-api/issues/135
+gem 'rails-api', git: 'https://github.com/fs/rails-api.git'
 
 gem 'pg'
 gem 'thin'
@@ -26,6 +27,11 @@ group :development do
 end
 
 group :development, :test do
+  # FIXME: Required for fixing warning
+  # https://github.com/rspec/rspec-rails/pull/772
+  # Going to be fixed in rspec > 2.99
+  #
+  gem 'minitest'
   gem 'byebug'
   gem 'rspec-rails'
   gem 'mail_safe'
