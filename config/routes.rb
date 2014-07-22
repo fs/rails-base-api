@@ -10,7 +10,7 @@ RailsBaseApi::Application.routes.draw do
 
   # Resources require authenticated user
   #
-  namespace :user do
+  namespace :user_scope do
     resources :comments, only: [:index, :create]
   end
 
