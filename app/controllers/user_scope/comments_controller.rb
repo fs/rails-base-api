@@ -1,5 +1,5 @@
-class User
-  class CommentsController < User::BaseController
+module UserScope
+  class CommentsController < UserScope::BaseController
     expose(:comments, ancestor: :current_user) { |scope| scope.with_posts_and_users }
     expose(:comment, attributes: :comment_params)
 

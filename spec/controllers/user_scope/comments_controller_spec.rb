@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe User::CommentsController do
+describe UserScope::CommentsController do
   before do
     sign_in(create :user)
   end
