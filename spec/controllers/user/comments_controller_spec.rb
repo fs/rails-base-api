@@ -11,8 +11,7 @@ describe User::CommentsController do
     before do
       controller.current_user.stub(:comments) { double(all: double(with_posts_and_users: comments)) }
 
-      get :index,
-        format: :json
+      get :index, format: :json
     end
 
     it 'responds successfully with an HTTP 200 status code' do
@@ -27,12 +26,7 @@ describe User::CommentsController do
 
   describe '#create' do
     before do
-      post :create,
-        format: :json,
-        comment: {
-          title: 'Title',
-          text: 'Text'
-        }
+      post :create, format: :json, comment: { title: 'Title', text: 'Text' }
     end
 
     it 'responds successfully with an HTTP 201 status code' do

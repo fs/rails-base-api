@@ -12,7 +12,7 @@ resource 'Comments' do
       before { header 'X-AUTH-TOKEN', user.authentication_token }
 
       example_request 'List of comments' do
-        expect(subject.first).to be_a_comment_representation(comment)
+        expect(subject['comments'].first).to be_a_comment_representation(comment)
       end
     end
 
@@ -34,7 +34,7 @@ resource 'Comments' do
       before { header 'X-AUTH-TOKEN', user.authentication_token }
 
       example_request 'Create comment' do
-        expect(subject).to be_a_comment_representation(comment)
+        expect(subject['comment']).to be_a_comment_representation(comment)
       end
     end
 
