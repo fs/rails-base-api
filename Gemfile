@@ -53,12 +53,6 @@ group :development, :test, :staging do
   gem 'apitome'
 end
 
-group :staging do
-  gem 'sass-rails'
-  gem 'uglifier'
-  gem 'coffee-rails'
-end
-
 group :staging, :production do
   gem 'rollbar'
   gem 'rails_12factor'
