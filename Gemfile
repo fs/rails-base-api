@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby '2.1.1'
 
-gem 'rails', '4.0.5'
+gem 'rails', '4.0.8'
 
 gem 'rails-api'
 
@@ -51,12 +51,6 @@ group :development, :test, :staging do
   gem 'factory_girl_rails'
   gem 'rspec_api_documentation'
   gem 'apitome'
-end
-
-group :staging do
-  gem 'sass-rails'
-  gem 'uglifier'
-  gem 'coffee-rails'
 end
 
 group :staging, :production do
