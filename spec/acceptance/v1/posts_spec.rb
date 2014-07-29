@@ -6,15 +6,16 @@ resource 'Posts' do
   let(:post) { posts.first }
   let!(:comments) { create_list :comment, 2, post: post }
   let!(:id) { post.id }
+
   subject { json_response_body }
 
-  get '/posts.json' do
+  get '/v1/posts.json' do
     example_request 'Listing posts' do
       expect(subject.first).to be_a_post_representation(post)
     end
   end
 
-  get '/posts/:id.json' do
+  get '/v1/posts/:id.json' do
     example_request 'Single post' do
       expect(subject).to be_a_post_representation(post)
     end
