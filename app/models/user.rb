@@ -4,6 +4,8 @@ class User < ActiveRecord::Base
 
   before_save :ensure_authentication_token!
 
+  has_many :comments
+
   def ensure_authentication_token!
     self.authentication_token = generate_authentication_token if authentication_token.blank?
   end
