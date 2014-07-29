@@ -18,7 +18,7 @@ Information about ruby and rails versions.
   - `brew install postgres`
 - Ruby 2.1.0
   - `rbenv install 2.1.0`
-- Rails 4.0
+- Rails 4
 
 Quick Start
 -
