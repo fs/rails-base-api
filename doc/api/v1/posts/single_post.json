@@ -1,0 +1,28 @@
+{
+  "resource": "Posts",
+  "http_method": "GET",
+  "route": "/v1/posts/:id.json",
+  "description": "Single post",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/v1/posts/3.json",
+      "request_body": null,
+      "request_headers": {
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": null,
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\"id\":3,\"title\":\"Odio non autem enim.\",\"text\":\"Rerum eum et. Eaque voluptate dolorem est reprehenderit omnis dolor explicabo. Ipsa voluptatum corrupti.\"}",
+      "response_headers": {"X-Frame-Options":"SAMEORIGIN","X-XSS-Protection":"1; mode=block","X-Content-Type-Options":"nosniff","X-UA-Compatible":"chrome=1","Content-Type":"application/json; charset=utf-8","ETag":"\"99c37363101c21964ef4d360e11d7434\"","Cache-Control":"max-age=0, private, must-revalidate","X-Request-Id":"192460db-53dc-4c02-9e99-722a36031ed0","X-Runtime":"0.010216","Content-Length":"153"},
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"http://localhost:5000/v1/posts/3.json\" -X GET "
+}
+  ]
+}

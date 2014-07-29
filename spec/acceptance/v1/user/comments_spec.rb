@@ -5,7 +5,7 @@ resource 'Comments' do
   let!(:user) { create :user }
   subject { json_response_body }
 
-  get '/v1//user/comments.json' do
+  get '/v1/user/comments.json' do
     let!(:comment) { create :comment, user: user }
 
     context 'with valid token' do

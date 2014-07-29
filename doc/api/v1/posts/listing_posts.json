@@ -1,0 +1,28 @@
+{
+  "resource": "Posts",
+  "http_method": "GET",
+  "route": "/v1/posts.json",
+  "description": "Listing posts",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/v1/posts.json",
+      "request_body": null,
+      "request_headers": {
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": null,
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "[{\"id\":1,\"title\":\"Eum rerum quibusdam architecto aut corporis natus quo.\",\"text\":\"Repudiandae iste ea neque. Ad blanditiis nesciunt minima. Ducimus aliquam excepturi.\",\"comments\":[{\"id\":4,\"title\":\"Accusantium rem corporis quod.\",\"text\":\"Recusandae veritatis officia similique distinctio repellat et molestiae. Eveniet quam expedita in repellendus. Debitis odio et quo reiciendis aliquam. Et fugiat eveniet reprehenderit accusamus. Aspernatur placeat reiciendis officiis amet vero ut deleniti.\",\"user\":null},{\"id\":5,\"title\":\"Tempore itaque iste eum unde modi repudiandae.\",\"text\":\"Delectus assumenda nam fuga modi nihil. Alias minus officiis omnis provident magni. Voluptatum eos dolor architecto. Consequatur qui sed labore ab explicabo molestiae dolorem. Error architecto sit.\",\"user\":null}]},{\"id\":2,\"title\":\"Dolor voluptatum ea est.\",\"text\":\"Quidem consequatur aperiam iure debitis et eveniet dolor. Debitis ut perferendis accusamus ipsam. Ut voluptatem ea aut animi dolores qui voluptatibus. Dolore et exercitationem. Quasi qui voluptatem ut perferendis.\",\"comments\":[]}]",
+      "response_headers": {"X-Frame-Options":"SAMEORIGIN","X-XSS-Protection":"1; mode=block","X-Content-Type-Options":"nosniff","X-UA-Compatible":"chrome=1","Content-Type":"application/json; charset=utf-8","ETag":"\"e8c701d3952d8c9d930aa3b5d9f3b835\"","Cache-Control":"max-age=0, private, must-revalidate","X-Request-Id":"7e284e48-3c2d-4269-8dab-8a6bbcd7345f","X-Runtime":"0.017835","Content-Length":"1075"},
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"http://localhost:5000/v1/posts.json\" -X GET "
+}
+  ]
+}
