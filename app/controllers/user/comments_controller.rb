@@ -1,6 +1,8 @@
 class User
   class CommentsController < User::BaseController
-    expose(:comments, ancestor: :current_user) { |scope| scope.with_posts_and_users }
+    expose(:comments, ancestor: :current_user) do |scope|
+      scope.page(params[:page]).per(params[:per_page]).with_posts_and_users
+    end
     expose(:comment, attributes: :comment_params)
 
     def index
