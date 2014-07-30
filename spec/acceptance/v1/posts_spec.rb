@@ -11,13 +11,13 @@ resource 'Posts' do
 
   get '/v1/posts.json' do
     example_request 'Listing posts' do
-      expect(subject.first).to be_a_post_representation(post)
+      expect(subject['posts'].first).to be_a_post_representation(post)
     end
   end
 
   get '/v1/posts/:id.json' do
     example_request 'Single post' do
-      expect(subject).to be_a_post_representation(post)
+      expect(subject['post']).to be_a_post_representation(post)
     end
   end
 end

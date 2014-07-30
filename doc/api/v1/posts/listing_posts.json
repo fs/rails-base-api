@@ -19,10 +19,20 @@
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "[{\"id\":1,\"title\":\"Eum rerum quibusdam architecto aut corporis natus quo.\",\"text\":\"Repudiandae iste ea neque. Ad blanditiis nesciunt minima. Ducimus aliquam excepturi.\",\"comments\":[{\"id\":4,\"title\":\"Accusantium rem corporis quod.\",\"text\":\"Recusandae veritatis officia similique distinctio repellat et molestiae. Eveniet quam expedita in repellendus. Debitis odio et quo reiciendis aliquam. Et fugiat eveniet reprehenderit accusamus. Aspernatur placeat reiciendis officiis amet vero ut deleniti.\",\"user\":null},{\"id\":5,\"title\":\"Tempore itaque iste eum unde modi repudiandae.\",\"text\":\"Delectus assumenda nam fuga modi nihil. Alias minus officiis omnis provident magni. Voluptatum eos dolor architecto. Consequatur qui sed labore ab explicabo molestiae dolorem. Error architecto sit.\",\"user\":null}]},{\"id\":2,\"title\":\"Dolor voluptatum ea est.\",\"text\":\"Quidem consequatur aperiam iure debitis et eveniet dolor. Debitis ut perferendis accusamus ipsam. Ut voluptatem ea aut animi dolores qui voluptatibus. Dolore et exercitationem. Quasi qui voluptatem ut perferendis.\",\"comments\":[]}]",
-      "response_headers": {"X-Frame-Options":"SAMEORIGIN","X-XSS-Protection":"1; mode=block","X-Content-Type-Options":"nosniff","X-UA-Compatible":"chrome=1","Content-Type":"application/json; charset=utf-8","ETag":"\"e8c701d3952d8c9d930aa3b5d9f3b835\"","Cache-Control":"max-age=0, private, must-revalidate","X-Request-Id":"7e284e48-3c2d-4269-8dab-8a6bbcd7345f","X-Runtime":"0.017835","Content-Length":"1075"},
+      "response_body": "{\"posts\":[{\"id\":1,\"title\":\"Dignissimos dicta quod laborum.\",\"text\":\"Corrupti nobis amet at repellendus non est enim. Nesciunt error quos. Quia voluptas pariatur dicta ut quisquam.\",\"comments\":[{\"id\":1,\"title\":\"Veritatis sapiente et laboriosam nesciunt omnis nisi ea.\",\"text\":\"Consequuntur quaerat mollitia fuga dignissimos. Aut quasi odit voluptatem excepturi qui dolorem voluptatem. In voluptatem provident rerum. Voluptatem sunt ut consequatur officiis. Ut nemo mollitia tenetur nisi consequuntur.\",\"user\":null},{\"id\":2,\"title\":\"Placeat omnis laudantium quam commodi repellendus tenetur quidem accusantium.\",\"text\":\"Ut tempore officia sit in necessitatibus. Molestiae vitae est culpa. Fugiat et atque tempora ut fugit.\",\"user\":null}]},{\"id\":2,\"title\":\"Sed id nulla rerum atque repellat sit et.\",\"text\":\"Sint repellendus voluptatem officia. Vero asperiores architecto recusandae ducimus qui aut. Repellat aliquid cum.\",\"comments\":[]}]}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "\"88bb58c99a72f5ec80c31158fa47d219\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "e191e9d4-ce36-45dc-a67d-f1ddf6e615fd",
+        "X-Runtime": "0.039381",
+        "Content-Length": "936"
+      },
       "response_content_type": "application/json; charset=utf-8",
       "curl": "curl \"http://localhost:5000/v1/posts.json\" -X GET "
-}
+    }
   ]
 }

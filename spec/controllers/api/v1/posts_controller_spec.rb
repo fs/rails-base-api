@@ -11,8 +11,7 @@ describe Api::V1::PostsController do
 
   describe 'GET #index' do
     before do
-      get :index,
-        format: :json
+      get :index, format: :json
     end
 
     it 'responds successfully with an HTTP 200 status code' do
@@ -27,9 +26,7 @@ describe Api::V1::PostsController do
 
   describe 'GET #show' do
     before do
-      get :show,
-        id: 1,
-        format: :json
+      get :show, id: 1, format: :json
     end
 
     it 'responds successfully with an HTTP 200 status code' do

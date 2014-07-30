@@ -28,10 +28,20 @@
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 201,
       "response_status_text": "Created",
-      "response_body": "{\"id\":3,\"title\":\"Title\",\"text\":\"Text\"}",
-      "response_headers": {"X-Frame-Options":"SAMEORIGIN","X-XSS-Protection":"1; mode=block","X-Content-Type-Options":"nosniff","X-UA-Compatible":"chrome=1","Content-Type":"application/json; charset=utf-8","ETag":"\"58a4432ae553c215fe3f42e953d1af60\"","Cache-Control":"max-age=0, private, must-revalidate","X-Request-Id":"fe9359a5-830a-46fa-b961-980af01b626b","X-Runtime":"0.014695","Content-Length":"38"},
+      "response_body": "{\"comment\":{\"id\":7,\"title\":\"Title\",\"text\":\"Text\"}}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "\"62f9fb80a3218cb80c6cafabc981781b\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "76f59da0-9e3e-4f6e-b779-b00651236fa8",
+        "X-Runtime": "0.012526",
+        "Content-Length": "50"
+      },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/user/comments.json\" -d 'title=Title&text=Text' -X POST \\\n\t-H \"X-Auth-Token: 2mE4UrzdwmT6NkGdYr3r\""
-}
+      "curl": "curl \"http://localhost:5000/v1/user/comments.json\" -d 'title=Title&text=Text' -X POST \\\n\t-H \"X-Auth-Token: gqgFB4hGPEFL9fwF7Usr\""
+    }
   ]
 }

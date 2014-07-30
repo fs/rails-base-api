@@ -19,10 +19,20 @@
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"id\":3,\"title\":\"Odio non autem enim.\",\"text\":\"Rerum eum et. Eaque voluptate dolorem est reprehenderit omnis dolor explicabo. Ipsa voluptatum corrupti.\"}",
-      "response_headers": {"X-Frame-Options":"SAMEORIGIN","X-XSS-Protection":"1; mode=block","X-Content-Type-Options":"nosniff","X-UA-Compatible":"chrome=1","Content-Type":"application/json; charset=utf-8","ETag":"\"99c37363101c21964ef4d360e11d7434\"","Cache-Control":"max-age=0, private, must-revalidate","X-Request-Id":"192460db-53dc-4c02-9e99-722a36031ed0","X-Runtime":"0.010216","Content-Length":"153"},
+      "response_body": "{\"post\":{\"id\":3,\"title\":\"Magnam et nobis sed tenetur dolorum et et magni.\",\"text\":\"Quis ipsa vitae. Accusamus est distinctio praesentium suscipit. Repudiandae earum et distinctio. Sequi corporis voluptas dolorum voluptatibus aut.\"}}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "\"5fd2cf83f425db3e2e5d3ff52b2bf5ca\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "937d9cf9-7ee1-4ef9-99a6-d1b915e6ec2a",
+        "X-Runtime": "0.009917",
+        "Content-Length": "232"
+      },
       "response_content_type": "application/json; charset=utf-8",
       "curl": "curl \"http://localhost:5000/v1/posts/3.json\" -X GET "
-}
+    }
   ]
 }

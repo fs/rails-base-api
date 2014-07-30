@@ -1,6 +1,4 @@
-RailsBaseApi::Application.routes.draw do
-  # Devise
-  #
+Rails.application.routes.draw do
   scope defaults: { format: :json } do
     devise_for :users, only: []
   end
