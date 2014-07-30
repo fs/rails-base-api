@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 describe UserSerializer do
   let(:user) { build :user, id: 1, authentication_token: 'token' }
