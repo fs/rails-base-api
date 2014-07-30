@@ -20,9 +20,18 @@
       "response_status": 401,
       "response_status_text": "Unauthorized",
       "response_body": "{\"error\":\"You need to sign in or sign up before continuing.\"}",
-      "response_headers": {"X-Frame-Options":"SAMEORIGIN","X-XSS-Protection":"1; mode=block","X-Content-Type-Options":"nosniff","X-UA-Compatible":"chrome=1","Content-Type":"application/json; charset=utf-8","Cache-Control":"no-cache","X-Request-Id":"2033bb1a-1463-4612-b842-34ccef2b9123","X-Runtime":"0.002846","Content-Length":"61"},
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "Cache-Control": "no-cache",
+        "X-Request-Id": "4d247efd-efc5-488d-9756-4803c2ad2ed1",
+        "X-Runtime": "0.003273",
+        "Content-Length": "61"
+      },
       "response_content_type": "application/json; charset=utf-8",
       "curl": "curl \"http://localhost:5000/user/comments.json\" -X GET "
-}
+    }
   ]
 }

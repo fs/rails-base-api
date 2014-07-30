@@ -1,0 +1,38 @@
+{
+  "resource": "Posts",
+  "http_method": "GET",
+  "route": "/posts.json",
+  "description": "Listing posts with default meta",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/posts.json",
+      "request_body": null,
+      "request_headers": {
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": null,
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\"posts\":[{\"id\":1,\"title\":\"Nemo qui aut nobis dolores distinctio omnis.\",\"text\":\"Dolore a sit facere. Eum blanditiis amet dolores. Vel ullam doloribus omnis. Voluptatem ullam vel ipsum. Ut eligendi molestias quas.\",\"comments\":[{\"id\":5,\"title\":\"Quos unde veniam ea officiis asperiores excepturi placeat.\",\"text\":\"Est laudantium omnis pariatur. Esse hic consequatur tempora quia. Rem numquam blanditiis dolorum exercitationem repudiandae. Accusantium doloremque id illo sed quas. Autem blanditiis ratione.\",\"user\":null},{\"id\":6,\"title\":\"Delectus aut exercitationem iste.\",\"text\":\"Ea porro accusamus saepe consequatur pariatur delectus voluptas. Molestias ut ex sit ullam molestiae asperiores sed. Reiciendis quam ut asperiores qui magni. Expedita aut quasi saepe cumque quas.\",\"user\":null}]},{\"id\":2,\"title\":\"Qui ea facilis necessitatibus vitae quam quisquam voluptatem.\",\"text\":\"Eum quo sit. Expedita minus doloremque eligendi tempore. Doloribus at ut recusandae. Dolores impedit quisquam. Veniam est autem placeat non.\",\"comments\":[]}],\"meta\":{\"total\":2,\"per_page\":25,\"page\":1}}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "\"c98f3b7ba4121e87b03f8cac85fcc9af\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "07b7ef21-e335-4ded-a289-98ccd283b000",
+        "X-Runtime": "0.051312",
+        "Content-Length": "1078"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"http://localhost:5000/posts.json\" -X GET "
+    }
+  ]
+}

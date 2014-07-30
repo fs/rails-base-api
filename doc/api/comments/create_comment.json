@@ -28,10 +28,20 @@
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 201,
       "response_status_text": "Created",
-      "response_body": "{\"comment\":{\"id\":1,\"title\":\"Title\",\"text\":\"Text\"}}",
-      "response_headers": {"X-Frame-Options":"SAMEORIGIN","X-XSS-Protection":"1; mode=block","X-Content-Type-Options":"nosniff","X-UA-Compatible":"chrome=1","Content-Type":"application/json; charset=utf-8","ETag":"\"9a31eb59533c85ff5ea99c7306db30b0\"","Cache-Control":"max-age=0, private, must-revalidate","X-Request-Id":"5fae8073-0693-4ae5-b616-d382a5635668","X-Runtime":"0.188469","Content-Length":"50"},
+      "response_body": "{\"comment\":{\"id\":4,\"title\":\"Title\",\"text\":\"Text\"}}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "\"bf3c3fe8495a1e5cf91091a106a51b4b\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "e12ebe39-55f1-428c-a920-cc5a78b021fe",
+        "X-Runtime": "0.042199",
+        "Content-Length": "50"
+      },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000user/comments.json\" -d 'title=Title&text=Text' -X POST \\\n\t-H \"X-Auth-Token: chgSZQc4xzpfTR-JmB8j\""
-}
+      "curl": "curl \"http://localhost:5000user/comments.json\" -d 'title=Title&text=Text' -X POST \\\n\t-H \"X-Auth-Token: 2Uzje4gjnG6cEF3NVmz5\""
+    }
   ]
 }
