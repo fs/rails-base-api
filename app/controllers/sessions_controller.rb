@@ -5,6 +5,6 @@ class SessionsController < Devise::SessionsController
 
   def create
     user = AuthenticateUser.perform(warden: warden).user
-    respond_with(user)
+    respond_with(user, location: nil)
   end
 end
