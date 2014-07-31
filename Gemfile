@@ -15,6 +15,7 @@ gem 'interactor-rails'
 gem 'seedbank'
 gem 'dotenv-rails'
 gem 'devise'
+gem 'kaminari'
 
 group :development do
   gem 'letter_opener'
