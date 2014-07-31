@@ -10,7 +10,7 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/posts/1.json",
+      "request_path": "/posts/5.json",
       "request_body": null,
       "request_headers": {
       },
@@ -19,10 +19,20 @@
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"post\":{\"id\":1,\"title\":\"Ipsa iste molestias soluta.\",\"text\":\"Voluptas dolores impedit quia mollitia nulla reiciendis. Occaecati similique non omnis saepe at dolorem. Delectus neque quo cupiditate iure iste.\"}}",
-      "response_headers": {"X-Frame-Options":"SAMEORIGIN","X-XSS-Protection":"1; mode=block","X-Content-Type-Options":"nosniff","X-UA-Compatible":"chrome=1","Content-Type":"application/json; charset=utf-8","ETag":"\"264338a1e8d2b8de27313234c3881565\"","Cache-Control":"max-age=0, private, must-revalidate","X-Request-Id":"e8782aac-b1bf-4623-8a43-c40d905d7186","X-Runtime":"0.032787","Content-Length":"210"},
+      "response_body": "{\"post\":{\"id\":5,\"title\":\"Recusandae aut velit ad esse.\",\"text\":\"Quia sed ut magni dolorum unde maxime. Qui fuga nam sunt veritatis suscipit. Repudiandae repellendus alias sequi. Eveniet qui quia velit nam.\"}}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "\"be1399e60bfb584d0547f3e74a4b0110\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "d6a65793-1783-450e-821e-d1ada171be62",
+        "X-Runtime": "0.011207",
+        "Content-Length": "208"
+      },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/posts/1.json\" -X GET "
-}
+      "curl": "curl \"http://localhost:5000/posts/5.json\" -X GET "
+    }
   ]
 }

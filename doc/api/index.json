@@ -4,13 +4,13 @@
       "name": "Comments",
       "examples": [
         {
-          "description": "Create comment authorization error",
-          "link": "comments/create_comment_authorization_error.json",
+          "description": "List of comments with default meta",
+          "link": "comments/list_of_comments_with_default_meta.json",
           "groups": "all"
         },
         {
-          "description": "Create comment",
-          "link": "comments/create_comment.json",
+          "description": "List of comments with meta",
+          "link": "comments/list_of_comments_with_meta.json",
           "groups": "all"
         },
         {
@@ -19,8 +19,13 @@
           "groups": "all"
         },
         {
-          "description": "List of comments",
-          "link": "comments/list_of_comments.json",
+          "description": "Create comment",
+          "link": "comments/create_comment.json",
+          "groups": "all"
+        },
+        {
+          "description": "Create comment authorization error",
+          "link": "comments/create_comment_authorization_error.json",
           "groups": "all"
         }
       ]
@@ -29,13 +34,13 @@
       "name": "Sessions",
       "examples": [
         {
-          "description": "Sign in with invalid password",
-          "link": "sessions/sign_in_with_invalid_password.json",
+          "description": "Sign in with valid password",
+          "link": "sessions/sign_in_with_valid_password.json",
           "groups": "all"
         },
         {
-          "description": "Sign in with valid password",
-          "link": "sessions/sign_in_with_valid_password.json",
+          "description": "Sign in with invalid password",
+          "link": "sessions/sign_in_with_invalid_password.json",
           "groups": "all"
         }
       ]
@@ -44,13 +49,18 @@
       "name": "Posts",
       "examples": [
         {
-          "description": "Single post",
-          "link": "posts/single_post.json",
+          "description": "Listing posts with default meta",
+          "link": "posts/listing_posts_with_default_meta.json",
           "groups": "all"
         },
         {
-          "description": "Listing posts",
-          "link": "posts/listing_posts.json",
+          "description": "List of posts with meta",
+          "link": "posts/list_of_posts_with_meta.json",
+          "groups": "all"
+        },
+        {
+          "description": "Single post",
+          "link": "posts/single_post.json",
           "groups": "all"
         }
       ]

@@ -9,10 +9,39 @@ resource 'Comments' do
     let!(:comment) { create :comment, user: user }
 
     context 'with valid token' do
+      let(:default_meta) do
+        {
+          page: 1,
+          per_page:  25,
+          total: 1
+        }
+      end
+
       before { header 'X-AUTH-TOKEN', user.authentication_token }
 
-      example_request 'List of comments' do
+      example_request 'List of comments with default meta' do
         expect(subject['comments'].first).to be_a_comment_representation(comment)
+        expect(subject['meta']).to be_a_meta_data(default_meta)
+      end
+
+      context 'with pagination params' do
+        parameter :page, 'Pagination page parameter'
+        parameter :per_page, 'Pagination per_page parameter'
+
+        let(:page) { 1 }
+        let(:per_page) { 1 }
+
+        let(:meta) do
+          {
+            page: 1,
+            per_page:  1,
+            total: 1
+          }
+        end
+
+        example_request 'List of comments with meta' do
+          expect(subject['meta']).to be_a_meta_data(meta)
+        end
       end
     end
 

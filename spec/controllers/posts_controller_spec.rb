@@ -6,7 +6,8 @@ describe PostsController do
 
   before do
     posts.stub(:find) { post }
-    Post.stub(:with_comments_and_users) { posts }
+    Post.stub_chain(:page, :per, :with_comments_and_users) { posts }
+    posts.stub(total_count: 1, limit_value: 1, current_page: 1)
   end
 
   describe 'GET #index' do
