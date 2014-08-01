@@ -4,6 +4,16 @@
       "name": "Comments",
       "examples": [
         {
+          "description": "Delete a comment",
+          "link": "comments/delete_a_comment.json",
+          "groups": "all"
+        },
+        {
+          "description": "Update comment",
+          "link": "comments/update_comment.json",
+          "groups": "all"
+        },
+        {
           "description": "Create comment authorization error",
           "link": "comments/create_comment_authorization_error.json",
           "groups": "all"

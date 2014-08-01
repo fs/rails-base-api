@@ -19,10 +19,20 @@
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"posts\":[{\"id\":3,\"title\":\"Ut et at vel omnis deserunt non.\",\"text\":\"Laborum iure voluptas non velit. Et consequatur fugiat hic dignissimos. Earum optio eos. Unde est aut voluptatibus fuga. Eos praesentium quam.\",\"comments\":[{\"id\":6,\"title\":\"Ea qui quae recusandae ipsa sed et provident.\",\"text\":\"Eaque cupiditate itaque sed ea aspernatur facere. Molestias est aut aut praesentium voluptatem dolor sunt. Ut minima eum ipsum eos voluptas quia.\",\"user\":null},{\"id\":7,\"title\":\"A id minima qui veritatis atque laudantium et ducimus.\",\"text\":\"Eum libero ut omnis illum. Id possimus et voluptatem deserunt minus. Iure aut voluptates voluptas et sed delectus et. Hic aut molestias. Qui et optio ipsum unde voluptas praesentium rerum.\",\"user\":null}]},{\"id\":4,\"title\":\"Impedit quod nobis dolor omnis maxime eum minima.\",\"text\":\"Occaecati aut perspiciatis ratione quidem aut ad. Eum nisi consectetur provident natus. Quaerat quam occaecati laudantium. Sit sapiente unde velit necessitatibus. Fugit dolorem quis id fuga.\",\"comments\":[]}]}",
-      "response_headers": {"X-Frame-Options":"SAMEORIGIN","X-XSS-Protection":"1; mode=block","X-Content-Type-Options":"nosniff","X-UA-Compatible":"chrome=1","Content-Type":"application/json; charset=utf-8","ETag":"\"f9c186bacdfe6ea051d326d91014625c\"","Cache-Control":"max-age=0, private, must-revalidate","X-Request-Id":"16595716-da5d-45e0-972d-f2500fa2686a","X-Runtime":"0.015035","Content-Length":"1027"},
+      "response_body": "{\"posts\":[{\"id\":3,\"title\":\"Officiis error deserunt sunt aut.\",\"text\":\"Ratione inventore aut voluptas id. Possimus dolores ipsa quibusdam consectetur. Provident quasi corporis. Voluptates autem est.\",\"comments\":[{\"id\":8,\"title\":\"Aut alias fuga corrupti consequuntur.\",\"text\":\"Dignissimos non et minus consequatur nihil. Temporibus pariatur fugit id et. Rerum culpa et consequatur aut. Eos et quaerat vel sunt esse dignissimos.\",\"user\":null},{\"id\":9,\"title\":\"Incidunt quos sit in.\",\"text\":\"Ratione sed quod ea quia qui a et. Odit asperiores quo. Est dignissimos adipisci fuga quis itaque. Et nam ullam rem ut.\",\"user\":null}]},{\"id\":4,\"title\":\"Voluptatibus vitae aut aut dolor.\",\"text\":\"Quas provident natus. Consequatur a deleniti qui. Occaecati magni et. Ratione qui illum sapiente. Pariatur aut consequatur et enim.\",\"comments\":[]}]}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "\"5d74292eaa4c409995bacce89aa06e7e\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "b2df60ba-0278-4601-916d-daac5db89c3e",
+        "X-Runtime": "0.011205",
+        "Content-Length": "833"
+      },
       "response_content_type": "application/json; charset=utf-8",
       "curl": "curl \"http://localhost:5000/posts.json\" -X GET "
-}
+    }
   ]
 }

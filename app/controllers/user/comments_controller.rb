@@ -21,6 +21,18 @@ class User
       )
     end
 
+    def update
+      comment.save
+
+      respond_with(comment, location: false)
+    end
+
+    def destroy
+      comment.destroy
+
+      respond_with(comment, location: false)
+    end
+
     private
 
     def comment_params

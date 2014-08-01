@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   # Resources require authenticated user
   #
   namespace :user do
-    resources :comments, only: [:index, :create]
+    resources :comments, only: [:index, :create, :update, :destroy]
   end
 
   # Public resources
