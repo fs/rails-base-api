@@ -3,7 +3,7 @@ app_config.middleware.use Rack::Cors do
     # Allow requests from domains:
     # e.g. origins('api.example.com', 'next.example.com')
     #
-    origins app_config.allow_requests_from
+    origins ENV.fetch('ALLOW_REQUESTS_FROM', app_config.host).split(',')
 
     resource(
       '*',

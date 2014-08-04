@@ -28,9 +28,5 @@ module RailsBaseApi
 
     # Default host for action mailer, initializers/mailer.rb
     config.host = 'localhost:5000'
-
-    # Allow cross-origin resource sharing with
-    #
-    config.allow_requests_from = ENV['ALLOW_REQUESTS_FROM']
   end
 end
