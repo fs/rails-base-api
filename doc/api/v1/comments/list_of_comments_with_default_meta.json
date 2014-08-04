@@ -1,0 +1,41 @@
+{
+  "resource": "Comments",
+  "http_method": "GET",
+  "route": "/v1/user/comments.json",
+  "description": "List of comments with default meta",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/v1/user/comments.json",
+      "request_body": null,
+      "request_headers": {
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": null,
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\"comments\":[{\"id\":1,\"title\":\"Ullam ducimus qui consequatur sed eius et.\",\"text\":\"Nobis dolores a quis asperiores quae. Dolorem rerum quasi modi exercitationem repudiandae magni. Quia quasi recusandae accusantium non.\",\"post\":null,\"user\":{\"id\":1,\"authentication_token\":\"sNw9y_SFjy3sdRmFm521\",\"email\":\"user1@example.com\"}}],\"meta\":{\"pagination\":{\"total\":1,\"per_page\":25,\"page\":1}}}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "\"7ab57d4e2219e3b6fc1c342b1c0d8ccf\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "29787a2f-3f0e-4d47-9e75-8af91fc94cff",
+        "X-Runtime": "0.083173",
+        "Content-Length": "380"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"http://localhost:5000/v1/user/comments.json\" -X GET \\\n\t-H \"X-Auth-Token: sNw9y_SFjy3sdRmFm521\""
+    }
+  ]
+}

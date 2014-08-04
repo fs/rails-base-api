@@ -1,0 +1,50 @@
+{
+  "resource": "Posts",
+  "http_method": "GET",
+  "route": "/v1/posts.json",
+  "description": "List of posts with meta",
+  "explanation": null,
+  "parameters": [
+    {
+      "name": "page",
+      "description": "Pagination page parameter"
+    },
+    {
+      "name": "per_page",
+      "description": "Pagination per_page parameter"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/v1/posts.json?page=1&per_page=1",
+      "request_body": null,
+      "request_headers": {
+      },
+      "request_query_parameters": {
+        "page": "1",
+        "per_page": "1"
+      },
+      "request_content_type": null,
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\"posts\":[{\"id\":3,\"title\":\"Illo voluptas quis et itaque.\",\"text\":\"Officiis odit qui quasi ea. Quisquam molestias expedita aut odio. Nihil voluptatem sed ipsa. Non illo sed quod quos quo qui. Natus tenetur nemo excepturi quae.\",\"comments\":[{\"id\":8,\"title\":\"Voluptas ipsum ea id.\",\"text\":\"Qui omnis sit. Omnis magnam sit atque. Aut sit dolorum dolor iusto sequi voluptate saepe. Non consequatur consequatur quia.\",\"user\":null},{\"id\":7,\"title\":\"Doloremque aut dolorum ut consequuntur dolor.\",\"text\":\"Ullam sint molestiae laborum qui velit dolores minus. Aut quia et. Asperiores quidem quis.\",\"user\":null}]}],\"meta\":{\"pagination\":{\"total\":2,\"per_page\":1,\"page\":1}}}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "\"15fc59f318eaf1070ae0f9877248ec2b\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "0d262c11-af07-4c75-b11c-9966097a7659",
+        "X-Runtime": "0.020087",
+        "Content-Length": "661"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"http://localhost:5000/v1/posts.json?page=1&per_page=1\" -X GET "
+    }
+  ]
+}
