@@ -33,7 +33,7 @@ group :development, :test do
   #
   gem 'minitest'
   gem 'byebug'
-  gem 'rspec-rails'
+  gem 'rspec-rails', '~> 3.0.0'
   gem 'mail_safe'
 
   gem 'rails_best_practices'
@@ -55,7 +55,7 @@ end
 group :development, :test, :staging do
   gem 'faker'
   gem 'factory_girl_rails'
-  gem 'rspec_api_documentation'
+  gem 'rspec_api_documentation', '~> 4.0.0'
   gem 'apitome'
 end
 

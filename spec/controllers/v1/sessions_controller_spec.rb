@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 describe V1::SessionsController do
   before do

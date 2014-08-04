@@ -23,6 +23,9 @@ module RailsBaseApi
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
 
+    # Default e-mail address which will be shown in the "from" devise emails, initializers/devise.rb.
+    config.noreply = 'noreply@fs-rails-base-api.heroku.com'
+
     # Default host for action mailer, initializers/mailer.rb
     config.host = 'localhost:5000'
   end
