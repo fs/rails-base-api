@@ -1,7 +1,7 @@
 {
   "resource": "Comments",
   "http_method": "POST",
-  "route": "user/comments.json",
+  "route": "/v1/user/comments.json",
   "description": "Create comment authorization error",
   "explanation": null,
   "parameters": [
@@ -19,7 +19,7 @@
   "requests": [
     {
       "request_method": "POST",
-      "request_path": "user/comments.json",
+      "request_path": "/v1/user/comments.json",
       "request_body": "title=Title&text=Text",
       "request_headers": {
       },
@@ -29,9 +29,18 @@
       "response_status": 401,
       "response_status_text": "Unauthorized",
       "response_body": "{\"error\":\"You need to sign in or sign up before continuing.\"}",
-      "response_headers": {"X-Frame-Options":"SAMEORIGIN","X-XSS-Protection":"1; mode=block","X-Content-Type-Options":"nosniff","X-UA-Compatible":"chrome=1","Content-Type":"application/json; charset=utf-8","Cache-Control":"no-cache","X-Request-Id":"6e052c68-dfc1-44dc-a5f4-6bd241bf4047","X-Runtime":"0.581476","Content-Length":"61"},
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "Cache-Control": "no-cache",
+        "X-Request-Id": "af3ca246-12de-450c-9207-983c0589dbc9",
+        "X-Runtime": "0.002087",
+        "Content-Length": "61"
+      },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000user/comments.json\" -d 'title=Title&text=Text' -X POST "
-}
+      "curl": "curl \"http://localhost:5000/v1/user/comments.json\" -d 'title=Title&text=Text' -X POST "
+    }
   ]
 }

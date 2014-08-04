@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe PostsController do
+describe V1::PostsController do
   let(:post) { build :post }
   let(:posts) { [post] }
 

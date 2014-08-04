@@ -1,0 +1,38 @@
+{
+  "resource": "Posts",
+  "http_method": "GET",
+  "route": "/v1/posts.json",
+  "description": "Listing posts",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/v1/posts.json",
+      "request_body": null,
+      "request_headers": {
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": null,
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\"posts\":[{\"id\":1,\"title\":\"Dignissimos dicta quod laborum.\",\"text\":\"Corrupti nobis amet at repellendus non est enim. Nesciunt error quos. Quia voluptas pariatur dicta ut quisquam.\",\"comments\":[{\"id\":1,\"title\":\"Veritatis sapiente et laboriosam nesciunt omnis nisi ea.\",\"text\":\"Consequuntur quaerat mollitia fuga dignissimos. Aut quasi odit voluptatem excepturi qui dolorem voluptatem. In voluptatem provident rerum. Voluptatem sunt ut consequatur officiis. Ut nemo mollitia tenetur nisi consequuntur.\",\"user\":null},{\"id\":2,\"title\":\"Placeat omnis laudantium quam commodi repellendus tenetur quidem accusantium.\",\"text\":\"Ut tempore officia sit in necessitatibus. Molestiae vitae est culpa. Fugiat et atque tempora ut fugit.\",\"user\":null}]},{\"id\":2,\"title\":\"Sed id nulla rerum atque repellat sit et.\",\"text\":\"Sint repellendus voluptatem officia. Vero asperiores architecto recusandae ducimus qui aut. Repellat aliquid cum.\",\"comments\":[]}]}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "\"88bb58c99a72f5ec80c31158fa47d219\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "e191e9d4-ce36-45dc-a67d-f1ddf6e615fd",
+        "X-Runtime": "0.039381",
+        "Content-Length": "936"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"http://localhost:5000/v1/posts.json\" -X GET "
+    }
+  ]
+}

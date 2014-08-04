@@ -5,7 +5,7 @@ resource 'Comments' do
   let!(:user) { create :user }
   subject { json_response_body }
 
-  get '/user/comments.json' do
+  get '/v1/user/comments.json' do
     let!(:comment) { create :comment, user: user }
 
     context 'with valid token' do
@@ -23,7 +23,7 @@ resource 'Comments' do
     end
   end
 
-  post 'user/comments.json' do
+  post '/v1/user/comments.json' do
     let(:params) { { title: 'Title', text: 'Text' } }
     let(:comment) { user.comments.first }
 
