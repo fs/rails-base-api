@@ -5,12 +5,12 @@
       "examples": [
         {
           "description": "Sign in with valid password",
-          "link": "sessions/sign_in_with_valid_password.json",
+          "link": "sessions/sign_in_with_valid_password",
           "groups": "all"
         },
         {
           "description": "Sign in with invalid password",
-          "link": "sessions/sign_in_with_invalid_password.json",
+          "link": "sessions/sign_in_with_invalid_password",
           "groups": "all"
         }
       ]
@@ -20,12 +20,12 @@
       "examples": [
         {
           "description": "Listing posts",
-          "link": "posts/listing_posts.json",
+          "link": "posts/listing_posts",
           "groups": "all"
         },
         {
           "description": "Single post",
-          "link": "posts/single_post.json",
+          "link": "posts/single_post",
           "groups": "all"
         }
       ]
@@ -35,22 +35,22 @@
       "examples": [
         {
           "description": "List of comments",
-          "link": "comments/list_of_comments.json",
+          "link": "comments/list_of_comments",
           "groups": "all"
         },
         {
           "description": "List of comments authorization error",
-          "link": "comments/list_of_comments_authorization_error.json",
+          "link": "comments/list_of_comments_authorization_error",
           "groups": "all"
         },
         {
           "description": "Create comment",
-          "link": "comments/create_comment.json",
+          "link": "comments/create_comment",
           "groups": "all"
         },
         {
           "description": "Create comment authorization error",
-          "link": "comments/create_comment_authorization_error.json",
+          "link": "comments/create_comment_authorization_error",
           "groups": "all"
         }
       ]

@@ -1,7 +1,7 @@
 {
   "resource": "Comments",
   "http_method": "GET",
-  "route": "/v1/user/comments.json",
+  "route": "/v1/user/comments",
   "description": "List of comments",
   "explanation": null,
   "parameters": [
@@ -10,7 +10,7 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/v1/user/comments.json",
+      "request_path": "/v1/user/comments",
       "request_body": null,
       "request_headers": {
       },
@@ -32,7 +32,7 @@
         "Content-Length": "359"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/user/comments.json\" -X GET \\\n\t-H \"X-Auth-Token: hy-QidkCBYpdzPpskz1N\""
+      "curl": "curl \"http://localhost:5000/v1/user/comments\" -X GET \\\n\t-H \"X-Auth-Token: hy-QidkCBYpdzPpskz1N\""
     }
   ]
 }
