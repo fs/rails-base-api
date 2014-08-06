@@ -22,20 +22,20 @@
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"comments\":[{\"id\":1,\"title\":\"Ullam ducimus qui consequatur sed eius et.\",\"text\":\"Nobis dolores a quis asperiores quae. Dolorem rerum quasi modi exercitationem repudiandae magni. Quia quasi recusandae accusantium non.\",\"post\":null,\"user\":{\"id\":1,\"authentication_token\":\"sNw9y_SFjy3sdRmFm521\",\"email\":\"user1@example.com\"}}],\"meta\":{\"pagination\":{\"total\":1,\"per_page\":25,\"page\":1}}}",
+      "response_body": "{\"comments\":[{\"id\":3,\"title\":\"Fuga itaque necessitatibus officiis possimus culpa facere in.\",\"text\":\"Est necessitatibus a. Esse eligendi et repudiandae maiores id. Cupiditate eos deleniti illum vel. Autem laboriosam adipisci.\",\"post\":null,\"user\":{\"id\":6,\"authentication_token\":\"C1Qs2WxVP-d8z8HrCDuk\",\"email\":\"user6@example.com\"}}],\"meta\":{\"pagination\":{\"total\":1,\"per_page\":25,\"page\":1}}}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "\"7ab57d4e2219e3b6fc1c342b1c0d8ccf\"",
+        "ETag": "\"dead044c88b514e796974fc8dd1c6168\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "29787a2f-3f0e-4d47-9e75-8af91fc94cff",
-        "X-Runtime": "0.083173",
-        "Content-Length": "380"
+        "X-Request-Id": "4a41b668-0ca1-4270-9784-a5f776dde511",
+        "X-Runtime": "0.036879",
+        "Content-Length": "388"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/user/comments.json\" -X GET \\\n\t-H \"X-Auth-Token: sNw9y_SFjy3sdRmFm521\""
+      "curl": "curl \"http://localhost:5000/v1/user/comments.json\" -X GET \\\n\t-H \"X-Auth-Token: C1Qs2WxVP-d8z8HrCDuk\""
     }
   ]
 }

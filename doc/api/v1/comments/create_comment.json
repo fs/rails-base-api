@@ -31,20 +31,20 @@
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 201,
       "response_status_text": "Created",
-      "response_body": "{\"comment\":{\"id\":4,\"title\":\"Title\",\"text\":\"Text\"}}",
+      "response_body": "{\"comment\":{\"id\":1,\"title\":\"Title\",\"text\":\"Text\"}}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "\"bf3c3fe8495a1e5cf91091a106a51b4b\"",
+        "ETag": "\"9a31eb59533c85ff5ea99c7306db30b0\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "c10461ef-363a-4149-8926-138d71a58e41",
-        "X-Runtime": "0.021959",
+        "X-Request-Id": "59cf209b-9f1a-4adc-808d-eaa82a6ac29e",
+        "X-Runtime": "0.046288",
         "Content-Length": "50"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/user/comments.json\" -d 'title=Title&text=Text' -X POST \\\n\t-H \"X-Auth-Token: AGe3f68RzwmT79UZfh9e\""
+      "curl": "curl \"http://localhost:5000/v1/user/comments.json\" -d 'title=Title&text=Text' -X POST \\\n\t-H \"X-Auth-Token: edfFqcUaV8UtTfV-25mx\""
     }
   ]
 }

@@ -1,21 +1,26 @@
 {
   "resources": [
     {
+      "name": "Sessions",
+      "examples": [
+        {
+          "description": "Sign in with invalid password",
+          "link": "sessions/sign_in_with_invalid_password.json",
+          "groups": "all"
+        },
+        {
+          "description": "Sign in with valid password",
+          "link": "sessions/sign_in_with_valid_password.json",
+          "groups": "all"
+        }
+      ]
+    },
+    {
       "name": "Comments",
       "examples": [
         {
-          "description": "List of comments with default meta",
-          "link": "comments/list_of_comments_with_default_meta.json",
-          "groups": "all"
-        },
-        {
-          "description": "List of comments with meta",
-          "link": "comments/list_of_comments_with_meta.json",
-          "groups": "all"
-        },
-        {
-          "description": "List of comments authorization error",
-          "link": "comments/list_of_comments_authorization_error.json",
+          "description": "Create comment authorization error",
+          "link": "comments/create_comment_authorization_error.json",
           "groups": "all"
         },
         {
@@ -24,8 +29,13 @@
           "groups": "all"
         },
         {
-          "description": "Create comment authorization error",
-          "link": "comments/create_comment_authorization_error.json",
+          "description": "List of comments authorization error",
+          "link": "comments/list_of_comments_authorization_error.json",
+          "groups": "all"
+        },
+        {
+          "description": "List of comments with default meta",
+          "link": "comments/list_of_comments_with_default_meta.json",
           "groups": "all"
         }
       ]
@@ -34,33 +44,18 @@
       "name": "Posts",
       "examples": [
         {
-          "description": "Listing posts",
-          "link": "posts/listing_posts.json",
-          "groups": "all"
-        },
-        {
-          "description": "List of posts with meta",
-          "link": "posts/list_of_posts_with_meta.json",
+          "description": "Listing posts with page",
+          "link": "posts/listing_posts_with_page.json",
           "groups": "all"
         },
         {
           "description": "Single post",
           "link": "posts/single_post.json",
           "groups": "all"
-        }
-      ]
-    },
-    {
-      "name": "Sessions",
-      "examples": [
-        {
-          "description": "Sign in with valid password",
-          "link": "sessions/sign_in_with_valid_password.json",
-          "groups": "all"
         },
         {
-          "description": "Sign in with invalid password",
-          "link": "sessions/sign_in_with_invalid_password.json",
+          "description": "Listing posts",
+          "link": "posts/listing_posts.json",
           "groups": "all"
         }
       ]

@@ -13,7 +13,7 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/v1/posts/5.json",
+      "request_path": "/v1/posts/3.json",
       "request_body": null,
       "request_headers": {
       },
@@ -22,20 +22,20 @@
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"post\":{\"id\":5,\"title\":\"Eligendi sed exercitationem cum ipsa.\",\"text\":\"Quis minus dolore ea ea. Sit accusantium molestias cupiditate hic aut. Placeat sequi in dolores.\"}}",
+      "response_body": "{\"post\":{\"id\":3,\"title\":\"Nam minus eos maxime et.\",\"text\":\"Molestias magni voluptatem ipsa. Esse commodi minima libero. Quia accusamus commodi iste tempora odio iusto.\"}}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "\"adef2154441bf271d4c2365a6714b439\"",
+        "ETag": "\"9194cefc65fdd39c9de73bcea47b9a05\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "51e37df3-a21c-48f4-9db6-07304c88d7ff",
-        "X-Runtime": "0.010161",
-        "Content-Length": "171"
+        "X-Request-Id": "4c1e473f-6804-4259-8d97-9c1a1c6017a8",
+        "X-Runtime": "0.010956",
+        "Content-Length": "170"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/posts/5.json\" -X GET "
+      "curl": "curl \"http://localhost:5000/v1/posts/3.json\" -X GET "
     }
   ]
 }
