@@ -11,7 +11,7 @@ resource 'Comments' do
     context 'with valid token' do
       before { header 'X-AUTH-TOKEN', user.authentication_token }
 
-      example_request 'List of comments with default meta' do
+      example_request 'List of comments' do
         expect(subject['comments'].first).to be_a_comment_representation(comment)
       end
     end
