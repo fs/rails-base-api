@@ -1,7 +1,7 @@
 {
   "resource": "Posts",
   "http_method": "GET",
-  "route": "/v1/posts.json",
+  "route": "/v1/posts",
   "description": "Listing posts",
   "explanation": null,
   "parameters": [
@@ -13,7 +13,7 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/v1/posts.json",
+      "request_path": "/v1/posts",
       "request_body": null,
       "request_headers": {
       },
@@ -22,20 +22,20 @@
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"posts\":[{\"id\":5,\"title\":\"Optio architecto adipisci ut et sed.\",\"text\":\"Repudiandae corrupti non. Laborum qui praesentium deserunt dolor in placeat consequatur. Unde eum dolorem impedit facere nam. Sapiente perspiciatis maiores similique.\",\"comments\":[{\"id\":6,\"title\":\"Fugiat doloremque repellat ullam cupiditate magnam qui ut.\",\"text\":\"Similique ipsa asperiores tenetur fuga aperiam aliquam. Tenetur similique rerum consequatur perferendis ut est. Saepe ut nesciunt ullam. Quo et exercitationem tenetur dignissimos beatae sapiente nemo.\",\"user\":null}]},{\"id\":6,\"title\":\"Fugit et iusto voluptatem quia minima.\",\"text\":\"Voluptatem ratione ab. Culpa necessitatibus porro distinctio. Aut qui atque veniam eos ipsa minima beatae.\",\"comments\":[]}],\"meta\":{\"pagination\":{\"total\":2,\"per_page\":25,\"page\":1}}}",
+      "response_body": "{\"posts\":[{\"id\":1,\"title\":\"Voluptatem beatae ut magni iste in cum quibusdam.\",\"text\":\"Dolor perferendis qui. Aspernatur nam voluptate quisquam maxime. At et qui reiciendis accusamus praesentium sint. Quia tempora aspernatur laboriosam inventore quo veritatis dolore.\",\"comments\":[{\"id\":1,\"title\":\"Itaque suscipit non at repellendus.\",\"text\":\"Delectus molestiae aliquam animi et. Suscipit sunt et. Sed harum voluptas blanditiis. Porro necessitatibus excepturi et. Esse id et et magnam qui qui nesciunt.\",\"user\":null}]},{\"id\":2,\"title\":\"Dolorem reiciendis neque rerum dolor et.\",\"text\":\"Qui quisquam sit quas. Mollitia voluptas ipsam et ea. Voluptatum nam ipsa eaque ut.\",\"comments\":[]}],\"meta\":{\"pagination\":{\"total\":2,\"per_page\":25,\"page\":1}}}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "\"bc08f28b9a14a24ba1635d5c76ecf5aa\"",
+        "ETag": "\"af7ea100fe184779dc2f860afe506668\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "8e80bf8c-e0d8-4bac-9b46-af3253380f6c",
-        "X-Runtime": "0.011377",
-        "Content-Length": "801"
+        "X-Request-Id": "bcd18dca-52c8-4834-837f-700b18c189ce",
+        "X-Runtime": "0.077994",
+        "Content-Length": "743"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/posts.json\" -X GET "
+      "curl": "curl \"http://localhost:5000/v1/posts\" -X GET "
     }
   ]
 }

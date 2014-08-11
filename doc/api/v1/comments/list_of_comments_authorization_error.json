@@ -1,7 +1,7 @@
 {
   "resource": "Comments",
   "http_method": "GET",
-  "route": "/v1/user/comments.json",
+  "route": "/v1/user/comments",
   "description": "List of comments authorization error",
   "explanation": null,
   "parameters": [
@@ -13,7 +13,7 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/v1/user/comments.json",
+      "request_path": "/v1/user/comments",
       "request_body": null,
       "request_headers": {
       },
@@ -29,12 +29,12 @@
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
         "Cache-Control": "no-cache",
-        "X-Request-Id": "d37889de-efc7-4e0a-9cf8-5e535f1c4b41",
-        "X-Runtime": "0.002607",
+        "X-Request-Id": "a23acd81-941a-46bd-8718-23067b22e628",
+        "X-Runtime": "0.002286",
         "Content-Length": "61"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/user/comments.json\" -X GET "
+      "curl": "curl \"http://localhost:5000/v1/user/comments\" -X GET "
     }
   ]
 }

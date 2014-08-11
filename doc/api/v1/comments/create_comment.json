@@ -1,7 +1,7 @@
 {
   "resource": "Comments",
   "http_method": "POST",
-  "route": "/v1/user/comments.json",
+  "route": "/v1/user/comments",
   "description": "Create comment",
   "explanation": null,
   "parameters": [
@@ -22,7 +22,7 @@
   "requests": [
     {
       "request_method": "POST",
-      "request_path": "/v1/user/comments.json",
+      "request_path": "/v1/user/comments",
       "request_body": "title=Title&text=Text",
       "request_headers": {
       },
@@ -31,20 +31,20 @@
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 201,
       "response_status_text": "Created",
-      "response_body": "{\"comment\":{\"id\":1,\"title\":\"Title\",\"text\":\"Text\"}}",
+      "response_body": "{\"comment\":{\"id\":4,\"title\":\"Title\",\"text\":\"Text\"}}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "\"9a31eb59533c85ff5ea99c7306db30b0\"",
+        "ETag": "\"bf3c3fe8495a1e5cf91091a106a51b4b\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "59cf209b-9f1a-4adc-808d-eaa82a6ac29e",
-        "X-Runtime": "0.046288",
+        "X-Request-Id": "839675b9-18d7-46ad-a380-fa117bac5d55",
+        "X-Runtime": "0.016410",
         "Content-Length": "50"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/user/comments.json\" -d 'title=Title&text=Text' -X POST \\\n\t-H \"X-Auth-Token: edfFqcUaV8UtTfV-25mx\""
+      "curl": "curl \"http://localhost:5000/v1/user/comments\" -d 'title=Title&text=Text' -X POST \\\n\t-H \"X-Auth-Token: ySk1LTzwsyCzMs8nS-eb\""
     }
   ]
 }

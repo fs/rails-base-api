@@ -9,13 +9,13 @@ resource 'Posts' do
 
   subject { json_response_body }
 
-  get '/v1/posts.json' do
+  get '/v1/posts' do
     example_request 'Listing posts' do
       expect(subject['posts'].first).to be_a_post_representation(post)
     end
   end
 
-  get '/v1/posts.json?page=1' do
+  get '/v1/posts?page=1' do
     example_request 'Listing posts with page' do
       expect(response_status).to eq(200)
       expect(subject).to be_a_json_with_pagination_represenation_of(
@@ -28,7 +28,7 @@ resource 'Posts' do
     end
   end
 
-  get '/v1/posts/:id.json' do
+  get '/v1/posts/:id' do
     example_request 'Single post' do
       expect(subject['post']).to be_a_post_representation(post)
     end

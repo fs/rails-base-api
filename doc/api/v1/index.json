@@ -1,6 +1,26 @@
 {
   "resources": [
     {
+      "name": "Posts",
+      "examples": [
+        {
+          "description": "Listing posts",
+          "link": "posts/listing_posts.json",
+          "groups": "all"
+        },
+        {
+          "description": "Listing posts with page",
+          "link": "posts/listing_posts_with_page.json",
+          "groups": "all"
+        },
+        {
+          "description": "Single post",
+          "link": "posts/single_post.json",
+          "groups": "all"
+        }
+      ]
+    },
+    {
       "name": "Sessions",
       "examples": [
         {
@@ -34,28 +54,8 @@
           "groups": "all"
         },
         {
-          "description": "List of comments with default meta",
-          "link": "comments/list_of_comments_with_default_meta.json",
-          "groups": "all"
-        }
-      ]
-    },
-    {
-      "name": "Posts",
-      "examples": [
-        {
-          "description": "Listing posts with page",
-          "link": "posts/listing_posts_with_page.json",
-          "groups": "all"
-        },
-        {
-          "description": "Single post",
-          "link": "posts/single_post.json",
-          "groups": "all"
-        },
-        {
-          "description": "Listing posts",
-          "link": "posts/listing_posts.json",
+          "description": "List of comments",
+          "link": "comments/list_of_comments.json",
           "groups": "all"
         }
       ]

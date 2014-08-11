@@ -1,7 +1,7 @@
 {
   "resource": "Posts",
   "http_method": "GET",
-  "route": "/v1/posts.json?page=1",
+  "route": "/v1/posts?page=1",
   "description": "Listing posts with page",
   "explanation": null,
   "parameters": [
@@ -13,7 +13,7 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/v1/posts.json?page=1",
+      "request_path": "/v1/posts?page=1",
       "request_body": null,
       "request_headers": {
       },
@@ -23,20 +23,20 @@
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"posts\":[{\"id\":1,\"title\":\"Repellendus consequuntur dolor et modi voluptates molestiae autem quo.\",\"text\":\"Explicabo voluptatem aut. Architecto autem officia qui numquam cum ipsa mollitia. Qui optio dignissimos impedit.\",\"comments\":[{\"id\":4,\"title\":\"Fuga fugiat omnis numquam est sunt rem esse.\",\"text\":\"Expedita sunt eaque aut labore. Deleniti et maiores alias velit. Repellendus id ex aut. Odit aut quo maiores ut quas cum delectus. Sunt dolor aut accusantium perspiciatis delectus tenetur.\",\"user\":null}]},{\"id\":2,\"title\":\"Consequatur modi cum harum sed.\",\"text\":\"Dolorem illo iusto qui debitis amet quia. Quia similique ea aut quod eligendi sequi unde. Necessitatibus optio aliquid odit a voluptas.\",\"comments\":[]}],\"meta\":{\"pagination\":{\"total\":2,\"per_page\":25,\"page\":1}}}",
+      "response_body": "{\"posts\":[{\"id\":3,\"title\":\"Quia nihil amet et mollitia quibusdam excepturi tenetur quod.\",\"text\":\"Itaque vel nobis exercitationem distinctio. Quisquam voluptatem explicabo vel sit assumenda. Corrupti cum qui sunt autem aspernatur quod.\",\"comments\":[{\"id\":2,\"title\":\"Saepe nobis voluptatibus facere autem non eos et quo.\",\"text\":\"Ad nostrum placeat repellendus autem nam. Autem quo voluptates eum molestiae optio. Fugiat in molestiae ex.\",\"user\":null}]},{\"id\":4,\"title\":\"Voluptatem fugit nesciunt molestiae.\",\"text\":\"Ut at qui et. Voluptas et odio cupiditate voluptas. Numquam dolor at hic sint mollitia est. Ea explicabo blanditiis maiores repellat rerum sit.\",\"comments\":[]}],\"meta\":{\"pagination\":{\"total\":2,\"per_page\":25,\"page\":1}}}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "\"69f0d146162ac87fa253b950da9e8dd2\"",
+        "ETag": "\"9895ac76a6cb24bbe125434f24a30666\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "c0050ce7-7cee-429d-ae6b-d9a8e0eb6a0c",
-        "X-Runtime": "0.039998",
-        "Content-Length": "777"
+        "X-Request-Id": "57d05c86-6b9c-4dde-92d7-dd1c9f67d772",
+        "X-Runtime": "0.014266",
+        "Content-Length": "734"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/posts.json?page=1\" -X GET "
+      "curl": "curl \"http://localhost:5000/v1/posts?page=1\" -X GET "
     }
   ]
 }
