@@ -1,7 +1,7 @@
 {
   "resource": "Comments",
   "http_method": "POST",
-  "route": "/v1/user/comments.json",
+  "route": "/v1/user/comments",
   "description": "Create comment authorization error",
   "explanation": null,
   "parameters": [
@@ -19,7 +19,7 @@
   "requests": [
     {
       "request_method": "POST",
-      "request_path": "/v1/user/comments.json",
+      "request_path": "/v1/user/comments",
       "request_body": "title=Title&text=Text",
       "request_headers": {
       },
@@ -40,7 +40,7 @@
         "Content-Length": "61"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/user/comments.json\" -d 'title=Title&text=Text' -X POST "
+      "curl": "curl \"http://localhost:5000/v1/user/comments\" -d 'title=Title&text=Text' -X POST "
     }
   ]
 }
