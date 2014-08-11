@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe CollectionSerializer do
-  let(:users) { create_list :user, 3 }
+  let(:users) { build_list :user, 3 }
 
   let(:json) { CollectionSerializer.new(users, root: :users).to_json }
   let(:users_json) { parse_json(json) }
@@ -18,7 +18,11 @@ describe CollectionSerializer do
   end
 
   before do
-    users.stub(total_count: 3, limit_value: 25, current_page: 1)
+    allow(users).to receive_messages(
+      total_count: 3,
+      limit_value: 25,
+      current_page: 1
+    )
   end
 
   it 'returns correct users' do
@@ -26,6 +30,6 @@ describe CollectionSerializer do
       expect(user_json).to be_a_user_representation(users[index])
     end
 
-    expect(users_json['meta']).to eql(meta)
+    expect(users_json['meta']).to be_a_meta_representation(meta)
   end
 end
