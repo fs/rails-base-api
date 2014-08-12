@@ -16,6 +16,9 @@
       "description": "Text"
     }
   ],
+  "response_fields": [
+
+  ],
   "requests": [
     {
       "request_method": "POST",
@@ -28,20 +31,20 @@
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 201,
       "response_status_text": "Created",
-      "response_body": "{\"comment\":{\"id\":7,\"title\":\"Title\",\"text\":\"Text\"}}",
+      "response_body": "{\"comment\":{\"id\":4,\"title\":\"Title\",\"text\":\"Text\"}}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "\"62f9fb80a3218cb80c6cafabc981781b\"",
+        "ETag": "\"bf3c3fe8495a1e5cf91091a106a51b4b\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "76f59da0-9e3e-4f6e-b779-b00651236fa8",
-        "X-Runtime": "0.012526",
+        "X-Request-Id": "839675b9-18d7-46ad-a380-fa117bac5d55",
+        "X-Runtime": "0.016410",
         "Content-Length": "50"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/user/comments\" -d 'title=Title&text=Text' -X POST \\\n\t-H \"X-Auth-Token: gqgFB4hGPEFL9fwF7Usr\""
+      "curl": "curl \"http://localhost:5000/v1/user/comments\" -d 'title=Title&text=Text' -X POST \\\n\t-H \"X-Auth-Token: ySk1LTzwsyCzMs8nS-eb\""
     }
   ]
 }

@@ -9,8 +9,8 @@ describe V1::User::CommentsController do
     let(:comments) { build_list :comment, 2 }
 
     before do
-      controller.current_user.stub(:comments) { double(all: double(with_posts_and_users: comments)) }
-
+      Comment.stub_chain(:page, :per, :with_posts_and_users) { comments }
+      comments.stub(total_count: 1, limit_value: 1, current_page: 1)
       get :index, format: :json
     end
 

@@ -7,6 +7,9 @@
   "parameters": [
 
   ],
+  "response_fields": [
+
+  ],
   "requests": [
     {
       "request_method": "GET",
@@ -19,17 +22,17 @@
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"posts\":[{\"id\":1,\"title\":\"Dignissimos dicta quod laborum.\",\"text\":\"Corrupti nobis amet at repellendus non est enim. Nesciunt error quos. Quia voluptas pariatur dicta ut quisquam.\",\"comments\":[{\"id\":1,\"title\":\"Veritatis sapiente et laboriosam nesciunt omnis nisi ea.\",\"text\":\"Consequuntur quaerat mollitia fuga dignissimos. Aut quasi odit voluptatem excepturi qui dolorem voluptatem. In voluptatem provident rerum. Voluptatem sunt ut consequatur officiis. Ut nemo mollitia tenetur nisi consequuntur.\",\"user\":null},{\"id\":2,\"title\":\"Placeat omnis laudantium quam commodi repellendus tenetur quidem accusantium.\",\"text\":\"Ut tempore officia sit in necessitatibus. Molestiae vitae est culpa. Fugiat et atque tempora ut fugit.\",\"user\":null}]},{\"id\":2,\"title\":\"Sed id nulla rerum atque repellat sit et.\",\"text\":\"Sint repellendus voluptatem officia. Vero asperiores architecto recusandae ducimus qui aut. Repellat aliquid cum.\",\"comments\":[]}]}",
+      "response_body": "{\"posts\":[{\"id\":1,\"title\":\"Voluptatem beatae ut magni iste in cum quibusdam.\",\"text\":\"Dolor perferendis qui. Aspernatur nam voluptate quisquam maxime. At et qui reiciendis accusamus praesentium sint. Quia tempora aspernatur laboriosam inventore quo veritatis dolore.\",\"comments\":[{\"id\":1,\"title\":\"Itaque suscipit non at repellendus.\",\"text\":\"Delectus molestiae aliquam animi et. Suscipit sunt et. Sed harum voluptas blanditiis. Porro necessitatibus excepturi et. Esse id et et magnam qui qui nesciunt.\",\"user\":null}]},{\"id\":2,\"title\":\"Dolorem reiciendis neque rerum dolor et.\",\"text\":\"Qui quisquam sit quas. Mollitia voluptas ipsam et ea. Voluptatum nam ipsa eaque ut.\",\"comments\":[]}],\"meta\":{\"pagination\":{\"total\":2,\"per_page\":25,\"page\":1}}}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "\"88bb58c99a72f5ec80c31158fa47d219\"",
+        "ETag": "\"af7ea100fe184779dc2f860afe506668\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "e191e9d4-ce36-45dc-a67d-f1ddf6e615fd",
-        "X-Runtime": "0.039381",
-        "Content-Length": "936"
+        "X-Request-Id": "bcd18dca-52c8-4834-837f-700b18c189ce",
+        "X-Runtime": "0.077994",
+        "Content-Length": "743"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": "curl \"http://localhost:5000/v1/posts\" -X GET "
