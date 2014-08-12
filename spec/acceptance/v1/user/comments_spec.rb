@@ -3,7 +3,7 @@ require 'rspec_api_documentation/dsl'
 
 resource 'Comments' do
   let!(:user) { create :user }
-  subject { json_response_body }
+  subject(:json_response) { json_response_body }
 
   get '/v1/user/comments' do
     let!(:comment) { create :comment, user: user }
@@ -12,7 +12,7 @@ resource 'Comments' do
       before { header 'X-AUTH-TOKEN', user.authentication_token }
 
       example_request 'List of comments' do
-        expect(subject['comments'].first).to be_a_comment_representation(comment)
+        expect(json_response['comments'].first).to be_a_comment_representation(comment)
       end
     end
 
@@ -34,7 +34,7 @@ resource 'Comments' do
       before { header 'X-AUTH-TOKEN', user.authentication_token }
 
       example_request 'Create comment' do
-        expect(subject['comment']).to be_a_comment_representation(comment)
+        expect(json_response['comment']).to be_a_comment_representation(comment)
       end
     end
 
