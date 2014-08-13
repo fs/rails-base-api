@@ -1,8 +1,8 @@
-require 'spec_helper'
+require 'rails_helper'
 require 'rspec_api_documentation/dsl'
 
 resource 'Sessions' do
-  let(:json_response) { json_response_body }
+  subject(:json_response) { json_response_body }
 
   post '/users/sign_in' do
     let(:user) { create :user, password: '123456' }

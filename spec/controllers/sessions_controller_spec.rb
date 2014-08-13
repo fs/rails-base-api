@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 describe SessionsController do
   before do
@@ -7,8 +7,9 @@ describe SessionsController do
 
   describe 'POST #create' do
     before do
-      AuthenticateUser
-        .should_receive(:perform) { double(user: build(:user)) }
+      allow(AuthenticateUser).to receive(:perform).and_return(
+        double(user: build(:user))
+      )
 
       post :create, format: :json
     end

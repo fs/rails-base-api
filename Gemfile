@@ -1,20 +1,21 @@
 source 'https://rubygems.org'
 
-ruby '2.1.1'
+ruby '2.1.2'
 
+# the most important stuff
 gem 'rails', '4.1.4'
-
+gem 'pg'
 # https://github.com/rails-api/rails-api/issues/135
 gem 'rails-api', git: 'https://github.com/fs/rails-api.git'
 
-gem 'pg'
+# all other gems
 gem 'thin'
 gem 'decent_exposure'
+gem 'seedbank'
+gem 'devise'
+gem 'dotenv-rails'
 gem 'active_model_serializers'
 gem 'interactor-rails'
-gem 'seedbank'
-gem 'dotenv-rails'
-gem 'devise'
 
 group :development do
   gem 'letter_opener'
@@ -33,7 +34,7 @@ group :development, :test do
   #
   gem 'minitest'
   gem 'byebug'
-  gem 'rspec-rails'
+  gem 'rspec-rails', '~> 3.0.0'
   gem 'mail_safe'
 
   gem 'rails_best_practices'
@@ -55,7 +56,7 @@ end
 group :development, :test, :staging do
   gem 'faker'
   gem 'factory_girl_rails'
-  gem 'rspec_api_documentation'
+  gem 'rspec_api_documentation', '~> 4.0.0'
   gem 'apitome'
 end
 
