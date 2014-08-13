@@ -4,9 +4,20 @@ class ApiResponder < ActionController::Responder
 
     if get?
       display resource
+    elsif post?
+      display_resource(status: :created)
     else
-      status = post? ? :created : :ok
-      display(resource, status: status, location: api_location)
+      display_resource(status: :ok)
     end
+  end
+
+  private
+
+  def display_resource(status:)
+    display(
+      resource,
+      status: status,
+      location: options[:location]
+    )
   end
 end
