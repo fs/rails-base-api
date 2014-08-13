@@ -18,6 +18,7 @@ Status of the API could be checked at [http://localhost:5000/docs](http://localh
 * [Decent Exposure](https://github.com/voxdolo/decent_exposure) for DRY controllers
 * [Rollbar](https://github.com/rollbar/rollbar-gem) for exception notification
 * [Thin](https://github.com/macournoyer/thin) as rails web server
+* [Kaminari](https://github.com/amatsuda/kaminari) for pagination
 
 ### Development gems
 
@@ -79,6 +80,17 @@ Run app
     mv doc/README_TEMPLATE.md README.md
     # update README.md
     git commit -am "Update README.md"
+
+**Add Pagination meta to response**
+
+Use ```CollectionSerializer``` on collections instead of default ```ActiveModel::ArraySerializer```
+    
+    def index
+      respond_with(
+        posts,
+        serializer: CollectionSerializer
+      )
+    end
 
 ## Examples
 
