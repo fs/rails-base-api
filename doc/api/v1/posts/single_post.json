@@ -1,16 +1,19 @@
 {
   "resource": "Posts",
   "http_method": "GET",
-  "route": "/posts/:id.json",
+  "route": "/v1/posts/:id",
   "description": "Single post",
   "explanation": null,
   "parameters": [
 
   ],
+  "response_fields": [
+
+  ],
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/posts/1.json",
+      "request_path": "/v1/posts/1",
       "request_body": null,
       "request_headers": {
       },
@@ -19,20 +22,20 @@
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"post\":{\"id\":1,\"title\":\"Numquam eaque rerum maiores quo necessitatibus.\",\"text\":\"Voluptas impedit molestias qui rerum aliquam non. Quos ea at molestiae magni vel dolores. Maxime et sunt non laborum minima rerum. Provident id molestiae.\"}}",
+      "response_body": "{\"post\":{\"id\":1,\"title\":\"Voluptates et quo neque perferendis repellat et.\",\"text\":\"Quisquam a non est nihil ex. Dolorem illum consequuntur corrupti porro. A aut earum. Aut quidem voluptate quis enim error. Ratione omnis omnis delectus sed beatae aut qui.\"}}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "\"76eb8c54b15c8a70663531c6d81aa436\"",
+        "ETag": "\"613cdc2b5383808c16cb2f01f27fa682\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "8e7f0ddb-6a6b-4d9b-971a-d4fc76ab4e0c",
-        "X-Runtime": "0.017892",
-        "Content-Length": "239"
+        "X-Request-Id": "f54d308d-8cbf-40ce-a6e4-108a61382999",
+        "X-Runtime": "0.045048",
+        "Content-Length": "257"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/posts/1.json\" -X GET "
+      "curl": "curl \"http://localhost:5000/v1/posts/1\" -X GET "
     }
   ]
 }

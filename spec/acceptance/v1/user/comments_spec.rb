@@ -3,16 +3,16 @@ require 'rspec_api_documentation/dsl'
 
 resource 'Comments' do
   let!(:user) { create :user }
-  subject { json_response_body }
+  subject(:json_response) { json_response_body }
 
-  get '/user/comments.json' do
+  get '/v1/user/comments' do
     let!(:comment) { create :comment, user: user }
 
     context 'with valid token' do
       before { header 'X-AUTH-TOKEN', user.authentication_token }
 
       example_request 'List of comments' do
-        expect(subject['comments'].first).to be_a_comment_representation(comment)
+        expect(json_response['comments'].first).to be_a_comment_representation(comment)
       end
     end
 
@@ -23,7 +23,7 @@ resource 'Comments' do
     end
   end
 
-  post 'user/comments.json' do
+  post '/v1/user/comments' do
     let(:params) { { title: 'Title', text: 'Text' } }
     let(:comment) { user.comments.first }
 
@@ -34,7 +34,7 @@ resource 'Comments' do
       before { header 'X-AUTH-TOKEN', user.authentication_token }
 
       example_request 'Create comment' do
-        expect(subject['comment']).to be_a_comment_representation(comment)
+        expect(json_response['comment']).to be_a_comment_representation(comment)
       end
     end
 
@@ -45,7 +45,7 @@ resource 'Comments' do
     end
   end
 
-  patch 'user/comments/:comment_id.json' do
+  patch '/v1/user/comments/:comment_id.json' do
     let(:params) { { title: 'Title', text: 'Text' } }
     let(:comment) { create(:comment, user: user) }
     let(:comment_id) { comment.id }
@@ -61,7 +61,7 @@ resource 'Comments' do
     end
   end
 
-  delete 'user/comments/:comment_id.json' do
+  delete '/v1/user/comments/:comment_id.json' do
     let(:comment) { create(:comment, user: user) }
     let(:comment_id) { comment.id }
 
