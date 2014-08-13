@@ -6,16 +6,12 @@ describe CollectionSerializer do
 
   it 'returns collection with meta' do
     expect(serialized_collection).to eql(
-      {
-        collection: [1, 2, 3],
-        meta:
-        {
-          pagination:
-          {
-            total: 3,
-            per_page: 25,
-            page: 1
-          }
+      collection: [1, 2, 3],
+      meta: {
+        pagination: {
+          total: 3,
+          per_page: 25,
+          page: 1
         }
       }
     )
