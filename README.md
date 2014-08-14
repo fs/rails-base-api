@@ -51,6 +51,22 @@ Status of the API could be checked at [http://localhost:5000/docs](http://localh
 * `bin/ci` - should be used in the CI or locally
 * `bin/server` - to run server locally
 
+### Serializers
+
+* `UserSerializer`- custom serializer for User model
+* `CollectionSerializer` - use that serializer if you want to add meta with
+  pagination info on response
+
+      def index
+        respond_with(
+          posts,
+          serializer: CollectionSerializer
+        )
+      end
+
+* You can also create serializers for your own models using
+  [generator](https://github.com/rails-api/active_model_serializers/blob/master/README.md#creating-a-serializer)
+
 ## Quick start
 
 Clone application as new project with original repository named "rails-base-api"
@@ -80,17 +96,6 @@ Run app
     mv doc/README_TEMPLATE.md README.md
     # update README.md
     git commit -am "Update README.md"
-
-**Add Pagination meta to response**
-
-Use ```CollectionSerializer``` on collections instead of default ```ActiveModel::ArraySerializer```
-    
-    def index
-      respond_with(
-        posts,
-        serializer: CollectionSerializer
-      )
-    end
 
 ## Examples
 
