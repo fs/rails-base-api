@@ -53,19 +53,31 @@ Status of the API could be checked at [http://localhost:5000/docs](http://localh
 
 ### Serializers
 
-* `UserSerializer`- custom serializer for User model
 * `CollectionSerializer` - use that serializer if you want to add meta with
-  pagination info on response
+pagination info on response
 
-      def index
-        respond_with(
-          posts,
-          serializer: CollectionSerializer
-        )
-      end
+        def index
+          respond_with(
+            posts,
+            serializer: CollectionSerializer
+          )
+        end
 
-* You can also create serializers for your own models using
-  [generator](https://github.com/rails-api/active_model_serializers/blob/master/README.md#creating-a-serializer)
+    The above usage of `CollectionSerializer` will produce the following:
+
+        {
+          "meta": {
+            "pagination": {
+              "total":46,
+              "per_page":2,
+              "page":1
+            }
+          },
+          "posts": [
+            { "title": "Post 1", "body": "Hello!" },
+            { "title": "Post 2", "body": "Goodbye!" }
+          ]
+        }
 
 ## Quick start
 
