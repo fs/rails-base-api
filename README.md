@@ -18,6 +18,7 @@ Status of the API could be checked at [http://localhost:5000/docs](http://localh
 * [Decent Exposure](https://github.com/voxdolo/decent_exposure) for DRY controllers
 * [Rollbar](https://github.com/rollbar/rollbar-gem) for exception notification
 * [Thin](https://github.com/macournoyer/thin) as rails web server
+* [Kaminari](https://github.com/amatsuda/kaminari) for pagination
 
 ### Development gems
 
@@ -49,6 +50,22 @@ Status of the API could be checked at [http://localhost:5000/docs](http://localh
 * `bin/quality` - runs rubocop, brakeman, rails_best_practices and bundle-audit for the app
 * `bin/ci` - should be used in the CI or locally
 * `bin/server` - to run server locally
+
+### Serializers
+
+* `UserSerializer`- custom serializer for User model
+* `CollectionSerializer` - use that serializer if you want to add meta with
+  pagination info on response
+
+      def index
+        respond_with(
+          posts,
+          serializer: CollectionSerializer
+        )
+      end
+
+* You can also create serializers for your own models using
+  [generator](https://github.com/rails-api/active_model_serializers/blob/master/README.md#creating-a-serializer)
 
 ## Quick start
 
