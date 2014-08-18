@@ -3,21 +3,11 @@ class ApiResponder < ActionController::Responder
     fail(error) unless resourceful?
 
     if get?
-      display resource
+      display(resource)
     elsif post?
-      display_resource(status: :created)
+      display(resource, status: :created, location: options[:location])
     else
-      display_resource(status: :ok)
+      display(resource, status: :ok, location: options[:location])
     end
-  end
-
-  private
-
-  def display_resource(status:)
-    display(
-      resource,
-      status: status,
-      location: options[:location]
-    )
   end
 end
