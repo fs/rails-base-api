@@ -16,6 +16,7 @@ gem 'devise'
 gem 'dotenv-rails'
 gem 'active_model_serializers'
 gem 'interactor-rails'
+gem 'rack-cors', require: 'rack/cors'
 
 group :development do
   gem 'letter_opener'
