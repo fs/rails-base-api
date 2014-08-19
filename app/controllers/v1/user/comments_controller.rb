@@ -1,6 +1,6 @@
 module V1
   module User
-    class CommentsController < User::BaseController
+    class CommentsController < V1::User::BaseController
       expose(:comments, ancestor: :current_user) { |scope| scope.with_posts_and_users }
       expose(:comment, attributes: :comment_params)
 
@@ -16,10 +16,19 @@ module V1
       def create
         comment.save
 
-        respond_with(
-          comment,
-          location: false
-        )
+        respond_with(comment)
+      end
+
+      def update
+        comment.save
+
+        respond_with(comment)
+      end
+
+      def destroy
+        comment.destroy
+
+        respond_with(comment)
       end
 
       private

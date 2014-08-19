@@ -7,6 +7,9 @@
   "parameters": [
 
   ],
+  "response_fields": [
+
+  ],
   "requests": [
     {
       "request_method": "GET",
@@ -19,17 +22,17 @@
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"posts\":[{\"id\":1,\"title\":\"Dignissimos dicta quod laborum.\",\"text\":\"Corrupti nobis amet at repellendus non est enim. Nesciunt error quos. Quia voluptas pariatur dicta ut quisquam.\",\"comments\":[{\"id\":1,\"title\":\"Veritatis sapiente et laboriosam nesciunt omnis nisi ea.\",\"text\":\"Consequuntur quaerat mollitia fuga dignissimos. Aut quasi odit voluptatem excepturi qui dolorem voluptatem. In voluptatem provident rerum. Voluptatem sunt ut consequatur officiis. Ut nemo mollitia tenetur nisi consequuntur.\",\"user\":null},{\"id\":2,\"title\":\"Placeat omnis laudantium quam commodi repellendus tenetur quidem accusantium.\",\"text\":\"Ut tempore officia sit in necessitatibus. Molestiae vitae est culpa. Fugiat et atque tempora ut fugit.\",\"user\":null}]},{\"id\":2,\"title\":\"Sed id nulla rerum atque repellat sit et.\",\"text\":\"Sint repellendus voluptatem officia. Vero asperiores architecto recusandae ducimus qui aut. Repellat aliquid cum.\",\"comments\":[]}]}",
+      "response_body": "{\"posts\":[{\"id\":3,\"title\":\"Atque temporibus vel aut quia.\",\"text\":\"Sit nobis quam earum illo eaque. Voluptas enim et saepe. Nulla velit aperiam optio beatae earum reprehenderit. Cumque qui nulla suscipit facere hic et. Recusandae similique eum harum repudiandae neque ut delectus.\",\"comments\":[{\"id\":3,\"title\":\"Ut est consequatur enim eligendi.\",\"text\":\"Saepe qui non et non dolorum. Ut animi distinctio exercitationem optio eius repellat. Animi et excepturi eveniet asperiores vel.\",\"user\":null},{\"id\":4,\"title\":\"Molestiae eos dolorum omnis doloremque est.\",\"text\":\"Velit autem esse ut. Molestiae totam maxime magnam qui harum rem dolor. Hic natus dolores reiciendis. Rem eaque nihil. Assumenda dolorum nobis.\",\"user\":null}]},{\"id\":4,\"title\":\"Quia necessitatibus culpa ut exercitationem impedit.\",\"text\":\"Minima amet pariatur necessitatibus non eaque perspiciatis. Quia et commodi saepe. Tempore nostrum unde neque.\",\"comments\":[]}]}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "\"88bb58c99a72f5ec80c31158fa47d219\"",
+        "ETag": "\"cc5810c02d8500086912f8adcd8a42e4\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "e191e9d4-ce36-45dc-a67d-f1ddf6e615fd",
-        "X-Runtime": "0.039381",
-        "Content-Length": "936"
+        "X-Request-Id": "50fbcceb-6cef-422d-a4f8-9eb17505bd37",
+        "X-Runtime": "0.017083",
+        "Content-Length": "934"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": "curl \"http://localhost:5000/v1/posts\" -X GET "

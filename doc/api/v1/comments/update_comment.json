@@ -1,8 +1,8 @@
 {
   "resource": "Comments",
-  "http_method": "POST",
-  "route": "/v1/user/comments",
-  "description": "Create comment",
+  "http_method": "PATCH",
+  "route": "/v1/user/comments/:comment_id.json",
+  "description": "Update comment",
   "explanation": null,
   "parameters": [
     {
@@ -21,30 +21,30 @@
   ],
   "requests": [
     {
-      "request_method": "POST",
-      "request_path": "/v1/user/comments",
+      "request_method": "PATCH",
+      "request_path": "/v1/user/comments/9.json",
       "request_body": "title=Title&text=Text",
       "request_headers": {
       },
       "request_query_parameters": {
       },
       "request_content_type": "application/x-www-form-urlencoded",
-      "response_status": 201,
-      "response_status_text": "Created",
-      "response_body": "{\"comment\":{\"id\":8,\"title\":\"Title\",\"text\":\"Text\"}}",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\"comment\":{\"id\":9,\"title\":\"Title\",\"text\":\"Text\"}}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "\"9a80f67f15a35450756eff40c74e2aea\"",
+        "ETag": "\"3b2cc8be94c41bbc264023be00cde67d\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "4c2462a5-5855-497f-8aed-dd41c5e279d9",
-        "X-Runtime": "0.012649",
+        "X-Request-Id": "0931c910-4fc9-49e8-b46d-a06db1dd4716",
+        "X-Runtime": "0.015952",
         "Content-Length": "50"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/user/comments\" -d 'title=Title&text=Text' -X POST \\\n\t-H \"X-Auth-Token: vu3TXzs39G-bDc9JBGkX\""
+      "curl": "curl \"http://localhost:5000/v1/user/comments/9.json\" -d 'title=Title&text=Text' -X PATCH \\\n\t-H \"X-Auth-Token: 1tRxP1jvj2vdmJPXgBw4\""
     }
   ]
 }

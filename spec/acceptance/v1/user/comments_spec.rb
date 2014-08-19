@@ -44,4 +44,31 @@ resource 'Comments' do
       end
     end
   end
+
+  patch '/v1/user/comments/:comment_id.json' do
+    let(:params) { { title: 'Title', text: 'Text' } }
+    let(:comment) { create(:comment, user: user) }
+    let(:comment_id) { comment.id }
+
+    parameter :title, 'Title', required: true
+    parameter :text, 'Text', required: true
+
+    before { header 'X-AUTH-TOKEN', user.authentication_token }
+
+    example_request 'Update comment' do
+      comment.attributes = params
+      expect(subject['comment']).to be_a_comment_representation(comment)
+    end
+  end
+
+  delete '/v1/user/comments/:comment_id.json' do
+    let(:comment) { create(:comment, user: user) }
+    let(:comment_id) { comment.id }
+
+    before { header 'X-AUTH-TOKEN', user.authentication_token }
+
+    example_request 'Delete a comment' do
+      expect(subject['comment']).to be_a_comment_representation(comment)
+    end
+  end
 end

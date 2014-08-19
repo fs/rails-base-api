@@ -1,0 +1,38 @@
+{
+  "resource": "Comments",
+  "http_method": "DELETE",
+  "route": "user/comments/:comment_id.json",
+  "description": "Delete a comment",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "DELETE",
+      "request_path": "user/comments/1.json",
+      "request_body": null,
+      "request_headers": {
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/x-www-form-urlencoded",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\"comment\":{\"id\":1,\"title\":\"Minus excepturi tempore omnis rem.\",\"text\":\"Et quod voluptate ipsa. Magnam rerum cumque qui eaque qui nihil dolorem. In fugit consequatur unde sapiente quia at. Illum ut quidem ab. Saepe qui hic quo error.\"}}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "\"41326d8ebc707a96a6030dcb1d61fe08\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "a0bb1676-76d1-492a-929c-ab157517f6d9",
+        "X-Runtime": "0.060294",
+        "Content-Length": "236"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"http://localhost:5000user/comments/1.json\" -d '' -X DELETE \\\n\t-H \"X-Auth-Token: fajrXGmGuCfd38kS-psC\""
+    }
+  ]
+}

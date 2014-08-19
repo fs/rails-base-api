@@ -2,12 +2,10 @@ class ApiResponder < ActionController::Responder
   def api_behavior(error)
     fail(error) unless resourceful?
 
-    if get?
-      display resource
-    elsif post?
-      display resource, status: :created, location: nil
+    if post?
+      display(resource, status: :created, location: options[:location])
     else
-      head :no_content
+      display(resource, status: :ok, location: options[:location])
     end
   end
 end
