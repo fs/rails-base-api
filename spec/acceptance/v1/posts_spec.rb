@@ -7,30 +7,23 @@ resource 'Posts' do
   let!(:comment) { create :comment, post: post }
   let!(:id) { post.id }
 
-  subject { json_response_body }
+  subject(:response) { json_response_body }
 
   get '/v1/posts' do
-    example_request 'Listing posts' do
-      expect(subject['posts'].first).to be_a_post_representation(post)
-    end
-  end
+    parameter :page, 'Page'
+    parameter :per_page, 'Items per page'
 
-  get '/v1/posts?page=1' do
-    example_request 'Listing posts with page' do
-      expect(response_status).to eq(200)
-      expect(subject).to be_a_json_with_pagination_represenation_of(
-        posts: posts,
-        serializer_includes: {
-          post: [:comments],
-          comment: [:user]
-        }
-      )
+    let(:params) { { page: 1, per_page: 25 } }
+
+    example_request 'Listing posts' do
+      expect(response['posts'].first).to be_a_post_representation(post)
+      expect(response['meta']).to be_a_meta_representation_of(posts, params)
     end
   end
 
   get '/v1/posts/:id' do
     example_request 'Single post' do
-      expect(subject['post']).to be_a_post_representation(post)
+      expect(response['post']).to be_a_post_representation(post)
     end
   end
 end
