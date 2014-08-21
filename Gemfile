@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby '2.1.2'
 
-gem 'rails', '4.1.4'
+gem 'rails', '4.1.5'
 
 # https://github.com/rails-api/rails-api/issues/135
 gem 'rails-api', git: 'https://github.com/fs/rails-api.git'
