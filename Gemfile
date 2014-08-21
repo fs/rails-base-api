@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 ruby '2.1.2'
 
 # the most important stuff
-gem 'rails', '4.1.4'
+gem 'rails', '4.1.5'
 gem 'pg'
 # https://github.com/rails-api/rails-api/issues/135
 gem 'rails-api', git: 'https://github.com/fs/rails-api.git'
@@ -17,6 +17,7 @@ gem 'kaminari'
 gem 'dotenv-rails'
 gem 'active_model_serializers'
 gem 'interactor-rails'
+gem 'rack-cors', require: 'rack/cors'
 
 group :development do
   gem 'letter_opener'

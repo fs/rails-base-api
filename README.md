@@ -19,6 +19,7 @@ Status of the API could be checked at [http://localhost:5000/docs](http://localh
 * [Rollbar](https://github.com/rollbar/rollbar-gem) for exception notification
 * [Thin](https://github.com/macournoyer/thin) as rails web server
 * [Kaminari](https://github.com/amatsuda/kaminari) for pagination
+* [Rack CORS](https://github.com/cyu/rack-cors) for [CORS](http://en.wikipedia.org/wiki/Cross-origin_resource_sharing)
 
 ### Development gems
 
@@ -43,6 +44,7 @@ Status of the API could be checked at [http://localhost:5000/docs](http://localh
 * `01_config.rb` - shortcut for getting application config with `app_config`
 * `mailer.rb` - setup default hosts for mailer from configuration
 * `requires.rb` - automatically requires everything in lib/ & lib/extensions
+* `rack_cors.rb` - setup whitelist of domains to allow cross-origin resource sharing
 
 ### Scripts
 
@@ -53,61 +55,78 @@ Status of the API could be checked at [http://localhost:5000/docs](http://localh
 
 ### Serializers
 
-* `CollectionSerializer` - use that serializer if you want to add meta with
-pagination info on response
+### CollectionSerializer
 
-        def index
-          respond_with(
-            posts,
-            serializer: CollectionSerializer
-          )
-        end
+Use that serializer if you want to add meta with pagination info on response
 
-    The above usage of `CollectionSerializer` will produce the following:
+```ruby
+def index
+  respond_with(
+    posts,
+    serializer: CollectionSerializer
+  )
+end
+```
 
-        {
-          "meta": {
-            "pagination": {
-              "total":46,
-              "per_page":2,
-              "page":1
-            }
-          },
-          "posts": [
-            { "title": "Post 1", "body": "Hello!" },
-            { "title": "Post 2", "body": "Goodbye!" }
-          ]
-        }
+The above usage of `CollectionSerializer` will produce the following:
+
+```json
+{
+  "meta": {
+    "pagination": {
+      "total":46,
+      "per_page":2,
+      "page":1
+    }
+  },
+  "posts": [
+    { "title": "Post 1", "body": "Hello!" },
+    { "title": "Post 2", "body": "Goodbye!" }
+  ]
+}
+```
 
 ## Quick start
 
 Clone application as new project with original repository named "rails-base-api"
 
-    git clone git://github.com/fs/rails-base-api.git --origin rails-base-api [MY-NEW-PROJECT]
+```bash
+git clone git://github.com/fs/rails-base-api.git --origin rails-base-api [MY-NEW-PROJECT]
+```
 
 Create your new repo on GitHub and push master into it.
 Make sure master branch is tracking origin repo.
 
-    git remote add origin git@github.com:[MY-GITHUB-ACCOUNT]/[MY-NEW-PROJECT].git
-    git push -u origin master
+```bash
+git remote add origin git@github.com:[MY-GITHUB-ACCOUNT]/[MY-NEW-PROJECT].git
+git push -u origin master
+```
 
 Run bootstrap script
 
-    bin/bootstrap
+```bash
+bin/bootstrap
+```
 
 Make sure all test are green
 
-    bin/ci
+```bash
+bin/ci
+```
 
 Run app
 
-    bin/server
+```bash
+bin/server
+```
 
 **Do not forget to update this file!**
 
-    mv doc/README_TEMPLATE.md README.md
-    # update README.md
-    git commit -am "Update README.md"
+```bash
+mv doc/README_TEMPLATE.md README.md
+# update README.md
+git commit -am "Update README.md"
+```
 
 ## Examples
 
