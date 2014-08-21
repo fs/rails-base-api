@@ -8,17 +8,13 @@ resource 'Comments' do
   get '/v1/user/comments' do
     let!(:comment) { create :comment, user: user }
 
+    it_behaves_like 'a request that requires an authentication'
+
     context 'with valid token' do
       before { header 'X-AUTH-TOKEN', user.authentication_token }
 
       example_request 'List of comments' do
         expect(json_response['comments'].first).to be_a_comment_representation(comment)
-      end
-    end
-
-    context 'without token' do
-      example_request 'List of comments authorization error' do
-        expect(response_status).to eq 401
       end
     end
   end
@@ -30,17 +26,13 @@ resource 'Comments' do
     parameter :title, 'Title', required: true
     parameter :text, 'Text', required: true
 
+    it_behaves_like 'a request that requires an authentication'
+
     context 'with valid token' do
       before { header 'X-AUTH-TOKEN', user.authentication_token }
 
       example_request 'Create comment' do
         expect(json_response['comment']).to be_a_comment_representation(comment)
-      end
-    end
-
-    context 'without token' do
-      example_request 'Create comment authorization error' do
-        expect(response_status).to eq 401
       end
     end
   end
