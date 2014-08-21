@@ -5,7 +5,14 @@
   "description": "Listing posts",
   "explanation": null,
   "parameters": [
-
+    {
+      "name": "page",
+      "description": "Page"
+    },
+    {
+      "name": "per_page",
+      "description": "Items per page"
+    }
   ],
   "response_fields": [
 
@@ -13,29 +20,31 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/v1/posts",
+      "request_path": "/v1/posts?page=1&per_page=25",
       "request_body": null,
       "request_headers": {
       },
       "request_query_parameters": {
+        "page": "1",
+        "per_page": "25"
       },
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"posts\":[{\"id\":1,\"title\":\"Voluptatem beatae ut magni iste in cum quibusdam.\",\"text\":\"Dolor perferendis qui. Aspernatur nam voluptate quisquam maxime. At et qui reiciendis accusamus praesentium sint. Quia tempora aspernatur laboriosam inventore quo veritatis dolore.\",\"comments\":[{\"id\":1,\"title\":\"Itaque suscipit non at repellendus.\",\"text\":\"Delectus molestiae aliquam animi et. Suscipit sunt et. Sed harum voluptas blanditiis. Porro necessitatibus excepturi et. Esse id et et magnam qui qui nesciunt.\",\"user\":null}]},{\"id\":2,\"title\":\"Dolorem reiciendis neque rerum dolor et.\",\"text\":\"Qui quisquam sit quas. Mollitia voluptas ipsam et ea. Voluptatum nam ipsa eaque ut.\",\"comments\":[]}],\"meta\":{\"pagination\":{\"total\":2,\"per_page\":25,\"page\":1}}}",
+      "response_body": "{\"posts\":[{\"id\":3,\"title\":\"Culpa et eos sequi.\",\"text\":\"Nesciunt magni voluptatem nihil est et. Quod vel et maxime quia. Quos inventore officiis ratione. Et sed debitis voluptatem tenetur in. Quo ut sequi dolorem.\",\"comments\":[{\"id\":2,\"title\":\"Quia vero quibusdam enim libero et.\",\"text\":\"Aut sunt enim quia sit hic velit quibusdam. Sed et autem molestiae sed cum quas atque. Dolor eligendi voluptatem quis eos molestiae.\",\"user\":null}]},{\"id\":4,\"title\":\"Corrupti assumenda quia totam repellat qui aperiam magnam incidunt.\",\"text\":\"Et non veritatis suscipit. Rem deserunt cum voluptas et a voluptate. Error tempora voluptates sint sit.\",\"comments\":[]}],\"meta\":{\"pagination\":{\"total\":2,\"per_page\":25,\"page\":1}}}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "\"af7ea100fe184779dc2f860afe506668\"",
+        "ETag": "\"3edad6bd845b615143ca3e7ce4c34228\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "bcd18dca-52c8-4834-837f-700b18c189ce",
-        "X-Runtime": "0.077994",
-        "Content-Length": "743"
+        "X-Request-Id": "494e8774-93b1-46c6-a818-7f1724bfe910",
+        "X-Runtime": "0.095179",
+        "Content-Length": "710"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/posts\" -X GET "
+      "curl": "curl \"http://localhost:5000/v1/posts?page=1&per_page=25\" -X GET \\\n\t-H \"Origin: \""
     }
   ]
 }

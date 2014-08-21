@@ -4,18 +4,13 @@
       "name": "Posts",
       "examples": [
         {
-          "description": "Listing posts",
-          "link": "posts/listing_posts.json",
-          "groups": "all"
-        },
-        {
-          "description": "Listing posts with page",
-          "link": "posts/listing_posts_with_page.json",
-          "groups": "all"
-        },
-        {
           "description": "Single post",
           "link": "posts/single_post.json",
+          "groups": "all"
+        },
+        {
+          "description": "Listing posts",
+          "link": "posts/listing_posts.json",
           "groups": "all"
         }
       ]

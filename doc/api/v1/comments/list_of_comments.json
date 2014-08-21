@@ -22,20 +22,20 @@
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"comments\":[{\"id\":6,\"title\":\"Quod nam aspernatur in dolorum.\",\"text\":\"Aut dignissimos minus provident cum accusamus. Consequuntur officiis cupiditate et ex expedita facilis molestiae. Non et animi sequi temporibus aspernatur sunt. Sint labore enim illum reprehenderit hic iusto pariatur. Sequi ipsa itaque.\",\"post\":null,\"user\":{\"id\":6,\"authentication_token\":\"ams6uzzryVQxjqjE6hsc\",\"email\":\"user6@example.com\"}}],\"meta\":{\"pagination\":{\"total\":1,\"per_page\":25,\"page\":1}}}",
+      "response_body": "{\"comments\":[{\"id\":5,\"title\":\"Ullam explicabo blanditiis et fugiat est tempore iste animi.\",\"text\":\"Quisquam cum tempora. Pariatur sit officiis dolores corrupti dolor. Doloribus quisquam culpa et quis blanditiis. Qui aperiam dolorem aut. Molestiae error nesciunt suscipit enim repellendus quasi.\",\"post\":null,\"user\":{\"id\":6,\"authentication_token\":\"L-VT-NV8CfePxhedM3ts\",\"email\":\"user6@example.com\"}}],\"meta\":{\"pagination\":{\"total\":1,\"per_page\":25,\"page\":1}}}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "\"1bb9b5060826c832ddb34a920906169e\"",
+        "ETag": "\"0dd5b4d6e8881810562da5aeacc2a45d\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "f467fea3-6f33-43f9-aadb-7b5f79177477",
-        "X-Runtime": "0.017281",
-        "Content-Length": "470"
+        "X-Request-Id": "ab1fcddc-6070-4845-a71d-de4438ba6d73",
+        "X-Runtime": "0.013512",
+        "Content-Length": "458"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/user/comments\" -X GET \\\n\t-H \"X-Auth-Token: ams6uzzryVQxjqjE6hsc\""
+      "curl": "curl \"http://localhost:5000/v1/user/comments\" -X GET \\\n\t-H \"X-Auth-Token: L-VT-NV8CfePxhedM3ts\" \\\n\t-H \"Origin: \""
     }
   ]
 }
