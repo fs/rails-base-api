@@ -8,8 +8,6 @@ resource 'Comments' do
   get '/v1/user/comments' do
     let!(:comment) { create :comment, user: user }
 
-    it_behaves_like 'a request that requires an authentication'
-
     context 'with valid token' do
       before { header 'X-AUTH-TOKEN', user.authentication_token }
 
@@ -17,6 +15,8 @@ resource 'Comments' do
         expect(json_response['comments'].first).to be_a_comment_representation(comment)
       end
     end
+
+    include_context 'a request without token'
   end
 
   post '/v1/user/comments' do
@@ -26,8 +26,6 @@ resource 'Comments' do
     parameter :title, 'Title', required: true
     parameter :text, 'Text', required: true
 
-    it_behaves_like 'a request that requires an authentication'
-
     context 'with valid token' do
       before { header 'X-AUTH-TOKEN', user.authentication_token }
 
@@ -35,5 +33,7 @@ resource 'Comments' do
         expect(json_response['comment']).to be_a_comment_representation(comment)
       end
     end
+
+    include_context 'a request without token'
   end
 end
