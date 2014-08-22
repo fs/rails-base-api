@@ -55,7 +55,7 @@ Status of the API could be checked at [http://localhost:5000/docs](http://localh
 
 ### Serializers
 
-### CollectionSerializer
+### PaginatedArraySerializer
 
 Use that serializer if you want to add meta with pagination info on response
 
@@ -63,12 +63,12 @@ Use that serializer if you want to add meta with pagination info on response
 def index
   respond_with(
     posts,
-    serializer: CollectionSerializer
+    serializer: PaginatedArraySerializer
   )
 end
 ```
 
-The above usage of `CollectionSerializer` will produce the following:
+The above usage of `PaginatedArraySerializer` will produce the following:
 
 ```json
 {

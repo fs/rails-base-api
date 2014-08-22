@@ -1,4 +1,4 @@
-class CollectionSerializer < ActiveModel::ArraySerializer
+class PaginatedArraySerializer < ActiveModel::ArraySerializer
   def initialize(object, options = {})
     super(object, options)
 
