@@ -4,7 +4,7 @@ describe User do
   describe 'validations' do
     context 'uniqueness' do
       subject { create :user }
-      it { is_expected.to validate_uniqueness_of :email }
+      it { should validate_uniqueness_of :email }
     end
   end
 
@@ -16,7 +16,7 @@ describe User do
     describe 'before save' do
       it 'calls #ensure_authentication_token!' do
         u = build :user
-        allow(u).to receive(:ensure_authentication_token!)
+        u.should_receive(:ensure_authentication_token!)
 
         u.save
       end

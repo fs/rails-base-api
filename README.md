@@ -18,7 +18,6 @@ Status of the API could be checked at [http://localhost:5000/docs](http://localh
 * [Decent Exposure](https://github.com/voxdolo/decent_exposure) for DRY controllers
 * [Rollbar](https://github.com/rollbar/rollbar-gem) for exception notification
 * [Thin](https://github.com/macournoyer/thin) as rails web server
-* [Rack CORS](https://github.com/cyu/rack-cors) for [CORS](http://en.wikipedia.org/wiki/Cross-origin_resource_sharing)
 
 ### Development gems
 
@@ -43,7 +42,6 @@ Status of the API could be checked at [http://localhost:5000/docs](http://localh
 * `01_config.rb` - shortcut for getting application config with `app_config`
 * `mailer.rb` - setup default hosts for mailer from configuration
 * `requires.rb` - automatically requires everything in lib/ & lib/extensions
-* `rack_cors.rb` - setup whitelist of domains to allow cross-origin resource sharing
 
 ### Scripts
 
