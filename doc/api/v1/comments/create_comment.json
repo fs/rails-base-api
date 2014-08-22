@@ -16,6 +16,9 @@
       "description": "Text"
     }
   ],
+  "response_fields": [
+
+  ],
   "requests": [
     {
       "request_method": "POST",
@@ -36,12 +39,12 @@
         "Content-Type": "application/json; charset=utf-8",
         "ETag": "\"62f9fb80a3218cb80c6cafabc981781b\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "76f59da0-9e3e-4f6e-b779-b00651236fa8",
-        "X-Runtime": "0.012526",
+        "X-Request-Id": "236b2c4f-e35e-499d-971a-58a76ccb88fe",
+        "X-Runtime": "0.022957",
         "Content-Length": "50"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/user/comments\" -d 'title=Title&text=Text' -X POST \\\n\t-H \"X-Auth-Token: gqgFB4hGPEFL9fwF7Usr\""
+      "curl": "curl \"http://localhost:5000/v1/user/comments\" -d 'title=Title&text=Text' -X POST \\\n\t-H \"X-Auth-Token: xRb-igpQRqo9d22tP4vW\" \\\n\t-H \"Origin: \""
     }
   ]
 }

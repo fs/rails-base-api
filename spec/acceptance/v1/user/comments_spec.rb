@@ -3,16 +3,23 @@ require 'rspec_api_documentation/dsl'
 
 resource 'Comments' do
   let!(:user) { create :user }
-  subject(:json_response) { json_response_body }
+  let!(:comments) { create_list :comment, 2, user: user }
+  let(:first_comment) { user.comments.reload.first }
+
+  subject(:response) { json_response_body }
 
   get '/v1/user/comments' do
-    let!(:comment) { create :comment, user: user }
+    parameter :page, 'Page'
+    parameter :per_page, 'Items per page'
+
+    let(:params) { { page: 1, per_page: 25 } }
 
     context 'with valid token' do
       before { header 'X-AUTH-TOKEN', user.authentication_token }
 
       example_request 'List of comments' do
-        expect(json_response['comments'].first).to be_a_comment_representation(comment)
+        expect(response['comments'].first).to be_a_comment_representation(first_comment)
+        expect(response['meta']).to be_a_meta_representation_of(comments, params)
       end
     end
 
@@ -25,7 +32,6 @@ resource 'Comments' do
 
   post '/v1/user/comments' do
     let(:params) { { title: 'Title', text: 'Text' } }
-    let(:comment) { user.comments.first }
 
     parameter :title, 'Title', required: true
     parameter :text, 'Text', required: true
@@ -34,7 +40,7 @@ resource 'Comments' do
       before { header 'X-AUTH-TOKEN', user.authentication_token }
 
       example_request 'Create comment' do
-        expect(json_response['comment']).to be_a_comment_representation(comment)
+        expect(response['comment']).to be_a_comment_representation(first_comment)
       end
     end
 

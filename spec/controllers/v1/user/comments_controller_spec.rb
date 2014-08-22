@@ -9,7 +9,8 @@ describe V1::User::CommentsController do
     let(:comments) { build_list :comment, 2 }
 
     before do
-      controller.current_user.stub(:comments) { double(all: double(with_posts_and_users: comments)) }
+      allow(comments).to receive_messages(total_count: 1, limit_value: 1, current_page: 1)
+      allow(Comment).to receive_message_chain(:page, :per, :with_posts_and_users).and_return(comments)
 
       get :index, format: :json
     end

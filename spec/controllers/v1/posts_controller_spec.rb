@@ -5,8 +5,8 @@ describe V1::PostsController do
   let(:posts) { [post] }
 
   before do
-    posts.stub(:find) { post }
-    Post.stub(:with_comments_and_users) { posts }
+    allow(posts).to receive_messages(find: post, total_count: 1, limit_value: 1, current_page: 1)
+    allow(Post).to receive_message_chain(:page, :per, :with_comments_and_users).and_return(posts)
   end
 
   describe 'GET #index' do

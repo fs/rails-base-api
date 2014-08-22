@@ -5,16 +5,28 @@
   "description": "List of comments authorization error",
   "explanation": null,
   "parameters": [
+    {
+      "name": "page",
+      "description": "Page"
+    },
+    {
+      "name": "per_page",
+      "description": "Items per page"
+    }
+  ],
+  "response_fields": [
 
   ],
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/v1/user/comments",
+      "request_path": "/v1/user/comments?page=1&per_page=25",
       "request_body": null,
       "request_headers": {
       },
       "request_query_parameters": {
+        "page": "1",
+        "per_page": "25"
       },
       "request_content_type": null,
       "response_status": 401,
@@ -26,12 +38,12 @@
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
         "Cache-Control": "no-cache",
-        "X-Request-Id": "a8872588-177d-4137-9a51-9e26d4a7058a",
-        "X-Runtime": "0.002857",
+        "X-Request-Id": "e9835c2e-a616-4c5a-b3cc-bb260683d15e",
+        "X-Runtime": "0.003348",
         "Content-Length": "61"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/user/comments\" -X GET "
+      "curl": "curl \"http://localhost:5000/v1/user/comments?page=1&per_page=25\" -X GET \\\n\t-H \"Origin: \""
     }
   ]
 }
