@@ -2,5 +2,5 @@ class CommentSerializer < ApplicationSerializer
   attributes :id, :title, :text
 
   has_one :post, serializer: CommentPostSerializer
-  has_one :user
+  has_one :user, serializer: CommentUserSerializer
 end
