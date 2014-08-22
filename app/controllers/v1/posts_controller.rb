@@ -12,7 +12,7 @@ module V1
           post: [:comments],
           comment: [:user]
         },
-        serializer: CollectionSerializer
+        serializer: PaginatedArraySerializer
       )
     end
 

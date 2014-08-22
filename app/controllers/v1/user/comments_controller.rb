@@ -12,7 +12,7 @@ module V1
           serializer_includes: {
             comment: %i(post user)
           },
-          serializer: CollectionSerializer
+          serializer: PaginatedArraySerializer
         )
       end
 
