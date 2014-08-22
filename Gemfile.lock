@@ -137,6 +137,9 @@ GEM
     json_spec (1.1.2)
       multi_json (~> 1.0)
       rspec (>= 2.0, < 4.0)
+    kaminari (0.16.1)
+      actionpack (>= 3.0.0)
+      activesupport (>= 3.0.0)
     launchy (2.4.2)
       addressable (~> 2.3)
     letter_opener (1.2.0)
@@ -316,6 +319,7 @@ DEPENDENCIES
   guard-rspec
   interactor-rails
   json_spec
+  kaminari
   letter_opener
   mail_safe
   minitest
