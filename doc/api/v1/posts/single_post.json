@@ -1,0 +1,41 @@
+{
+  "resource": "Posts",
+  "http_method": "GET",
+  "route": "/v1/posts/:id",
+  "description": "Single post",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/v1/posts/3",
+      "request_body": null,
+      "request_headers": {
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": null,
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\"post\":{\"id\":3,\"title\":\"Rem tempore et ab neque recusandae error.\",\"text\":\"Optio et iure minus voluptas est maxime. Maxime enim sit expedita. Quas qui delectus nisi culpa quis ipsum. Animi nihil ea nobis quas ut quibusdam adipisci. Tenetur eligendi quia natus nulla ut a.\"}}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "\"f09b3f0f1e2a2b7536485a23a91fdb38\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "5e82f9ca-daf0-474c-b593-a1d7d23eaeb2",
+        "X-Runtime": "0.009196",
+        "Content-Length": "275"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"http://localhost:5000/v1/posts/3\" -X GET \\\n\t-H \"Origin: \""
+    }
+  ]
+}

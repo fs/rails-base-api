@@ -1,0 +1,50 @@
+{
+  "resource": "Comments",
+  "http_method": "GET",
+  "route": "/v1/user/comments",
+  "description": "List of comments",
+  "explanation": null,
+  "parameters": [
+    {
+      "name": "page",
+      "description": "Page"
+    },
+    {
+      "name": "per_page",
+      "description": "Items per page"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/v1/user/comments?page=1&per_page=25",
+      "request_body": null,
+      "request_headers": {
+      },
+      "request_query_parameters": {
+        "page": "1",
+        "per_page": "25"
+      },
+      "request_content_type": null,
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\"comments\":[{\"id\":2,\"title\":\"Porro doloribus totam sunt velit voluptatem possimus.\",\"text\":\"Autem nam quos eius exercitationem. Repellendus nam reprehenderit cumque ut velit et. Et quo perspiciatis.\",\"post\":null,\"user\":{\"id\":1,\"authentication_token\":\"TEKCD4e-ohaxmv3BKw7z\",\"email\":\"user1@example.com\"}},{\"id\":1,\"title\":\"Ipsa ut est porro qui.\",\"text\":\"Natus molestiae quisquam omnis iure mollitia. Itaque quia non eos voluptas consectetur exercitationem quo. Iste similique accusamus temporibus laborum voluptatem dolorem. Quam aliquid qui et saepe.\",\"post\":null,\"user\":{\"id\":1,\"authentication_token\":\"TEKCD4e-ohaxmv3BKw7z\",\"email\":\"user1@example.com\"}}],\"meta\":{\"pagination\":{\"total\":2,\"per_page\":25,\"page\":1}}}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "\"58edbd9002b1b83ca8b6f9fac67e7f13\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "cf28ff2c-e744-45c0-9181-baab3ba72748",
+        "X-Runtime": "0.034964",
+        "Content-Length": "713"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"http://localhost:5000/v1/user/comments?page=1&per_page=25\" -X GET \\\n\t-H \"X-Auth-Token: TEKCD4e-ohaxmv3BKw7z\" \\\n\t-H \"Origin: \""
+    }
+  ]
+}

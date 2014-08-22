@@ -1,0 +1,50 @@
+{
+  "resource": "Posts",
+  "http_method": "GET",
+  "route": "/v1/posts",
+  "description": "Listing posts",
+  "explanation": null,
+  "parameters": [
+    {
+      "name": "page",
+      "description": "Page"
+    },
+    {
+      "name": "per_page",
+      "description": "Items per page"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/v1/posts?page=1&per_page=25",
+      "request_body": null,
+      "request_headers": {
+      },
+      "request_query_parameters": {
+        "page": "1",
+        "per_page": "25"
+      },
+      "request_content_type": null,
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\"posts\":[{\"id\":1,\"title\":\"Veritatis aliquid labore autem quas qui molestiae.\",\"text\":\"Praesentium aliquam aut molestiae pariatur. Ipsa est optio quidem placeat iusto asperiores corporis. Blanditiis accusantium qui delectus voluptatem. Reiciendis corporis qui.\",\"comments\":[]},{\"id\":2,\"title\":\"Doloribus cum amet dicta.\",\"text\":\"Nisi vel et delectus. Commodi in vel adipisci facere soluta omnis. Dicta quae natus nihil sint ea eos repellendus.\",\"comments\":[]}],\"meta\":{\"pagination\":{\"total\":2,\"per_page\":25,\"page\":1}}}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "\"a8fd1274d57aa4fad6b098a54b8ba9da\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "4ec91aab-982e-4493-8524-1660ebaee5ce",
+        "X-Runtime": "0.072059",
+        "Content-Length": "518"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"http://localhost:5000/v1/posts?page=1&per_page=25\" -X GET \\\n\t-H \"Origin: \""
+    }
+  ]
+}

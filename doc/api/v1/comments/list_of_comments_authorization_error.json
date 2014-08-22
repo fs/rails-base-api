@@ -1,0 +1,49 @@
+{
+  "resource": "Comments",
+  "http_method": "GET",
+  "route": "/v1/user/comments",
+  "description": "List of comments authorization error",
+  "explanation": null,
+  "parameters": [
+    {
+      "name": "page",
+      "description": "Page"
+    },
+    {
+      "name": "per_page",
+      "description": "Items per page"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/v1/user/comments?page=1&per_page=25",
+      "request_body": null,
+      "request_headers": {
+      },
+      "request_query_parameters": {
+        "page": "1",
+        "per_page": "25"
+      },
+      "request_content_type": null,
+      "response_status": 401,
+      "response_status_text": "Unauthorized",
+      "response_body": "{\"error\":\"You need to sign in or sign up before continuing.\"}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "Cache-Control": "no-cache",
+        "X-Request-Id": "e9835c2e-a616-4c5a-b3cc-bb260683d15e",
+        "X-Runtime": "0.003348",
+        "Content-Length": "61"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"http://localhost:5000/v1/user/comments?page=1&per_page=25\" -X GET \\\n\t-H \"Origin: \""
+    }
+  ]
+}
