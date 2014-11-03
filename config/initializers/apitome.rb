@@ -41,4 +41,13 @@ Apitome.setup do |config|
   # individual pages on demand. This allows you to specify which one you want, as a single page may impact performance.
   config.single_page = true
 
+  # Restrict access to documentation
+  #
+  if ENV['APITOME_USER'] && ENV['APITOME_PASSWORD']
+    Apitome::DocsController.http_basic_authenticate_with(
+      name: ENV['APITOME_USER'],
+      password: ENV['APITOME_PASSWORD'],
+      only: [:index]
+    )
+  end
 end if defined? Apitome

@@ -128,6 +128,10 @@ mv doc/README_TEMPLATE.md README.md
 git commit -am "Update README.md"
 ```
 
+### Restrict access to documentation
+
+You can enable restrict access to documentation by adding `APITOME_USER` and `APITOME_PASSWORD` environment variables. Can be useful on staging environment.
+
 ## Examples
 
 Please check how to build API endpoints and test them properly in the
