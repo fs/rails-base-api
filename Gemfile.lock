@@ -132,10 +132,7 @@ GEM
       tilt
     highline (1.6.21)
     i18n (0.7.0)
-    interactor (2.1.0)
-    interactor-rails (1.0.1)
-      interactor (< 3)
-      rails (>= 3, < 5)
+    interactor (3.1.0)
     json (1.8.3)
     json_spec (1.1.2)
       multi_json (~> 1.0)
@@ -332,7 +329,7 @@ DEPENDENCIES
   faker
   foreman
   guard-rspec
-  interactor-rails
+  interactor
   json_spec
   kaminari
   letter_opener
