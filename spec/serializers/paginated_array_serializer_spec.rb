@@ -1,5 +1,3 @@
-require 'rails_helper'
-
 describe PaginatedArraySerializer do
   let(:collection) { Kaminari.paginate_array([1, 2, 3]).page(1) }
   let(:json) { PaginatedArraySerializer.new(collection, root: :collection).to_json }
