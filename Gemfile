@@ -5,8 +5,7 @@ ruby '2.1.2'
 # the most important stuff
 gem 'rails', '4.2.3'
 gem 'pg'
-# https://github.com/rails-api/rails-api/issues/135
-gem 'rails-api', git: 'https://github.com/fs/rails-api.git'
+gem 'rails-api'
 
 # all other gems
 gem 'active_model_serializers', '~> 0.8.3'

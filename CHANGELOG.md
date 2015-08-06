@@ -1,5 +1,7 @@
-Unreleased
+# Unreleased
 
+* Update Rails API to 0.4.0
+  ([#171](https://github.com/fs/rails-base-api/pull/171))
 * Update Rspec and dependencies: guard-rspec, rspec_api_documentation.
   Remove minitest from dependencies after update of shoulda-matchers.
   ([#170](https://github.com/fs/rails-base-api/pull/170))
