@@ -107,6 +107,7 @@ Run bootstrap script
 ```bash
 bin/bootstrap
 ```
+__if bundle install fails on PG with Mac OS try [SO Solution](http://stackoverflow.com/questions/19262312/installing-pg-gem-on-os-x-failure-to-build-native-extension).__
 
 Make sure all test are green
 
@@ -131,6 +132,16 @@ git commit -am "Update README.md"
 ### Restrict access to documentation
 
 You can enable restrict access to documentation by adding `APITOME_USER` and `APITOME_PASSWORD` environment variables. Can be useful on staging environment.
+
+### Including Root in JSON Response
+
+Per [active_model_serializers](https://github.com/rails-api/active_model_serializers)
+
+If you want to have a root key on your responses you should use the Json adapter, instead of the default FlattenJson:
+
+```ruby
+ActiveModel::Serializer.config.adapter = :json
+```
 
 ## Examples
 

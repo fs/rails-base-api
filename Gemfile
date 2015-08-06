@@ -15,7 +15,9 @@ gem 'seedbank'
 gem 'devise'
 gem 'kaminari'
 gem 'dotenv-rails'
-gem 'active_model_serializers'
+# https://github.com/fs/rails-base-api/issues/158
+gem 'active_model_serializers', '>= 0.9.3'
+
 gem 'interactor-rails'
 gem 'rack-cors', require: 'rack/cors'
 
