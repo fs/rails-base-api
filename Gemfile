@@ -31,13 +31,8 @@ group :development do
 end
 
 group :development, :test do
-  # FIXME: Required for fixing warning
-  # https://github.com/rspec/rspec-rails/pull/772
-  # Going to be fixed in rspec > 2.99
-  #
-  gem 'minitest'
   gem 'byebug'
-  gem 'rspec-rails', '~> 3.0.0'
+  gem 'rspec-rails'
   gem 'mail_safe'
 
   gem 'rails_best_practices'
@@ -59,7 +54,7 @@ end
 group :development, :test, :staging do
   gem 'faker'
   gem 'factory_girl_rails'
-  gem 'rspec_api_documentation', '~> 4.0.0'
+  gem 'rspec_api_documentation'
   gem 'apitome'
 end
 
