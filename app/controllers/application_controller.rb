@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::API
-  include ActionController::MimeResponds, ActionController::ImplicitRender
+  include ActionController::ImplicitRender
+
   include SkipTrackable
   include TokenAuthentication
 

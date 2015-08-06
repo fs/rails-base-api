@@ -3,21 +3,22 @@ source 'https://rubygems.org'
 ruby '2.1.2'
 
 # the most important stuff
-gem 'rails', '4.1.11'
+gem 'rails', '4.2.3'
 gem 'pg'
 # https://github.com/rails-api/rails-api/issues/135
 gem 'rails-api', git: 'https://github.com/fs/rails-api.git'
 
 # all other gems
-gem 'thin'
+gem 'active_model_serializers', '~> 0.8.3'
 gem 'decent_exposure'
-gem 'seedbank'
 gem 'devise'
-gem 'kaminari'
 gem 'dotenv-rails'
-gem 'active_model_serializers'
 gem 'interactor-rails'
+gem 'kaminari'
 gem 'rack-cors', require: 'rack/cors'
+gem 'responders'
+gem 'seedbank'
+gem 'thin'
 
 group :development do
   gem 'letter_opener'
