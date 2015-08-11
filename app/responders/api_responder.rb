@@ -1,6 +1,6 @@
 class ApiResponder < ActionController::Responder
-  def api_behavior(error)
-    fail(error) unless resourceful?
+  def api_behavior
+    fail MissingRenderer.new(format), "No renderer defined for format: #{format}" unless has_renderer?
 
     if get?
       display resource
