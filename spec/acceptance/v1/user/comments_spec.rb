@@ -4,7 +4,7 @@ require 'rspec_api_documentation/dsl'
 resource 'Comments' do
   let!(:user) { create :user }
   let!(:comments) { create_list :comment, 2, user: user }
-  let(:first_comment) { user.comments.reload.first }
+  let(:first_comment) { user.comments.ordered.reload.first }
 
   subject(:response) { json_response_body }
 

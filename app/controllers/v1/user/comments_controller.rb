@@ -2,7 +2,8 @@ module V1
   module User
     class CommentsController < User::BaseController
       expose(:comments, ancestor: :current_user) do |scope|
-        scope.page(params[:page]).per(params[:per_page]).with_posts_and_users
+        scope.page(params[:page]).per(params[:per_page])
+          .with_posts_and_users.ordered
       end
       expose(:comment, attributes: :comment_params)
 

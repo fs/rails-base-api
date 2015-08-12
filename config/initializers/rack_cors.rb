@@ -1,4 +1,4 @@
-app_config.middleware.use Rack::Cors do
+app_config.middleware.insert_before 'Warden::Manager', 'Rack::Cors' do
   allow do
     # Allow requests from domains:
     # e.g. origins('api.example.com', 'next.example.com')
