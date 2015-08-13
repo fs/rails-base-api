@@ -1,6 +1,16 @@
 {
   "resources": [
     {
+      "name": "Errors",
+      "examples": [
+        {
+          "description": "Request to unexisting page",
+          "link": "errors/request_to_unexisting_page.json",
+          "groups": "all"
+        }
+      ]
+    },
+    {
       "name": "Sessions",
       "examples": [
         {
@@ -11,16 +21,6 @@
         {
           "description": "Sign in with invalid password",
           "link": "sessions/sign_in_with_invalid_password.json",
-          "groups": "all"
-        }
-      ]
-    },
-    {
-      "name": "Errors",
-      "examples": [
-        {
-          "description": "Request to unexisting page",
-          "link": "errors/request_to_unexisting_page.json",
           "groups": "all"
         }
       ]
