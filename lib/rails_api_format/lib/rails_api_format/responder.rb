@@ -3,12 +3,10 @@ module RailsApiFormat
     def api_behavior
       fail MissingRenderer.new(format), "No renderer defined for format: #{format}" unless has_renderer?
 
-      if get?
-        display resource
-      elsif post?
-        display resource, status: :created, location: nil
+      if post?
+        display(resource, status: :created)
       else
-        head :no_content
+        display(resource, status: :ok)
       end
     end
 
