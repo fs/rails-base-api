@@ -2,7 +2,7 @@ require 'rails_helper'
 require 'rspec_api_documentation/dsl'
 
 resource 'Sessions' do
-  subject(:json_response) { json_response_body }
+  subject(:response) { json_response_body }
 
   post '/v1/users/sign_in' do
     let(:user) { create :user, password: '123456' }
@@ -13,7 +13,7 @@ resource 'Sessions' do
     let(:email) { user.email }
 
     example_request 'Sign in with valid password', password: '123456' do
-      expect(json_response['user']).to be_a_user_representation(user)
+      expect(response['user']).to be_a_user_representation(user)
     end
 
     example_request 'Sign in with invalid password', password: '' do
