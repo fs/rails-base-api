@@ -1,5 +1,7 @@
 # Unreleased
 
+* Filter headers in docs to make it less chatty
+  ([#177](https://github.com/fs/rails-base-api/pull/177))
 * Move `sessions` resource to `v1` namespace
   ([#175](https://github.com/fs/rails-base-api/pull/175))
 * Replace unsupported [interactor-rails](https://github.com/collectiveidea/interactor-rails) with [interactor](https://github.com/collectiveidea/interactor)
