@@ -4,8 +4,6 @@ class ApplicationController < ActionController::API
   include SkipTrackable
   include TokenAuthentication
 
-  self.responder = ApiResponder
-
   decent_configuration do
     strategy DecentExposure::StrongParametersStrategy
   end

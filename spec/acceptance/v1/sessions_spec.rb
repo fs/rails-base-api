@@ -2,6 +2,8 @@ require 'rails_helper'
 require 'rspec_api_documentation/dsl'
 
 resource 'Sessions' do
+  header 'Accept', 'application/json'
+
   subject(:response) { json_response_body }
 
   post '/v1/users/sign_in' do
@@ -18,6 +20,7 @@ resource 'Sessions' do
 
     example_request 'Sign in with invalid password', password: '' do
       expect(response_status).to eq 401
+      expect(response).to be_an_error_representation(:unauthorized, 'Invalid email or password.')
     end
   end
 end
