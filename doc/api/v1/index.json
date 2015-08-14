@@ -4,13 +4,23 @@
       "name": "Posts",
       "examples": [
         {
-          "description": "Listing posts",
-          "link": "posts/listing_posts.json",
+          "description": "Single post",
+          "link": "posts/single_post.json",
           "groups": "all"
         },
         {
-          "description": "Single post",
-          "link": "posts/single_post.json",
+          "description": "Listing posts",
+          "link": "posts/listing_posts.json",
+          "groups": "all"
+        }
+      ]
+    },
+    {
+      "name": "Errors",
+      "examples": [
+        {
+          "description": "Request to unexisting page",
+          "link": "errors/request_to_unexisting_page.json",
           "groups": "all"
         }
       ]
@@ -29,13 +39,13 @@
           "groups": "all"
         },
         {
-          "description": "Create comment",
-          "link": "comments/create_comment.json",
+          "description": "Create comment authorization error",
+          "link": "comments/create_comment_authorization_error.json",
           "groups": "all"
         },
         {
-          "description": "Create comment authorization error",
-          "link": "comments/create_comment_authorization_error.json",
+          "description": "Create comment",
+          "link": "comments/create_comment.json",
           "groups": "all"
         }
       ]

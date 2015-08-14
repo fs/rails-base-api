@@ -31,19 +31,12 @@
       "request_content_type": null,
       "response_status": 401,
       "response_status_text": "Unauthorized",
-      "response_body": "{\"error\":\"You need to sign in or sign up before continuing.\"}",
+      "response_body": "{\"error\":{\"status\":401,\"error\":\"You need to sign in or sign up before continuing.\"}}",
       "response_headers": {
-        "X-Frame-Options": "SAMEORIGIN",
-        "X-XSS-Protection": "1; mode=block",
-        "X-Content-Type-Options": "nosniff",
-        "Content-Type": "application/json; charset=utf-8",
-        "Cache-Control": "no-cache",
-        "X-Request-Id": "e9835c2e-a616-4c5a-b3cc-bb260683d15e",
-        "X-Runtime": "0.003348",
-        "Content-Length": "61"
+        "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/user/comments?page=1&per_page=25\" -X GET \\\n\t-H \"Origin: \""
+      "curl": "curl \"http://localhost:5000/v1/user/comments?page=1&per_page=25\" -X GET "
     }
   ]
 }
