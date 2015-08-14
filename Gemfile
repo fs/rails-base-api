@@ -9,7 +9,7 @@ gem 'rails-api'
 gem 'rails_api_format', path: 'lib/rails_api_format'
 
 # all other gems
-gem 'active_model_serializers', '~> 0.8.3'
+gem 'active_model_serializers', git: 'https://github.com/rails-api/active_model_serializers.git'
 gem 'decent_exposure'
 gem 'devise'
 gem 'dotenv-rails'

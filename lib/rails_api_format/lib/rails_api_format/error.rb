@@ -14,7 +14,9 @@ module RailsApiFormat
     end
 
     def to_json(options = {})
-      ErrorSerializer.new(self).to_json(options)
+      # Specify root element as `error` instead of auto generated `rails_api_format/error`
+      # https://github.com/rails-api/active_model_serializers/pull/1029#issuecomment-131896282
+      ActiveModel::SerializableResource.serialize(self, options.merge(root: :error)).to_json
     end
 
     def status
