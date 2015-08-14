@@ -13,7 +13,7 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/v1/posts/1",
+      "request_path": "/v1/posts/3",
       "request_body": null,
       "request_headers": {
       },
@@ -22,12 +22,12 @@
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"post\":{\"id\":1,\"title\":\"Veniam qui earum qui nihil officiis sapiente.\",\"text\":\"Voluptatem beatae laboriosam consectetur. Deserunt recusandae aspernatur. Quam id harum recusandae culpa.\"}}",
+      "response_body": "{\"post\":{\"id\":3,\"title\":\"Totam ex ullam beatae cupiditate aut.\",\"text\":\"Perferendis molestiae ut quas. Repellendus velit porro. Iste voluptas repudiandae. Earum et dolore dignissimos accusamus sed.\"}}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/posts/1\" -X GET "
+      "curl": "curl \"http://localhost:5000/v1/posts/3\" -X GET "
     }
   ]
 }

@@ -1,5 +1,7 @@
 # Unreleased
 
+* Provide full resource for all requests
+  ([#176](https://github.com/fs/rails-base-api/pull/176))
 * Introduce `rails_api_format` gem. Currently it makes standard error responses,
   in the future all API format related changes will be made by this gem.
   ([#85](https://github.com/fs/rails-base-api/pull/85))

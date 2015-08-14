@@ -1,21 +1,6 @@
 {
   "resources": [
     {
-      "name": "Posts",
-      "examples": [
-        {
-          "description": "Single post",
-          "link": "posts/single_post.json",
-          "groups": "all"
-        },
-        {
-          "description": "Listing posts",
-          "link": "posts/listing_posts.json",
-          "groups": "all"
-        }
-      ]
-    },
-    {
       "name": "Errors",
       "examples": [
         {
@@ -29,13 +14,8 @@
       "name": "Comments",
       "examples": [
         {
-          "description": "List of comments",
-          "link": "comments/list_of_comments.json",
-          "groups": "all"
-        },
-        {
-          "description": "List of comments authorization error",
-          "link": "comments/list_of_comments_authorization_error.json",
+          "description": "Create comment",
+          "link": "comments/create_comment.json",
           "groups": "all"
         },
         {
@@ -44,8 +24,28 @@
           "groups": "all"
         },
         {
-          "description": "Create comment",
-          "link": "comments/create_comment.json",
+          "description": "List of comments authorization error",
+          "link": "comments/list_of_comments_authorization_error.json",
+          "groups": "all"
+        },
+        {
+          "description": "List of comments",
+          "link": "comments/list_of_comments.json",
+          "groups": "all"
+        }
+      ]
+    },
+    {
+      "name": "Posts",
+      "examples": [
+        {
+          "description": "Listing posts",
+          "link": "posts/listing_posts.json",
+          "groups": "all"
+        },
+        {
+          "description": "Single post",
+          "link": "posts/single_post.json",
           "groups": "all"
         }
       ]
@@ -54,13 +54,13 @@
       "name": "Sessions",
       "examples": [
         {
-          "description": "Sign in with valid password",
-          "link": "sessions/sign_in_with_valid_password.json",
+          "description": "Sign in with invalid password",
+          "link": "sessions/sign_in_with_invalid_password.json",
           "groups": "all"
         },
         {
-          "description": "Sign in with invalid password",
-          "link": "sessions/sign_in_with_invalid_password.json",
+          "description": "Sign in with valid password",
+          "link": "sessions/sign_in_with_valid_password.json",
           "groups": "all"
         }
       ]
