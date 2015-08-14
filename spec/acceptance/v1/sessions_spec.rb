@@ -4,7 +4,7 @@ require 'rspec_api_documentation/dsl'
 resource 'Sessions' do
   subject(:json_response) { json_response_body }
 
-  post '/users/sign_in' do
+  post '/v1/users/sign_in' do
     let(:user) { create :user, password: '123456' }
 
     parameter :email, 'Email', required: true
