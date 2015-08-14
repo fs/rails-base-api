@@ -23,6 +23,7 @@
       "request_path": "/v1/posts?page=1&per_page=25",
       "request_body": null,
       "request_headers": {
+        "Accept": "application/json"
       },
       "request_query_parameters": {
         "page": "1",
@@ -31,12 +32,12 @@
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"posts\":[{\"id\":1,\"title\":\"Ut asperiores et deleniti mollitia.\",\"text\":\"Et repudiandae sunt. Officia omnis fugiat quia iusto quidem exercitationem dolorem. Unde quod quibusdam omnis accusantium ex amet.\",\"comments\":[]},{\"id\":2,\"title\":\"Maiores tenetur cum laudantium sunt dolorem.\",\"text\":\"Qui qui quod. Rerum earum quae. Aliquid dolorem molestiae harum.\",\"comments\":[]}],\"meta\":{\"pagination\":{\"total\":2,\"per_page\":25,\"page\":1}}}",
+      "response_body": "{\"posts\":[{\"id\":3,\"title\":\"Minus impedit omnis nam ut.\",\"text\":\"Itaque velit sit exercitationem. Ab et placeat esse veniam eos inventore ipsa. Optio et minima. Quas enim aut rem repellat et. Placeat minima aliquid mollitia omnis quasi.\",\"comments\":[]},{\"id\":4,\"title\":\"Magnam ut in dignissimos eveniet consequuntur.\",\"text\":\"Illo repudiandae sunt dolorem in nihil adipisci vel. Aut minus repellat velit. Amet qui itaque. Et saepe culpa. Blanditiis laborum eum nisi.\",\"comments\":[]}],\"meta\":{\"pagination\":{\"total\":2,\"per_page\":25,\"page\":1}}}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/posts?page=1&per_page=25\" -X GET "
+      "curl": "curl \"http://localhost:5000/v1/posts?page=1&per_page=25\" -X GET \\\n\t-H \"Accept: application/json\""
     }
   ]
 }

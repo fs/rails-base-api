@@ -6,6 +6,7 @@ resource 'Comments' do
   let!(:comments) { create_list :comment, 2, user: user }
   let(:first_comment) { user.comments.ordered.reload.first }
 
+  header 'Accept', 'application/json'
   subject(:response) { json_response_body }
 
   get '/v1/user/comments' do
@@ -48,6 +49,33 @@ resource 'Comments' do
       example_request 'Create comment authorization error' do
         expect(response_status).to eq 401
       end
+    end
+  end
+
+  patch '/v1/user/comments/:comment_id' do
+    let(:params) { { title: 'Title', text: 'Text' } }
+    let(:comment) { create(:comment, user: user) }
+    let(:comment_id) { comment.id }
+
+    parameter :title, 'Title', required: true
+    parameter :text, 'Text', required: true
+
+    before { header 'X-AUTH-TOKEN', user.authentication_token }
+
+    example_request 'Update comment' do
+      comment.attributes = params
+      expect(response['comment']).to be_a_comment_representation(comment)
+    end
+  end
+
+  delete '/v1/user/comments/:comment_id' do
+    let(:comment) { create(:comment, user: user) }
+    let(:comment_id) { comment.id }
+
+    before { header 'X-AUTH-TOKEN', user.authentication_token }
+
+    example_request 'Delete a comment' do
+      expect(response['comment']).to be_a_comment_representation(comment)
     end
   end
 end

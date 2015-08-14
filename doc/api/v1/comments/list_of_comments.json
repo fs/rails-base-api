@@ -23,7 +23,8 @@
       "request_path": "/v1/user/comments?page=1&per_page=25",
       "request_body": null,
       "request_headers": {
-        "X-Auth-Token": "sXUdKRN34aaTU8dqxmer"
+        "Accept": "application/json",
+        "X-Auth-Token": "KUUScAH7mu7qB88rYATd"
       },
       "request_query_parameters": {
         "page": "1",
@@ -32,12 +33,12 @@
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"comments\":[{\"id\":9,\"title\":\"Non officia porro molestiae voluptatum cum.\",\"text\":\"In quas placeat reprehenderit. Blanditiis alias minima debitis omnis ducimus fuga. Deserunt aliquam sequi et. Autem neque sequi dolore cum quam.\",\"post\":null,\"user\":{\"id\":4,\"authentication_token\":\"sXUdKRN34aaTU8dqxmer\",\"email\":\"user4@example.com\"}},{\"id\":8,\"title\":\"Et omnis nulla unde vitae.\",\"text\":\"Animi eius voluptas iste qui et qui corrupti. Qui et nihil eveniet eum. Ut minima dolores doloremque. Animi nam aliquam ipsam qui. Eaque et aut vel quasi dolor.\",\"post\":null,\"user\":{\"id\":4,\"authentication_token\":\"sXUdKRN34aaTU8dqxmer\",\"email\":\"user4@example.com\"}}],\"meta\":{\"pagination\":{\"total\":2,\"per_page\":25,\"page\":1}}}",
+      "response_body": "{\"comments\":[{\"id\":12,\"title\":\"Ut reprehenderit consectetur sed saepe.\",\"text\":\"Ullam laboriosam excepturi. Quo molestiae rerum. Assumenda sint quae maiores nobis temporibus.\",\"post\":null,\"user\":{\"id\":5,\"authentication_token\":\"KUUScAH7mu7qB88rYATd\",\"email\":\"user5@example.com\"}},{\"id\":11,\"title\":\"Exercitationem reprehenderit et ad consequatur blanditiis quos laborum.\",\"text\":\"Dolorem aut eveniet similique quibusdam non ad. Quis sapiente est. Ad explicabo sequi illo. Qui autem rerum repellat voluptas voluptatem. Vel sit est sequi minima dolores consequatur.\",\"post\":null,\"user\":{\"id\":5,\"authentication_token\":\"KUUScAH7mu7qB88rYATd\",\"email\":\"user5@example.com\"}}],\"meta\":{\"pagination\":{\"total\":2,\"per_page\":25,\"page\":1}}}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/user/comments?page=1&per_page=25\" -X GET \\\n\t-H \"X-Auth-Token: sXUdKRN34aaTU8dqxmer\""
+      "curl": "curl \"http://localhost:5000/v1/user/comments?page=1&per_page=25\" -X GET \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-Auth-Token: KUUScAH7mu7qB88rYATd\""
     }
   ]
 }

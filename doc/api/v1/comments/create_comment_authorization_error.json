@@ -25,6 +25,8 @@
       "request_path": "/v1/user/comments",
       "request_body": "title=Title&text=Text",
       "request_headers": {
+        "Accept": "application/json",
+        "X-Auth-Token": "_s-_7A5Cy-cefCQaxx-w"
       },
       "request_query_parameters": {
       },
@@ -36,7 +38,7 @@
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/user/comments\" -d 'title=Title&text=Text' -X POST "
+      "curl": "curl \"http://localhost:5000/v1/user/comments\" -d 'title=Title&text=Text' -X POST \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-Auth-Token: _s-_7A5Cy-cefCQaxx-w\""
     }
   ]
 }

@@ -19,11 +19,17 @@ module V1
 
       def create
         comment.save
+        respond_with(comment)
+      end
 
-        respond_with(
-          comment,
-          location: false
-        )
+      def update
+        comment.save
+        respond_with(comment)
+      end
+
+      def destroy
+        comment.destroy
+        respond_with(comment)
       end
 
       private

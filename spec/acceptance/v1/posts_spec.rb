@@ -5,6 +5,7 @@ resource 'Posts' do
   let!(:posts) { create_list :post, 2 }
   let(:first_post) { posts.first }
 
+  header 'Accept', 'application/json'
   subject(:response) { json_response_body }
 
   get '/v1/posts' do

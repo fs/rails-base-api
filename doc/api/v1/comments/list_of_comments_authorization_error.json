@@ -23,6 +23,8 @@
       "request_path": "/v1/user/comments?page=1&per_page=25",
       "request_body": null,
       "request_headers": {
+        "Accept": "application/json",
+        "X-Auth-Token": "_s-_7A5Cy-cefCQaxx-w"
       },
       "request_query_parameters": {
         "page": "1",
@@ -36,7 +38,7 @@
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/user/comments?page=1&per_page=25\" -X GET "
+      "curl": "curl \"http://localhost:5000/v1/user/comments?page=1&per_page=25\" -X GET \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-Auth-Token: _s-_7A5Cy-cefCQaxx-w\""
     }
   ]
 }

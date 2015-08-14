@@ -1,8 +1,8 @@
 {
   "resource": "Comments",
-  "http_method": "POST",
-  "route": "/v1/user/comments",
-  "description": "Create comment",
+  "http_method": "PATCH",
+  "route": "/v1/user/comments/:comment_id",
+  "description": "Update comment",
   "explanation": null,
   "parameters": [
     {
@@ -21,24 +21,24 @@
   ],
   "requests": [
     {
-      "request_method": "POST",
-      "request_path": "/v1/user/comments",
+      "request_method": "PATCH",
+      "request_path": "/v1/user/comments/3",
       "request_body": "title=Title&text=Text",
       "request_headers": {
         "Accept": "application/json",
-        "X-Auth-Token": "_s-_7A5Cy-cefCQaxx-w"
+        "X-Auth-Token": "As7LpzJJ6yMzdvxxiyfw"
       },
       "request_query_parameters": {
       },
       "request_content_type": "application/x-www-form-urlencoded",
-      "response_status": 201,
-      "response_status_text": "Created",
-      "response_body": "{\"comment\":{\"id\":6,\"title\":\"Title\",\"text\":\"Text\"}}",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\"comment\":{\"id\":3,\"title\":\"Title\",\"text\":\"Text\"}}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/user/comments\" -d 'title=Title&text=Text' -X POST \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-Auth-Token: _s-_7A5Cy-cefCQaxx-w\""
+      "curl": "curl \"http://localhost:5000/v1/user/comments/3\" -d 'title=Title&text=Text' -X PATCH \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-Auth-Token: As7LpzJJ6yMzdvxxiyfw\""
     }
   ]
 }
