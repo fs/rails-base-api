@@ -25,9 +25,7 @@ group :development do
   gem 'foreman'
   gem 'bullet'
 
-  gem 'guard-rspec'
   gem 'rb-fsevent', require: false
-  gem 'zeus'
 end
 
 group :development, :test do
