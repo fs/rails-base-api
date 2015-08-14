@@ -2,7 +2,7 @@
 
 require 'fileutils'
 
-class Bootstrap
+class Setup
   def initialize(argv)
     @argv = argv
   end
@@ -82,4 +82,4 @@ class Bootstrap
 end
 
 
-Bootstrap.new(ARGV).run
+Setup.new(ARGV).run
