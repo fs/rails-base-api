@@ -25,7 +25,8 @@ group :development do
   gem 'foreman'
   gem 'bullet'
 
-  gem 'rb-fsevent', require: false
+  gem 'spring'
+  gem 'spring-commands-rspec'
 end
 
 group :development, :test do
@@ -45,7 +46,7 @@ group :test do
 
   gem 'database_cleaner'
   gem 'email_spec'
-  gem 'shoulda-matchers'
+  gem 'shoulda-matchers', require: false
   gem 'json_spec'
 end
 

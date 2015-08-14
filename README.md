@@ -30,6 +30,7 @@ Status of the API could be checked at [http://localhost:5000/docs](http://localh
 * [Rails Best Practices](https://github.com/railsbp/rails_best_practices) code metric tool
 * [Brakeman](https://github.com/presidentbeef/brakeman) static analysis security vulnerability scanner
 * [Bundler Audit](https://github.com/rubysec/bundler-audit) Patch-level verification for Gems
+* [Spring](https://github.com/rails/spring) for fast Rails actions via pre-loading
 
 ### Testing gems
 
