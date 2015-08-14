@@ -1,5 +1,7 @@
 # Unreleased
 
+* Rename bin/bootstrap to bin/setup
+  ([#180](https://github.com/fs/rails-base-api/pull/180)))
 * Provide full resource for all requests
   ([#176](https://github.com/fs/rails-base-api/pull/176))
 * Introduce `rails_api_format` gem. Currently it makes standard error responses,
