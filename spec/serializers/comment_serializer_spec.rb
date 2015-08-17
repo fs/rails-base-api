@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe CommentSerializer do
   let(:comment) { build :comment }
-  let(:json) { CommentSerializer.new(comment).to_json }
+  let(:json) { ActiveModel::SerializableResource.serialize(comment).to_json }
   let(:comment_json) { parse_json(json)['comment'] }
 
   it 'returns comment' do

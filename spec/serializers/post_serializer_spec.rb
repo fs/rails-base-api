@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe PostSerializer do
   let(:post) { build :post }
-  let(:json) { PostSerializer.new(post).to_json }
+  let(:json) { ActiveModel::SerializableResource.serialize(post).to_json }
   let(:post_json) { parse_json(json)['post'] }
 
   it 'returns post' do
