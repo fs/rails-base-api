@@ -23,7 +23,7 @@
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"post\":{\"id\":1,\"title\":\"Asperiores voluptatem dolor quas qui esse similique ea.\",\"text\":\"Maiores deleniti quaerat voluptas et. Ab voluptas occaecati odit consequuntur quia facere autem. Consectetur deleniti alias sint quo unde. Aliquam dolore rerum quas voluptates et qui laborum.\"}}",
+      "response_body": "{\"post\":{\"id\":1,\"title\":\"Eum esse eveniet maiores reprehenderit vero laborum.\",\"text\":\"Minima eius non earum est odit repellat fugiat. Libero et rerum eligendi rem voluptates aut non. Voluptas sapiente sint est. Quod reiciendis assumenda facilis ut doloremque aut. Laboriosam nisi distinctio inventore nihil omnis molestiae.\",\"comments\":[]}}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },

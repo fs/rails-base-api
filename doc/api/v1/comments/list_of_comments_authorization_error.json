@@ -23,8 +23,7 @@
       "request_path": "/v1/user/comments?page=1&per_page=25",
       "request_body": null,
       "request_headers": {
-        "Accept": "application/json",
-        "X-Auth-Token": "_s-_7A5Cy-cefCQaxx-w"
+        "Accept": "application/json"
       },
       "request_query_parameters": {
         "page": "1",
@@ -33,12 +32,12 @@
       "request_content_type": null,
       "response_status": 401,
       "response_status_text": "Unauthorized",
-      "response_body": "{\"error\":{\"status\":401,\"error\":\"You need to sign in or sign up before continuing.\"}}",
+      "response_body": "{\"error\":{\"status\":401,\"error\":\"You need to sign in or sign up before continuing.\",\"validations\":null}}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/user/comments?page=1&per_page=25\" -X GET \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-Auth-Token: _s-_7A5Cy-cefCQaxx-w\""
+      "curl": "curl \"http://localhost:5000/v1/user/comments?page=1&per_page=25\" -X GET \\\n\t-H \"Accept: application/json\""
     }
   ]
 }

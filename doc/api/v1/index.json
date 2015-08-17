@@ -1,16 +1,6 @@
 {
   "resources": [
     {
-      "name": "Errors",
-      "examples": [
-        {
-          "description": "Request to unexisting page",
-          "link": "errors/request_to_unexisting_page.json",
-          "groups": "all"
-        }
-      ]
-    },
-    {
       "name": "Posts",
       "examples": [
         {
@@ -26,23 +16,33 @@
       ]
     },
     {
-      "name": "Comments",
+      "name": "Sessions",
       "examples": [
         {
-          "description": "Update comment",
-          "link": "comments/update_comment.json",
+          "description": "Sign in with valid password",
+          "link": "sessions/sign_in_with_valid_password.json",
           "groups": "all"
         },
         {
-          "description": "Create comment",
-          "link": "comments/create_comment.json",
+          "description": "Sign in with invalid password",
+          "link": "sessions/sign_in_with_invalid_password.json",
           "groups": "all"
-        },
+        }
+      ]
+    },
+    {
+      "name": "Errors",
+      "examples": [
         {
-          "description": "Create comment authorization error",
-          "link": "comments/create_comment_authorization_error.json",
+          "description": "Request to unexisting page",
+          "link": "errors/request_to_unexisting_page.json",
           "groups": "all"
-        },
+        }
+      ]
+    },
+    {
+      "name": "Comments",
+      "examples": [
         {
           "description": "List of comments authorization error",
           "link": "comments/list_of_comments_authorization_error.json",
@@ -57,20 +57,20 @@
           "description": "Delete a comment",
           "link": "comments/delete_a_comment.json",
           "groups": "all"
-        }
-      ]
-    },
-    {
-      "name": "Sessions",
-      "examples": [
+        },
         {
-          "description": "Sign in with valid password",
-          "link": "sessions/sign_in_with_valid_password.json",
+          "description": "Update comment",
+          "link": "comments/update_comment.json",
           "groups": "all"
         },
         {
-          "description": "Sign in with invalid password",
-          "link": "sessions/sign_in_with_invalid_password.json",
+          "description": "Create comment",
+          "link": "comments/create_comment.json",
+          "groups": "all"
+        },
+        {
+          "description": "Create comment authorization error",
+          "link": "comments/create_comment_authorization_error.json",
           "groups": "all"
         }
       ]

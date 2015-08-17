@@ -22,23 +22,23 @@
   "requests": [
     {
       "request_method": "PATCH",
-      "request_path": "/v1/user/comments/3",
+      "request_path": "/v1/user/comments/10",
       "request_body": "title=Title&text=Text",
       "request_headers": {
         "Accept": "application/json",
-        "X-Auth-Token": "As7LpzJJ6yMzdvxxiyfw"
+        "X-Auth-Token": "cpv-Saibz59xYrRx-nhT"
       },
       "request_query_parameters": {
       },
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"comment\":{\"id\":3,\"title\":\"Title\",\"text\":\"Text\"}}",
+      "response_body": "{\"comment\":{\"id\":10,\"title\":\"Title\",\"text\":\"Text\",\"post\":null,\"user\":{\"id\":6,\"authentication_token\":\"cpv-Saibz59xYrRx-nhT\",\"email\":\"user6@example.com\"}}}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/user/comments/3\" -d 'title=Title&text=Text' -X PATCH \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-Auth-Token: As7LpzJJ6yMzdvxxiyfw\""
+      "curl": "curl \"http://localhost:5000/v1/user/comments/10\" -d 'title=Title&text=Text' -X PATCH \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-Auth-Token: cpv-Saibz59xYrRx-nhT\""
     }
   ]
 }

@@ -9,7 +9,7 @@ gem 'rails-api'
 gem 'rails_api_format', path: 'lib/rails_api_format'
 
 # all other gems
-gem 'active_model_serializers', '~> 0.8.3'
+gem 'active_model_serializers', git: 'https://github.com/rails-api/active_model_serializers.git'
 gem 'decent_exposure'
 gem 'devise'
 gem 'dotenv-rails'
@@ -25,9 +25,8 @@ group :development do
   gem 'foreman'
   gem 'bullet'
 
-  gem 'guard-rspec'
-  gem 'rb-fsevent', require: false
-  gem 'zeus'
+  gem 'spring'
+  gem 'spring-commands-rspec'
 end
 
 group :development, :test do
@@ -47,7 +46,7 @@ group :test do
 
   gem 'database_cleaner'
   gem 'email_spec'
-  gem 'shoulda-matchers'
+  gem 'shoulda-matchers', require: false
   gem 'json_spec'
 end
 
