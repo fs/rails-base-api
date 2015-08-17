@@ -1,8 +1,15 @@
+GIT
+  remote: https://github.com/rails-api/active_model_serializers.git
+  revision: 6aba26049154712d65176708ffad55fcfe512ca0
+  specs:
+    active_model_serializers (0.10.0.rc2)
+      activemodel (>= 4.0)
+
 PATH
   remote: lib/rails_api_format
   specs:
     rails_api_format (0.0.1)
-      active_model_serializers (~> 0.8.3)
+      active_model_serializers (~> 0.10.0.rc2)
       devise (~> 3.5.1)
       rails (~> 4.2.3)
       responders (~> 2.1.0)
@@ -29,8 +36,6 @@ GEM
       erubis (~> 2.7.0)
       rails-dom-testing (~> 1.0, >= 1.0.5)
       rails-html-sanitizer (~> 1.0, >= 1.0.2)
-    active_model_serializers (0.8.3)
-      activemodel (>= 3.0)
     activejob (4.2.3)
       activesupport (= 4.2.3)
       globalid (>= 0.3.0)
@@ -144,7 +149,7 @@ GEM
       actionmailer (>= 1.3.6)
     mime-types (2.6.1)
     mini_portile (0.6.2)
-    minitest (5.7.0)
+    minitest (5.8.0)
     multi_json (1.11.2)
     mustache (0.99.8)
     nokogiri (1.6.6.2)
@@ -289,7 +294,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  active_model_serializers (~> 0.8.3)
+  active_model_serializers!
   apitome
   brakeman
   bullet
@@ -327,6 +332,3 @@ DEPENDENCIES
   spring-commands-rspec
   thin
   webmock
-
-BUNDLED WITH
-   1.10.6
