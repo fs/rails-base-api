@@ -8,13 +8,7 @@ module V1
       expose(:comment, attributes: :comment_params)
 
       def index
-        respond_with(
-          comments,
-          serializer_includes: {
-            comment: %i(post user)
-          },
-          serializer: PaginatedArraySerializer
-        )
+        respond_with(comments, serializer: PaginatedArraySerializer)
       end
 
       def create

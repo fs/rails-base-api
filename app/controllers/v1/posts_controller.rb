@@ -6,14 +6,7 @@ module V1
     end
 
     def index
-      respond_with(
-        posts,
-        serializer_includes: {
-          post: [:comments],
-          comment: [:user]
-        },
-        serializer: PaginatedArraySerializer
-      )
+      respond_with(posts, serializer: PaginatedArraySerializer)
     end
 
     def show
