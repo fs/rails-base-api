@@ -4,12 +4,13 @@ class AuthenticateUser
   OPTIONS = { store: false, scope: :user }
 
   def call
-    context.user = authenticated_user
+    context.user = authenticated_user!
   end
 
   private
 
-  def authenticated_user
-    context.warden.authenticate!(OPTIONS).tap(&:ensure_authentication_token!)
+  def authenticated_user!
+    context.warden.request.env['devise.skip_trackable'] = false
+    context.warden.authenticate!(OPTIONS)
   end
 end

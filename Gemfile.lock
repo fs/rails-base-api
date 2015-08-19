@@ -255,6 +255,10 @@ GEM
     sexp_processor (4.4.3)
     shoulda-matchers (2.8.0)
       activesupport (>= 3.0.0)
+    simple_token_authentication (1.10.0)
+      actionmailer (>= 3.2.6, < 5)
+      actionpack (>= 3.2.6, < 5)
+      devise (~> 3.2)
     simplecov (0.8.2)
       docile (~> 1.1.0)
       multi_json
@@ -327,6 +331,7 @@ DEPENDENCIES
   rubocop
   seedbank
   shoulda-matchers
+  simple_token_authentication
   simplecov
   spring
   spring-commands-rspec
