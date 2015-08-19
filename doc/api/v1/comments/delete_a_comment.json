@@ -13,23 +13,22 @@
   "requests": [
     {
       "request_method": "DELETE",
-      "request_path": "/v1/user/comments/7",
+      "request_path": "/v1/user/comments/3",
       "request_body": null,
       "request_headers": {
-        "Accept": "application/json",
-        "X-Auth-Token": "GSPtMiy8CizTgvPvzyqs"
+        "Accept": "application/json"
       },
       "request_query_parameters": {
       },
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"comment\":{\"id\":7,\"title\":\"Dolor excepturi in distinctio voluptatem.\",\"text\":\"Dolores qui ducimus et soluta enim totam. Blanditiis tempore assumenda laborum vel odit omnis. Dignissimos necessitatibus excepturi.\",\"post\":null,\"user\":{\"id\":5,\"authentication_token\":\"GSPtMiy8CizTgvPvzyqs\",\"email\":\"user5@example.com\"}}}",
+      "response_body": "{\"comment\":{\"id\":3,\"title\":\"Deserunt ducimus quia aut quos a et iste.\",\"text\":\"Ipsa nam aut veritatis mollitia maiores est. Ut voluptate sed omnis dicta. Animi dolorem enim quaerat similique quis.\",\"post\":null,\"user\":{\"id\":1,\"authentication_token\":\"3AUHasbuK5dkm_RaK_XH\",\"email\":\"user1@example.com\"}}}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/user/comments/7\" -d '' -X DELETE \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-Auth-Token: GSPtMiy8CizTgvPvzyqs\""
+      "curl": "curl \"http://localhost:5000/v1/user/comments/3\" -d '' -X DELETE \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-User-Email: user1@example.com\" \\\n\t-H \"X-User-Token: 3AUHasbuK5dkm_RaK_XH\""
     }
   ]
 }

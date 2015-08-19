@@ -13,7 +13,7 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/v1/posts/1",
+      "request_path": "/v1/posts/3",
       "request_body": null,
       "request_headers": {
         "Accept": "application/json"
@@ -23,12 +23,12 @@
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"post\":{\"id\":1,\"title\":\"Eum esse eveniet maiores reprehenderit vero laborum.\",\"text\":\"Minima eius non earum est odit repellat fugiat. Libero et rerum eligendi rem voluptates aut non. Voluptas sapiente sint est. Quod reiciendis assumenda facilis ut doloremque aut. Laboriosam nisi distinctio inventore nihil omnis molestiae.\",\"comments\":[]}}",
+      "response_body": "{\"post\":{\"id\":3,\"title\":\"Enim dolorem sint quidem excepturi blanditiis ullam architecto maxime.\",\"text\":\"Molestiae culpa sapiente placeat nostrum voluptatibus. Expedita quis dolores. Praesentium nostrum eum rem natus.\",\"comments\":[]}}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/posts/1\" -X GET \\\n\t-H \"Accept: application/json\""
+      "curl": "curl \"http://localhost:5000/v1/posts/3\" -X GET \\\n\t-H \"Accept: application/json\""
     }
   ]
 }

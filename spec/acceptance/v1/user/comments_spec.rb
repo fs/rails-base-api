@@ -16,7 +16,10 @@ resource 'Comments' do
     let(:params) { { page: 1, per_page: 25 } }
 
     context 'with valid token' do
-      before { header 'X-AUTH-TOKEN', user.authentication_token }
+      before do
+        header 'X-User-Email', user.email
+        header 'X-User-Token', user.authentication_token
+      end
 
       example_request 'List of comments' do
         expect(response['comments'].first).to be_a_comment_representation(first_comment)
@@ -38,7 +41,10 @@ resource 'Comments' do
     parameter :text, 'Text', required: true
 
     context 'with valid token' do
-      before { header 'X-AUTH-TOKEN', user.authentication_token }
+      before do
+        header 'X-User-Email', user.email
+        header 'X-User-Token', user.authentication_token
+      end
 
       example_request 'Create comment' do
         expect(response['comment']).to be_a_comment_representation(first_comment)
@@ -60,7 +66,10 @@ resource 'Comments' do
     parameter :title, 'Title', required: true
     parameter :text, 'Text', required: true
 
-    before { header 'X-AUTH-TOKEN', user.authentication_token }
+    before do
+      header 'X-User-Email', user.email
+      header 'X-User-Token', user.authentication_token
+    end
 
     example_request 'Update comment' do
       comment.attributes = params
@@ -72,7 +81,10 @@ resource 'Comments' do
     let(:comment) { create(:comment, user: user) }
     let(:comment_id) { comment.id }
 
-    before { header 'X-AUTH-TOKEN', user.authentication_token }
+    before do
+      header 'X-User-Email', user.email
+      header 'X-User-Token', user.authentication_token
+    end
 
     example_request 'Delete a comment' do
       expect(response['comment']).to be_a_comment_representation(comment)

@@ -23,8 +23,7 @@
       "request_path": "/v1/user/comments?page=1&per_page=25",
       "request_body": null,
       "request_headers": {
-        "Accept": "application/json",
-        "X-Auth-Token": "VmvD-anMc7mzyfhcqQRw"
+        "Accept": "application/json"
       },
       "request_query_parameters": {
         "page": "1",
@@ -33,12 +32,12 @@
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"comments\":[{\"id\":4,\"title\":\"Dolores facere asperiores distinctio hic odit et reiciendis sequi.\",\"text\":\"Consequuntur ut et. Dolor sunt repellat. Facere eaque quisquam dolores atque sint. Et sint consequatur nemo reiciendis labore.\",\"post\":null,\"user\":{\"id\":4,\"authentication_token\":\"VmvD-anMc7mzyfhcqQRw\",\"email\":\"user4@example.com\"}},{\"id\":3,\"title\":\"Voluptatem iure eum ut natus perspiciatis cumque ut dolore.\",\"text\":\"Et voluptates tenetur cum modi. Sit quis voluptatem quisquam pariatur est. Eos sed ipsa. Et ipsam rerum explicabo.\",\"post\":null,\"user\":{\"id\":4,\"authentication_token\":\"VmvD-anMc7mzyfhcqQRw\",\"email\":\"user4@example.com\"}}],\"meta\":{\"pagination\":{\"total\":2,\"per_page\":25,\"page\":1}}}",
+      "response_body": "{\"comments\":[{\"id\":10,\"title\":\"Aut odio tempora et nemo.\",\"text\":\"Eligendi voluptatum fugit et qui. Aspernatur fuga doloribus. Quam officiis temporibus corporis. Est aut rerum nihil fuga reiciendis. Deserunt nesciunt qui aperiam nihil.\",\"post\":null,\"user\":{\"id\":4,\"authentication_token\":\"3movHwydBKb5iGmKHHL1\",\"email\":\"user4@example.com\"}},{\"id\":9,\"title\":\"Id aperiam est odio aut eveniet consequatur ab odit.\",\"text\":\"Aut labore aut qui iusto laudantium odit dicta. Nisi in fuga aliquid labore maxime doloribus suscipit. Libero vel ut temporibus. Dolores repellat non id quisquam magni neque repellendus.\",\"post\":null,\"user\":{\"id\":4,\"authentication_token\":\"3movHwydBKb5iGmKHHL1\",\"email\":\"user4@example.com\"}}],\"meta\":{\"pagination\":{\"total\":2,\"per_page\":25,\"page\":1}}}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/user/comments?page=1&per_page=25\" -X GET \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-Auth-Token: VmvD-anMc7mzyfhcqQRw\""
+      "curl": "curl \"http://localhost:5000/v1/user/comments?page=1&per_page=25\" -X GET \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-User-Email: user4@example.com\" \\\n\t-H \"X-User-Token: 3movHwydBKb5iGmKHHL1\""
     }
   ]
 }
