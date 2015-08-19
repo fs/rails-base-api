@@ -1,6 +1,6 @@
 module RailsApiFormat
   class ErrorSerializer < ActiveModel::Serializer
-    attributes :status, :error, :validations
+    attributes :id, :status, :error, :validations
 
     private
 

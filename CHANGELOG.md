@@ -1,5 +1,7 @@
 # Unreleased
 
+* Add id to error response
+  ([#183](https://github.com/fs/rails-base-api/pull/183))
 * Upgrade Active Model Serializer to 0.10.0.rc2
   ([#182](https://github.com/fs/rails-base-api/pull/182))
 * Rename bin/bootstrap to bin/setup
