@@ -18,6 +18,7 @@ gem 'kaminari'
 gem 'rack-cors', require: 'rack/cors'
 gem 'responders'
 gem 'seedbank'
+gem 'simple_token_authentication'
 gem 'thin'
 
 group :development do
