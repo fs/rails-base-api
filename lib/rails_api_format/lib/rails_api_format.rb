@@ -1,4 +1,4 @@
-require 'rails_api_format/railtie'
+require "rails_api_format/railtie"
 
 module RailsApiFormat
   extend ::ActiveSupport::Autoload

@@ -1,4 +1,4 @@
-require 'securerandom'
+require "securerandom"
 
 module RailsApiFormat
   class Error
@@ -27,7 +27,7 @@ module RailsApiFormat
     end
 
     def id
-      @id || ENV.fetch('ACTION_DISPATCH_REQUEST_ID', SecureRandom.uuid)
+      @id || ENV.fetch("ACTION_DISPATCH_REQUEST_ID", SecureRandom.uuid)
     end
   end
 end
