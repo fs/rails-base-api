@@ -1,14 +1,14 @@
-app_config.middleware.insert_before 'Warden::Manager', 'Rack::Cors' do
+app_config.middleware.insert_before "Warden::Manager", "Rack::Cors" do
   allow do
     # Allow requests from domains:
     # e.g. origins('api.example.com', 'next.example.com')
     #
-    origins(*ENV.fetch('ALLOW_REQUESTS_FROM', app_config.host).split(','))
+    origins(*ENV.fetch("ALLOW_REQUESTS_FROM", app_config.host).split(","))
 
     resource(
-      '*',
+      "*",
       headers: :any,
-      methods: [:get, :post, :put, :delete, :patch, :options]
+      methods: %i(get post put delete patch options)
     )
   end
 end

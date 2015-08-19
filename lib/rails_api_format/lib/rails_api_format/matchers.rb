@@ -3,15 +3,15 @@ module RailsApiFormat
     extend RSpec::Matchers::DSL
 
     def json_present?(json)
-      json.present? && json.include?('error')
+      json.present? && json.include?("error")
     end
 
     def status_present?(json, error)
-      json['error']['status'] == error.status
+      json["error"]["status"] == error.status
     end
 
     def error_present?(json, error)
-      json['error']['error'] == error.error
+      json["error"]["error"] == error.error
     end
 
     matcher :be_an_error_representation do |status, error|
