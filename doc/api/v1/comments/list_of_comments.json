@@ -32,12 +32,12 @@
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"comments\":[{\"id\":10,\"title\":\"Aut odio tempora et nemo.\",\"text\":\"Eligendi voluptatum fugit et qui. Aspernatur fuga doloribus. Quam officiis temporibus corporis. Est aut rerum nihil fuga reiciendis. Deserunt nesciunt qui aperiam nihil.\",\"post\":null,\"user\":{\"id\":4,\"authentication_token\":\"3movHwydBKb5iGmKHHL1\",\"email\":\"user4@example.com\"}},{\"id\":9,\"title\":\"Id aperiam est odio aut eveniet consequatur ab odit.\",\"text\":\"Aut labore aut qui iusto laudantium odit dicta. Nisi in fuga aliquid labore maxime doloribus suscipit. Libero vel ut temporibus. Dolores repellat non id quisquam magni neque repellendus.\",\"post\":null,\"user\":{\"id\":4,\"authentication_token\":\"3movHwydBKb5iGmKHHL1\",\"email\":\"user4@example.com\"}}],\"meta\":{\"pagination\":{\"total\":2,\"per_page\":25,\"page\":1}}}",
+      "response_body": "{\"comments\":[{\"id\":12,\"title\":\"Veniam nam quisquam ullam ut iure non consequatur tempore.\",\"text\":\"Dolorum repudiandae et repellendus eos veniam. Odio id ut ducimus possimus cum assumenda aliquam. Iusto aperiam expedita deleniti repellendus numquam. A qui qui esse et qui magnam. Quas quae ducimus fuga facilis.\",\"post\":null,\"user\":{\"id\":7,\"authentication_token\":\"JBdPyyZFUfaYuFMqJie2\",\"email\":\"user7@example.com\"}},{\"id\":11,\"title\":\"Voluptatum natus maxime facilis sit aut error quo.\",\"text\":\"Quam aliquid velit nihil et officia non. Enim sit consequatur ipsa distinctio dolorem deserunt aut. Magni omnis ullam cum dolore ipsam autem molestias. Sed molestiae excepturi et illo. Quisquam id aut vel vel provident.\",\"post\":null,\"user\":{\"id\":7,\"authentication_token\":\"JBdPyyZFUfaYuFMqJie2\",\"email\":\"user7@example.com\"}}],\"meta\":{\"pagination\":{\"total\":2,\"per_page\":25,\"page\":1}}}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/user/comments?page=1&per_page=25\" -X GET \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-User-Email: user4@example.com\" \\\n\t-H \"X-User-Token: 3movHwydBKb5iGmKHHL1\""
+      "curl": "curl \"http://localhost:5000/v1/user/comments?page=1&per_page=25\" -X GET \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-User-Email: user7@example.com\" \\\n\t-H \"X-User-Token: JBdPyyZFUfaYuFMqJie2\""
     }
   ]
 }

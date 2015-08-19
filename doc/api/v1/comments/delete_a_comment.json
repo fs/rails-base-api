@@ -23,12 +23,12 @@
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"comment\":{\"id\":3,\"title\":\"Deserunt ducimus quia aut quos a et iste.\",\"text\":\"Ipsa nam aut veritatis mollitia maiores est. Ut voluptate sed omnis dicta. Animi dolorem enim quaerat similique quis.\",\"post\":null,\"user\":{\"id\":1,\"authentication_token\":\"3AUHasbuK5dkm_RaK_XH\",\"email\":\"user1@example.com\"}}}",
+      "response_body": "{\"comment\":{\"id\":3,\"title\":\"Doloribus ratione autem enim et tenetur ex sunt quibusdam.\",\"text\":\"Animi fugiat aspernatur et. Dolorum fugit odio unde quaerat et non. Corrupti soluta ut sunt. Animi odio nulla.\",\"post\":null,\"user\":{\"id\":3,\"authentication_token\":\"sheW8Saz1y-wFTsmyQz-\",\"email\":\"user3@example.com\"}}}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/user/comments/3\" -d '' -X DELETE \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-User-Email: user1@example.com\" \\\n\t-H \"X-User-Token: 3AUHasbuK5dkm_RaK_XH\""
+      "curl": "curl \"http://localhost:5000/v1/user/comments/3\" -d '' -X DELETE \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-User-Email: user3@example.com\" \\\n\t-H \"X-User-Token: sheW8Saz1y-wFTsmyQz-\""
     }
   ]
 }

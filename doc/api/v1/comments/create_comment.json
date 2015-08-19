@@ -32,12 +32,12 @@
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 201,
       "response_status_text": "Created",
-      "response_body": "{\"comment\":{\"id\":6,\"title\":\"Title\",\"text\":\"Text\",\"post\":null,\"user\":{\"id\":2,\"authentication_token\":\"osN61QesAwAerp1mUy8v\",\"email\":\"user2@example.com\"}}}",
+      "response_body": "{\"comment\":{\"id\":6,\"title\":\"Title\",\"text\":\"Text\",\"post\":null,\"user\":{\"id\":4,\"authentication_token\":\"8Rj3y9-zXqBzaPxzUHyC\",\"email\":\"user4@example.com\"}}}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/user/comments\" -d 'title=Title&text=Text' -X POST \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-User-Email: user2@example.com\" \\\n\t-H \"X-User-Token: osN61QesAwAerp1mUy8v\""
+      "curl": "curl \"http://localhost:5000/v1/user/comments\" -d 'title=Title&text=Text' -X POST \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-User-Email: user4@example.com\" \\\n\t-H \"X-User-Token: 8Rj3y9-zXqBzaPxzUHyC\""
     }
   ]
 }

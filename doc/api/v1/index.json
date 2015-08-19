@@ -1,11 +1,16 @@
 {
   "resources": [
     {
-      "name": "Errors",
+      "name": "Sessions",
       "examples": [
         {
-          "description": "Request to unexisting page",
-          "link": "errors/request_to_unexisting_page.json",
+          "description": "Sign in with valid password",
+          "link": "sessions/sign_in_with_valid_password.json",
+          "groups": "all"
+        },
+        {
+          "description": "Sign in with invalid password",
+          "link": "sessions/sign_in_with_invalid_password.json",
           "groups": "all"
         }
       ]
@@ -29,13 +34,13 @@
           "groups": "all"
         },
         {
-          "description": "List of comments",
-          "link": "comments/list_of_comments.json",
+          "description": "List of comments authorization error",
+          "link": "comments/list_of_comments_authorization_error.json",
           "groups": "all"
         },
         {
-          "description": "List of comments authorization error",
-          "link": "comments/list_of_comments_authorization_error.json",
+          "description": "List of comments",
+          "link": "comments/list_of_comments.json",
           "groups": "all"
         },
         {
@@ -46,16 +51,11 @@
       ]
     },
     {
-      "name": "Sessions",
+      "name": "Errors",
       "examples": [
         {
-          "description": "Sign in with invalid password",
-          "link": "sessions/sign_in_with_invalid_password.json",
-          "groups": "all"
-        },
-        {
-          "description": "Sign in with valid password",
-          "link": "sessions/sign_in_with_valid_password.json",
+          "description": "Request to unexisting page",
+          "link": "errors/request_to_unexisting_page.json",
           "groups": "all"
         }
       ]

@@ -32,12 +32,12 @@
       "request_content_type": null,
       "response_status": 401,
       "response_status_text": "Unauthorized",
-      "response_body": "{\"error\":{\"status\":401,\"error\":\"You need to sign in or sign up before continuing.\",\"validations\":null}}",
+      "response_body": "{\"error\":{\"id\":\"e07d02e9-b5ff-4430-8cf6-cee375d9ea5f\",\"status\":401,\"error\":\"You need to sign in or sign up before continuing.\",\"validations\":null}}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/user/comments?page=1&per_page=25\" -X GET \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-User-Email: user4@example.com\" \\\n\t-H \"X-User-Token: 3movHwydBKb5iGmKHHL1\""
+      "curl": "curl \"http://localhost:5000/v1/user/comments?page=1&per_page=25\" -X GET \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-User-Email: user4@example.com\" \\\n\t-H \"X-User-Token: 8Rj3y9-zXqBzaPxzUHyC\""
     }
   ]
 }
