@@ -1,12 +1,15 @@
+require 'securerandom'
+
 module RailsApiFormat
   class Error
     include ActiveModel::Model
     include ActiveModel::Serialization
 
-    attr_accessor :status, :error, :validations
+    attr_accessor :id, :status, :error, :validations
 
     def attributes
       {
+        id: id,
         status: status,
         error: error,
         validations: validations
@@ -21,6 +24,10 @@ module RailsApiFormat
 
     def status
       Rack::Utils.status_code(@status)
+    end
+
+    def id
+      @id || ENV.fetch('ACTION_DISPATCH_REQUEST_ID', SecureRandom.uuid)
     end
   end
 end

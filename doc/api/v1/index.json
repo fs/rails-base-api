@@ -1,21 +1,6 @@
 {
   "resources": [
     {
-      "name": "Posts",
-      "examples": [
-        {
-          "description": "Single post",
-          "link": "posts/single_post.json",
-          "groups": "all"
-        },
-        {
-          "description": "Listing posts",
-          "link": "posts/listing_posts.json",
-          "groups": "all"
-        }
-      ]
-    },
-    {
       "name": "Sessions",
       "examples": [
         {
@@ -31,18 +16,23 @@
       ]
     },
     {
-      "name": "Errors",
-      "examples": [
-        {
-          "description": "Request to unexisting page",
-          "link": "errors/request_to_unexisting_page.json",
-          "groups": "all"
-        }
-      ]
-    },
-    {
       "name": "Comments",
       "examples": [
+        {
+          "description": "Delete a comment",
+          "link": "comments/delete_a_comment.json",
+          "groups": "all"
+        },
+        {
+          "description": "Create comment",
+          "link": "comments/create_comment.json",
+          "groups": "all"
+        },
+        {
+          "description": "Create comment authorization error",
+          "link": "comments/create_comment_authorization_error.json",
+          "groups": "all"
+        },
         {
           "description": "List of comments authorization error",
           "link": "comments/list_of_comments_authorization_error.json",
@@ -54,23 +44,33 @@
           "groups": "all"
         },
         {
-          "description": "Delete a comment",
-          "link": "comments/delete_a_comment.json",
-          "groups": "all"
-        },
-        {
           "description": "Update comment",
           "link": "comments/update_comment.json",
           "groups": "all"
-        },
+        }
+      ]
+    },
+    {
+      "name": "Errors",
+      "examples": [
         {
-          "description": "Create comment",
-          "link": "comments/create_comment.json",
+          "description": "Request to unexisting page",
+          "link": "errors/request_to_unexisting_page.json",
+          "groups": "all"
+        }
+      ]
+    },
+    {
+      "name": "Posts",
+      "examples": [
+        {
+          "description": "Listing posts",
+          "link": "posts/listing_posts.json",
           "groups": "all"
         },
         {
-          "description": "Create comment authorization error",
-          "link": "comments/create_comment_authorization_error.json",
+          "description": "Single post",
+          "link": "posts/single_post.json",
           "groups": "all"
         }
       ]

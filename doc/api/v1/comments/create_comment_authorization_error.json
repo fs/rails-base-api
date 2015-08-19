@@ -25,20 +25,19 @@
       "request_path": "/v1/user/comments",
       "request_body": "title=Title&text=Text",
       "request_headers": {
-        "Accept": "application/json",
-        "X-Auth-Token": "wmR44xKp4SeiYvJuRoTa"
+        "Accept": "application/json"
       },
       "request_query_parameters": {
       },
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 401,
       "response_status_text": "Unauthorized",
-      "response_body": "{\"error\":{\"status\":401,\"error\":\"You need to sign in or sign up before continuing.\",\"validations\":null}}",
+      "response_body": "{\"error\":{\"id\":\"892f40c6-91c2-49eb-995a-9356fe2f4099\",\"status\":401,\"error\":\"You need to sign in or sign up before continuing.\",\"validations\":null}}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/user/comments\" -d 'title=Title&text=Text' -X POST \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-Auth-Token: wmR44xKp4SeiYvJuRoTa\""
+      "curl": "curl \"http://localhost:5000/v1/user/comments\" -d 'title=Title&text=Text' -X POST \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-User-Email: user4@example.com\" \\\n\t-H \"X-User-Token: 8Rj3y9-zXqBzaPxzUHyC\""
     }
   ]
 }

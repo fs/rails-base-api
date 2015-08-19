@@ -1,5 +1,9 @@
 # Unreleased
 
+* Replace custom token authentication strategy with [simple_token_authentication](https://github.com/gonzalo-bulnes/simple_token_authentication)
+  ([#184](https://github.com/fs/rails-base-api/pull/184))
+* Add id to error response
+  ([#183](https://github.com/fs/rails-base-api/pull/183))
 * Upgrade Active Model Serializer to 0.10.0.rc2
   ([#182](https://github.com/fs/rails-base-api/pull/182))
 * Rename bin/bootstrap to bin/setup
