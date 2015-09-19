@@ -1,11 +1,7 @@
 # Unreleased
 
-* Update Rails and Devise to get rid of vulnerabilities
-  ([#198](https://github.com/fs/rails-base-api/pull/198))
-* Switch off static assets serve
-  ([#192](https://github.com/fs/rails-base-api/pull/192))
-* Update Rails to 4.2.4 and Ruby to 2.2.3
-  ([#193](https://github.com/fs/rails-base-api/pull/193))
+* Implement the dynamic database name
+* Switch web server to [Puma](https://github.com/puma/puma)
 * Sync Rubocop rules with Rails-Base
 * Replace custom token authentication strategy with [simple_token_authentication](https://github.com/gonzalo-bulnes/simple_token_authentication)
   ([#184](https://github.com/fs/rails-base-api/pull/184))
