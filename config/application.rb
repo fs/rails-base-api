@@ -29,6 +29,8 @@ module RailsBaseApi
     # Default host for action mailer, initializers/mailer.rb
     config.host = "localhost:5000"
 
+    config.serve_static_assets = false
+
     # Disable default Rails headers which do not make sense in
     # API-only project (X-Frame-Options, X-XSS-Protection, X-Content-Type-Options)
     config.action_dispatch.default_headers = {}
