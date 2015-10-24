@@ -1,9 +1,9 @@
 source "https://rubygems.org"
 
-ruby "2.2.2"
+ruby "2.2.3"
 
 # the most important stuff
-gem "rails", "4.2.3"
+gem "rails", "4.2.4"
 gem "pg"
 gem "rails-api"
 gem "rails_api_format", path: "lib/rails_api_format"
