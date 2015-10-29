@@ -49,7 +49,7 @@ Status of the API could be checked at [http://localhost:5000/docs](http://localh
 
 ### Scripts
 
-* `bin/bootstrap` - setup required gems and migrate db if needed
+* `bin/setup` - setup required gems and migrate db if needed
 * `bin/quality` - runs rubocop, brakeman, rails_best_practices and bundle-audit for the app
 * `bin/ci` - should be used in the CI or locally
 * `bin/server` - to run server locally
