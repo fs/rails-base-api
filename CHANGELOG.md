@@ -1,5 +1,7 @@
 # Unreleased
 
+* Switch off static assets serve
+  ([#192](https://github.com/fs/rails-base-api/pull/192))
 * Update Rails to 4.2.4 and Ruby to 2.2.3
   ([#193](https://github.com/fs/rails-base-api/pull/193))
 * Sync Rubocop rules with Rails-Base
