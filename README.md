@@ -137,3 +137,5 @@ You can enable restrict access to documentation by adding `APITOME_USER` and `AP
 
 Please check how to build API endpoints and test them properly in the
 [examples branch](https://github.com/fs/rails-base-api/tree/examples)
+
+[<img src="http://www.flatstack.com/logo.svg" width="100"/>](http://www.flatstack.com)
