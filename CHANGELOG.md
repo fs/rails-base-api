@@ -1,5 +1,9 @@
 # Unreleased
 
+* Implement the dynamic database name
+  ([#187](https://github.com/fs/rails-base-api/pull/187))
+* Switch web server to [Puma](https://github.com/puma/puma)
+  ([#187](https://github.com/fs/rails-base-api/pull/187))
 * Update Rails and Devise to get rid of vulnerabilities
   ([#198](https://github.com/fs/rails-base-api/pull/198))
 * Switch off static assets serve
