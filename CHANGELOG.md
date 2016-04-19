@@ -1,5 +1,7 @@
 # Unreleased
 
+* Update Rails to get rid of vulnerabilities
+  ([#200](https://github.com/fs/rails-base-api/pull/200))
 * Update Rails and Devise to get rid of vulnerabilities
   ([#198](https://github.com/fs/rails-base-api/pull/198))
 * Switch off static assets serve
