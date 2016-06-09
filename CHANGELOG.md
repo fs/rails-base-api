@@ -1,5 +1,7 @@
 # Unreleased
 
+* Update Ruby to 2.3.1
+* Update Nokogiri gem to get rid of vulnerabilities
 * Update Rails to get rid of vulnerabilities
   ([#200](https://github.com/fs/rails-base-api/pull/200))
 * Update Rails and Devise to get rid of vulnerabilities
