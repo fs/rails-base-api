@@ -4,7 +4,7 @@ module V1
 
     def create
       user = AuthenticateUser.call(warden: warden).user
-      respond_with(user)
+      respond_with(user, serializer: SessionSerializer)
     end
   end
 end
