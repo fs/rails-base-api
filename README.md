@@ -103,10 +103,10 @@ git remote add origin git@github.com:[MY-GITHUB-ACCOUNT]/[MY-NEW-PROJECT].git
 git push -u origin master
 ```
 
-Run bootstrap script
+Run setup script
 
 ```bash
-bin/bootstrap
+bin/setup
 ```
 
 Make sure all test are green
