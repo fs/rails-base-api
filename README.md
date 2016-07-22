@@ -1,11 +1,11 @@
 # Skeleton for new Rails 4 application for REST API
 
 [![Code Climate](https://codeclimate.com/github/fs/rails-base-api.png)](https://codeclimate.com/github/fs/rails-base-api)
-[![Semaphore](https://semaphoreapp.com/api/v1/projects/0e00006725dcea00b179fab81a1b1bdaf9a64816/106819/shields_badge.png)](https://semaphoreapp.com/fs/rails-base-api)
+[![Build Status](https://semaphoreci.com/api/v1/fs/rails-base-api/branches/master/shields_badge.svg)](https://semaphoreci.com/fs/rails-base-api)
 
 This simple application includes ruby/rails technology which we use at FlatStack for new REST API projects.
 
-Application currently based on Rails 4 stable branch and Ruby 2.2
+Application currently based on Rails 4 stable branch and Ruby 2.3.1
 
 ## API
 
