@@ -1,5 +1,6 @@
 # Unreleased
 
+* Add health_check gem for check that rails is up
 * Update Ruby to 2.3.1
 * Update Nokogiri gem to get rid of vulnerabilities
 * Update Rails to get rid of vulnerabilities
