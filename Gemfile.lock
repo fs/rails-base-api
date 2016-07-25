@@ -124,6 +124,8 @@ GEM
       activesupport (>= 4.1.0)
     haml (4.0.5)
       tilt
+    health_check (2.2.1)
+      rails (>= 4.0)
     highline (1.6.21)
     i18n (0.7.0)
     interactor (3.1.0)
@@ -314,6 +316,7 @@ DEPENDENCIES
   factory_girl_rails
   faker
   foreman
+  health_check
   interactor
   json_spec
   kaminari
