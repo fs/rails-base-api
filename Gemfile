@@ -13,6 +13,7 @@ gem "active_model_serializers", git: "https://github.com/rails-api/active_model_
 gem "decent_exposure"
 gem "devise"
 gem "dotenv-rails"
+gem "health_check"
 gem "interactor"
 gem "kaminari"
 gem "rack-cors", require: "rack/cors"
