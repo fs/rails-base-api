@@ -1,5 +1,7 @@
 # Unreleased
 
+* Extract authentication_token from UserSerializer
+  ([#203](https://github.com/fs/rails-base-api/pull/203))
 * Add health_check gem for check that rails is up
 * Update Rails to 4.2.7.1
 * Update Ruby to 2.3.1
