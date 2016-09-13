@@ -5,15 +5,6 @@ GIT
     active_model_serializers (0.10.0.rc2)
       activemodel (>= 4.0)
 
-PATH
-  remote: lib/rails_api_format
-  specs:
-    rails_api_format (0.0.1)
-      active_model_serializers (~> 0.10.0.rc2)
-      devise (~> 3.5.1)
-      rails (~> 4.2.3)
-      responders (~> 2.1.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -191,6 +182,11 @@ GEM
     rails_12factor (0.0.2)
       rails_serve_static_assets
       rails_stdout_logging
+    rails_api_format (0.0.2)
+      active_model_serializers (~> 0.10.0.rc2)
+      devise (~> 3.5.1)
+      rails (~> 4.2.3)
+      responders (~> 2.1.0)
     rails_best_practices (1.15.2)
       activesupport
       awesome_print
@@ -327,7 +323,7 @@ DEPENDENCIES
   rails (= 4.2.7.1)
   rails-api
   rails_12factor
-  rails_api_format!
+  rails_api_format
   rails_best_practices
   responders
   rollbar
