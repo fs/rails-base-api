@@ -18,6 +18,7 @@ gem "interactor"
 gem "kaminari"
 gem "rack-cors", require: "rack/cors"
 gem "responders"
+gem "rollbar"
 gem "seedbank"
 gem "simple_token_authentication"
 gem "thin"
@@ -60,6 +61,5 @@ group :development, :test, :staging do
 end
 
 group :staging, :production do
-  gem "rollbar"
   gem "rails_12factor"
 end
