@@ -1,5 +1,7 @@
 # Unreleased
 
+* Extract [rails_api_format](https://rubygems.org/gems/rails_api_format) gem from `lib` folder.
+  ([Github repo](https://github.com/fs/rails_api_format))
 * Update Rollbar to 2.12.0
 * Extract authentication_token from UserSerializer
   ([#203](https://github.com/fs/rails-base-api/pull/203))
