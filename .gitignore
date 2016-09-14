@@ -10,7 +10,6 @@
 /tmp
 coverage/*
 rerun.txt
-config/database.yml
 vendor/bundle
 vendor/cache
 vendor/ruby
