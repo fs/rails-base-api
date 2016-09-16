@@ -1,5 +1,6 @@
 # Unreleased
 
+* Update Faker to 1.6.6
 * Update Rollbar to 2.12.0
 * Extract authentication_token from UserSerializer
   ([#203](https://github.com/fs/rails-base-api/pull/203))
