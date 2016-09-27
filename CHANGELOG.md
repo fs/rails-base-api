@@ -1,5 +1,6 @@
 # Unreleased
 
+* Include [rails-api-format](https://github.com/fs/rails-api-format.git) gem from git source.
 * Update Faker to 1.6.6
 * Update Rollbar to 2.12.0
 * Extract authentication_token from UserSerializer
