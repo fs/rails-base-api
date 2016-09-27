@@ -1,18 +1,19 @@
 GIT
+  remote: https://github.com/fs/rails-api-format.git
+  revision: c3acffa0fb559c9bb9fa1f615ab60acc256f3c0b
+  specs:
+    rails_api_format (0.0.2)
+      active_model_serializers (~> 0.10.0.rc2)
+      devise (~> 3.5.1)
+      rails (~> 4.2.3)
+      responders (~> 2.1.0)
+
+GIT
   remote: https://github.com/rails-api/active_model_serializers.git
   revision: 6aba26049154712d65176708ffad55fcfe512ca0
   specs:
     active_model_serializers (0.10.0.rc2)
       activemodel (>= 4.0)
-
-PATH
-  remote: lib/rails_api_format
-  specs:
-    rails_api_format (0.0.1)
-      active_model_serializers (~> 0.10.0.rc2)
-      devise (~> 3.5.1)
-      rails (~> 4.2.3)
-      responders (~> 2.1.0)
 
 GEM
   remote: https://rubygems.org/
