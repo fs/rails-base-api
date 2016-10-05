@@ -1,10 +1,18 @@
+#require "./lib/jsonapi/responder"
+
 module V1
   class SessionsController < Devise::SessionsController
-    wrap_parameters :user
+    include ActionController::ImplicitRender
+    include JSONAPI::Utils
+    self.responder = JSONAPI::Responder
+
+    respond_to :api_json
 
     def create
-      user = AuthenticateUser.call(warden: warden).user
-      respond_with(user, serializer: SessionSerializer)
+      devise_parameter_sanitizer.for(:sign_in) << :data
+
+      user = AuthenticateUser.call(warden: warden, params: params).user
+      respond_with user
     end
   end
 end

@@ -34,7 +34,6 @@ RSpec.configure do |config|
   config.include FactoryGirl::Syntax::Methods
   config.include Helpers
   config.include JsonSpec::Helpers
-  config.include RailsApiFormat::Matchers
 
   config.before :suite do
     DatabaseCleaner.strategy = :transaction

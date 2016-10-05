@@ -1,5 +1,9 @@
 class ApplicationController < ActionController::API
   include ActionController::ImplicitRender
+  include JSONAPI::Utils
+  acts_as_token_authentication_handler_for User
 
-  respond_to :json
+  rescue_from ActiveRecord::RecordNotFound, with: :jsonapi_render_not_found
+
+  respond_to :api_json
 end

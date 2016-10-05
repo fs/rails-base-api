@@ -1,20 +1,3 @@
-GIT
-  remote: https://github.com/fs/rails-api-format.git
-  revision: c3acffa0fb559c9bb9fa1f615ab60acc256f3c0b
-  specs:
-    rails_api_format (0.0.2)
-      active_model_serializers (~> 0.10.0.rc2)
-      devise (~> 3.5.1)
-      rails (~> 4.2.3)
-      responders (~> 2.1.0)
-
-GIT
-  remote: https://github.com/rails-api/active_model_serializers.git
-  revision: 6aba26049154712d65176708ffad55fcfe512ca0
-  specs:
-    active_model_serializers (0.10.0.rc2)
-      activemodel (>= 4.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -135,6 +118,11 @@ GEM
     json_spec (1.1.4)
       multi_json (~> 1.0)
       rspec (>= 2.0, < 4.0)
+    jsonapi-resources (0.8.1)
+      concurrent-ruby
+      rails (>= 4.0)
+    jsonapi-utils (0.5.0.beta3)
+      jsonapi-resources (~> 0.8.0)
     kaminari (0.16.1)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
@@ -304,7 +292,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  active_model_serializers!
   apitome
   brakeman
   bullet
@@ -321,6 +308,7 @@ DEPENDENCIES
   health_check
   interactor
   json_spec
+  jsonapi-utils (~> 0.5.0.beta3)
   kaminari
   letter_opener
   mail_safe
@@ -329,7 +317,6 @@ DEPENDENCIES
   rails (= 4.2.7.1)
   rails-api
   rails_12factor
-  rails_api_format!
   rails_best_practices
   responders
   rollbar
