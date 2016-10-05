@@ -1,3 +1,5 @@
+require "./lib/jsonapi/responder"
+
 class ApplicationController < ActionController::API
   include ActionController::ImplicitRender
   include JSONAPI::Utils

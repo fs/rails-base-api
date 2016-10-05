@@ -1,4 +1,4 @@
-#require "./lib/jsonapi/responder"
+require "./lib/jsonapi/responder"
 
 module V1
   class SessionsController < Devise::SessionsController
