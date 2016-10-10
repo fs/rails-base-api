@@ -3,12 +3,9 @@ module JSONAPI
     include Responders::HttpCacheResponder
 
     def api_behavior
-      fail MissingRenderer.new(format) unless format == :api_json
-
-      case
-      when post?
+      if post?
         display resource, status: :created
-      when patch? || put?
+      elsif patch? || put?
         display resource, status: :accepted
       else
         display resource
