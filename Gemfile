@@ -40,6 +40,7 @@ group :development, :test do
   gem "brakeman"
   gem "rubocop"
   gem "bundler-audit"
+  gem "pry-rails"
 end
 
 group :test do
