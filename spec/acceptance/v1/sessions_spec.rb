@@ -34,4 +34,30 @@ resource "Sessions" do
       end
     end
   end
+
+  delete "/sessions/:id" do
+    let(:authentication_token) { current_user.authentication_token }
+
+    parameter :id, "(integer) User's id", required: false
+
+    context "User tries to sign out" do
+      include_context "user signed in"
+
+      let(:id) { current_user.id }
+
+      example_request "Successfull sign out" do
+        expect(response_status_code).to eq(:ok)
+        expect(response_attrs["authentication-token"]).to_not eq(authentication_token)
+        expect(response_data).to be_a_user_representation(current_user)
+      end
+    end
+
+    context "Unauthenticated user can't sign out" do
+      let(:id) { user.id }
+
+      example_request "Failed sign out" do
+        expect(response_status_code).to eq(:unauthorized)
+      end
+    end
+  end
 end
