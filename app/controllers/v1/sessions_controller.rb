@@ -6,6 +6,8 @@ module V1
     include JSONAPI::Utils
     self.responder = JSONAPI::Responder
 
+    acts_as_token_authentication_handler_for User, fallback: :exception, only: :destroy
+
     skip_filter :verify_signed_out_user, only: :destroy
     respond_to :api_json
 
