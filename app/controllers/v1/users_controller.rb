@@ -1,7 +1,7 @@
 module V1
   class UsersController < ApplicationController
     expose :user, build_params: :resource_params
-    expose :users
+    expose :users, -> { User.all }
 
     before_action :authorize_user!, only: %i(update destroy)
     acts_as_token_authentication_handler_for User, fallback: :exception,
