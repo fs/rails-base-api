@@ -14,8 +14,7 @@ resource "Users" do
 
     context "with valid token" do
       example_request "Remove user" do
-        expect(response_status_code).to eq(:ok)
-        expect(response_attrs["email"]).to eq(current_user.email)
+        expect(response_status_code).to eq(:no_content)
       end
     end
 
