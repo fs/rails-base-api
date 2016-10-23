@@ -18,7 +18,7 @@ resource "Users" do
 
     context "with valid token" do
       example_request "Update user" do
-        expect(response_status_code).to eq(:ok)
+        expect(response_status_code).to eq(:accepted)
         expect(response_attrs["email"]).to eq(email)
       end
     end
