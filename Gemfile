@@ -42,6 +42,7 @@ group :development, :test do
   gem "rubocop"
   gem "bundler-audit"
   gem "pry-rails"
+  gem "pry-byebug"
 end
 
 group :test do
