@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   scope module: :v1 do
     devise_scope :user do
       jsonapi_resources :users
+      jsonapi_resources :todo_items
+
       jsonapi_resources :sessions, only: %i(create destroy)
     end
   end
