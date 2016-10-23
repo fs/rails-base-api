@@ -11,17 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161021164521) do
+ActiveRecord::Schema.define(version: 20161023142754) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "todo_items", force: :cascade do |t|
     t.integer  "user_id"
-    t.string   "title",      null: false
+    t.string   "title",                  null: false
     t.text     "text"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.integer  "status",     default: 0
   end
 
   add_index "todo_items", ["user_id"], name: "index_todo_items_on_user_id", using: :btree

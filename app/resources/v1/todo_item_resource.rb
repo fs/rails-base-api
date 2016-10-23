@@ -2,7 +2,7 @@ module V1
   class TodoItemResource < V1::ApplicationResource
     NON_UPDATED_FIELDS = %i(created_at updated_at).freeze
 
-    attributes :title, :text, :created_at, :updated_at
+    attributes :title, :text, :created_at, :updated_at, :status
 
     has_one :user
 
