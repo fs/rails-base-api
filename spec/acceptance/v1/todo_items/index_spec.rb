@@ -1,7 +1,7 @@
 require "rails_helper"
 require "rspec_api_documentation/dsl"
 
-resource "Users" do
+resource "TodoItems" do
   include_examples "JSON API headers"
   include_examples "user signed in"
 
