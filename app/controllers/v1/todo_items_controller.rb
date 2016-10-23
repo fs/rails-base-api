@@ -15,6 +15,7 @@ module V1
     end
 
     def create
+      todo_item.user = current_user
       todo_item.save
       respond_with todo_item
     end
