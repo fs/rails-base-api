@@ -26,7 +26,7 @@ module V1
     end
 
     def destroy
-      current_user.delete
+      user.delete
       respond_with user
     end
 

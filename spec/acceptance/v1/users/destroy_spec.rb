@@ -7,26 +7,22 @@ resource "Users" do
 
   subject(:response) { json_response_body }
 
-  patch "/users/:id" do
+  delete "/users/:id" do
     let(:id) { current_user.id }
-    let(:email) { Faker::Internet.email }
 
     parameter :id, "(integer) Current user's id", required: true
-    parameter :email, "(string) New user's email", required: true
-
-    let(:params) { jsonapi_params("users", { email: email }, id) }
 
     context "with valid token" do
-      example_request "Update user" do
-        expect(response_status_code).to eq(:accepted)
-        expect(response_attrs["email"]).to eq(email)
+      example_request "Remove user" do
+        expect(response_status_code).to eq(:ok)
+        expect(response_attrs["email"]).to eq(current_user.email)
       end
     end
 
     context "with invalid token", document: false do
       before { header "X-User-Token", "" }
 
-      example_request "Update user causes authorization error" do
+      example_request "Removal user causes authorization error" do
         expect(response_status_code).to eq(:unauthorized)
       end
     end

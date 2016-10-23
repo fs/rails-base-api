@@ -9,7 +9,6 @@ resource "Users" do
   let!(:user) { create :user }
 
   get "/users" do
-
     example_request "Show all users" do
       expect(response_status_code).to eq(:ok)
       expect(response_data.first).to be_a_user_representation(user)
