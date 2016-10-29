@@ -14,7 +14,7 @@ resource "Users" do
     parameter :id, "(integer) Current user's id", required: true
     parameter :email, "(string) New user's email", required: true
 
-    let(:params) { jsonapi_params("users", { email: email }, id) }
+    let!(:params) { jsonapi_params("users", { email: email }, id) }
 
     context "with valid token" do
       example_request "Update user" do
