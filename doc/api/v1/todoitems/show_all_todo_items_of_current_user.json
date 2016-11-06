@@ -1,0 +1,37 @@
+{
+  "resource": "TodoItems",
+  "http_method": "GET",
+  "route": "/todo-items",
+  "description": "Show all todo items of current user",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/todo-items",
+      "request_body": null,
+      "request_headers": {
+        "Accept": "application/vnd.api+json",
+        "Content-Type": "application/vnd.api+json",
+        "X-User-Token": "yJirwUdGPtRBKEVTthin",
+        "X-User-Email": "user22@example.com"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\"data\":[{\"id\":\"6\",\"type\":\"todo-items\",\"links\":{\"self\":\"http://localhost:3000/v1/todo-items/6\"},\"attributes\":{\"title\":\"mixtape\",\"text\":\"Carry keytar hashtag chillwave twee ugh organic. Craft beer fanny pack iphone twee keytar messenger bag direct trade. Vhs hammock umami. Plaid wes anderson organic.\",\"created-at\":\"2016-11-06T17:48:08.663Z\",\"updated-at\":\"2016-11-06T17:48:08.663Z\",\"status\":\"created\"},\"relationships\":{\"user\":{\"links\":{\"self\":\"http://localhost:3000/v1/todo-items/6/relationships/user\",\"related\":\"http://localhost:3000/v1/todo-items/6/user\"}}}}],\"meta\":{\"record-count\":1,\"page-count\":null},\"links\":{\"first\":\"http://localhost:3000/v1/todo-items?page%5Bnumber%5D=1\\u0026page%5Bsize%5D=10\",\"last\":\"http://localhost:3000/v1/todo-items?page%5Bnumber%5D=1\\u0026page%5Bsize%5D=10\"}}",
+      "response_headers": {
+        "Content-Type": "application/vnd.api+json"
+      },
+      "response_content_type": "application/vnd.api+json",
+      "curl": "curl \"https://localhost:3000/todo-items\" -X GET \\\n\t-H \"Accept: application/vnd.api+json\" \\\n\t-H \"Content-Type: application/vnd.api+json\" \\\n\t-H \"X-User-Token: yJirwUdGPtRBKEVTthin\" \\\n\t-H \"X-User-Email: user22@example.com\""
+    }
+  ]
+}

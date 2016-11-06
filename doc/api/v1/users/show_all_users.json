@@ -1,0 +1,35 @@
+{
+  "resource": "Users",
+  "http_method": "GET",
+  "route": "/users",
+  "description": "Show all users",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/users",
+      "request_body": null,
+      "request_headers": {
+        "Accept": "application/vnd.api+json",
+        "Content-Type": "application/vnd.api+json"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\"data\":[{\"id\":\"10\",\"type\":\"users\",\"links\":{\"self\":\"http://localhost:3000/v1/users/10\"},\"attributes\":{\"email\":\"user10@example.com\",\"password\":null},\"relationships\":{\"todo-items\":{\"links\":{\"self\":\"http://localhost:3000/v1/users/10/relationships/todo-items\",\"related\":\"http://localhost:3000/v1/users/10/todo-items\"}}}}],\"meta\":{\"record-count\":1,\"page-count\":null},\"links\":{\"first\":\"http://localhost:3000/v1/users?page%5Bnumber%5D=1\\u0026page%5Bsize%5D=10\",\"last\":\"http://localhost:3000/v1/users?page%5Bnumber%5D=1\\u0026page%5Bsize%5D=10\"}}",
+      "response_headers": {
+        "Content-Type": "application/vnd.api+json"
+      },
+      "response_content_type": "application/vnd.api+json",
+      "curl": "curl \"https://localhost:3000/users\" -X GET \\\n\t-H \"Accept: application/vnd.api+json\" \\\n\t-H \"Content-Type: application/vnd.api+json\""
+    }
+  ]
+}

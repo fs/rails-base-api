@@ -1,0 +1,46 @@
+{
+  "resource": "Users",
+  "http_method": "POST",
+  "route": "/users/",
+  "description": "Register user with invalid data",
+  "explanation": null,
+  "parameters": [
+    {
+      "required": true,
+      "name": "email",
+      "description": "(string) New user's email"
+    },
+    {
+      "required": true,
+      "name": "password",
+      "description": "(string) New user's password"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/users/",
+      "request_body": "{\"data\":{\"type\":\"users\",\"attributes\":{\"email\":\"reina@ryanrempel.biz\"}}}",
+      "request_headers": {
+        "Accept": "application/vnd.api+json",
+        "Content-Type": "application/vnd.api+json",
+        "X-User-Token": "RTGxj8YiMsRXPvpDgBuM",
+        "X-User-Email": "user16@example.com"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 422,
+      "response_status_text": "Unprocessable Entity",
+      "response_body": "{\"errors\":[{\"title\":\"Password can't be blank\",\"id\":\"password\",\"code\":\"100\",\"status\":\"422\"}]}",
+      "response_headers": {
+        "Content-Type": "application/vnd.api+json"
+      },
+      "response_content_type": "application/vnd.api+json",
+      "curl": "curl \"https://localhost:3000/users/\" -d '{\"data\":{\"type\":\"users\",\"attributes\":{\"email\":\"reina@ryanrempel.biz\"}}}' -X POST \\\n\t-H \"Accept: application/vnd.api+json\" \\\n\t-H \"Content-Type: application/vnd.api+json\" \\\n\t-H \"X-User-Token: RTGxj8YiMsRXPvpDgBuM\" \\\n\t-H \"X-User-Email: user16@example.com\""
+    }
+  ]
+}

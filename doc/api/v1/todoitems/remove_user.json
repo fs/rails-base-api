@@ -1,0 +1,41 @@
+{
+  "resource": "TodoItems",
+  "http_method": "DELETE",
+  "route": "/todo-items/:id",
+  "description": "Remove user",
+  "explanation": null,
+  "parameters": [
+    {
+      "required": true,
+      "name": "id",
+      "description": "(integer) Todo Item's id"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "DELETE",
+      "request_path": "/todo-items/3",
+      "request_body": null,
+      "request_headers": {
+        "Accept": "application/vnd.api+json",
+        "Content-Type": "application/vnd.api+json",
+        "X-User-Token": "cAoknTV6rLcUyhwv5tyA",
+        "X-User-Email": "user13@example.com"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\"data\":{\"id\":\"3\",\"type\":\"todo-items\",\"links\":{\"self\":\"http://localhost:3000/v1/todo-items/3\"},\"attributes\":{\"title\":\"irony\",\"text\":\"Williamsburg tilde selvage irony 3 wolf moon kale chips poutine cleanse. Celiac butcher banjo echo photo booth listicle vice hashtag. Occupy meditation helvetica semiotics mumblecore knausgaard. Polaroid cronut master.\",\"created-at\":\"2016-11-06T17:48:08.429Z\",\"updated-at\":\"2016-11-06T17:48:08.429Z\",\"status\":\"created\"},\"relationships\":{\"user\":{\"links\":{\"self\":\"http://localhost:3000/v1/todo-items/3/relationships/user\",\"related\":\"http://localhost:3000/v1/todo-items/3/user\"}}}}}",
+      "response_headers": {
+        "Content-Type": "application/vnd.api+json"
+      },
+      "response_content_type": "application/vnd.api+json",
+      "curl": "curl \"https://localhost:3000/todo-items/3\" -d '' -X DELETE \\\n\t-H \"Accept: application/vnd.api+json\" \\\n\t-H \"Content-Type: application/vnd.api+json\" \\\n\t-H \"X-User-Token: cAoknTV6rLcUyhwv5tyA\" \\\n\t-H \"X-User-Email: user13@example.com\""
+    }
+  ]
+}

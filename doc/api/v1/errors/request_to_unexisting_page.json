@@ -23,12 +23,12 @@
       "request_content_type": null,
       "response_status": 404,
       "response_status_text": "Not Found",
-      "response_body": "{\"error\":{\"id\":\"f5576af0-303e-4ca4-b421-ba741116d4a4\",\"status\":404,\"error\":\"Not Found\",\"validations\":null}}",
+      "response_body": "{\n  \"status\": \"404\",\n  \"error\": \"Not Found\"\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/not-found\" -X GET \\\n\t-H \"Accept: application/json\""
+      "curl": "curl \"https://localhost:3000/not-found\" -X GET \\\n\t-H \"Accept: application/json\""
     }
   ]
 }

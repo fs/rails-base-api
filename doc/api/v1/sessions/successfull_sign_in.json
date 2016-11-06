@@ -1,0 +1,44 @@
+{
+  "resource": "Sessions",
+  "http_method": "POST",
+  "route": "/sessions",
+  "description": "Successfull sign in",
+  "explanation": null,
+  "parameters": [
+    {
+      "required": true,
+      "name": "email",
+      "description": "Email"
+    },
+    {
+      "required": true,
+      "name": "password",
+      "description": "Password"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/sessions",
+      "request_body": "{\"data\":{\"type\":\"sessions\",\"attributes\":{\"email\":\"user8@example.com\",\"password\":\"123456\"}}}",
+      "request_headers": {
+        "Accept": "application/vnd.api+json",
+        "Content-Type": "application/vnd.api+json"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 201,
+      "response_status_text": "Created",
+      "response_body": "{\"data\":{\"id\":\"8\",\"type\":\"sessions\",\"links\":{\"self\":\"http://localhost:3000/v1/sessions/8\"},\"attributes\":{\"authentication-token\":\"eDR1gsmEsHyypdF_R1-y\",\"email\":\"user8@example.com\",\"password\":null}}}",
+      "response_headers": {
+        "Content-Type": "application/vnd.api+json"
+      },
+      "response_content_type": "application/vnd.api+json",
+      "curl": "curl \"https://localhost:3000/sessions\" -d '{\"data\":{\"type\":\"sessions\",\"attributes\":{\"email\":\"user8@example.com\",\"password\":\"123456\"}}}' -X POST \\\n\t-H \"Accept: application/vnd.api+json\" \\\n\t-H \"Content-Type: application/vnd.api+json\""
+    }
+  ]
+}

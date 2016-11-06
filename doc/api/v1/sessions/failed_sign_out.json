@@ -1,0 +1,39 @@
+{
+  "resource": "Sessions",
+  "http_method": "DELETE",
+  "route": "/sessions/:id",
+  "description": "Failed sign out",
+  "explanation": null,
+  "parameters": [
+    {
+      "required": false,
+      "name": "id",
+      "description": "(integer) User's id"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "DELETE",
+      "request_path": "/sessions/7",
+      "request_body": null,
+      "request_headers": {
+        "Accept": "application/vnd.api+json",
+        "Content-Type": "application/vnd.api+json"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 401,
+      "response_status_text": "Unauthorized",
+      "response_body": "{\"errors\":[{\"title\":\"Unauthorized\",\"detail\":\"You need to sign in or sign up before continuing\",\"code\":\"401\",\"status\":\"401\"}]}",
+      "response_headers": {
+        "Content-Type": "application/vnd.api+json; charset=utf-8"
+      },
+      "response_content_type": "application/vnd.api+json; charset=utf-8",
+      "curl": "curl \"https://localhost:3000/sessions/7\" -d '' -X DELETE \\\n\t-H \"Accept: application/vnd.api+json\" \\\n\t-H \"Content-Type: application/vnd.api+json\""
+    }
+  ]
+}
