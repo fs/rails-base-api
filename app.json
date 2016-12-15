@@ -1,0 +1,12 @@
+{
+  "name": "Rails Base API",
+  "description": "Skeleton for new Rails 4 application for REST API",
+  "env": {
+    "ALLOW_REQUESTS_FROM": { "required": true },
+    "RACK_ENV": { "required": true },
+    "SECRET_KEY_BASE": { "required": true }
+  },
+  "addons": [
+    "heroku-postgresql:hobby-dev"
+  ]
+}
