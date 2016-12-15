@@ -22,8 +22,8 @@ resource "TodoItems" do
 
     let!(:params) do
       jsonapi_params "todo_items",
-      updated_item.attributes.slice("title", "text", "status"),
-      id
+        updated_item.attributes.slice("title", "text", "status"),
+        id
     end
 
     context "with valid token" do
