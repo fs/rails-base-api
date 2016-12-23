@@ -24,11 +24,7 @@ resource 'Comments' do
       end
     end
 
-    context 'without token' do
-      example_request 'List of comments authorization error' do
-        expect(response_status).to eq 401
-      end
-    end
+    include_context 'a request without token'
   end
 
   post '/v1/user/comments' do
@@ -45,11 +41,7 @@ resource 'Comments' do
       end
     end
 
-    context 'without token' do
-      example_request 'Create comment authorization error' do
-        expect(response_status).to eq 401
-      end
-    end
+    include_context 'a request without token'
   end
 
   patch '/v1/user/comments/:comment_id' do
