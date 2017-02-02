@@ -23,8 +23,9 @@ en:
   hello: "Hello world"
   time:
     formats:
+      default: "%Y-%m-%dT%H:%M:%SZ"
       short_date: "%x"
-      long_date: "%a, %b %d, %Y"
-      us: "%m/%d/%Y %I:%M %p"
-      us_date: "%m/%d/%Y"
-      us_time: "%I:%M %p"
+      long_date: "%a, %d %b %Y %H:%M:%S %Z %z"
+      us: "%d/%m/%Y %I:%M:%S %p %Z %z"
+      us_date: "%d/%m/%Y"
+      us_time: "%I:%M:%S %p"
