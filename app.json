@@ -1,6 +1,6 @@
 {
   "name": "Rails Base API",
-  "description": "Skeleton for new Rails 4 application for REST API",
+  "description": "Skeleton for new Rails 4 application for JSON API",
   "env": {
     "ALLOW_REQUESTS_FROM": { "required": true },
     "RACK_ENV": { "required": true },
