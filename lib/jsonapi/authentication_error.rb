@@ -9,7 +9,7 @@ module JSONAPI
         code: code,
         status: :unauthorized,
         title: "Unauthorized",
-        detail: "You need to sign in or sign up before continuing")]
+        detail: I18n.t("devise.failure.unauthenticated"))]
     end
   end
 end
