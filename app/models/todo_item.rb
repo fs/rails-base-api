@@ -3,6 +3,5 @@ class TodoItem < ActiveRecord::Base
 
   enum status: %w(created completed)
 
-  validates :title, presence: true
-  validates :user, presence: true
+  validates :title, :user, presence: true
 end
