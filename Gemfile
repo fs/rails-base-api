@@ -23,6 +23,7 @@ gem "seedbank"
 gem "simple_token_authentication"
 gem "puma"
 gem "nokogiri", "~> 1.7.1"
+gem "rake", "~> 11.3"
 
 group :development do
   gem "letter_opener"
