@@ -1,5 +1,3 @@
-require "./lib/jsonapi/responder"
-
 module V1
   class SessionsController < Devise::SessionsController
     include ActionController::ImplicitRender

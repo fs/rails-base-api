@@ -1,5 +1,3 @@
-require "./lib/jsonapi/failure"
-
 module Authorization
   extend ActiveSupport::Concern
 

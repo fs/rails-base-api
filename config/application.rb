@@ -34,5 +34,8 @@ module RailsBaseApi
     # Disable default Rails headers which do not make sense in
     # API-only project (X-Frame-Options, X-XSS-Protection, X-Content-Type-Options)
     config.action_dispatch.default_headers = {}
+
+    # Autoload JSON API lib path
+    config.autoload_paths << "#{Rails.root}/lib/jsonapi"
   end
 end
