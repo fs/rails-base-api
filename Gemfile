@@ -11,7 +11,6 @@ gem "rails_api_format", git: "https://github.com/fs/rails-api-format.git"
 # all other gems
 gem "active_model_serializers", git: "https://github.com/rails-api/active_model_serializers.git"
 gem "decent_exposure"
-gem "devise"
 gem "dotenv-rails"
 gem "health_check"
 gem "interactor"
@@ -23,6 +22,7 @@ gem "seedbank"
 gem "simple_token_authentication"
 gem "thin"
 gem "jwt"
+gem "responders"
 
 group :development do
   gem "letter_opener"

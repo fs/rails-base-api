@@ -313,7 +313,6 @@ DEPENDENCIES
   byebug
   database_cleaner
   decent_exposure
-  devise
   dotenv-rails
   email_spec
   factory_girl_rails

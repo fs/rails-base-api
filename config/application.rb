@@ -34,5 +34,11 @@ module RailsBaseApi
     # Disable default Rails headers which do not make sense in
     # API-only project (X-Frame-Options, X-XSS-Protection, X-Content-Type-Options)
     config.action_dispatch.default_headers = {}
+    config.middleware.insert_before 0, "Rack::Cors" do
+      allow do
+        origins '*'
+        resource '*', :headers => :any, :methods => [:get, :post, :options]
+      end
+    end
   end
 end
