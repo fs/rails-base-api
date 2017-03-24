@@ -1,9 +1,9 @@
 source "https://rubygems.org"
 
-ruby "2.3.1"
+ruby "2.4.0"
 
 # the most important stuff
-gem "rails", "4.2.7.1"
+gem "rails", "4.2.8"
 gem "pg"
 gem "rails-api"
 
@@ -22,6 +22,7 @@ gem "rollbar"
 gem "seedbank"
 gem "simple_token_authentication"
 gem "puma"
+gem "nokogiri", "~> 1.7.1"
 
 group :development do
   gem "letter_opener"

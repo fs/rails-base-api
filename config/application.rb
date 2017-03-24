@@ -27,7 +27,7 @@ module RailsBaseApi
     config.noreply = "noreply@fs-rails-base-api.heroku.com"
 
     # Default host for action mailer, initializers/mailer.rb
-    config.host = "localhost:5000"
+    config.host = ENV.fetch("HOST")
 
     config.serve_static_files = false
 
