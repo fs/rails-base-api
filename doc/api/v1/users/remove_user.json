@@ -1,0 +1,41 @@
+{
+  "resource": "Users",
+  "http_method": "DELETE",
+  "route": "/users/:id",
+  "description": "Remove user",
+  "explanation": null,
+  "parameters": [
+    {
+      "required": true,
+      "name": "id",
+      "description": "(integer) Current user's id"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "DELETE",
+      "request_path": "/users/3",
+      "request_body": null,
+      "request_headers": {
+        "Accept": "application/vnd.api+json",
+        "Content-Type": "application/vnd.api+json",
+        "X-User-Token": "Vy5v27EbpA-4Wx9Rci_L",
+        "X-User-Email": "user3@example.com"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\"data\":{\"id\":\"3\",\"type\":\"users\",\"links\":{\"self\":\"http://localhost:3000/v1/users/3\"},\"attributes\":{\"email\":\"user3@example.com\",\"password\":null},\"relationships\":{\"todo-items\":{\"links\":{\"self\":\"http://localhost:3000/v1/users/3/relationships/todo-items\",\"related\":\"http://localhost:3000/v1/users/3/todo-items\"}}}}}",
+      "response_headers": {
+        "Content-Type": "application/vnd.api+json"
+      },
+      "response_content_type": "application/vnd.api+json",
+      "curl": "curl \"https://localhost:3000/users/3\" -d '' -X DELETE \\\n\t-H \"Accept: application/vnd.api+json\" \\\n\t-H \"Content-Type: application/vnd.api+json\" \\\n\t-H \"X-User-Token: Vy5v27EbpA-4Wx9Rci_L\" \\\n\t-H \"X-User-Email: user3@example.com\""
+    }
+  ]
+}

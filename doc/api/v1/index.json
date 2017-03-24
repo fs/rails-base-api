@@ -6,7 +6,103 @@
         {
           "description": "Request to unexisting page",
           "link": "errors/request_to_unexisting_page.json",
-          "groups": "all"
+          "groups": "all",
+          "route": "/not-found",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "name": "Users",
+      "examples": [
+        {
+          "description": "Show user profile",
+          "link": "users/show_user_profile.json",
+          "groups": "all",
+          "route": "/users/:id",
+          "method": "get"
+        },
+        {
+          "description": "Remove user",
+          "link": "users/remove_user.json",
+          "groups": "all",
+          "route": "/users/:id",
+          "method": "delete"
+        },
+        {
+          "description": "Show all users",
+          "link": "users/show_all_users.json",
+          "groups": "all",
+          "route": "/users",
+          "method": "get"
+        },
+        {
+          "description": "Update user",
+          "link": "users/update_user.json",
+          "groups": "all",
+          "route": "/users/:id",
+          "method": "patch"
+        },
+        {
+          "description": "Register user with invalid data",
+          "link": "users/register_user_with_invalid_data.json",
+          "groups": "all",
+          "route": "/users/",
+          "method": "post"
+        },
+        {
+          "description": "Register user",
+          "link": "users/register_user.json",
+          "groups": "all",
+          "route": "/users/",
+          "method": "post"
+        }
+      ]
+    },
+    {
+      "name": "TodoItems",
+      "examples": [
+        {
+          "description": "Show todo item",
+          "link": "todoitems/show_todo_item.json",
+          "groups": "all",
+          "route": "/todo-items/:id",
+          "method": "get"
+        },
+        {
+          "description": "Remove user",
+          "link": "todoitems/remove_user.json",
+          "groups": "all",
+          "route": "/todo-items/:id",
+          "method": "delete"
+        },
+        {
+          "description": "Updates todo item",
+          "link": "todoitems/updates_todo_item.json",
+          "groups": "all",
+          "route": "/todo-items/:id",
+          "method": "patch"
+        },
+        {
+          "description": "Show all todo items of current user",
+          "link": "todoitems/show_all_todo_items_of_current_user.json",
+          "groups": "all",
+          "route": "/todo-items",
+          "method": "get"
+        },
+        {
+          "description": "Failed to create todo item",
+          "link": "todoitems/failed_to_create_todo_item.json",
+          "groups": "all",
+          "route": "/todo-items/",
+          "method": "post"
+        },
+        {
+          "description": "Create todo item",
+          "link": "todoitems/create_todo_item.json",
+          "groups": "all",
+          "route": "/todo-items/",
+          "method": "post"
         }
       ]
     },
@@ -14,14 +110,32 @@
       "name": "Sessions",
       "examples": [
         {
-          "description": "Sign in with valid password",
-          "link": "sessions/sign_in_with_valid_password.json",
-          "groups": "all"
+          "description": "Successfull sign out",
+          "link": "sessions/successfull_sign_out.json",
+          "groups": "all",
+          "route": "/sessions/:id",
+          "method": "delete"
         },
         {
-          "description": "Sign in with invalid password",
-          "link": "sessions/sign_in_with_invalid_password.json",
-          "groups": "all"
+          "description": "Failed sign out",
+          "link": "sessions/failed_sign_out.json",
+          "groups": "all",
+          "route": "/sessions/:id",
+          "method": "delete"
+        },
+        {
+          "description": "Successfull sign in",
+          "link": "sessions/successfull_sign_in.json",
+          "groups": "all",
+          "route": "/sessions",
+          "method": "post"
+        },
+        {
+          "description": "Failed sign in",
+          "link": "sessions/failed_sign_in.json",
+          "groups": "all",
+          "route": "/sessions",
+          "method": "post"
         }
       ]
     }

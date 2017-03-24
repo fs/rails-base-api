@@ -38,7 +38,7 @@ Apitome.setup do |config|
 
   # Apitome can render the documentation into a single page that uses scrollspy, or it can render the documentation on
   # individual pages on demand. This allows you to specify which one you want, as a single page may impact performance.
-  config.single_page = true
+  config.single_page = false
 
   # Restrict access to documentation
   #

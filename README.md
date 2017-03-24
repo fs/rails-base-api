@@ -1,11 +1,11 @@
-# Skeleton for new Rails 4 application for REST API
+# Skeleton for new Rails 4 application for JSON API
 
 [![Code Climate](https://codeclimate.com/github/fs/rails-base-api.png)](https://codeclimate.com/github/fs/rails-base-api)
 [![Build Status](https://semaphoreci.com/api/v1/fs/rails-base-api/branches/master/shields_badge.svg)](https://semaphoreci.com/fs/rails-base-api)
 
-This simple application includes ruby/rails technology which we use at FlatStack for new REST API projects.
+This simple application includes Ruby/Rails technology which we use at FlatStack for new JSON API projects.
 
-Application currently based on Rails 4 stable branch and Ruby 2.3.1
+Application currently based on Rails 4 stable branch and Ruby 2.3.3
 
 ## API
 
@@ -17,9 +17,10 @@ Status of the API could be checked at [http://localhost:5000/docs](http://localh
 
 * [Decent Exposure](https://github.com/voxdolo/decent_exposure) for DRY controllers
 * [Rollbar](https://github.com/rollbar/rollbar-gem) for exception notification
-* [Thin](https://github.com/macournoyer/thin) as rails web server
+* [Puma](https://github.com/puma/puma) as Rails web server
 * [Kaminari](https://github.com/amatsuda/kaminari) for pagination
 * [Rack CORS](https://github.com/cyu/rack-cors) for [CORS](http://en.wikipedia.org/wiki/Cross-origin_resource_sharing)
+* [JSON API Utils](https://github.com/tiagopog/jsonapi-utils) for [JSON API support](https://jsonapi.org)
 
 ### Development gems
 
@@ -53,39 +54,6 @@ Status of the API could be checked at [http://localhost:5000/docs](http://localh
 * `bin/quality` - runs rubocop, brakeman, rails_best_practices and bundle-audit for the app
 * `bin/ci` - should be used in the CI or locally
 * `bin/server` - to run server locally
-
-### Serializers
-
-### PaginatedArraySerializer
-
-Use that serializer if you want to add meta with pagination info on response
-
-```ruby
-def index
-  respond_with(
-    posts,
-    serializer: PaginatedArraySerializer
-  )
-end
-```
-
-The above usage of `PaginatedArraySerializer` will produce the following:
-
-```json
-{
-  "meta": {
-    "pagination": {
-      "total":46,
-      "per_page":2,
-      "page":1
-    }
-  },
-  "posts": [
-    { "title": "Post 1", "body": "Hello!" },
-    { "title": "Post 2", "body": "Goodbye!" }
-  ]
-}
-```
 
 ## Quick start
 

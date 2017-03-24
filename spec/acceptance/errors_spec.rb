@@ -7,8 +7,8 @@ resource "Errors" do
 
   get "/not-found" do
     example_request "Request to unexisting page" do
-      expect(response_status).to eq 404
-      expect(response).to be_an_error_representation(:not_found, "Not Found")
+      expect(response_status_code).to eq(:not_found)
+      expect(response).to be_an_error_representation(404, "Not Found")
     end
   end
 end

@@ -27,12 +27,15 @@ module RailsBaseApi
     config.noreply = "noreply@fs-rails-base-api.heroku.com"
 
     # Default host for action mailer, initializers/mailer.rb
-    config.host = "localhost:5000"
+    config.host = ENV.fetch("HOST")
 
     config.serve_static_files = false
 
     # Disable default Rails headers which do not make sense in
     # API-only project (X-Frame-Options, X-XSS-Protection, X-Content-Type-Options)
     config.action_dispatch.default_headers = {}
+
+    # Autoload JSON API lib path
+    config.autoload_paths << "#{Rails.root}/lib/"
   end
 end

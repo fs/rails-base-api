@@ -1,0 +1,46 @@
+{
+  "resource": "Users",
+  "http_method": "POST",
+  "route": "/users/",
+  "description": "Register user",
+  "explanation": null,
+  "parameters": [
+    {
+      "required": true,
+      "name": "email",
+      "description": "(string) New user's email"
+    },
+    {
+      "required": true,
+      "name": "password",
+      "description": "(string) New user's password"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/users/",
+      "request_body": "{\"data\":{\"type\":\"users\",\"attributes\":{\"email\":\"jamison.prohaska@bayer.info\",\"password\":\"123456\"}}}",
+      "request_headers": {
+        "Accept": "application/vnd.api+json",
+        "Content-Type": "application/vnd.api+json",
+        "X-User-Token": "PyaybpkfQ7kDkcZZACyy",
+        "X-User-Email": "user17@example.com"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 201,
+      "response_status_text": "Created",
+      "response_body": "{\"data\":{\"id\":\"18\",\"type\":\"users\",\"links\":{\"self\":\"http://localhost:3000/v1/users/18\"},\"attributes\":{\"email\":\"jamison.prohaska@bayer.info\",\"password\":\"123456\"},\"relationships\":{\"todo-items\":{\"links\":{\"self\":\"http://localhost:3000/v1/users/18/relationships/todo-items\",\"related\":\"http://localhost:3000/v1/users/18/todo-items\"}}}}}",
+      "response_headers": {
+        "Content-Type": "application/vnd.api+json"
+      },
+      "response_content_type": "application/vnd.api+json",
+      "curl": "curl \"https://localhost:3000/users/\" -d '{\"data\":{\"type\":\"users\",\"attributes\":{\"email\":\"jamison.prohaska@bayer.info\",\"password\":\"123456\"}}}' -X POST \\\n\t-H \"Accept: application/vnd.api+json\" \\\n\t-H \"Content-Type: application/vnd.api+json\" \\\n\t-H \"X-User-Token: PyaybpkfQ7kDkcZZACyy\" \\\n\t-H \"X-User-Email: user17@example.com\""
+    }
+  ]
+}

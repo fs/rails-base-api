@@ -3,9 +3,12 @@ Rails.application.routes.draw do
     devise_for :users, only: []
   end
 
-  namespace :v1, defaults: { format: "json" } do
+  scope module: :v1 do
     devise_scope :user do
-      post "users/sign_in", to: 'sessions#create'
+      jsonapi_resources :users
+      jsonapi_resources :todo_items
+
+      jsonapi_resources :sessions, only: %i(create destroy)
     end
   end
 end

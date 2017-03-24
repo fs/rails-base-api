@@ -1,0 +1,49 @@
+{
+  "resource": "TodoItems",
+  "http_method": "POST",
+  "route": "/todo-items/",
+  "description": "Failed to create todo item",
+  "explanation": null,
+  "parameters": [
+    {
+      "required": true,
+      "name": "title",
+      "description": "(string) Item's title"
+    },
+    {
+      "name": "text",
+      "description": "(string) Todo item content"
+    },
+    {
+      "name": "status",
+      "description": "(0|1) Item status - created or completed"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/todo-items/",
+      "request_body": "{\"data\":{\"type\":\"todo_items\",\"attributes\":{\"text\":\"Cliche godard humblebrag try-hard. Meggings literally poutine authentic. Small batch semiotics 3 wolf moon wayfarers. Fap photo booth swag heirloom fingerstache echo craft beer church-key.\"}}}",
+      "request_headers": {
+        "Accept": "application/vnd.api+json",
+        "Content-Type": "application/vnd.api+json",
+        "X-User-Token": "_JMuWKbjJ1oEEGqbtn72",
+        "X-User-Email": "user23@example.com"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 422,
+      "response_status_text": "Unprocessable Entity",
+      "response_body": "{\"errors\":[{\"title\":\"Title can't be blank\",\"id\":\"title\",\"code\":\"100\",\"status\":\"422\"}]}",
+      "response_headers": {
+        "Content-Type": "application/vnd.api+json"
+      },
+      "response_content_type": "application/vnd.api+json",
+      "curl": "curl \"https://localhost:3000/todo-items/\" -d '{\"data\":{\"type\":\"todo_items\",\"attributes\":{\"text\":\"Cliche godard humblebrag try-hard. Meggings literally poutine authentic. Small batch semiotics 3 wolf moon wayfarers. Fap photo booth swag heirloom fingerstache echo craft beer church-key.\"}}}' -X POST \\\n\t-H \"Accept: application/vnd.api+json\" \\\n\t-H \"Content-Type: application/vnd.api+json\" \\\n\t-H \"X-User-Token: _JMuWKbjJ1oEEGqbtn72\" \\\n\t-H \"X-User-Email: user23@example.com\""
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "resource": "TodoItems",
+  "http_method": "PATCH",
+  "route": "/todo-items/:id",
+  "description": "Updates todo item",
+  "explanation": null,
+  "parameters": [
+    {
+      "required": true,
+      "name": "title",
+      "description": "(string) Item's title"
+    },
+    {
+      "name": "text",
+      "description": "(string) Todo item content"
+    },
+    {
+      "name": "status",
+      "description": "(0|1) Item status - created or completed"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "PATCH",
+      "request_path": "/todo-items/5",
+      "request_body": "{\"data\":{\"type\":\"todo_items\",\"attributes\":{\"title\":\"Meggings 8-bit irony tousled mlkshk neutra crucifix lumbersexual kogi.\",\"text\":\"Meh wolf whatever salvia cardigan seitan paleo. Health poutine listicle goth scenester kitsch fanny pack. Narwhal cold-pressed hashtag goth umami.\",\"status\":1},\"id\":5}}",
+      "request_headers": {
+        "Accept": "application/vnd.api+json",
+        "Content-Type": "application/vnd.api+json",
+        "X-User-Token": "nKKpA_5FtLAesqP6ynfD",
+        "X-User-Email": "user20@example.com"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 202,
+      "response_status_text": "Accepted",
+      "response_body": "{\"data\":{\"id\":\"5\",\"type\":\"todo-items\",\"links\":{\"self\":\"http://localhost:3000/v1/todo-items/5\"},\"attributes\":{\"title\":\"Meggings 8-bit irony tousled mlkshk neutra crucifix lumbersexual kogi.\",\"text\":\"Meh wolf whatever salvia cardigan seitan paleo. Health poutine listicle goth scenester kitsch fanny pack. Narwhal cold-pressed hashtag goth umami.\",\"created-at\":\"2016-11-06T17:48:08.593Z\",\"updated-at\":\"2016-11-06T17:48:08.616Z\",\"status\":\"completed\"},\"relationships\":{\"user\":{\"links\":{\"self\":\"http://localhost:3000/v1/todo-items/5/relationships/user\",\"related\":\"http://localhost:3000/v1/todo-items/5/user\"}}}}}",
+      "response_headers": {
+        "Content-Type": "application/vnd.api+json"
+      },
+      "response_content_type": "application/vnd.api+json",
+      "curl": "curl \"https://localhost:3000/todo-items/5\" -d '{\"data\":{\"type\":\"todo_items\",\"attributes\":{\"title\":\"Meggings 8-bit irony tousled mlkshk neutra crucifix lumbersexual kogi.\",\"text\":\"Meh wolf whatever salvia cardigan seitan paleo. Health poutine listicle goth scenester kitsch fanny pack. Narwhal cold-pressed hashtag goth umami.\",\"status\":1},\"id\":5}}' -X PATCH \\\n\t-H \"Accept: application/vnd.api+json\" \\\n\t-H \"Content-Type: application/vnd.api+json\" \\\n\t-H \"X-User-Token: nKKpA_5FtLAesqP6ynfD\" \\\n\t-H \"X-User-Email: user20@example.com\""
+    }
+  ]
+}

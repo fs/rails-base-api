@@ -1,0 +1,46 @@
+{
+  "resource": "Users",
+  "http_method": "PATCH",
+  "route": "/users/:id",
+  "description": "Update user",
+  "explanation": null,
+  "parameters": [
+    {
+      "required": true,
+      "name": "id",
+      "description": "(integer) Current user's id"
+    },
+    {
+      "required": true,
+      "name": "email",
+      "description": "(string) New user's email"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "PATCH",
+      "request_path": "/users/15",
+      "request_body": "{\"data\":{\"type\":\"users\",\"attributes\":{\"email\":\"jacey@bayer.net\"},\"id\":15}}",
+      "request_headers": {
+        "Accept": "application/vnd.api+json",
+        "Content-Type": "application/vnd.api+json",
+        "X-User-Token": "S7D3CccF6rhTGzUgsu3D",
+        "X-User-Email": "user15@example.com"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 202,
+      "response_status_text": "Accepted",
+      "response_body": "{\"data\":{\"id\":\"15\",\"type\":\"users\",\"links\":{\"self\":\"http://localhost:3000/v1/users/15\"},\"attributes\":{\"email\":\"jacey@bayer.net\",\"password\":null},\"relationships\":{\"todo-items\":{\"links\":{\"self\":\"http://localhost:3000/v1/users/15/relationships/todo-items\",\"related\":\"http://localhost:3000/v1/users/15/todo-items\"}}}}}",
+      "response_headers": {
+        "Content-Type": "application/vnd.api+json"
+      },
+      "response_content_type": "application/vnd.api+json",
+      "curl": "curl \"https://localhost:3000/users/15\" -d '{\"data\":{\"type\":\"users\",\"attributes\":{\"email\":\"jacey@bayer.net\"},\"id\":15}}' -X PATCH \\\n\t-H \"Accept: application/vnd.api+json\" \\\n\t-H \"Content-Type: application/vnd.api+json\" \\\n\t-H \"X-User-Token: S7D3CccF6rhTGzUgsu3D\" \\\n\t-H \"X-User-Email: user15@example.com\""
+    }
+  ]
+}

@@ -1,27 +1,29 @@
 source "https://rubygems.org"
 
-ruby "2.3.1"
+ruby "2.3.3"
 
 # the most important stuff
-gem "rails", "4.2.7.1"
+gem "rails", "4.2.8"
 gem "pg"
 gem "rails-api"
-gem "rails_api_format", git: "https://github.com/fs/rails-api-format.git"
 
 # all other gems
-gem "active_model_serializers", git: "https://github.com/rails-api/active_model_serializers.git"
 gem "decent_exposure"
 gem "devise"
 gem "dotenv-rails"
 gem "health_check"
 gem "interactor"
+gem "jsonapi-utils", git: "https://github.com/tiagopog/jsonapi-utils.git", branch: "master"
 gem "kaminari"
+gem "pundit"
 gem "rack-cors", require: "rack/cors"
 gem "responders"
 gem "rollbar"
 gem "seedbank"
 gem "simple_token_authentication"
-gem "thin"
+gem "puma"
+gem "nokogiri", "~> 1.7.1"
+gem "rake", "~> 11.3"
 
 group :development do
   gem "letter_opener"
@@ -41,6 +43,8 @@ group :development, :test do
   gem "brakeman"
   gem "rubocop"
   gem "bundler-audit"
+  gem "pry-rails"
+  gem "pry-byebug"
 end
 
 group :test do

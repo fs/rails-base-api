@@ -1,0 +1,49 @@
+{
+  "resource": "TodoItems",
+  "http_method": "POST",
+  "route": "/todo-items/",
+  "description": "Create todo item",
+  "explanation": null,
+  "parameters": [
+    {
+      "required": true,
+      "name": "title",
+      "description": "(string) Item's title"
+    },
+    {
+      "name": "text",
+      "description": "(string) Todo item content"
+    },
+    {
+      "name": "status",
+      "description": "(0|1) Item status - created or completed"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/todo-items/",
+      "request_body": "{\"data\":{\"type\":\"todo_items\",\"attributes\":{\"title\":\"3 wolf moon forage cold-pressed vinegar vegan diy.\",\"text\":\"Intelligentsia next level mumblecore banjo yuccie ethical bicycle rights. Normcore chambray gluten-free. 90's master marfa ethical. Chartreuse franzen wes anderson lo-fi meggings yr. 3 wolf moon mustache disrupt selvage tofu lomo vinyl.\",\"status\":0}}}",
+      "request_headers": {
+        "Accept": "application/vnd.api+json",
+        "Content-Type": "application/vnd.api+json",
+        "X-User-Token": "YK7Z_ky6vfaVzqydP9Yt",
+        "X-User-Email": "user24@example.com"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 201,
+      "response_status_text": "Created",
+      "response_body": "{\"data\":{\"id\":\"7\",\"type\":\"todo-items\",\"links\":{\"self\":\"http://localhost:3000/v1/todo-items/7\"},\"attributes\":{\"title\":\"3 wolf moon forage cold-pressed vinegar vegan diy.\",\"text\":\"Intelligentsia next level mumblecore banjo yuccie ethical bicycle rights. Normcore chambray gluten-free. 90's master marfa ethical. Chartreuse franzen wes anderson lo-fi meggings yr. 3 wolf moon mustache disrupt selvage tofu lomo vinyl.\",\"created-at\":\"2016-11-06T17:48:08.737Z\",\"updated-at\":\"2016-11-06T17:48:08.737Z\",\"status\":\"created\"},\"relationships\":{\"user\":{\"links\":{\"self\":\"http://localhost:3000/v1/todo-items/7/relationships/user\",\"related\":\"http://localhost:3000/v1/todo-items/7/user\"}}}}}",
+      "response_headers": {
+        "Content-Type": "application/vnd.api+json"
+      },
+      "response_content_type": "application/vnd.api+json",
+      "curl": "curl \"https://localhost:3000/todo-items/\" -d '{\"data\":{\"type\":\"todo_items\",\"attributes\":{\"title\":\"3 wolf moon forage cold-pressed vinegar vegan diy.\",\"text\":\"Intelligentsia next level mumblecore banjo yuccie ethical bicycle rights. Normcore chambray gluten-free. 90\\u0027s master marfa ethical. Chartreuse franzen wes anderson lo-fi meggings yr. 3 wolf moon mustache disrupt selvage tofu lomo vinyl.\",\"status\":0}}}' -X POST \\\n\t-H \"Accept: application/vnd.api+json\" \\\n\t-H \"Content-Type: application/vnd.api+json\" \\\n\t-H \"X-User-Token: YK7Z_ky6vfaVzqydP9Yt\" \\\n\t-H \"X-User-Email: user24@example.com\""
+    }
+  ]
+}
