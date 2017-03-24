@@ -22,6 +22,7 @@ gem "rollbar"
 gem "seedbank"
 gem "simple_token_authentication"
 gem "thin"
+gem "jwt"
 
 group :development do
   gem "letter_opener"
