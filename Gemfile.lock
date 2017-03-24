@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/tiagopog/jsonapi-utils.git
+  revision: 838b05c6924637264d475899ea3d45675980c8b9
+  branch: master
+  specs:
+    jsonapi-utils (0.5.2)
+      jsonapi-resources (= 0.8.3)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -115,11 +123,9 @@ GEM
     json_spec (1.1.4)
       multi_json (~> 1.0)
       rspec (>= 2.0, < 4.0)
-    jsonapi-resources (0.8.1)
+    jsonapi-resources (0.8.3)
       concurrent-ruby
       rails (>= 4.0)
-    jsonapi-utils (0.5.0.beta3)
-      jsonapi-resources (~> 0.8.0)
     kaminari (0.16.1)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
@@ -312,7 +318,7 @@ DEPENDENCIES
   health_check
   interactor
   json_spec
-  jsonapi-utils (~> 0.5.0.beta3)
+  jsonapi-utils!
   kaminari
   letter_opener
   mail_safe
