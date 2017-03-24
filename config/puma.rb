@@ -1,21 +1,13 @@
-workers_count = Integer(ENV["WEB_CONCURRENCY"] || 3)
-threads_count = Integer(ENV["MAX_THREADS"] || 1)
-
-workers workers_count
+workers ENV.fetch("WEB_CONCURRENCY", 2).to_i
+threads_count = ENV.fetch("MAX_THREADS", 5).to_i
 threads threads_count, threads_count
+
+rackup DefaultRackup
+port ENV.fetch("PORT", 5000)
+environment ENV.fetch("RACK_ENV", "development")
 
 preload_app!
 
-rackup DefaultRackup
-port ENV["PORT"] || 3000
-environment ENV["RACK_ENV"] || "development"
-
 on_worker_boot do
-  # Valid on Rails up to 4.1 the initializer method of setting `pool` size
-  ActiveSupport.on_load(:active_record) do
-    config = ActiveRecord::Base.configurations[Rails.env] ||
-             Rails.application.config.database_configuration[Rails.env]
-    config["pool"] = workers_count * threads_count
-    ActiveRecord::Base.establish_connection(config)
-  end
+  ActiveRecord::Base.establish_connection
 end
