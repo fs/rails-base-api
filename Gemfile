@@ -1,9 +1,9 @@
 source "https://rubygems.org"
 
-ruby "2.3.1"
+ruby "2.3.3"
 
 # the most important stuff
-gem "rails", "4.2.7.1"
+gem "rails", "4.2.8"
 gem "pg"
 gem "rails-api"
 gem "rails_api_format", git: "https://github.com/fs/rails-api-format.git"
