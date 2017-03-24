@@ -36,6 +36,6 @@ module RailsBaseApi
     config.action_dispatch.default_headers = {}
 
     # Autoload JSON API lib path
-    config.autoload_paths << "#{Rails.root}/lib/jsonapi"
+    config.autoload_paths << "#{Rails.root}/lib/"
   end
 end
