@@ -6,7 +6,6 @@ class Api::V1::UsersController < ApplicationController
   expose(:users) { User.where("role <> ?", User.roles[:admin]) }
 
   def create
-    user.role = "admin" if admin_param_valid?
     if user.save
       head :created
     else
@@ -33,12 +32,10 @@ class Api::V1::UsersController < ApplicationController
     params.permit(:username, :password)
   end
 
-  def admin_param_valid?
-    code = params["code"]
-    code.nil? || (code && code == "admin")
-  end
-
   def admin_register_check
-    head :forbidden unless admin_param_valid?
+    code = params["code"]
+    return if code.nil?
+    return head :forbidden unless code == "admin"
+    user.role = "admin"
   end
 end
