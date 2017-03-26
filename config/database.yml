@@ -15,5 +15,8 @@ test:
 
 production: &deploy
   <<: *defaults
+  database: <%= ENV['DATABASE_NAME'] %>
+  username: <%= ENV['DATABASE_USERNAME'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
 
 staging: *deploy
