@@ -12,7 +12,7 @@ module Authentication
       head :unauthorized
     end
   rescue JWT::ExpiredSignature
-    hean :forbidden
+    head :forbidden
   rescue JWT::VerificationError, JWT::DecodeError
     head :unauthorized
   end
