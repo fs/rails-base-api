@@ -1,9 +1,9 @@
 source "https://rubygems.org"
 
-ruby "2.3.1"
+ruby "2.4.0"
 
 # the most important stuff
-gem "rails", "4.2.7.1"
+gem "rails", "4.2.8"
 gem "pg"
 gem "rails-api"
 gem "rails_api_format", git: "https://github.com/fs/rails-api-format.git"
@@ -22,7 +22,6 @@ gem "seedbank"
 gem "simple_token_authentication"
 gem "thin"
 gem "jwt"
-gem "responders"
 
 group :development do
   gem "letter_opener"
@@ -34,14 +33,15 @@ group :development do
 end
 
 group :development, :test do
+  gem "bundler-audit"
   gem "byebug"
   gem "rspec-rails"
   gem "mail_safe"
 
   gem "rails_best_practices"
   gem "brakeman"
-  gem "rubocop"
-  gem "bundler-audit"
+  gem "rubocop", require: false
+  gem "rubocop-rspec", require: false
 end
 
 group :test do
