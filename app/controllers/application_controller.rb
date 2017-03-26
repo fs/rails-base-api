@@ -1,10 +1,7 @@
 class ApplicationController < ActionController::API
   include ActionController::ImplicitRender
+  include RequestHelper
   include Authentication
-  
-  respond_to :json
 
-  def respond_with_token(token)
-    render json: { authentication_token: token }, status: :created
-  end
+  respond_to :json
 end

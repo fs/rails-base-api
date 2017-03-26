@@ -1,15 +1,13 @@
 module Authentication
   extend ActiveSupport::Concern
 
-  include RequestHelper
-
   included do
     attr_reader :current_user
   end
 
-  def authenticate_user
-    if user_id_in_token?
-      @current_user = User.find_by(id: auth_token[:user_id])
+  def authenticate_token_by_type(type = Token::TYPES[:access])
+    if token_valid_for? type
+      @current_user = User.find_by(id: auth_token[:sub])
     else
       head :unauthorized
     end

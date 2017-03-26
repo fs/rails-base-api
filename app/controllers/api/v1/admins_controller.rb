@@ -1,5 +1,5 @@
 class Api::V1::AdminsController < ApplicationController
-  before_action :authenticate_user
+  before_action :authenticate_token_by_type
   before_action :current_user_admin?
 
   expose(:admins) { User.where("role = ?", User.roles[:admin]) }
