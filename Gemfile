@@ -6,7 +6,7 @@ ruby "2.4.0"
 gem "rails", "4.2.8"
 gem "pg"
 gem "rails-api"
-gem "rails_api_format", git: "https://github.com/fs/rails-api-format.git"
+gem "rails_api_format", git: "https://github.com/RuslanKhabibullinFs/rails-api-format.git"
 
 # all other gems
 gem "active_model_serializers", git: "https://github.com/rails-api/active_model_serializers.git"

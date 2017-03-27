@@ -6,21 +6,21 @@ resource "Sessions" do
 
   subject(:response) { json_response_body }
 
-  post "/v1/users/sign_in" do
+  post "/api/v1/sessions" do
     let(:user) { create :user, password: "123456" }
 
-    parameter :email, "Email", required: true
+    parameter :username, "Username", required: true
     parameter :password, "Password", required: true
+    parameter :code, "Code"
 
-    let(:email) { user.email }
+    let(:username) { user.username }
 
     example_request "Sign in with valid password", password: "123456" do
-      expect(response["user"]).to be_a_session_representation
+      expect(response["token"]).to be_a_token_representation
     end
 
     example_request "Sign in with invalid password", password: "" do
       expect(response_status).to eq 401
-      expect(response).to be_an_error_representation(:unauthorized, "Invalid email or password.")
     end
   end
 end

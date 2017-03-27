@@ -2,7 +2,7 @@ require "rails_helper"
 
 describe PaginatedArraySerializer do
   let(:users) { Kaminari.paginate_array(build_list(:user, 3)).page(1) }
-  let(:json) { ActiveModel::SerializableResource.new(users, serializer: described_class).to_json }
+  let(:json) { ActiveModel::Serializer::CollectionSerializer.new(users, serializer: described_class).to_json }
   let(:parsed_json) { parse_json(json) }
 
   it "returns json with meta" do
