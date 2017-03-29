@@ -1,27 +1,115 @@
 {
   "resources": [
     {
+      "name": "Tokens",
+      "explanation": null,
+      "examples": [
+        {
+          "description": "Update auth token",
+          "link": "tokens/update_auth_token.json",
+          "groups": "all",
+          "route": "api/v1/tokens/refresh",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "name": "Article",
+      "explanation": null,
+      "examples": [
+        {
+          "description": "Get articles",
+          "link": "article/get_articles.json",
+          "groups": "all",
+          "route": "api/v1/articles",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "name": "Users",
+      "explanation": null,
+      "examples": [
+        {
+          "description": "Update current user email",
+          "link": "users/update_current_user_email.json",
+          "groups": "all",
+          "route": "api/v1/users/:id",
+          "method": "put"
+        },
+        {
+          "description": "Registration with valid data",
+          "link": "users/registration_with_valid_data.json",
+          "groups": "all",
+          "route": "api/v1/users",
+          "method": "post"
+        },
+        {
+          "description": "Registration with invalid data",
+          "link": "users/registration_with_invalid_data.json",
+          "groups": "all",
+          "route": "api/v1/users",
+          "method": "post"
+        },
+        {
+          "description": "Show current user data",
+          "link": "users/show_current_user_data.json",
+          "groups": "all",
+          "route": "api/v1/users/:id",
+          "method": "get"
+        }
+      ]
+    },
+    {
       "name": "Errors",
+      "explanation": null,
       "examples": [
         {
           "description": "Request to unexisting page",
           "link": "errors/request_to_unexisting_page.json",
-          "groups": "all"
+          "groups": "all",
+          "route": "/not-found",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "name": "User",
+      "explanation": null,
+      "examples": [
+        {
+          "description": "Get users",
+          "link": "user/get_users.json",
+          "groups": "all",
+          "route": "api/v1/users",
+          "method": "get"
+        },
+        {
+          "description": "Admin user request for admins",
+          "link": "user/admin_user_request_for_admins.json",
+          "groups": "all",
+          "route": "api/v1/admins",
+          "method": "get"
         }
       ]
     },
     {
       "name": "Sessions",
+      "explanation": null,
       "examples": [
-        {
-          "description": "Sign in with valid password",
-          "link": "sessions/sign_in_with_valid_password.json",
-          "groups": "all"
-        },
         {
           "description": "Sign in with invalid password",
           "link": "sessions/sign_in_with_invalid_password.json",
-          "groups": "all"
+          "groups": "all",
+          "route": "/api/v1/sessions",
+          "method": "post"
+        },
+        {
+          "description": "Sign in with valid password",
+          "link": "sessions/sign_in_with_valid_password.json",
+          "groups": "all",
+          "route": "/api/v1/sessions",
+          "method": "post"
         }
       ]
     }

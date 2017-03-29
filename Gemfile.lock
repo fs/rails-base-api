@@ -10,7 +10,7 @@ GIT
 
 GIT
   remote: https://github.com/rails-api/active_model_serializers.git
-  revision: 80e470dcdb8b724990baf3c90d7300884c4395bf
+  revision: 04125a06b093e99edc72980a148e255620f323c1
   specs:
     active_model_serializers (0.10.5)
       actionpack (>= 4.1, < 6)
@@ -110,7 +110,7 @@ GEM
       railties (>= 3.0.0)
     faker (1.7.3)
       i18n (~> 0.5)
-    foreman (0.83.0)
+    foreman (0.84.0)
       thor (~> 0.19.1)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
@@ -126,9 +126,18 @@ GEM
       rspec (>= 2.0, < 4.0)
     jsonapi-renderer (0.1.2)
     jwt (1.5.6)
-    kaminari (0.17.0)
-      actionpack (>= 3.0.0)
-      activesupport (>= 3.0.0)
+    kaminari (1.0.1)
+      activesupport (>= 4.1.0)
+      kaminari-actionview (= 1.0.1)
+      kaminari-activerecord (= 1.0.1)
+      kaminari-core (= 1.0.1)
+    kaminari-actionview (1.0.1)
+      actionview
+      kaminari-core (= 1.0.1)
+    kaminari-activerecord (1.0.1)
+      activerecord
+      kaminari-core (= 1.0.1)
+    kaminari-core (1.0.1)
     kramdown (1.13.2)
     launchy (2.4.3)
       addressable (~> 2.3)
@@ -146,7 +155,7 @@ GEM
     mini_portile2 (2.1.0)
     minitest (5.10.1)
     multi_json (1.12.1)
-    mustache (1.0.4)
+    mustache (1.0.5)
     nokogiri (1.7.1)
       mini_portile2 (~> 2.1.0)
     orm_adapter (0.5.0)

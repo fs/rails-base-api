@@ -1,5 +1,6 @@
 {
   "resource": "Errors",
+  "resource_explanation": null,
   "http_method": "GET",
   "route": "/not-found",
   "description": "Request to unexisting page",
@@ -23,7 +24,7 @@
       "request_content_type": null,
       "response_status": 404,
       "response_status_text": "Not Found",
-      "response_body": "{\"error\":{\"id\":\"f5576af0-303e-4ca4-b421-ba741116d4a4\",\"status\":404,\"error\":\"Not Found\",\"validations\":null}}",
+      "response_body": "{\n  \"error\": {\n    \"id\": \"8608b51e-5b23-4263-b6d9-fc210a876511\",\n    \"status\": 404,\n    \"error\": \"Not Found\",\n    \"validations\": null\n  }\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },

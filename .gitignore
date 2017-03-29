@@ -8,6 +8,7 @@
 /db/*.sqlite3
 /log/*.log
 /tmp
+/doc
 coverage/*
 rerun.txt
 vendor/bundle

@@ -3,6 +3,7 @@ require "rspec_api_documentation/dsl"
 
 resource "User" do
   subject(:response) { json_response_body }
+
   let(:current_user) { create(:user, :admin) }
   let(:token) { JWTWrapper.encode(JWTPayload.payload_for(current_user)) }
 
