@@ -1,0 +1,34 @@
+{
+  "resource": "Users",
+  "resource_explanation": null,
+  "http_method": "GET",
+  "route": "api/v1/users/:id",
+  "description": "Show current user data",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "api/v1/users/8",
+      "request_body": null,
+      "request_headers": {
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": null,
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"user\": {\n    \"id\": 8,\n    \"username\": \"user9\",\n    \"role\": \"user\"\n  }\n}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"http://localhost:5000api/v1/users/8\" -X GET \\\n\t-H \"Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOjgsInJvbGUiOiJ1c2VyIiwidHlwZSI6ImFjY2VzcyIsImlhdCI6MTQ5MDgxNDgzMCwiaXNzIjoiRGVtbyBqd3QiLCJleHAiOjE0OTA4MjU2MzB9.Q51ewcDKZe7Kakm2rZi2A50SKSG1XI9oQwT9QBhtPleAu3CEadjqooY6hTWPNphskbVy5feggRRw1BXjly5W2t89w_dDBYQNkFPfB0O59NyiLW9BuDVI9LW0jP-E29nKtyfMlmJCPXTxc6-iC4O0rP02LlruYhAEQ6d898GztKQH3uRehiqICD45-9-ysX60-Cfxw8Slw2HCd0xuIRwnrzCMk-bXnSPq64rGaowN_LaIpZBbKRK9rBrHMCtffXxsB6sTuAgVEqVVXptfJdmtOyU6ZCd24nLQ3bTAx6X0mS1183vYUB1jTQEFFF9WDxlIgJtHk699uR_qXfPP-AE5Bg\""
+    }
+  ]
+}

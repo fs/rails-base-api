@@ -1,0 +1,47 @@
+{
+  "resource": "Users",
+  "resource_explanation": null,
+  "http_method": "POST",
+  "route": "api/v1/users",
+  "description": "Registration with invalid data",
+  "explanation": null,
+  "parameters": [
+    {
+      "required": true,
+      "name": "username",
+      "description": "Username"
+    },
+    {
+      "required": true,
+      "name": "password",
+      "description": "Password"
+    },
+    {
+      "name": "code",
+      "description": "Code"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "api/v1/users",
+      "request_body": "username=user6&password=",
+      "request_headers": {
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/x-www-form-urlencoded",
+      "response_status": 422,
+      "response_status_text": "Unprocessable Entity",
+      "response_body": "{\n  \"rails_api_format/error\": {\n    \"id\": \"0012bb8e-9863-42e4-83ca-7a50076a3054\",\n    \"status\": 422,\n    \"error\": null,\n    \"validations\": {\n      \"password\": [\n        \"can't be blank\",\n        \"is too short (minimum is 5 characters)\",\n        \"can't be blank\"\n      ]\n    }\n  }\n}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"http://localhost:5000api/v1/users\" -d 'username=user6&password=' -X POST "
+    }
+  ]
+}
