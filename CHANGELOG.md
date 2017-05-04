@@ -1,5 +1,7 @@
 # Unreleased
 
+* Update Rails to 4.2.8
+* Update Ruby to 2.3.3
 * Upgrade [decent exposure](https://github.com/hashrocket/decent_exposure) to 3.0
 * Include [rails-api-format](https://github.com/fs/rails-api-format.git) gem from git source.
 * Update Faker to 1.6.6
