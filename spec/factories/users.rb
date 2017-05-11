@@ -2,11 +2,7 @@
 
 FactoryGirl.define do
   factory :user do
-    username
+    email
     password
-
-    trait :admin do
-      role User.roles[:admin]
-    end
   end
 end

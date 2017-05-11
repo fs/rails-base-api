@@ -9,7 +9,6 @@ resource "Users" do
 
     parameter :username, "Username", required: true
     parameter :password, "Password", required: true
-    parameter :code, "Code"
 
     let(:username) { user[:username] }
 

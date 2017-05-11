@@ -3,7 +3,6 @@ RSpec::Matchers.define :be_a_user_representation do |user|
     response_attributes = user.attributes.slice %w(
       id
       username
-      role
     )
 
     expect(json).to be

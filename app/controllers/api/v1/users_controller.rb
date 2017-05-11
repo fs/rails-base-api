@@ -1,9 +1,8 @@
 class Api::V1::UsersController < ApplicationController
   before_action :authenticate_token_by_type, except: %i(create)
-  before_action :admin_register_check, only: %i(create)
 
   expose :user
-  expose(:users) { User.where("role <> ?", User.roles[:admin]) }
+  expose(:users) { User.all }
 
   def create
     if user.save
@@ -30,12 +29,5 @@ class Api::V1::UsersController < ApplicationController
 
   def user_params
     params.permit(:username, :password)
-  end
-
-  def admin_register_check
-    code = params["code"]
-    return if code.nil?
-    return head :forbidden unless code == "admin"
-    user.role = "admin"
   end
 end

@@ -1,8 +1,6 @@
-class User < ActiveRecord::Base
-  validates :username, presence: true, uniqueness: { case_sensitive: false }
-  validates :password, presence: true, length: { minimum: 5, maximum: 100 }
-
-  has_secure_password
-
-  enum role: %i(user admin)
+class User < ApplicationRecord
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable and :omniauthable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :trackable, :validatable
 end
