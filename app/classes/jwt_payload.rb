@@ -3,7 +3,6 @@ class JWTPayload
     expiration ||= Rails.application.secrets.jwt_expiration_hours
     {
       sub: user.id,
-      role: user.role,
       type: type,
       iat: Time.now.to_i,
       iss: "Demo jwt",

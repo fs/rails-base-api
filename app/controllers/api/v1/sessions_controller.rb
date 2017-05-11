@@ -1,16 +1,27 @@
-class Api::V1::SessionsController < ApplicationController
-  def create
-    result = AuthenticateUser.call(session_params)
-    if result.success?
-      render json: result.token
-    else
-      head :unauthorized
+module Api
+  module V1
+    class SessionsController < ApplicationController
+      delegate :user, to: :authentication
+
+      def create
+        if authentication.success?
+          sign_in :user, user
+          token = GenerateToken.call(user: user).token
+          render json: token, status: :created
+        else
+          head :unauthorized
+        end
+      end
+
+      private
+
+      def session_params
+        params.require(:session).permit(:email, :password)
+      end
+
+      def authentication
+        @_result ||= Auth.call(session_params)
+      end
     end
-  end
-
-  private
-
-  def session_params
-    params.permit(:username, :password)
   end
 end
