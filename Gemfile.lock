@@ -1,4 +1,14 @@
 GIT
+  remote: https://github.com/RuslanKhabibullinFs/rails-api-format
+  revision: 135f41c9426dd08e2e7a3a31dde644063ea2167d
+  specs:
+    rails_api_format (0.0.2)
+      active_model_serializers (~> 0.10.0)
+      devise (>= 3.5.1, < 4.3)
+      rails (>= 4.2.3, < 5.1)
+      responders (>= 2.1.0, < 2.6)
+
+GIT
   remote: https://github.com/rails-api/active_model_serializers.git
   revision: 04125a06b093e99edc72980a148e255620f323c1
   specs:
@@ -303,6 +313,7 @@ DEPENDENCIES
   pg
   rack-cors
   rails (~> 5.0.2)
+  rails_api_format!
   rails_best_practices
   responders
   rollbar

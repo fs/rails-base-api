@@ -20,6 +20,7 @@ gem "rollbar"
 gem "seedbank"
 gem "thin"
 gem "jwt"
+gem "rails_api_format", git: "https://github.com/RuslanKhabibullinFs/rails-api-format"
 
 group :development do
   gem "letter_opener"
