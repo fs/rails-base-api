@@ -10,6 +10,9 @@ module RailsBaseApi
   class Application < Rails::Application
     config.api_only = true
 
+    LIBRARY_PATH = Rails.root.join("lib")
+    config.autoload_paths << LIBRARY_PATH.to_s
+
     # Default e-mail address which will be shown in the "from" devise emails, initializers/devise.rb.
     config.noreply = "noreply@fs-rails-base-api.heroku.com"
 
