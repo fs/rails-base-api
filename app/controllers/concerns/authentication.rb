@@ -6,7 +6,7 @@ module Authentication
     rescue_from Pundit::NotAuthorizedError, with: :render_403
   end
 
-  def render_401
+  def render_403
     raise NotImplementedError
   end
 end
