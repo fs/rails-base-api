@@ -1,6 +1,8 @@
 module Devise
   module Strategies
     class JsonWebToken < Base
+      include TokenClaims
+
       def valid?
         request.headers["Authorization"].present?
       end
@@ -17,15 +19,6 @@ module Devise
         fail!(:token_expired)
       rescue JWT::VerificationError, JWT::DecodeError
         fail!
-      end
-
-      private
-
-      def claims
-        strategy, token = request.headers["Authorization"].split(" ")
-        return nil unless (strategy || "").casecmp("bearer")
-
-        ::JWTWrapper.decode(token)
       end
     end
   end
