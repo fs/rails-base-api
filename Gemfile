@@ -18,9 +18,9 @@ gem "rack-cors", require: "rack/cors"
 gem "responders"
 gem "rollbar"
 gem "seedbank"
-gem "thin"
 gem "jwt"
 gem "rails_api_format", git: "https://github.com/RuslanKhabibullinFs/rails-api-format"
+gem "pundit"
 
 group :development do
   gem "letter_opener"

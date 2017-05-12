@@ -5,7 +5,7 @@ class JWTPayload
       sub: user.id,
       type: type,
       iat: Time.now.to_i,
-      iss: "Demo jwt",
+      iss: ENV.fetch("JWT_ISSUE", "Demo jwt"),
       exp: expiration.to_i.hours.from_now.to_i
     }
   end

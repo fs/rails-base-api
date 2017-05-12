@@ -1,7 +1,14 @@
 class ApplicationController < ActionController::API
   include ActionController::ImplicitRender
+  include Authentication
 
   respond_to :json
+
+  protected
+
+  def render_403
+    head :forbidden
+  end
 
   def pagination(collection)
     {

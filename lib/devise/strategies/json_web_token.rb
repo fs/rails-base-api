@@ -6,14 +6,17 @@ module Devise
       end
 
       def authenticate!
-        return fail! unless claims
-        return fail! unless claims.key? :sub
+        return fail! unless claims&.key? :sub
 
         if user = User.find_by(id: claims[:sub])
           success!(user)
         else
           fail!
         end
+      rescue JWT::ExpiredSignature
+        fail!(:token_expired)
+      rescue JWT::VerificationError, JWT::DecodeError
+        fail!
       end
 
       private
