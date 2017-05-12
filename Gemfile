@@ -7,7 +7,7 @@ gem "rails", "~> 5.0.2"
 gem "pg"
 
 # all other gems
-gem "active_model_serializers", git: "https://github.com/rails-api/active_model_serializers.git"
+gem "active_model_serializers", "~> 0.10.6", git: "https://github.com/rails-api/active_model_serializers.git"
 gem "decent_exposure"
 gem "devise"
 gem "dotenv-rails"

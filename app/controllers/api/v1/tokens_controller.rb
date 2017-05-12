@@ -16,7 +16,7 @@ module Api
       private
 
       def authenticate_by_refresh_token
-        return head :unauthorized unless claims[:token] && claims[:type] == ::Token::TYPES[:refresh]
+        return head :unauthorized unless claims[:type] && claims[:type] == ::Token::TYPES[:refresh]
       end
     end
   end

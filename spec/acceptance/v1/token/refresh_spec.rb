@@ -6,12 +6,12 @@ resource "Tokens" do
 
   before { header "Authorization", "Bearer #{token.refresh_token}" }
 
-  subject(:response) { json_response_body }
+  subject(:response) { json_response_data }
 
   get "api/v1/tokens/refresh" do
     example_request "Update auth token" do
       expect(response_status).to be 200
-      expect(response["token"]).to be_a_token_representation(token)
+      expect(response).to be_a_token_representation(token)
     end
   end
 end

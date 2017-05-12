@@ -5,7 +5,7 @@ module Api
       before_action :authorize_user!, only: %i[update destroy]
 
       expose :user
-      expose(:users) { User.find_each }
+      expose(:users) { User.all.page(params[:page]).per(ITEMS_PER_PAGE) }
 
       def create
         if user.save
@@ -20,7 +20,7 @@ module Api
       end
 
       def index
-        render json: users
+        render_paginated_collection users
       end
 
       def update

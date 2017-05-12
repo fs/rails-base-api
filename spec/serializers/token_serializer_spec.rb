@@ -4,7 +4,7 @@ describe TokenSerializer do
   include_context "generate token object"
 
   let(:json) { ActiveModelSerializers::SerializableResource.new(token, serializer: described_class).to_json }
-  let(:user_json) { parse_json(json)["token"] }
+  let(:user_json) { parse_json_data(json) }
 
   it "returns valid tokens" do
     expect(user_json).to be_a_token_representation

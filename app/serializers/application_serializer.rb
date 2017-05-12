@@ -1,5 +1,6 @@
 class ApplicationSerializer < ActiveModel::Serializer
-  def json_key
-    "data"
+  def initialize(object, options = {})
+    options[:root] = "data"
+    super(object, options)
   end
 end

@@ -4,7 +4,7 @@ require "rspec_api_documentation/dsl"
 resource "Users" do
   include_context "current user signed in"
 
-  subject(:response) { json_response_body }
+  subject(:response) { json_response_data }
 
   get "api/v1/users/:id" do
     let(:id) { current_user.id }

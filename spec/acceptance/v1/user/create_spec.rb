@@ -7,16 +7,18 @@ resource "Users" do
   post "api/v1/users" do
     let(:user) { attributes_for(:user, password: "123456") }
 
-    parameter :username, "Username", required: true
-    parameter :password, "Password", required: true
+    with_options scope: :user, required: true do
+      parameter :email, "Email"
+      parameter :password, "Password"
+    end
 
-    let(:username) { user[:username] }
-
-    example_request "Registration with valid data", password: "123456" do
+    example "Registration with valid data" do
+      do_request(user: user)
       expect(response_status).to be 201
     end
 
-    example_request "Registration with invalid data", password: "" do
+    example "Registration with invalid data" do
+      do_request(user: user.except(:password))
       expect(response_status).to be 422
       expect(response_body).to include("error")
     end
