@@ -3,6 +3,7 @@ source "https://rubygems.org"
 ruby "2.4.0"
 
 # the most important stuff
+gem "puma"
 gem "rails", "~> 5.0.2"
 gem "pg"
 

@@ -166,6 +166,7 @@ GEM
     pg (0.20.0)
     powerpack (0.1.1)
     public_suffix (2.0.5)
+    puma (3.9.1)
     pundit (1.1.0)
       activesupport (>= 3.0.0)
     rack (2.0.2)
@@ -307,6 +308,7 @@ DEPENDENCIES
   letter_opener
   mail_safe
   pg
+  puma
   pundit
   rack-cors
   rails (~> 5.0.2)
@@ -329,4 +331,4 @@ RUBY VERSION
    ruby 2.4.0p0
 
 BUNDLED WITH
-   1.14.6
+   1.15.1
