@@ -1,0 +1,44 @@
+{
+  "resource": "Comments",
+  "http_method": "GET",
+  "route": "/v1/user/comments",
+  "description": "List of comments",
+  "explanation": null,
+  "parameters": [
+    {
+      "name": "page",
+      "description": "Page"
+    },
+    {
+      "name": "per_page",
+      "description": "Items per page"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/v1/user/comments?page=1&per_page=25",
+      "request_body": null,
+      "request_headers": {
+        "Accept": "application/json",
+        "X-Auth-Token": "VmvD-anMc7mzyfhcqQRw"
+      },
+      "request_query_parameters": {
+        "page": "1",
+        "per_page": "25"
+      },
+      "request_content_type": null,
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\"comments\":[{\"id\":4,\"title\":\"Dolores facere asperiores distinctio hic odit et reiciendis sequi.\",\"text\":\"Consequuntur ut et. Dolor sunt repellat. Facere eaque quisquam dolores atque sint. Et sint consequatur nemo reiciendis labore.\",\"post\":null,\"user\":{\"id\":4,\"authentication_token\":\"VmvD-anMc7mzyfhcqQRw\",\"email\":\"user4@example.com\"}},{\"id\":3,\"title\":\"Voluptatem iure eum ut natus perspiciatis cumque ut dolore.\",\"text\":\"Et voluptates tenetur cum modi. Sit quis voluptatem quisquam pariatur est. Eos sed ipsa. Et ipsam rerum explicabo.\",\"post\":null,\"user\":{\"id\":4,\"authentication_token\":\"VmvD-anMc7mzyfhcqQRw\",\"email\":\"user4@example.com\"}}],\"meta\":{\"pagination\":{\"total\":2,\"per_page\":25,\"page\":1}}}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"http://localhost:5000/v1/user/comments?page=1&per_page=25\" -X GET \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-Auth-Token: VmvD-anMc7mzyfhcqQRw\""
+    }
+  ]
+}

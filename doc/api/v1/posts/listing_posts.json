@@ -1,0 +1,43 @@
+{
+  "resource": "Posts",
+  "http_method": "GET",
+  "route": "/v1/posts",
+  "description": "Listing posts",
+  "explanation": null,
+  "parameters": [
+    {
+      "name": "page",
+      "description": "Page"
+    },
+    {
+      "name": "per_page",
+      "description": "Items per page"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/v1/posts?page=1&per_page=25",
+      "request_body": null,
+      "request_headers": {
+        "Accept": "application/json"
+      },
+      "request_query_parameters": {
+        "page": "1",
+        "per_page": "25"
+      },
+      "request_content_type": null,
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\"posts\":[{\"id\":3,\"title\":\"Sed tenetur consequatur ducimus.\",\"text\":\"Dolorem fuga error fugit. Et consequatur tenetur pariatur ipsam occaecati. Et inventore soluta quasi. Aspernatur provident dolor non praesentium ducimus temporibus sit. Sit nam ipsam rerum ea voluptates.\",\"comments\":[]},{\"id\":4,\"title\":\"Delectus quos recusandae vel cumque veniam id ipsam possimus.\",\"text\":\"Eum et sunt aut quaerat laudantium. Non nostrum rerum necessitatibus animi ut mollitia soluta. Eum et et asperiores. Consequuntur ut ipsum et rerum sint nisi.\",\"comments\":[]}],\"meta\":{\"pagination\":{\"total\":2,\"per_page\":25,\"page\":1}}}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"http://localhost:5000/v1/posts?page=1&per_page=25\" -X GET \\\n\t-H \"Accept: application/json\""
+    }
+  ]
+}
