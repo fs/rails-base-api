@@ -1,5 +1,30 @@
 # Unreleased
 
+* Update Rails to 4.2.8
+* Update Ruby to 2.3.3
+* Upgrade [decent exposure](https://github.com/hashrocket/decent_exposure) to 3.0
+* Include [rails-api-format](https://github.com/fs/rails-api-format.git) gem from git source.
+* Update Faker to 1.6.6
+* Update Rollbar to 2.12.0
+* Extract authentication_token from UserSerializer
+  ([#203](https://github.com/fs/rails-base-api/pull/203))
+* Add health_check gem for check that rails is up
+* Update Rails to 4.2.7.1
+* Update Ruby to 2.3.1
+* Update Nokogiri gem to get rid of vulnerabilities
+* Update Rails to get rid of vulnerabilities
+  ([#200](https://github.com/fs/rails-base-api/pull/200))
+* Update Rails and Devise to get rid of vulnerabilities
+  ([#198](https://github.com/fs/rails-base-api/pull/198))
+* Switch off static assets serve
+  ([#192](https://github.com/fs/rails-base-api/pull/192))
+* Update Rails to 4.2.4 and Ruby to 2.2.3
+  ([#193](https://github.com/fs/rails-base-api/pull/193))
+* Sync Rubocop rules with Rails-Base
+* Replace custom token authentication strategy with [simple_token_authentication](https://github.com/gonzalo-bulnes/simple_token_authentication)
+  ([#184](https://github.com/fs/rails-base-api/pull/184))
+* Add id to error response
+  ([#183](https://github.com/fs/rails-base-api/pull/183))
 * Upgrade Active Model Serializer to 0.10.0.rc2
   ([#182](https://github.com/fs/rails-base-api/pull/182))
 * Rename bin/bootstrap to bin/setup

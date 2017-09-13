@@ -1,19 +1,19 @@
 {
-  "resource": "Sessions",
+  "resource": "Posts",
   "http_method": "POST",
-  "route": "/v1/users/sign_in",
-  "description": "Sign in with valid password",
+  "route": "/v1/posts",
+  "description": "Create post",
   "explanation": null,
   "parameters": [
     {
       "required": true,
-      "name": "email",
-      "description": "Email"
+      "name": "title",
+      "description": "Title"
     },
     {
       "required": true,
-      "name": "password",
-      "description": "Password"
+      "name": "text",
+      "description": "Text"
     }
   ],
   "response_fields": [
@@ -22,8 +22,8 @@
   "requests": [
     {
       "request_method": "POST",
-      "request_path": "/v1/users/sign_in",
-      "request_body": "email=user8%40example.com&password=123456",
+      "request_path": "/v1/posts",
+      "request_body": "post[title]=Title&post[text]=Text",
       "request_headers": {
         "Accept": "application/json"
       },
@@ -32,12 +32,12 @@
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 201,
       "response_status_text": "Created",
-      "response_body": "{\"user\":{\"id\":8,\"email\":\"user8@example.com\",\"authentication_token\":\"ujJNCLcg9FiVxq-ukMud\"}}",
+      "response_body": "{\"post\":{\"id\":5,\"title\":\"Title\",\"text\":\"Text\",\"comments\":[]}}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/users/sign_in\" -d 'email=user8%40example.com&password=123456' -X POST \\\n\t-H \"Accept: application/json\""
+      "curl": "curl \"http://localhost:5000/v1/posts\" -d 'post[title]=Title&post[text]=Text' -X POST \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-User-Email: user2@example.com\" \\\n\t-H \"X-User-Token: suxqLLkHHuc67XKHZx1c\""
     }
   ]
 }

@@ -2,9 +2,9 @@
 
 set -e
 
-bin/rubocop
-bin/brakeman --exit-on-warn
-bin/rails_best_practices --silent --spec
+bin/brakeman --quiet --skip-libs --exit-on-warn
+bin/rubocop --config config/rubocop.yml
+bin/rails_best_practices --silent --spec --features
 
 bin/bundle-audit update
 bin/bundle-audit

@@ -1,7 +1,7 @@
 {
   "resource": "Comments",
   "http_method": "GET",
-  "route": "/v1/user/comments",
+  "route": "/v1/posts/:post_id/comments",
   "description": "List of comments",
   "explanation": null,
   "parameters": [
@@ -20,11 +20,10 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/v1/user/comments?page=1&per_page=25",
+      "request_path": "/v1/posts/11/comments?page=1&per_page=25",
       "request_body": null,
       "request_headers": {
-        "Accept": "application/json",
-        "X-Auth-Token": "VmvD-anMc7mzyfhcqQRw"
+        "Accept": "application/json"
       },
       "request_query_parameters": {
         "page": "1",
@@ -33,12 +32,12 @@
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"comments\":[{\"id\":4,\"title\":\"Dolores facere asperiores distinctio hic odit et reiciendis sequi.\",\"text\":\"Consequuntur ut et. Dolor sunt repellat. Facere eaque quisquam dolores atque sint. Et sint consequatur nemo reiciendis labore.\",\"post\":null,\"user\":{\"id\":4,\"authentication_token\":\"VmvD-anMc7mzyfhcqQRw\",\"email\":\"user4@example.com\"}},{\"id\":3,\"title\":\"Voluptatem iure eum ut natus perspiciatis cumque ut dolore.\",\"text\":\"Et voluptates tenetur cum modi. Sit quis voluptatem quisquam pariatur est. Eos sed ipsa. Et ipsam rerum explicabo.\",\"post\":null,\"user\":{\"id\":4,\"authentication_token\":\"VmvD-anMc7mzyfhcqQRw\",\"email\":\"user4@example.com\"}}],\"meta\":{\"pagination\":{\"total\":2,\"per_page\":25,\"page\":1}}}",
+      "response_body": "{\"comments\":[{\"id\":11,\"title\":\"Cumque rerum quia officiis sint numquam reprehenderit.\",\"text\":\"Voluptas ad molestiae ab quibusdam iste. Architecto quia atque aspernatur asperiores. Voluptas ut ipsum porro ut. Consectetur et earum est accusantium ut facilis. Et sapiente commodi nostrum eligendi iste adipisci.\",\"post\":{\"id\":11,\"title\":\"Velit qui quia molestiae officiis laudantium eos.\",\"text\":\"Amet sint et. Deleniti ratione rerum velit voluptas. Voluptatem quo voluptatem ducimus.\"},\"user\":{\"id\":7,\"email\":\"user7@example.com\"}},{\"id\":10,\"title\":\"Minus eum ea rerum dicta ut vitae beatae.\",\"text\":\"Repellat dolor aut rerum. Unde voluptatem vitae quis suscipit et. Suscipit amet voluptatibus ut soluta repudiandae.\",\"post\":{\"id\":11,\"title\":\"Velit qui quia molestiae officiis laudantium eos.\",\"text\":\"Amet sint et. Deleniti ratione rerum velit voluptas. Voluptatem quo voluptatem ducimus.\"},\"user\":{\"id\":7,\"email\":\"user7@example.com\"}}],\"meta\":{\"pagination\":{\"total\":2,\"per_page\":25,\"page\":1}}}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/user/comments?page=1&per_page=25\" -X GET \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-Auth-Token: VmvD-anMc7mzyfhcqQRw\""
+      "curl": "curl \"http://localhost:5000/v1/posts/11/comments?page=1&per_page=25\" -X GET \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-User-Token: XNa8Zk1Zxp4ipkfkKKwQ\" \\\n\t-H \"X-User-Email: user7@example.com\""
     }
   ]
 }

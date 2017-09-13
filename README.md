@@ -1,11 +1,11 @@
 # Skeleton for new Rails 4 application for REST API
 
 [![Code Climate](https://codeclimate.com/github/fs/rails-base-api.png)](https://codeclimate.com/github/fs/rails-base-api)
-[![Semaphore](https://semaphoreapp.com/api/v1/projects/0e00006725dcea00b179fab81a1b1bdaf9a64816/106819/shields_badge.png)](https://semaphoreapp.com/fs/rails-base-api)
+[![Build Status](https://semaphoreci.com/api/v1/fs/rails-base-api/branches/master/shields_badge.svg)](https://semaphoreci.com/fs/rails-base-api)
 
 This simple application includes ruby/rails technology which we use at FlatStack for new REST API projects.
 
-Application currently based on Rails 4 stable branch and Ruby 2.1
+Application currently based on Rails 4 stable branch and Ruby 2.3.3
 
 ## API
 
@@ -49,7 +49,7 @@ Status of the API could be checked at [http://localhost:5000/docs](http://localh
 
 ### Scripts
 
-* `bin/bootstrap` - setup required gems and migrate db if needed
+* `bin/setup` - setup required gems and migrate db if needed
 * `bin/quality` - runs rubocop, brakeman, rails_best_practices and bundle-audit for the app
 * `bin/ci` - should be used in the CI or locally
 * `bin/server` - to run server locally
@@ -103,10 +103,10 @@ git remote add origin git@github.com:[MY-GITHUB-ACCOUNT]/[MY-NEW-PROJECT].git
 git push -u origin master
 ```
 
-Run bootstrap script
+Run setup script
 
 ```bash
-bin/bootstrap
+bin/setup
 ```
 
 Make sure all test are green
@@ -137,3 +137,5 @@ You can enable restrict access to documentation by adding `APITOME_USER` and `AP
 
 Please check how to build API endpoints and test them properly in the
 [examples branch](https://github.com/fs/rails-base-api/tree/examples)
+
+[<img src="http://www.flatstack.com/logo.svg" width="100"/>](http://www.flatstack.com)

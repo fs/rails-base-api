@@ -1,7 +1,7 @@
 {
   "resource": "Comments",
   "http_method": "POST",
-  "route": "/v1/user/comments",
+  "route": "/v1/posts/:post_id/comments",
   "description": "Create comment",
   "explanation": null,
   "parameters": [
@@ -22,23 +22,22 @@
   "requests": [
     {
       "request_method": "POST",
-      "request_path": "/v1/user/comments",
+      "request_path": "/v1/posts/9/comments",
       "request_body": "title=Title&text=Text",
       "request_headers": {
-        "Accept": "application/json",
-        "X-Auth-Token": "wmR44xKp4SeiYvJuRoTa"
+        "Accept": "application/json"
       },
       "request_query_parameters": {
       },
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 201,
       "response_status_text": "Created",
-      "response_body": "{\"comment\":{\"id\":13,\"title\":\"Title\",\"text\":\"Text\",\"post\":null,\"user\":{\"id\":7,\"authentication_token\":\"wmR44xKp4SeiYvJuRoTa\",\"email\":\"user7@example.com\"}}}",
+      "response_body": "{\"comment\":{\"id\":6,\"title\":\"Title\",\"text\":\"Text\",\"post\":{\"id\":9,\"title\":\"Fugit eum praesentium omnis nihil qui dolores sit.\",\"text\":\"Quis dolor cum asperiores illum quae. Ea non quibusdam. Dolorem quisquam sunt debitis impedit enim alias. Ut vitae voluptas adipisci fuga eaque non aut.\"},\"user\":{\"id\":5,\"email\":\"user5@example.com\"}}}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/user/comments\" -d 'title=Title&text=Text' -X POST \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-Auth-Token: wmR44xKp4SeiYvJuRoTa\""
+      "curl": "curl \"http://localhost:5000/v1/posts/9/comments\" -d 'title=Title&text=Text' -X POST \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-User-Token: wzQsREzzuiJjfDDRcspv\" \\\n\t-H \"X-User-Email: user5@example.com\""
     }
   ]
 }

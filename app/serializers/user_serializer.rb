@@ -1,3 +1,3 @@
 class UserSerializer < ApplicationSerializer
-  attributes :id, :authentication_token, :email
+  attributes :id, :email
 end

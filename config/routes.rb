@@ -3,19 +3,15 @@ Rails.application.routes.draw do
     devise_for :users, only: []
   end
 
-  namespace :v1, defaults: { format: 'json' } do
+  namespace :v1, defaults: { format: "json" } do
     devise_scope :user do
-      post 'users/sign_in', to: 'sessions#create'
+      post "users/sign_in", to: 'sessions#create'
     end
 
-    # Resources require authenticated user
-    #
-    namespace :user do
-      resources :comments, only: [:index, :create, :update, :destroy]
+    resources :posts, only: [:index, :show, :create], param: :post_id do
+      member do
+        resources :comments, only: [:index, :create, :update, :destroy]
+      end
     end
-
-    # Public resources
-    #
-    resources :posts, only: [:index, :show]
   end
 end
