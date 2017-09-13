@@ -1,7 +1,7 @@
 {
   "resource": "Comments",
   "http_method": "DELETE",
-  "route": "/v1/user/comments/:comment_id",
+  "route": "/v1/posts/:post_id/comments/:comment_id",
   "description": "Delete a comment",
   "explanation": null,
   "parameters": [
@@ -13,23 +13,22 @@
   "requests": [
     {
       "request_method": "DELETE",
-      "request_path": "/v1/user/comments/7",
+      "request_path": "/v1/posts/8/comments/3",
       "request_body": null,
       "request_headers": {
-        "Accept": "application/json",
-        "X-Auth-Token": "GSPtMiy8CizTgvPvzyqs"
+        "Accept": "application/json"
       },
       "request_query_parameters": {
       },
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"comment\":{\"id\":7,\"title\":\"Dolor excepturi in distinctio voluptatem.\",\"text\":\"Dolores qui ducimus et soluta enim totam. Blanditiis tempore assumenda laborum vel odit omnis. Dignissimos necessitatibus excepturi.\",\"post\":null,\"user\":{\"id\":5,\"authentication_token\":\"GSPtMiy8CizTgvPvzyqs\",\"email\":\"user5@example.com\"}}}",
+      "response_body": "{\"comment\":{\"id\":3,\"title\":\"Nemo sed aperiam sit distinctio voluptas.\",\"text\":\"Iste nostrum tempore consequatur aut quod voluptatum aperiam. Dignissimos doloremque deserunt eius. Adipisci ex fuga occaecati atque. Maxime alias sunt nesciunt aut minus.\",\"post\":null,\"user\":{\"id\":4,\"email\":\"user4@example.com\"}}}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/user/comments/7\" -d '' -X DELETE \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-Auth-Token: GSPtMiy8CizTgvPvzyqs\""
+      "curl": "curl \"http://localhost:5000/v1/posts/8/comments/3\" -d '' -X DELETE \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-User-Token: 3F1k9mfwkFPr2Hz77W4y\" \\\n\t-H \"X-User-Email: user4@example.com\""
     }
   ]
 }

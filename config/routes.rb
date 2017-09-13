@@ -8,14 +8,10 @@ Rails.application.routes.draw do
       post "users/sign_in", to: 'sessions#create'
     end
 
-    # Resources require authenticated user
-    #
-    namespace :user do
-      resources :comments, only: [:index, :create, :update, :destroy]
+    resources :posts, only: [:index, :show, :create], param: :post_id do
+      member do
+        resources :comments, only: [:index, :create, :update, :destroy]
+      end
     end
-
-    # Public resources
-    #
-    resources :posts, only: [:index, :show]
   end
 end

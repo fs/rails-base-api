@@ -32,12 +32,12 @@
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"posts\":[{\"id\":3,\"title\":\"Sed tenetur consequatur ducimus.\",\"text\":\"Dolorem fuga error fugit. Et consequatur tenetur pariatur ipsam occaecati. Et inventore soluta quasi. Aspernatur provident dolor non praesentium ducimus temporibus sit. Sit nam ipsam rerum ea voluptates.\",\"comments\":[]},{\"id\":4,\"title\":\"Delectus quos recusandae vel cumque veniam id ipsam possimus.\",\"text\":\"Eum et sunt aut quaerat laudantium. Non nostrum rerum necessitatibus animi ut mollitia soluta. Eum et et asperiores. Consequuntur ut ipsum et rerum sint nisi.\",\"comments\":[]}],\"meta\":{\"pagination\":{\"total\":2,\"per_page\":25,\"page\":1}}}",
+      "response_body": "{\"posts\":[{\"id\":1,\"title\":\"Atque soluta labore corrupti nostrum.\",\"text\":\"In non iusto asperiores veniam tempore et eos. Cupiditate repellendus veritatis voluptas fugiat tempore. Aperiam suscipit natus consectetur itaque aut.\",\"comments\":[]},{\"id\":2,\"title\":\"Similique consectetur et placeat nostrum in.\",\"text\":\"Saepe delectus asperiores iste suscipit. Quo exercitationem esse ad. Deleniti voluptatem consectetur praesentium autem dignissimos nemo.\",\"comments\":[]}],\"meta\":{\"pagination\":{\"total\":2,\"per_page\":25,\"page\":1}}}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/posts?page=1&per_page=25\" -X GET \\\n\t-H \"Accept: application/json\""
+      "curl": "curl \"http://localhost:5000/v1/posts?page=1&per_page=25\" -X GET \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-User-Email: user1@example.com\" \\\n\t-H \"X-User-Token: EGbK6gC19kzQG_Jypr1s\""
     }
   ]
 }
