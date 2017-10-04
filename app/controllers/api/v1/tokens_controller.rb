@@ -7,10 +7,8 @@ module Api
       before_action :authenticate_by_refresh_token
 
       def refresh
-        payload = JWTPayload.payload_for(current_user)
-        auth_token = JWTWrapper.encode(payload)
-        token = Token.new(auth_token)
-        render json: token
+        fresh_token = Token.refresh_for(current_user)
+        render json: fresh_token
       end
 
       private

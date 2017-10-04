@@ -5,7 +5,7 @@ module Api
       before_action :authorize_user!, only: %i[update destroy]
 
       expose :user
-      expose(:users) { User.all.page(params[:page]).per(ITEMS_PER_PAGE) }
+      expose(:users) { User.all.page(params[:page]).per(items_per_page) }
 
       def create
         if user.save

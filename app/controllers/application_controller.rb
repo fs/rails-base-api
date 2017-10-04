@@ -4,12 +4,14 @@ class ApplicationController < ActionController::API
 
   respond_to :json
 
-  ITEMS_PER_PAGE = 20
-
   protected
 
   def render_403
     head :forbidden
+  end
+
+  def items_per_page
+    20
   end
 
   def render_paginated_collection(collection, meta = {})
