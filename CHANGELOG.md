@@ -1,6 +1,6 @@
 # Unreleased
 
-* Update Ruby to 2.3.4, update loofah gem
+* Update Ruby to 2.3.6, update loofah gem
 * Update Rails to 4.2.8
 * Update Ruby to 2.3.3
 * Upgrade [decent exposure](https://github.com/hashrocket/decent_exposure) to 3.0
