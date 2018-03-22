@@ -1,7 +1,7 @@
 class AuthenticateUser
   include Interactor
 
-  OPTIONS = { store: false, scope: :user }
+  OPTIONS = { store: false, scope: :user }.freeze
 
   def call
     context.user = authenticated_user!
