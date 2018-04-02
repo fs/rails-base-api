@@ -4,7 +4,6 @@ set -e
 
 bin/brakeman --quiet --skip-libs --exit-on-warn
 bin/rubocop --config config/rubocop.yml
-bin/rails_best_practices --silent --spec --features
 
 bin/bundle-audit update
 bin/bundle-audit
