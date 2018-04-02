@@ -1,5 +1,7 @@
+Rails:
+  Enabled: true
+
 AllCops:
-  RunRailsCops: true
   DisplayCopNames: true
   Exclude:
     - bin/**/*
@@ -28,14 +30,29 @@ Metrics/LineLength:
   Description: 'Limit lines to 120 characters.'
   Max: 120
 
-Lint/EndAlignment:
-  AlignWith: variable
-  SupportedStyles:
-    - keyword
-    - variable
+Layout/EndAlignment:
+  EnforcedStyleAlignWith: variable
 
-Style/AlignParameters:
+Layout/AlignParameters:
   EnforcedStyle: with_fixed_indentation
   SupportedStyles:
     - with_first_parameter
     - with_fixed_indentation
+
+Bundler/OrderedGems:
+  Enabled: false
+
+Lint/ScriptPermission:
+  Enabled: false
+
+Rails/FilePath:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/MultilineIfModifier:
+  Enabled: false
+
+Style/PercentLiteralDelimiters:
+  Enabled: false
