@@ -12,7 +12,6 @@ gem "rails_api_format", git: "https://github.com/fs/rails-api-format.git"
 gem "active_model_serializers", git: "https://github.com/rails-api/active_model_serializers.git"
 gem "decent_exposure"
 gem "devise"
-gem "dotenv-rails"
 gem "health_check"
 gem "interactor"
 gem "kaminari"
@@ -34,10 +33,10 @@ end
 
 group :development, :test do
   gem "byebug"
+  gem "dotenv-rails"
   gem "rspec-rails"
   gem "mail_safe"
 
-  gem "rails_best_practices"
   gem "brakeman"
   gem "rubocop"
   gem "bundler-audit"
@@ -58,8 +57,4 @@ group :development, :test, :staging do
   gem "factory_girl_rails"
   gem "rspec_api_documentation"
   gem "apitome"
-end
-
-group :staging, :production do
-  gem "rails_12factor"
 end
