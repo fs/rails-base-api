@@ -2,6 +2,7 @@
 
 [![Code Climate](https://codeclimate.com/github/fs/rails-base-api.png)](https://codeclimate.com/github/fs/rails-base-api)
 [![Build Status](https://semaphoreci.com/api/v1/fs/rails-base-api/branches/master/shields_badge.svg)](https://semaphoreci.com/fs/rails-base-api)
+[![Known Vulnerabilities](https://snyk.io/test/github/fs/rails-base-api/badge.svg)](https://snyk.io/test/github/fs/rails-base-api)
 
 This simple application includes ruby/rails technology which we use at FlatStack for new REST API projects.
 
