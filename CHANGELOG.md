@@ -1,5 +1,7 @@
 # Unreleased
 
+* Update nokogiri, rack-cors, sprockets to stable versions
+  ([#226](https://github.com/fs/rails-base-api/pull/226))
 * Update Ruby to 2.3.6, update loofah gem
 * Update Rails to 4.2.8
 * Update Ruby to 2.3.3
