@@ -1,5 +1,9 @@
 # Unreleased
 
+* Implement the dynamic database name
+  ([#225](https://github.com/fs/rails-base-api/pull/225))
+* Switch web server to [Puma](https://github.com/puma/puma)
+  ([#225](https://github.com/fs/rails-base-api/pull/225))
 * Update nokogiri, rack-cors, sprockets to stable versions
   ([#226](https://github.com/fs/rails-base-api/pull/226))
 * Update Ruby to 2.3.6, update loofah gem

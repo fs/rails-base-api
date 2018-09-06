@@ -83,7 +83,6 @@ GEM
     crack (0.4.2)
       safe_yaml (~> 1.0.0)
     crass (1.0.3)
-    daemons (1.1.9)
     database_cleaner (1.2.0)
     decent_exposure (3.0.0)
       activesupport (>= 4.0)
@@ -103,7 +102,6 @@ GEM
       launchy (~> 2.1)
       mail (~> 2.2)
     erubis (2.7.0)
-    eventmachine (1.0.7)
     factory_girl (4.4.0)
       activesupport (>= 3.0.0)
     factory_girl_rails (4.4.1)
@@ -158,6 +156,7 @@ GEM
       ast (~> 2.4.0)
     pg (0.17.1)
     powerpack (0.1.1)
+    puma (3.0.2)
     rack (1.6.10)
     rack-cors (1.0.2)
     rack-test (0.6.3)
@@ -264,10 +263,6 @@ GEM
       sprockets (>= 3.0.0)
     temple (0.6.7)
     terminal-table (1.4.5)
-    thin (1.6.2)
-      daemons (>= 1.0.9)
-      eventmachine (>= 1.0.0)
-      rack (>= 1.0.0)
     thor (0.19.4)
     thread_safe (0.3.6)
     tilt (2.0.1)
@@ -306,6 +301,7 @@ DEPENDENCIES
   letter_opener
   mail_safe
   pg
+  puma
   rack-cors
   rails (= 4.2.8)
   rails-api
@@ -321,7 +317,6 @@ DEPENDENCIES
   simplecov
   spring
   spring-commands-rspec
-  thin
   webmock
 
 RUBY VERSION
