@@ -30,10 +30,11 @@ resource "Tokens" do
       expect(response_body).to match_response_schema("jwt_token")
     end
 
-    context "with invalid password", document: false do
+    context "with invalid password" do
       let(:password) { "invalid" }
 
-      example_request "Create Token with invalid password" do
+      example "Create Token with invalid password", document: false do
+        do_request
         expect(response_status).to eq(422)
         expect(response_body).to match_response_schema("error")
       end

@@ -9,7 +9,7 @@
           "required": ["email", "full-name"],
           "properties": {
             "email": { "type": "string" },
-            "full-name": { "type": "string" }
+            "full-name": { "type": ["string", "null"] }
           }
         }
       }

@@ -3,9 +3,7 @@
     { "$ref": "file:/jsonapi.json#/definitions/success" },
     {
       "properties": {
-        "data": {
-          "items": { "$ref": "file:/definitions.json#/definitions/user" }
-        }
+        "data": { "$ref": "file:/definitions.json#/definitions/user" }
       }
     }
   ]

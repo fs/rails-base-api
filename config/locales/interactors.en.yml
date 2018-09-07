@@ -1,0 +1,9 @@
+en:
+  interactors:
+    authenticate_user:
+      success: Successfully authenticated.
+    create_jwt:
+      success: Successfully authenticated.
+      invalid_credentials: Invalid credentials.
+    authenticate:
+      invalid_credentials: Invalid credentials.

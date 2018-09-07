@@ -2,13 +2,12 @@ require "rails_helper"
 require "rspec_api_documentation/dsl"
 
 resource "Errors" do
-  header "Accept", "application/json"
-  subject(:response) { json_response_body }
+  include_context "with JSON API Headers"
 
   get "/not-found" do
     example_request "Request to unexisting page" do
       expect(response_status).to eq 404
-      expect(response).to be_an_error_representation(:not_found, "Not Found")
+      expect(response_body).to match_response_schema("error")
     end
   end
 end
