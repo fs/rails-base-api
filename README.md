@@ -35,7 +35,7 @@ Status of the API could be checked at [http://localhost:5000/docs](http://localh
 
 ### Testing gems
 
-* [Factory Girl](https://github.com/thoughtbot/factory_girl) for easier creation of test data
+* [Factory Bot](https://github.com/thoughtbot/factory_bot) for easier creation of test data
 * [RSpec](https://github.com/rspec/rspec) for awesome, readable isolation testing
 * [Shoulda Matchers](http://github.com/thoughtbot/shoulda-matchers) for frequently needed Rails and RSpec matchers
 * [Email Spec](https://github.com/bmabey/email-spec) Collection of rspec matchers and cucumber steps for testing emails

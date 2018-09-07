@@ -50,8 +50,8 @@ group :test do
 end
 
 group :development, :test, :staging do
+  gem "factory_bot_rails"
   gem "faker"
-  gem "factory_girl_rails"
   gem "rspec_api_documentation"
   # gem "apitome"
 end
