@@ -12,13 +12,12 @@ resource "Tokens" do
   include_context "with JSON API Headers"
 
   post "/v1/tokens" do
-    let(:request_class) { "token_request" }
+    parameter :email, "email", required: true
+    parameter :password, "password", required: true
 
     let(:email) { "user@example.com" }
-    parameter :email, "email", required: true
-
     let(:password) { "123456" }
-    parameter :password, "password", required: true
+    let(:request_class) { "token_request" }
 
     include_context "with JSON API post body from request class"
 
@@ -29,6 +28,15 @@ resource "Tokens" do
     example_request "Create Token" do
       expect(response_status).to eq(201)
       expect(response_body).to match_response_schema("jwt_token")
+    end
+
+    context "with invalid password", document: false do
+      let(:password) { "invalid" }
+
+      example_request "Create Token with invalid password" do
+        expect(response_status).to eq(422)
+        expect(response_body).to match_response_schema("error")
+      end
     end
   end
 end

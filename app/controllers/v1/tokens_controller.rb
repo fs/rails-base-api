@@ -15,7 +15,7 @@ module V1
     private
 
     def authentication_params
-      jsonapi_params(only: %i[email password]).merge(entity_name: :user)
+      jsonapi_params(only: %i[email password])
     end
   end
 end

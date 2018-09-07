@@ -1,4 +1,6 @@
 {
+  "id": "file:/definitions.json#",
+
   "definitions": {
     "user": {
       "required": ["attributes"],

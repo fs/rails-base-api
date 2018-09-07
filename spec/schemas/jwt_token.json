@@ -1,5 +1,10 @@
 {
   "allOf": [
-    { "$ref": "jsonapi.json#/definitions/success" }
+    { "$ref": "file:/jsonapi.json#/definitions/success" },
+    {
+      "properties": {
+        "data": { "$ref": "file:/definitions.json#/definitions/jwt_token" }
+      }
+    }
   ]
 }
