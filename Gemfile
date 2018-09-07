@@ -1,32 +1,30 @@
 source "https://rubygems.org"
 
-ruby "2.4.4"
+ruby "2.5.1"
 
 # the most important stuff
-gem "rails", "4.2.8"
 gem "pg"
-gem "rails-api"
-gem "rails_api_format", git: "https://github.com/fs/rails-api-format.git"
+gem "rails", "5.2.1"
 
 # all other gems
 gem "active_model_serializers"
+gem "bcrypt"
+gem "bootsnap", require: false
 gem "decent_exposure"
-gem "devise"
 gem "health_check"
 gem "interactor"
 gem "kaminari"
-gem "rack-cors", require: "rack/cors"
+gem "puma"
 gem "responders"
 gem "rollbar"
 gem "seedbank"
-gem "simple_token_authentication"
-gem "thin"
 
 group :development do
   gem "letter_opener"
   gem "foreman"
   gem "bullet"
 
+  gem "listen", ">= 3.0.5", "< 3.2"
   gem "spring"
   gem "spring-commands-rspec"
 end
@@ -35,7 +33,6 @@ group :development, :test do
   gem "byebug"
   gem "dotenv-rails"
   gem "rspec-rails"
-  gem "mail_safe"
 
   gem "brakeman"
   gem "rubocop"
@@ -56,5 +53,5 @@ group :development, :test, :staging do
   gem "faker"
   gem "factory_girl_rails"
   gem "rspec_api_documentation"
-  gem "apitome"
+  # gem "apitome"
 end

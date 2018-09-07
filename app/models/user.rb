@@ -1,6 +1,8 @@
 class User < ActiveRecord::Base
-  acts_as_token_authenticatable
+  has_secure_password
 
-  devise :database_authenticatable, :registerable,
-    :recoverable, :trackable, :validatable
+  # acts_as_token_authenticatable
+
+  # devise :database_authenticatable, :registerable,
+  #   :recoverable, :trackable, :validatable
 end
