@@ -1,0 +1,38 @@
+{
+  "resource": "Users",
+  "resource_explanation": null,
+  "http_method": "GET",
+  "route": "/v1/users",
+  "description": "List Users",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/v1/users",
+      "request_body": null,
+      "request_headers": {
+        "Content-Type": "application/vnd.api+json",
+        "Accept": "application/vnd.api+json",
+        "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzY0Mzc2NjksInN1YiI6MzR9.cA6jlmqtcsXs8AzYMD_tYnS47VlYwwMorHyNe3fqXq8"
+      },
+      "request_query_parameters": {
+        "{\"data\":{\"type\":\"user-requests\",\"attributes\":{\"full-name\":null,\"email\":null,\"password\":null}}}": null
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"data\": [\n    {\n      \"id\": \"31\",\n      \"type\": \"users\",\n      \"attributes\": {\n        \"email\": \"user7@example.com\",\n        \"full-name\": \"Buford Purdy\"\n      }\n    },\n    {\n      \"id\": \"32\",\n      \"type\": \"users\",\n      \"attributes\": {\n        \"email\": \"user8@example.com\",\n        \"full-name\": \"Harrison Maggio Sr.\"\n      }\n    },\n    {\n      \"id\": \"33\",\n      \"type\": \"users\",\n      \"attributes\": {\n        \"email\": \"user9@example.com\",\n        \"full-name\": \"Margaret Reilly I\"\n      }\n    },\n    {\n      \"id\": \"34\",\n      \"type\": \"users\",\n      \"attributes\": {\n        \"email\": \"user10@example.com\",\n        \"full-name\": \"Sherril Barrows\"\n      }\n    }\n  ]\n}",
+      "response_headers": {
+        "Content-Type": "application/vnd.api+json; charset=utf-8"
+      },
+      "response_content_type": "application/vnd.api+json; charset=utf-8",
+      "curl": "curl -g \"http://localhost:5000/v1/users\" -X GET \\\n\t-H \"Content-Type: application/vnd.api+json\" \\\n\t-H \"Accept: application/vnd.api+json\" \\\n\t-H \"Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzY0Mzc2NjksInN1YiI6MzR9.cA6jlmqtcsXs8AzYMD_tYnS47VlYwwMorHyNe3fqXq8\""
+    }
+  ]
+}

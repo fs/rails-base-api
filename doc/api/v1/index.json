@@ -1,0 +1,77 @@
+{
+  "resources": [
+    {
+      "name": "Profiles",
+      "explanation": null,
+      "examples": [
+        {
+          "description": "Retrive Profile",
+          "link": "profiles/retrive_profile.json",
+          "groups": "all",
+          "route": "/v1/profile",
+          "method": "get"
+        },
+        {
+          "description": "Update Profile",
+          "link": "profiles/update_profile.json",
+          "groups": "all",
+          "route": "/v1/profile",
+          "method": "patch"
+        },
+        {
+          "description": "Delete Profile",
+          "link": "profiles/delete_profile.json",
+          "groups": "all",
+          "route": "/v1/profile",
+          "method": "delete"
+        }
+      ]
+    },
+    {
+      "name": "SignUp",
+      "explanation": null,
+      "examples": [
+        {
+          "description": "Create User",
+          "link": "signup/create_user.json",
+          "groups": "all",
+          "route": "/v1/sign_ups",
+          "method": "post"
+        }
+      ]
+    },
+    {
+      "name": "Tokens",
+      "explanation": null,
+      "examples": [
+        {
+          "description": "Create Token",
+          "link": "tokens/create_token.json",
+          "groups": "all",
+          "route": "/v1/tokens",
+          "method": "post"
+        }
+      ]
+    },
+    {
+      "name": "Users",
+      "explanation": null,
+      "examples": [
+        {
+          "description": "List Users",
+          "link": "users/list_users.json",
+          "groups": "all",
+          "route": "/v1/users",
+          "method": "get"
+        },
+        {
+          "description": "Retrive User",
+          "link": "users/retrive_user.json",
+          "groups": "all",
+          "route": "/v1/users/:id",
+          "method": "get"
+        }
+      ]
+    }
+  ]
+}

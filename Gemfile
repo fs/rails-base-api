@@ -53,8 +53,8 @@ group :test do
 end
 
 group :development, :test, :staging do
-  gem "apitome", require: false
   gem "factory_bot_rails"
   gem "faker"
+  gem "raddocs"
   gem "rspec_api_documentation"
 end

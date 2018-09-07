@@ -1,0 +1,48 @@
+{
+  "resource": "Profiles",
+  "resource_explanation": null,
+  "http_method": "PATCH",
+  "route": "/v1/profile",
+  "description": "Update Profile",
+  "explanation": null,
+  "parameters": [
+    {
+      "name": "full_name",
+      "description": "full name"
+    },
+    {
+      "name": "email",
+      "description": "email"
+    },
+    {
+      "name": "password",
+      "description": "password"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "PATCH",
+      "request_path": "/v1/profile",
+      "request_body": "{\"data\":{\"type\":\"profile-requests\",\"attributes\":{\"full-name\":\"Example User Updated\",\"email\":\"user_updated@example.com\",\"password\":\"new_password\"}}}",
+      "request_headers": {
+        "Content-Type": "application/vnd.api+json",
+        "Accept": "application/vnd.api+json",
+        "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzY0Mzc2NjcsInN1YiI6MjF9.VT2DC9Fm-k4FAwRquGtGn7IzsUuB6771z-oVK_q2kKM"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"data\": {\n    \"id\": \"21\",\n    \"type\": \"users\",\n    \"attributes\": {\n      \"email\": \"user_updated@example.com\",\n      \"full-name\": \"Augustine Donnelly\"\n    }\n  }\n}",
+      "response_headers": {
+        "Content-Type": "application/vnd.api+json; charset=utf-8"
+      },
+      "response_content_type": "application/vnd.api+json; charset=utf-8",
+      "curl": "curl \"http://localhost:5000/v1/profile\" -d '{\"data\":{\"type\":\"profile-requests\",\"attributes\":{\"full-name\":\"Example User Updated\",\"email\":\"user_updated@example.com\",\"password\":\"new_password\"}}}' -X PATCH \\\n\t-H \"Content-Type: application/vnd.api+json\" \\\n\t-H \"Accept: application/vnd.api+json\" \\\n\t-H \"Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzY0Mzc2NjcsInN1YiI6MjF9.VT2DC9Fm-k4FAwRquGtGn7IzsUuB6771z-oVK_q2kKM\""
+    }
+  ]
+}
