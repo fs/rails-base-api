@@ -4,6 +4,9 @@ module V1
 
     before_action :authenticate_user
 
+    rescue_from ActiveRecord::RecordNotFound, with: :respond_with_record_not_found
+    rescue_from ActionController::RoutingError, with: :respond_with_route_not_found
+
     private
 
     def authenticate_user
@@ -32,6 +35,14 @@ module V1
 
     def respond_with_unauthorized
       respond_with_error(I18n.t("interactors.authenticate.invalid_credentials"), status: :unauthorized)
+    end
+
+    def respond_with_record_not_found
+      respond_with_error(I18n.t("generic_errors.record_not_found"), status: :not_found)
+    end
+
+    def respond_with_route_not_found
+      respond_with_error(I18n.t("generic_errors.route_not_found"), status: :not_found)
     end
 
     def jsonapi_params(options)
