@@ -1,0 +1,29 @@
+{
+  "definitions": {
+    "user": {
+      "required": ["attributes"],
+      "properties": {
+        "attributes": {
+          "required": ["email", "full-name"],
+          "properties": {
+            "email": { "type": "string" },
+            "full-name": { "type": "string" }
+          }
+        }
+      }
+    },
+
+
+    "jwt_token": {
+      "required": ["attributes"],
+      "properties": {
+        "attributes": {
+          "required": ["token"],
+          "properties": {
+            "token": { "type": "string" }
+          }
+        }
+      }
+    }
+  }
+}

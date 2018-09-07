@@ -30,11 +30,9 @@ RSpec.configure do |config|
   config.include Rails.application.routes.url_helpers
   config.include EmailSpec::Helpers
   config.include EmailSpec::Matchers
-  config.include Devise::TestHelpers, type: :controller
   config.include FactoryBot::Syntax::Methods
   config.include Helpers
   config.include JsonSpec::Helpers
-  config.include RailsApiFormat::Matchers
 
   config.before :suite do
     DatabaseCleaner.strategy = :transaction

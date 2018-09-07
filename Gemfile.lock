@@ -104,10 +104,14 @@ GEM
     interactor (3.1.1)
     jaro_winkler (1.5.1)
     json (2.1.0)
+    json_matchers (0.10.0)
+      json_schema
+    json_schema (0.19.1)
     json_spec (1.1.5)
       multi_json (~> 1.0)
       rspec (>= 2.0, < 4.0)
     jsonapi-renderer (0.2.0)
+    jwt (1.5.6)
     kaminari (1.1.1)
       activesupport (>= 4.1.0)
       kaminari-actionview (= 1.1.1)
@@ -120,6 +124,10 @@ GEM
       activerecord
       kaminari-core (= 1.1.1)
     kaminari-core (1.1.1)
+    knock (2.1.1)
+      bcrypt (~> 3.1)
+      jwt (~> 1.5)
+      rails (>= 4.2)
     launchy (2.4.3)
       addressable (~> 2.3)
     letter_opener (1.6.0)
@@ -279,8 +287,10 @@ DEPENDENCIES
   foreman
   health_check
   interactor
+  json_matchers
   json_spec
   kaminari
+  knock
   letter_opener
   listen (>= 3.0.5, < 3.2)
   pg

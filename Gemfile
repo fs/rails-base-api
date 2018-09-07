@@ -14,6 +14,7 @@ gem "decent_exposure"
 gem "health_check"
 gem "interactor"
 gem "kaminari"
+gem "knock"
 gem "puma"
 gem "responders"
 gem "rollbar"
@@ -45,8 +46,9 @@ group :test do
 
   gem "database_cleaner"
   gem "email_spec"
-  gem "shoulda-matchers", require: false
+  gem "json_matchers"
   gem "json_spec"
+  gem "shoulda-matchers", require: false
 end
 
 group :development, :test, :staging do
