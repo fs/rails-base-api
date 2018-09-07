@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-ruby "2.3.6"
+ruby "2.4.4"
 
 # the most important stuff
 gem "rails", "4.2.8"
@@ -9,7 +9,7 @@ gem "rails-api"
 gem "rails_api_format", git: "https://github.com/fs/rails-api-format.git"
 
 # all other gems
-gem "active_model_serializers", git: "https://github.com/rails-api/active_model_serializers.git"
+gem "active_model_serializers"
 gem "decent_exposure"
 gem "devise"
 gem "health_check"
