@@ -19,7 +19,7 @@ describe CreateJwt do
 
     it "sets token in context" do
       interactor.run
-      expect(context.jwt_token).to be
+      expect(context.jwt_token).to be_present
     end
   end
 end

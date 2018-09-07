@@ -49,6 +49,9 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
+    apitome (0.2.0)
+      kramdown
+      railties
     arel (9.0.0)
     ast (2.4.0)
     bcrypt (3.1.12)
@@ -128,6 +131,7 @@ GEM
       bcrypt (~> 3.1)
       jwt (~> 1.5)
       rails (>= 4.2)
+    kramdown (1.17.0)
     launchy (2.4.3)
       addressable (~> 2.3)
     letter_opener (1.6.0)
@@ -231,6 +235,8 @@ GEM
       rainbow (>= 2.2.2, < 4.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (~> 1.0, >= 1.0.1)
+    rubocop-rspec (1.29.1)
+      rubocop (>= 0.58.0)
     ruby-progressbar (1.10.0)
     ruby_dep (1.5.0)
     safe_yaml (1.0.4)
@@ -272,6 +278,7 @@ PLATFORMS
 
 DEPENDENCIES
   active_model_serializers
+  apitome
   bcrypt
   bootsnap
   brakeman
@@ -301,6 +308,7 @@ DEPENDENCIES
   rspec-rails
   rspec_api_documentation
   rubocop
+  rubocop-rspec
   seedbank
   shoulda-matchers
   simplecov

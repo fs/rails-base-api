@@ -29,6 +29,7 @@ resource "Profiles" do
 
     let(:full_name) { "Example User Updated" }
     let(:email) { "user_updated@example.com" }
+    let(:password) { "new_password" }
     let(:request_class) { "profile_request" }
 
     example_request "Update Profile" do
@@ -46,10 +47,10 @@ resource "Profiles" do
       end
     end
 
-    context "with blank password" do
-      let(:password) { "" }
+    context "with short password" do
+      let(:password) { "short" }
 
-      example "Update Profile with invalid password", document: false do
+      example "Update Profile with invalid email", document: false do
         do_request
         expect(response_status).to eq(422)
         expect(response_body).to match_response_schema("error")

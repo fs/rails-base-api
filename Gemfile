@@ -21,9 +21,9 @@ gem "rollbar"
 gem "seedbank"
 
 group :development do
-  gem "letter_opener"
-  gem "foreman"
   gem "bullet"
+  gem "foreman"
+  gem "letter_opener"
 
   gem "listen", ">= 3.0.5", "< 3.2"
   gem "spring"
@@ -36,8 +36,9 @@ group :development, :test do
   gem "rspec-rails"
 
   gem "brakeman"
-  gem "rubocop"
   gem "bundler-audit"
+  gem "rubocop"
+  gem "rubocop-rspec"
 end
 
 group :test do
@@ -52,8 +53,8 @@ group :test do
 end
 
 group :development, :test, :staging do
+  gem "apitome", require: false
   gem "factory_bot_rails"
   gem "faker"
   gem "rspec_api_documentation"
-  # gem "apitome"
 end
