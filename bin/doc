@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+
+set -e
+
+bin/rspec spec/api/ --format RspecApiDocumentation::ApiFormatter
+bin/rails erd
