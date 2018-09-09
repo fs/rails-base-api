@@ -25,9 +25,9 @@ group :development do
   gem "foreman"
   gem "letter_opener"
 
-  gem "listen", ">= 3.0.5", "< 3.2"
   gem "spring"
   gem "spring-commands-rspec"
+  gem "spring-watcher-listen"
 end
 
 group :development, :test do
