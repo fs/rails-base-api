@@ -43,19 +43,17 @@ group :development, :test do
 end
 
 group :test do
-  gem "simplecov", require: false
-  gem "webmock", require: false
-
   gem "database_cleaner"
   gem "email_spec"
   gem "json_matchers"
   gem "json_spec"
+  gem "rspec_api_documentation"
   gem "shoulda-matchers", require: false
+  gem "simplecov", require: false
+  gem "webmock", require: false
 end
 
 group :development, :test, :staging do
   gem "factory_bot_rails"
   gem "faker"
-  gem "raddocs"
-  gem "rspec_api_documentation"
 end

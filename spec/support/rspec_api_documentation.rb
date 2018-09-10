@@ -3,7 +3,7 @@ require "rspec_api_documentation/dsl"
 
 # rubocop:disable Style/WordArray
 RspecApiDocumentation.configure do |config|
-  config.format = :JSON
+  config.format = :markdown
   config.docs_dir = Rails.root.join("doc", "api", "v1")
   config.request_headers_to_include = ["Accept", "Content-Type", "Authorization"]
   config.response_headers_to_include = ["Content-Type"]

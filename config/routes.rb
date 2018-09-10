@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  mount Raddocs::App => "/api/docs"
-
   namespace :v1, defaults: { format: "jsonapi" } do
     resources :tokens, only: :create
     resources :users, only: %i[index show]

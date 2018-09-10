@@ -96,9 +96,6 @@ GEM
       thor (~> 0.19.1)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
-    haml (5.0.4)
-      temple (>= 0.8.0)
-      tilt
     hashdiff (0.3.7)
     health_check (3.0.0)
       railties (>= 5.0)
@@ -155,7 +152,6 @@ GEM
     msgpack (1.2.4)
     multi_json (1.13.1)
     mustache (1.0.5)
-    mustermann (1.0.3)
     nio4r (2.3.1)
     nokogiri (1.8.4)
       mini_portile2 (~> 2.3.0)
@@ -168,14 +164,8 @@ GEM
     puma (3.12.0)
     rack (2.0.5)
     rack-cors (1.0.2)
-    rack-protection (2.0.3)
-      rack
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
-    raddocs (2.2.0)
-      haml (>= 4.0)
-      json
-      sinatra (~> 2.0)
     rails (5.2.1)
       actioncable (= 5.2.1)
       actionmailer (= 5.2.1)
@@ -262,11 +252,6 @@ GEM
       json (>= 1.8, < 3)
       simplecov-html (~> 0.10.0)
     simplecov-html (0.10.2)
-    sinatra (2.0.3)
-      mustermann (~> 1.0)
-      rack (~> 2.0)
-      rack-protection (= 2.0.3)
-      tilt (~> 2.0)
     spring (2.0.2)
       activesupport (>= 4.2)
     spring-commands-rspec (1.0.4)
@@ -281,10 +266,8 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    temple (0.8.0)
     thor (0.19.4)
     thread_safe (0.3.6)
-    tilt (2.0.8)
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
     unicode-display_width (1.4.0)
@@ -325,7 +308,6 @@ DEPENDENCIES
   pg
   puma
   rack-cors
-  raddocs
   rails (= 5.2.1)
   rails-erd
   responders
