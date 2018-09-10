@@ -24,7 +24,7 @@ group :development do
   gem "bullet"
   gem "foreman"
   gem "letter_opener"
-
+  gem "rails-erd"
   gem "spring"
   gem "spring-commands-rspec"
   gem "spring-watcher-listen"

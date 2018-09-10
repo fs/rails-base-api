@@ -34,7 +34,7 @@
       "request_content_type": "application/vnd.api+json",
       "response_status": 201,
       "response_status_text": "Created",
-      "response_body": "{\n  \"data\": {\n    \"id\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzY0Mzc2NjksInN1YiI6Mjl9.b0Nwzi8JjUN0c6i5iBWFZWHobqiphmHkGgLmUOldhC0\",\n    \"type\": \"jwt-tokens\",\n    \"attributes\": {\n      \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzY0Mzc2NjksInN1YiI6Mjl9.b0Nwzi8JjUN0c6i5iBWFZWHobqiphmHkGgLmUOldhC0\"\n    }\n  }\n}",
+      "response_body": "{\n  \"data\": {\n    \"id\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzY2NTgxMzIsInN1YiI6MTQ1fQ.J_9o_xb83OUdY64BDC6u7gwYH_TLOK50Xv_FctdHtX8\",\n    \"type\": \"jwt-tokens\",\n    \"attributes\": {\n      \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzY2NTgxMzIsInN1YiI6MTQ1fQ.J_9o_xb83OUdY64BDC6u7gwYH_TLOK50Xv_FctdHtX8\"\n    }\n  }\n}",
       "response_headers": {
         "Content-Type": "application/vnd.api+json; charset=utf-8"
       },

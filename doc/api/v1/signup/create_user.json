@@ -38,7 +38,7 @@
       "request_content_type": "application/vnd.api+json",
       "response_status": 201,
       "response_status_text": "Created",
-      "response_body": "{\n  \"data\": {\n    \"id\": \"27\",\n    \"type\": \"users\",\n    \"attributes\": {\n      \"email\": \"user@example.com\",\n      \"full-name\": null\n    }\n  }\n}",
+      "response_body": "{\n  \"data\": {\n    \"id\": \"143\",\n    \"type\": \"users\",\n    \"attributes\": {\n      \"email\": \"user@example.com\",\n      \"full-name\": null\n    }\n  }\n}",
       "response_headers": {
         "Content-Type": "application/vnd.api+json; charset=utf-8"
       },

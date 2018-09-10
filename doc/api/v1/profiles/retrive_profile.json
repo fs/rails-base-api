@@ -19,7 +19,7 @@
       "request_headers": {
         "Content-Type": "application/vnd.api+json",
         "Accept": "application/vnd.api+json",
-        "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzY0Mzc2NjcsInN1YiI6MjB9.cKmDT-WB6dMnYdDs1QWFYvbExfQ-1dJ9RcmQJqfSkgQ"
+        "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzY2NTgxMzIsInN1YiI6MTM2fQ.9NwGwpMJ32dxuRAGO5_gIdTdwuX_LSZxCKVGpMUnGso"
       },
       "request_query_parameters": {
         "{\"data\":{\"type\":\"profile-requests\",\"attributes\":{\"full-name\":null,\"email\":null,\"password\":null}}}": null
@@ -27,12 +27,12 @@
       "request_content_type": "application/vnd.api+json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"data\": {\n    \"id\": \"20\",\n    \"type\": \"users\",\n    \"attributes\": {\n      \"email\": \"user1@example.com\",\n      \"full-name\": \"Drew Murray\"\n    }\n  }\n}",
+      "response_body": "{\n  \"data\": {\n    \"id\": \"136\",\n    \"type\": \"users\",\n    \"attributes\": {\n      \"email\": \"user1@example.com\",\n      \"full-name\": \"Branden Flatley V\"\n    }\n  }\n}",
       "response_headers": {
         "Content-Type": "application/vnd.api+json; charset=utf-8"
       },
       "response_content_type": "application/vnd.api+json; charset=utf-8",
-      "curl": "curl -g \"http://localhost:5000/v1/profile\" -X GET \\\n\t-H \"Content-Type: application/vnd.api+json\" \\\n\t-H \"Accept: application/vnd.api+json\" \\\n\t-H \"Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzY0Mzc2NjcsInN1YiI6MjB9.cKmDT-WB6dMnYdDs1QWFYvbExfQ-1dJ9RcmQJqfSkgQ\""
+      "curl": "curl -g \"http://localhost:5000/v1/profile\" -X GET \\\n\t-H \"Content-Type: application/vnd.api+json\" \\\n\t-H \"Accept: application/vnd.api+json\" \\\n\t-H \"Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzY2NTgxMzIsInN1YiI6MTM2fQ.9NwGwpMJ32dxuRAGO5_gIdTdwuX_LSZxCKVGpMUnGso\""
     }
   ]
 }

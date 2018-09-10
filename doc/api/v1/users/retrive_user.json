@@ -18,12 +18,12 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/v1/users/35",
+      "request_path": "/v1/users/151",
       "request_body": null,
       "request_headers": {
         "Content-Type": "application/vnd.api+json",
         "Accept": "application/vnd.api+json",
-        "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzY0Mzc2NjksInN1YiI6MzZ9.f39CMZ0egCtQIPp50FtFZe_OIdYsoqjwDNKQ3d0rGNk"
+        "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzY2NTgxMzMsInN1YiI6MTUyfQ.bP7_CXiVL1Q3TihIGr0NwNQSnLQAJjB4ChiE88_xp2Q"
       },
       "request_query_parameters": {
         "{\"data\":{\"type\":\"user-requests\",\"attributes\":{\"full-name\":null,\"email\":null,\"password\":null}}}": null
@@ -31,12 +31,12 @@
       "request_content_type": "application/vnd.api+json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"data\": {\n    \"id\": \"35\",\n    \"type\": \"users\",\n    \"attributes\": {\n      \"email\": \"user11@example.com\",\n      \"full-name\": \"Gene Labadie\"\n    }\n  }\n}",
+      "response_body": "{\n  \"data\": {\n    \"id\": \"151\",\n    \"type\": \"users\",\n    \"attributes\": {\n      \"email\": \"user11@example.com\",\n      \"full-name\": \"Doria Sporer\"\n    }\n  }\n}",
       "response_headers": {
         "Content-Type": "application/vnd.api+json; charset=utf-8"
       },
       "response_content_type": "application/vnd.api+json; charset=utf-8",
-      "curl": "curl -g \"http://localhost:5000/v1/users/35\" -X GET \\\n\t-H \"Content-Type: application/vnd.api+json\" \\\n\t-H \"Accept: application/vnd.api+json\" \\\n\t-H \"Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzY0Mzc2NjksInN1YiI6MzZ9.f39CMZ0egCtQIPp50FtFZe_OIdYsoqjwDNKQ3d0rGNk\""
+      "curl": "curl -g \"http://localhost:5000/v1/users/151\" -X GET \\\n\t-H \"Content-Type: application/vnd.api+json\" \\\n\t-H \"Accept: application/vnd.api+json\" \\\n\t-H \"Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzY2NTgxMzMsInN1YiI6MTUyfQ.bP7_CXiVL1Q3TihIGr0NwNQSnLQAJjB4ChiE88_xp2Q\""
     }
   ]
 }
