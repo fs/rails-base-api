@@ -27,7 +27,7 @@ resource "Tokens" do
 
     example_request "Create Token" do
       expect(response_status).to eq(201)
-      expect(response_body).to match_response_schema("jwt_token")
+      expect(response_body).to match_response_schema("v1/jwt_token")
     end
 
     context "with invalid password" do
@@ -36,7 +36,7 @@ resource "Tokens" do
       example "Create Token with invalid password", document: false do
         do_request
         expect(response_status).to eq(422)
-        expect(response_body).to match_response_schema("error")
+        expect(response_body).to match_response_schema("v1/error")
       end
     end
   end

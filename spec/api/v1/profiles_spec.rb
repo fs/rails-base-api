@@ -18,7 +18,7 @@ resource "Profiles" do
 
     example_request "Retrive Profile" do
       expect(response_status).to eq(200)
-      expect(response_body).to match_response_schema("users")
+      expect(response_body).to match_response_schema("v1/users")
     end
   end
 
@@ -34,7 +34,7 @@ resource "Profiles" do
 
     example_request "Update Profile" do
       expect(response_status).to eq(200)
-      expect(response_body).to match_response_schema("user")
+      expect(response_body).to match_response_schema("v1/user")
     end
 
     context "with invalid email" do
@@ -43,7 +43,7 @@ resource "Profiles" do
       example "Update Profile with invalid email", document: false do
         do_request
         expect(response_status).to eq(422)
-        expect(response_body).to match_response_schema("error")
+        expect(response_body).to match_response_schema("v1/error")
       end
     end
 
@@ -53,7 +53,7 @@ resource "Profiles" do
       example "Update Profile with invalid email", document: false do
         do_request
         expect(response_status).to eq(422)
-        expect(response_body).to match_response_schema("error")
+        expect(response_body).to match_response_schema("v1/error")
       end
     end
 
@@ -65,7 +65,7 @@ resource "Profiles" do
       example "Update Profile with existing email", document: false do
         do_request
         expect(response_status).to eq(422)
-        expect(response_body).to match_response_schema("error")
+        expect(response_body).to match_response_schema("v1/error")
       end
     end
   end
@@ -75,7 +75,7 @@ resource "Profiles" do
 
     example_request "Delete Profile" do
       expect(response_status).to eq(200)
-      expect(response_body).to match_response_schema("user")
+      expect(response_body).to match_response_schema("v1/user")
     end
   end
 end

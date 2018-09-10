@@ -22,7 +22,7 @@ resource "Users" do
 
     example_request "List Users" do
       expect(response_status).to eq(200)
-      expect(response_body).to match_response_schema("users")
+      expect(response_body).to match_response_schema("v1/users")
     end
   end
 
@@ -35,7 +35,7 @@ resource "Users" do
 
     example_request "Retrive User" do
       expect(response_status).to eq(200)
-      expect(response_body).to match_response_schema("user")
+      expect(response_body).to match_response_schema("v1/user")
     end
 
     context "with invalid id" do
@@ -44,7 +44,7 @@ resource "Users" do
       example "Retrive User with invalid id", document: false do
         do_request
         expect(response_status).to eq(404)
-        expect(response_body).to match_response_schema("error")
+        expect(response_body).to match_response_schema("v1/error")
       end
     end
   end

@@ -24,7 +24,7 @@ resource "SignUp" do
 
     example_request "Create User" do
       expect(response_status).to eq(201)
-      expect(response_body).to match_response_schema("user")
+      expect(response_body).to match_response_schema("v1/user")
     end
 
     context "with invalid email" do
@@ -33,7 +33,7 @@ resource "SignUp" do
       example "Create User with invalid email", document: false do
         do_request
         expect(response_status).to eq(422)
-        expect(response_body).to match_response_schema("error")
+        expect(response_body).to match_response_schema("v1/error")
       end
     end
 
@@ -43,7 +43,7 @@ resource "SignUp" do
       example "Create User with invalid password", document: false do
         do_request
         expect(response_status).to eq(422)
-        expect(response_body).to match_response_schema("error")
+        expect(response_body).to match_response_schema("v1/error")
       end
     end
 
@@ -55,7 +55,7 @@ resource "SignUp" do
       example "Create User with existing email", document: false do
         do_request
         expect(response_status).to eq(422)
-        expect(response_body).to match_response_schema("error")
+        expect(response_body).to match_response_schema("v1/error")
       end
     end
   end
