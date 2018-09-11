@@ -4,7 +4,7 @@ module V1
 
     before_action :authenticate_user!
 
-    rescue_from ActiveRecord::RecordNotFound do |exception|
+    rescue_from ActiveRecord::RecordNotFound do |_exception|
       respond_with_error(:record_not_found)
     end
 
@@ -26,8 +26,8 @@ module V1
       respond_with_resource(resources, include: include, location: nil, fields: fields)
     end
 
-    def respond_with_resource_errors(resource, code: :unprocessable_entity)
-      render jsonapi: resource, serializer: ActiveModel::Serializer::ErrorSerializer, status: :unprocessable_entity
+    def respond_with_resource_errors(resource, status: :unprocessable_entity)
+      render jsonapi: resource, serializer: ActiveModel::Serializer::ErrorSerializer, status: status
     end
 
     def respond_with_error(code)

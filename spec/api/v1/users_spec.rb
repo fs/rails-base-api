@@ -45,7 +45,7 @@ resource "Users" do
     context "with invalid id" do
       let(:id) { 0 }
 
-      example "Retrive User with invalid id"do
+      example "Retrive User with invalid id" do
         do_request
 
         expect(response_status).to eq(404)

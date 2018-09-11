@@ -10,14 +10,14 @@ class Error
     record_not_found: :not_found,
     route_not_found: :not_found,
     custom_error: :internal_server_error
-  }
+  }.freeze
 
-  attr_accessor :code, :detail
+  attr_accessor :code
 
   def attributes
     {
       code: code,
-      detail: detail,
+      detail: detail
     }
   end
 

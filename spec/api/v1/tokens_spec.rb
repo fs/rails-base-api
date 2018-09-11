@@ -35,7 +35,7 @@ resource "Tokens" do
     context "with invalid password" do
       let(:password) { "invalid" }
 
-      example "Create Token with invalid password"do
+      example "Create Token with invalid password" do
         do_request
 
         expect(response_status).to eq(422)
