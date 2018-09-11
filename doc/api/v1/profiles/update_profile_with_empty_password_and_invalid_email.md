@@ -18,7 +18,7 @@
 
 <pre>Content-Type: application/vnd.api+json
 Accept: application/vnd.api+json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzY3NjA5NzMsInN1YiI6MTUxfQ.99LIkGZJpmnaRN5QXS-yhKv8LsIGUePOGiES0aU8J1w</pre>
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzY3NjExODgsInN1YiI6MTY1fQ.AoMwSorPTETdEFEM1CUTKbEKEQzKhTGRW_yxh4KDPL0</pre>
 
 #### Route
 
@@ -33,7 +33,7 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzY3NjA5N
 <pre class="request">curl &quot;http://localhost:5000/v1/profile&quot; -d &#39;{&quot;data&quot;:{&quot;type&quot;:&quot;profile_requests&quot;,&quot;attributes&quot;:{&quot;full_name&quot;:&quot;Example User Updated&quot;,&quot;email&quot;:&quot;invalid&quot;,&quot;password&quot;:&quot;&quot;}}}&#39; -X PATCH \
 	-H &quot;Content-Type: application/vnd.api+json&quot; \
 	-H &quot;Accept: application/vnd.api+json&quot; \
-	-H &quot;Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzY3NjA5NzMsInN1YiI6MTUxfQ.99LIkGZJpmnaRN5QXS-yhKv8LsIGUePOGiES0aU8J1w&quot;</pre>
+	-H &quot;Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzY3NjExODgsInN1YiI6MTY1fQ.AoMwSorPTETdEFEM1CUTKbEKEQzKhTGRW_yxh4KDPL0&quot;</pre>
 
 ### Response
 

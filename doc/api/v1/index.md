@@ -1,10 +1,6 @@
 # API Documentation
 
 
-## Authorization
-
-* [Request without authorization](authorization/request_without_authorization.md)
-
 ## Profiles
 
 * [Retrive Profile](profiles/retrive_profile.md)

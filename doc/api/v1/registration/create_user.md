@@ -47,7 +47,7 @@ Accept: application/vnd.api+json</pre>
 
 <pre>{
   "data": {
-    "id": "153",
+    "id": "167",
     "type": "users",
     "attributes": {
       "email": "user@example.com",

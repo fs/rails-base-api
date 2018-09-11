@@ -16,7 +16,7 @@
 
 <pre>Content-Type: application/vnd.api+json
 Accept: application/vnd.api+json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzY3NjA5NzMsInN1YiI6MTYyfQ.uXcQz764au7gfpmZFOaO8AFn-tEhF7GR9CsjSP8fBos</pre>
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzY3NjExODgsInN1YiI6MTc2fQ.SM3fZ97H8I_cvj-xHR18FmfdvXYK_XMtObYmAs4k1lQ</pre>
 
 #### Route
 
@@ -31,7 +31,7 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzY3NjA5N
 <pre class="request">curl -g &quot;http://localhost:5000/v1/users/0&quot; -X GET \
 	-H &quot;Content-Type: application/vnd.api+json&quot; \
 	-H &quot;Accept: application/vnd.api+json&quot; \
-	-H &quot;Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzY3NjA5NzMsInN1YiI6MTYyfQ.uXcQz764au7gfpmZFOaO8AFn-tEhF7GR9CsjSP8fBos&quot;</pre>
+	-H &quot;Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzY3NjExODgsInN1YiI6MTc2fQ.SM3fZ97H8I_cvj-xHR18FmfdvXYK_XMtObYmAs4k1lQ&quot;</pre>
 
 ### Response
 

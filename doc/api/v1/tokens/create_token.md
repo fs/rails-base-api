@@ -46,10 +46,10 @@ Accept: application/vnd.api+json</pre>
 
 <pre>{
   "data": {
-    "id": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzY3NjA5NzMsInN1YiI6MTU0fQ.RhN1NnaQ3sZviA4KGTZ8KA4xz65Dqr5QeqqLOjejiKY",
+    "id": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzY3NjExODgsInN1YiI6MTY4fQ.42J7f4PUabczP3pmUpQNcmtG4GFmXpHA17VaWmnQqK0",
     "type": "jwt_tokens",
     "attributes": {
-      "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzY3NjA5NzMsInN1YiI6MTU0fQ.RhN1NnaQ3sZviA4KGTZ8KA4xz65Dqr5QeqqLOjejiKY"
+      "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzY3NjExODgsInN1YiI6MTY4fQ.42J7f4PUabczP3pmUpQNcmtG4GFmXpHA17VaWmnQqK0"
     }
   }
 }</pre>

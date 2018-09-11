@@ -9,7 +9,7 @@
 
 <pre>Content-Type: application/vnd.api+json
 Accept: application/vnd.api+json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzY3NjA5NzMsInN1YiI6MTU5fQ.KA9xlyNJj2dw0lt4WQKv1GllLL0UAJu8xWCNjZbPkPs</pre>
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzY3NjExODgsInN1YiI6MTczfQ.Abxi19K-az8G3cuhq_ti18PBbtKAc_f3RUJuHVlXc1Q</pre>
 
 #### Route
 
@@ -24,7 +24,7 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzY3NjA5N
 <pre class="request">curl -g &quot;http://localhost:5000/v1/users&quot; -X GET \
 	-H &quot;Content-Type: application/vnd.api+json&quot; \
 	-H &quot;Accept: application/vnd.api+json&quot; \
-	-H &quot;Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzY3NjA5NzMsInN1YiI6MTU5fQ.KA9xlyNJj2dw0lt4WQKv1GllLL0UAJu8xWCNjZbPkPs&quot;</pre>
+	-H &quot;Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzY3NjExODgsInN1YiI6MTczfQ.Abxi19K-az8G3cuhq_ti18PBbtKAc_f3RUJuHVlXc1Q&quot;</pre>
 
 ### Response
 
@@ -41,35 +41,35 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzY3NjA5N
 <pre>{
   "data": [
     {
-      "id": "156",
+      "id": "170",
       "type": "users",
       "attributes": {
         "email": "user5@example.com",
-        "full_name": "Wayne Breitenberg"
+        "full_name": "Danial Gibson"
       }
     },
     {
-      "id": "157",
+      "id": "171",
       "type": "users",
       "attributes": {
         "email": "user6@example.com",
-        "full_name": "Valentine Bailey"
+        "full_name": "Yukiko Ledner"
       }
     },
     {
-      "id": "158",
+      "id": "172",
       "type": "users",
       "attributes": {
         "email": "user7@example.com",
-        "full_name": "Miss Leon Schulist"
+        "full_name": "Elois Kiehn"
       }
     },
     {
-      "id": "159",
+      "id": "173",
       "type": "users",
       "attributes": {
         "email": "user8@example.com",
-        "full_name": "Arlen Rice"
+        "full_name": "Mr. Kelly Connelly"
       }
     }
   ]
