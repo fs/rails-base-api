@@ -6,10 +6,10 @@
       "required": ["attributes"],
       "properties": {
         "attributes": {
-          "required": ["email", "full-name"],
+          "required": ["email", "full_name"],
           "properties": {
             "email": { "type": "string" },
-            "full-name": { "type": ["string", "null"] }
+            "full_name": { "type": ["string", "null"] }
           }
         }
       }

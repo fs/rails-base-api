@@ -1,6 +1,6 @@
 # Users API
 
-## Retrive User
+## Retrive User with invalid id
 
 ### GET /v1/users/:id
 
@@ -16,11 +16,11 @@
 
 <pre>Content-Type: application/vnd.api+json
 Accept: application/vnd.api+json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzY3NjA5NzMsInN1YiI6MTYxfQ.aCvKdmjFDvUnrLzmm8jpFCx4xaY91fdLtFiQxtsE9u8</pre>
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzY3NjA5NzMsInN1YiI6MTYyfQ.uXcQz764au7gfpmZFOaO8AFn-tEhF7GR9CsjSP8fBos</pre>
 
 #### Route
 
-<pre>GET /v1/users/160</pre>
+<pre>GET /v1/users/0</pre>
 
 #### Query Parameters
 
@@ -28,30 +28,28 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzY3NjA5N
 
 #### cURL
 
-<pre class="request">curl -g &quot;http://localhost:5000/v1/users/160&quot; -X GET \
+<pre class="request">curl -g &quot;http://localhost:5000/v1/users/0&quot; -X GET \
 	-H &quot;Content-Type: application/vnd.api+json&quot; \
 	-H &quot;Accept: application/vnd.api+json&quot; \
-	-H &quot;Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzY3NjA5NzMsInN1YiI6MTYxfQ.aCvKdmjFDvUnrLzmm8jpFCx4xaY91fdLtFiQxtsE9u8&quot;</pre>
+	-H &quot;Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzY3NjA5NzMsInN1YiI6MTYyfQ.uXcQz764au7gfpmZFOaO8AFn-tEhF7GR9CsjSP8fBos&quot;</pre>
 
 ### Response
 
 #### Headers
 
-<pre>Content-Type: application/vnd.api+json; charset=utf-8</pre>
+<pre>Content-Type: application/json; charset=utf-8</pre>
 
 #### Status
 
-<pre>200 OK</pre>
+<pre>404 Not Found</pre>
 
 #### Body
 
 <pre>{
-  "data": {
-    "id": "160",
-    "type": "users",
-    "attributes": {
-      "email": "user9@example.com",
-      "full_name": "Buster Rolfson"
+  "errors": [
+    {
+      "code": "record_not_found",
+      "detail": "Record not found"
     }
-  }
+  ]
 }</pre>

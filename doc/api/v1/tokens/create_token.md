@@ -24,11 +24,11 @@ Accept: application/vnd.api+json</pre>
 
 #### Body
 
-<pre>{"data":{"type":"token-requests","attributes":{"email":"user@example.com","password":"123456"}}}</pre>
+<pre>{"data":{"type":"token_requests","attributes":{"email":"user@example.com","password":"123456"}}}</pre>
 
 #### cURL
 
-<pre class="request">curl &quot;http://localhost:5000/v1/tokens&quot; -d &#39;{&quot;data&quot;:{&quot;type&quot;:&quot;token-requests&quot;,&quot;attributes&quot;:{&quot;email&quot;:&quot;user@example.com&quot;,&quot;password&quot;:&quot;123456&quot;}}}&#39; -X POST \
+<pre class="request">curl &quot;http://localhost:5000/v1/tokens&quot; -d &#39;{&quot;data&quot;:{&quot;type&quot;:&quot;token_requests&quot;,&quot;attributes&quot;:{&quot;email&quot;:&quot;user@example.com&quot;,&quot;password&quot;:&quot;123456&quot;}}}&#39; -X POST \
 	-H &quot;Content-Type: application/vnd.api+json&quot; \
 	-H &quot;Accept: application/vnd.api+json&quot;</pre>
 
@@ -46,10 +46,10 @@ Accept: application/vnd.api+json</pre>
 
 <pre>{
   "data": {
-    "id": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzY2Njg4MjMsInN1YiI6MTk5fQ.lI4GEJbt0boQZ_nM1qCZk_lebN5576ai-BkN9Bw8F8A",
-    "type": "jwt-tokens",
+    "id": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzY3NjA5NzMsInN1YiI6MTU0fQ.RhN1NnaQ3sZviA4KGTZ8KA4xz65Dqr5QeqqLOjejiKY",
+    "type": "jwt_tokens",
     "attributes": {
-      "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzY2Njg4MjMsInN1YiI6MTk5fQ.lI4GEJbt0boQZ_nM1qCZk_lebN5576ai-BkN9Bw8F8A"
+      "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzY3NjA5NzMsInN1YiI6MTU0fQ.RhN1NnaQ3sZviA4KGTZ8KA4xz65Dqr5QeqqLOjejiKY"
     }
   }
 }</pre>
