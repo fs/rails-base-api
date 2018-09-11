@@ -25,7 +25,9 @@ resource "Tokens" do
       create :user, email: email, password: "123456"
     end
 
-    example_request "Create Token" do
+    example "Create Token" do
+      do_request
+
       expect(response_status).to eq(201)
       expect(response_body).to match_response_schema("v1/jwt_token")
     end
@@ -33,10 +35,11 @@ resource "Tokens" do
     context "with invalid password" do
       let(:password) { "invalid" }
 
-      example "Create Token with invalid password", document: false do
+      example "Create Token with invalid password"do
         do_request
+
         expect(response_status).to eq(422)
-        expect(response_body).to match_response_schema("v1/error")
+        expect(response_body).to match_response_schema("v1/errors")
       end
     end
   end

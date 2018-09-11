@@ -15,7 +15,6 @@
       }
     },
 
-
     "jwt_token": {
       "required": ["attributes"],
       "properties": {

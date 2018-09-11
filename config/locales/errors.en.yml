@@ -1,5 +1,7 @@
 en:
-  generic_errors:
-    record_not_found: "Record not found"
-    route_not_found: "Route not found"
-
+  errors:
+    invalid_credentials: Invalid credentials
+    unauthorized: Authorization required
+    record_not_found: Record not found
+    route_not_found: Route not found
+    custom_error: Custom error message

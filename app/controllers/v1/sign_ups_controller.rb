@@ -1,6 +1,6 @@
 module V1
   class SignUpsController < V1::BaseController
-    skip_before_action :authenticate_user
+    skip_before_action :authenticate_user!
 
     expose :user
 

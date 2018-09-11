@@ -333,6 +333,7 @@
 
     "error": {
       "type": "object",
+      "required": ["id", "status", "code", "title"],
       "properties": {
         "id": {
           "description": "A unique identifier for this particular occurrence of the problem.",

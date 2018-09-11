@@ -32,12 +32,12 @@ group :development do
 end
 
 group :development, :test do
-  gem "byebug"
-  gem "dotenv-rails"
-  gem "rspec-rails"
-
   gem "brakeman"
   gem "bundler-audit"
+  gem "byebug"
+  gem "dotenv-rails"
+  gem "rspec-its"
+  gem "rspec-rails"
   gem "rubocop"
   gem "rubocop-rspec"
 end

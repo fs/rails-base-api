@@ -22,41 +22,11 @@ resource "SignUp" do
     let(:password) { "123456" }
     let(:request_class) { "user_request" }
 
-    example_request "Create User" do
+    example "Create User" do
+      do_request
+
       expect(response_status).to eq(201)
       expect(response_body).to match_response_schema("v1/user")
-    end
-
-    context "with invalid email" do
-      let(:email) { "invalid" }
-
-      example "Create User with invalid email", document: false do
-        do_request
-        expect(response_status).to eq(422)
-        expect(response_body).to match_response_schema("v1/error")
-      end
-    end
-
-    context "with blank password" do
-      let(:password) { "" }
-
-      example "Create User with invalid password", document: false do
-        do_request
-        expect(response_status).to eq(422)
-        expect(response_body).to match_response_schema("v1/error")
-      end
-    end
-
-    context "when user already exists" do
-      before do
-        create :user, email: email
-      end
-
-      example "Create User with existing email", document: false do
-        do_request
-        expect(response_status).to eq(422)
-        expect(response_body).to match_response_schema("v1/error")
-      end
     end
   end
 end

@@ -2,15 +2,16 @@ module V1
   class BaseController < ActionController::API
     include Knock::Authenticable
 
-    before_action :authenticate_user
+    before_action :authenticate_user!
 
-    rescue_from ActiveRecord::RecordNotFound, with: :respond_with_record_not_found
-    rescue_from ActionController::RoutingError, with: :respond_with_route_not_found
+    rescue_from ActiveRecord::RecordNotFound do |exception|
+      respond_with_error(:record_not_found)
+    end
 
     private
 
-    def authenticate_user
-      respond_with_unauthorized if current_user.blank?
+    def authenticate_user!
+      respond_with_error(:unauthorized) if current_user.blank?
     end
 
     def current_user
@@ -25,24 +26,14 @@ module V1
       respond_with_resource(resources, include: include, location: nil, fields: fields)
     end
 
-    def respond_with_resource_errors(resource)
+    def respond_with_resource_errors(resource, code: :unprocessable_entity)
       render jsonapi: resource, serializer: ActiveModel::Serializer::ErrorSerializer, status: :unprocessable_entity
     end
 
-    def respond_with_error(message, status: :unprocessable_entity)
-      render jsonapi: Error.new(base: message), serializer: ActiveModel::Serializer::ErrorSerializer, status: status
-    end
-
-    def respond_with_unauthorized
-      respond_with_error(I18n.t("interactors.authenticate.invalid_credentials"), status: :unauthorized)
-    end
-
-    def respond_with_record_not_found
-      respond_with_error(I18n.t("generic_errors.record_not_found"), status: :not_found)
-    end
-
-    def respond_with_route_not_found
-      respond_with_error(I18n.t("generic_errors.route_not_found"), status: :not_found)
+    def respond_with_error(code)
+      Error.new(code: code).tap do |error|
+        render json: error.to_json, status: error.status
+      end
     end
 
     def jsonapi_params(options)

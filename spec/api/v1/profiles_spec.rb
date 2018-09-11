@@ -16,7 +16,9 @@ resource "Profiles" do
   get "/v1/profile" do
     let(:request_class) { "profile_request" }
 
-    example_request "Retrive Profile" do
+    example "Retrive Profile" do
+      do_request
+
       expect(response_status).to eq(200)
       expect(response_body).to match_response_schema("v1/users")
     end
@@ -32,40 +34,22 @@ resource "Profiles" do
     let(:password) { "new_password" }
     let(:request_class) { "profile_request" }
 
-    example_request "Update Profile" do
+    example "Update Profile" do
+      do_request
+
       expect(response_status).to eq(200)
       expect(response_body).to match_response_schema("v1/user")
     end
 
-    context "with invalid email" do
+    context "with invalid data" do
+      let(:password) { "" }
       let(:email) { "invalid" }
 
-      example "Update Profile with invalid email", document: false do
+      example "Update Profile with empty password and invalid email" do
         do_request
+
         expect(response_status).to eq(422)
-        expect(response_body).to match_response_schema("v1/error")
-      end
-    end
-
-    context "with short password" do
-      let(:password) { "short" }
-
-      example "Update Profile with invalid email", document: false do
-        do_request
-        expect(response_status).to eq(422)
-        expect(response_body).to match_response_schema("v1/error")
-      end
-    end
-
-    context "when user already exists" do
-      before do
-        create :user, email: email
-      end
-
-      example "Update Profile with existing email", document: false do
-        do_request
-        expect(response_status).to eq(422)
-        expect(response_body).to match_response_schema("v1/error")
+        expect(response_body).to match_response_schema("v1/errors")
       end
     end
   end
@@ -73,7 +57,9 @@ resource "Profiles" do
   delete "/v1/profile" do
     let(:request_class) { "profile_request" }
 
-    example_request "Delete Profile" do
+    example "Delete Profile" do
+      do_request
+
       expect(response_status).to eq(200)
       expect(response_body).to match_response_schema("v1/user")
     end

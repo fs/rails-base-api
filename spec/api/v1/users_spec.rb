@@ -20,7 +20,9 @@ resource "Users" do
       create_list :user, 3
     end
 
-    example_request "List Users" do
+    example "List Users" do
+      do_request
+
       expect(response_status).to eq(200)
       expect(response_body).to match_response_schema("v1/users")
     end
@@ -33,18 +35,21 @@ resource "Users" do
     let(:id) { user.id }
     let(:request_class) { "user_request" }
 
-    example_request "Retrive User" do
+    example "Retrive User" do
+      do_request
+
       expect(response_status).to eq(200)
       expect(response_body).to match_response_schema("v1/user")
     end
 
     context "with invalid id" do
-      let(:id) { 332 }
+      let(:id) { 0 }
 
-      example "Retrive User with invalid id", document: false do
+      example "Retrive User with invalid id"do
         do_request
+
         expect(response_status).to eq(404)
-        expect(response_body).to match_response_schema("v1/error")
+        expect(response_body).to match_response_schema("v1/errors")
       end
     end
   end

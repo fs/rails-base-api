@@ -4,7 +4,7 @@ class CreateJwt
   delegate :email, :password, to: :context
 
   def call
-    context.fail!(message: I18n.t("interactors.create_jwt.invalid_credentials")) unless authenticated?
+    context.fail! unless authenticated?
     context.jwt_token = jwt_token
   end
 
