@@ -1,5 +1,3 @@
-require "securerandom"
-
 class Error
   include ActiveModel::Model
   include ActiveModel::Serialization
