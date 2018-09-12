@@ -8,7 +8,7 @@ module V1
       if result.success?
         respond_with_resource(result.jwt_token, status: :created, location: nil)
       else
-        respond_with_error(:invalid_credentials)
+        respond_with_error(result.code)
       end
     end
 
