@@ -42,7 +42,6 @@ group :development, :test do
 end
 
 group :test do
-  gem "database_cleaner"
   gem "email_spec"
   gem "json_matchers"
   gem "rspec_api_documentation"
