@@ -1,1 +1,1 @@
-FactoryGirl.create :user
+FactoryBot.create :user

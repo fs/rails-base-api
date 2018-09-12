@@ -1,0 +1,10 @@
+{
+  "allOf": [
+    { "$ref": "file:/jsonapi.json#/definitions/success" },
+    {
+      "properties": {
+        "data": { "$ref": "file:/definitions.json#/definitions/user" }
+      }
+    }
+  ]
+}
