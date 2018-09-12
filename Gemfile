@@ -23,7 +23,6 @@ gem "seedbank"
 
 group :development do
   gem "bullet"
-  gem "foreman"
   gem "letter_opener"
   gem "rails-erd"
   gem "spring"
@@ -46,10 +45,8 @@ group :test do
   gem "database_cleaner"
   gem "email_spec"
   gem "json_matchers"
-  gem "json_spec"
   gem "rspec_api_documentation"
   gem "shoulda-matchers", require: false
-  gem "simplecov", require: false
   gem "webmock", require: false
 end
 
