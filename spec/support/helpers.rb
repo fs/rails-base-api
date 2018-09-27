@@ -1,9 +1,5 @@
-module Helpers
-  def setup_devise_mapping(mapping_name = :user)
-    @request.env["devise.mapping"] = Devise.mappings[mapping_name]
-  end
+Dir[Rails.root.join("spec", "support", "helpers", "**", "*.rb")].each { |f| require f }
 
-  def json_response_body
-    parse_json(response_body)
-  end
+RSpec.configure do |config|
+  config.include ResponseHelpers
 end
