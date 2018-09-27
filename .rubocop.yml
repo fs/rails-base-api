@@ -34,6 +34,9 @@ RSpec/MultipleExpectations:
 RSpec/ExampleLength:
   Enabled: false
 
+RSpec/ImplicitSubject:
+   Enabled: false
+
 RSpec/RepeatedDescription:
   Enabled: false
 

@@ -35,7 +35,7 @@ group :development, :test do
   gem "bundler-audit"
   gem "byebug"
   gem "dotenv-rails"
-  gem "rspec-its"
+  gem "pry-rails"
   gem "rspec-rails"
   gem "rubocop"
   gem "rubocop-rspec"
@@ -43,9 +43,9 @@ end
 
 group :test do
   gem "email_spec"
-  gem "json_matchers"
   gem "rspec_api_documentation"
   gem "shoulda-matchers", require: false
+  gem "timecop"
   gem "webmock", require: false
 end
 

@@ -1,12 +1,23 @@
-# rubocop:disable RSpec/EmptyExampleGroup
 shared_examples "API endpoint with authorization" do
-  context "without authorization headers", document: false do
-    header "Authorization", ""
+  context "without authorization headers" do
+    before do
+      header "Authorization", ""
+    end
 
-    example_request "Request without authorization header" do
+    let(:expected_data) do
+      {
+        "errors" => [{
+          "code" => "unauthorized",
+          "detail" => "Authorization required"
+        }]
+      }
+    end
+
+    example "Request without authorization header", document: false do
+      do_request
+
       expect(response_status).to eq(401)
-      expect(response_body).to match_response_schema("error")
+      expect(json_response_body).to eq(expected_data)
     end
   end
 end
-# rubocop:enable RSpec/EmptyExampleGroup

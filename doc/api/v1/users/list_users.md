@@ -9,7 +9,7 @@
 
 <pre>Content-Type: application/vnd.api+json
 Accept: application/vnd.api+json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzY3NjExODgsInN1YiI6MTczfQ.Abxi19K-az8G3cuhq_ti18PBbtKAc_f3RUJuHVlXc1Q</pre>
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzgxMjk4MDMsInN1YiI6MzQxfQ.UAxwLgNxG7xMZJrAG9LJpVG9vXEFJf1-3S4jstLtDHk</pre>
 
 #### Route
 
@@ -17,14 +17,14 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzY3NjExO
 
 #### Query Parameters
 
-<pre>{&quot;data&quot;:{&quot;type&quot;:&quot;user_requests&quot;,&quot;attributes&quot;:{&quot;full_name&quot;:null,&quot;email&quot;:null,&quot;password&quot;:null}}}: </pre>
+<pre>{}: </pre>
 
 #### cURL
 
 <pre class="request">curl -g &quot;http://localhost:5000/v1/users&quot; -X GET \
 	-H &quot;Content-Type: application/vnd.api+json&quot; \
 	-H &quot;Accept: application/vnd.api+json&quot; \
-	-H &quot;Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzY3NjExODgsInN1YiI6MTczfQ.Abxi19K-az8G3cuhq_ti18PBbtKAc_f3RUJuHVlXc1Q&quot;</pre>
+	-H &quot;Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzgxMjk4MDMsInN1YiI6MzQxfQ.UAxwLgNxG7xMZJrAG9LJpVG9vXEFJf1-3S4jstLtDHk&quot;</pre>
 
 ### Response
 
@@ -41,35 +41,35 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzY3NjExO
 <pre>{
   "data": [
     {
-      "id": "170",
+      "id": "341",
       "type": "users",
       "attributes": {
-        "email": "user5@example.com",
-        "full_name": "Danial Gibson"
+        "email": "john.smith@example.com",
+        "full_name": "John Smith"
       }
     },
     {
-      "id": "171",
+      "id": "342",
       "type": "users",
       "attributes": {
-        "email": "user6@example.com",
-        "full_name": "Yukiko Ledner"
+        "email": "michael.jordan@example.com",
+        "full_name": "Michael Jordan"
       }
     },
     {
-      "id": "172",
+      "id": "343",
       "type": "users",
       "attributes": {
-        "email": "user7@example.com",
-        "full_name": "Elois Kiehn"
+        "email": "brad.pitt@example.com",
+        "full_name": "Brad Pitt"
       }
     },
     {
-      "id": "173",
+      "id": "344",
       "type": "users",
       "attributes": {
-        "email": "user8@example.com",
-        "full_name": "Mr. Kelly Connelly"
+        "email": "steve.jobs@example.com",
+        "full_name": "Steve Jobs"
       }
     }
   ]

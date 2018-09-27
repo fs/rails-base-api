@@ -1,25 +1,37 @@
 require "rails_helper"
 
 describe CreateJwt do
-  let(:interactor) { described_class.new(user_attributes) }
-  let(:context) { interactor.context }
+  subject(:result) { described_class.call(user_attributes) }
 
-  let(:user_attributes) { attributes_for(:user).slice(:email, :password) }
-
-  context "when user does not exist" do
-    it_behaves_like "failure interactor"
+  let(:user_attributes) do
+    {
+      email: "john.smith@example.com",
+      password: "123456"
+    }
   end
 
-  context "when user exists" do
-    before do
-      create(:user, user_attributes)
+  before do
+    create :user, email: "john.smith@example.com", password: "123456"
+  end
+
+  it "authenticates user" do
+    is_expected.to be_success
+
+    expect(result.jwt_token).to be_present
+  end
+
+  context "when invalid credentials" do
+    let(:user_attributes) do
+      {
+        email: "john.smith@example.com",
+        password: "invalid password"
+      }
     end
 
-    it_behaves_like "success interactor"
+    it "does not authenticate user" do
+      is_expected.to be_failure
 
-    it "sets token in context" do
-      interactor.run
-      expect(context.jwt_token).to be_present
+      expect(result.jwt_token).to be_nil
     end
   end
 end
