@@ -8,7 +8,9 @@ describe Error do
       .not_to raise_error
   end
 
-  its(:code) { is_expected.to be(:custom_error) }
-  its(:status) { is_expected.to be(:internal_server_error) }
-  its(:detail) { is_expected.to eql("Custom error message") }
+  it "creates error with custom_error code" do
+    expect(error.code).to be(:custom_error)
+    expect(error.status).to be(:internal_server_error)
+    expect(error.detail).to eql("Custom error message")
+  end
 end

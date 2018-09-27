@@ -8,9 +8,9 @@
 
 | Name | Description | Required | Scope |
 |------|-------------|----------|-------|
-| full_name | full name | false |  |
-| email | email | false |  |
-| password | password | false |  |
+| full_name | full name | false | data[attributes] |
+| email | email | false | data[attributes] |
+| password | password | false | data[attributes] |
 
 ### Request
 
@@ -18,7 +18,7 @@
 
 <pre>Content-Type: application/vnd.api+json
 Accept: application/vnd.api+json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzY3NjExODgsInN1YiI6MTY1fQ.AoMwSorPTETdEFEM1CUTKbEKEQzKhTGRW_yxh4KDPL0</pre>
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzgxMjk4MDMsInN1YiI6MzM2fQ.AyXUoKLR8wF8zTvflSC1r_hWtUy3EhpbzaxA095JhPs</pre>
 
 #### Route
 
@@ -26,14 +26,14 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzY3NjExO
 
 #### Body
 
-<pre>{"data":{"type":"profile_requests","attributes":{"full_name":"Example User Updated","email":"invalid","password":""}}}</pre>
+<pre>{"data":{"attributes":{"full_name":"Updated Name","email":"invalid","password":""}}}</pre>
 
 #### cURL
 
-<pre class="request">curl &quot;http://localhost:5000/v1/profile&quot; -d &#39;{&quot;data&quot;:{&quot;type&quot;:&quot;profile_requests&quot;,&quot;attributes&quot;:{&quot;full_name&quot;:&quot;Example User Updated&quot;,&quot;email&quot;:&quot;invalid&quot;,&quot;password&quot;:&quot;&quot;}}}&#39; -X PATCH \
+<pre class="request">curl &quot;http://localhost:5000/v1/profile&quot; -d &#39;{&quot;data&quot;:{&quot;attributes&quot;:{&quot;full_name&quot;:&quot;Updated Name&quot;,&quot;email&quot;:&quot;invalid&quot;,&quot;password&quot;:&quot;&quot;}}}&#39; -X PATCH \
 	-H &quot;Content-Type: application/vnd.api+json&quot; \
 	-H &quot;Accept: application/vnd.api+json&quot; \
-	-H &quot;Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzY3NjExODgsInN1YiI6MTY1fQ.AoMwSorPTETdEFEM1CUTKbEKEQzKhTGRW_yxh4KDPL0&quot;</pre>
+	-H &quot;Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzgxMjk4MDMsInN1YiI6MzM2fQ.AyXUoKLR8wF8zTvflSC1r_hWtUy3EhpbzaxA095JhPs&quot;</pre>
 
 ### Response
 

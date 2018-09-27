@@ -3,6 +3,7 @@ module V1
     include Knock::Authenticable
 
     before_action :authenticate_user!
+    before_action :setup_currents
 
     rescue_from ActiveRecord::RecordNotFound do |_exception|
       respond_with_error(:record_not_found)
@@ -16,6 +17,10 @@ module V1
 
     def current_user
       @current_user ||= token && authenticate_for(User)
+    end
+
+    def setup_currents
+      Current.user = current_user
     end
 
     def respond_with_resource(resource, status: :ok, location: resource, include: nil, fields: nil)
