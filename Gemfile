@@ -4,7 +4,7 @@ ruby "2.5.1"
 
 # the most important stuff
 gem "pg"
-gem "rails", "5.2.1"
+gem "rails", "5.2.2.1"
 
 # all other gems
 gem "active_model_serializers"
