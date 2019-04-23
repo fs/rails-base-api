@@ -4,11 +4,11 @@ module V1
     expose :users, -> { User.all }
 
     def index
-      respond_with_resources(users)
+      respond_with users
     end
 
     def show
-      respond_with_resource(user, location: :v1_user)
+      respond_with user, location: :v1_user
     end
   end
 end

@@ -6,16 +6,16 @@ module V1
       result = CreateJwt.call(authentication_params)
 
       if result.success?
-        respond_with_resource(result.jwt_token, status: :created, location: nil)
+        render json: { token: result.token }, status: :created
       else
-        respond_with_error(result.code)
+        render json: { error: result.message }, status: result.code
       end
     end
 
     private
 
     def authentication_params
-      jsonapi_params(only: %i[email password])
+      params.require(:authorization).permit(:email, :password)
     end
   end
 end

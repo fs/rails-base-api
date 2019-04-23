@@ -4,14 +4,7 @@ shared_examples "API endpoint with authorization" do
       header "Authorization", ""
     end
 
-    let(:expected_data) do
-      {
-        "errors" => [{
-          "code" => "unauthorized",
-          "detail" => "Authorization required"
-        }]
-      }
-    end
+    let(:expected_data) { { "error" => "unauthorized" } }
 
     example "Request without authorization header", document: false do
       do_request

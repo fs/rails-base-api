@@ -1,11 +1,11 @@
 require "rails_helper"
 
 resource "Tokens" do
-  include_context "with JSON API Headers"
+  include_context "with API Headers"
   include_context "with frozen time"
 
   post "/v1/tokens" do
-    with_options scope: %i[data attributes] do
+    with_options scope: :authorization do
       parameter :email, "email", required: true
       parameter :password, "password", required: true
     end
@@ -16,40 +16,18 @@ resource "Tokens" do
 
     let(:jwt_token) { build(:jwt_token, subject: user) }
 
-    let(:expected_data) do
-      {
-        "data" => {
-          "id" => jwt_token.token,
-          "type" => "jwt_tokens",
-          "attributes" => {
-            "token" => jwt_token.token
-          }
-        }
-      }
-    end
+    let(:expected_data) { { "token" => jwt_token.token } }
 
-    example "Create Token" do
-      do_request
-
+    example_request "Create Token" do
       expect(response_status).to eq(201)
       expect(json_response_body).to eq(expected_data)
     end
 
     context "with invalid password" do
       let(:password) { "invalid" }
+      let(:expected_data) { { "error" => "Invalid credentials" } }
 
-      let(:expected_data) do
-        {
-          "errors" => [{
-            "code" => "invalid_credentials",
-            "detail" => "Invalid credentials"
-          }]
-        }
-      end
-
-      example "Create Token with invalid password" do
-        do_request
-
+      example_request "Create Token with invalid password" do
         expect(response_status).to eq(422)
         expect(json_response_body).to eq(expected_data)
       end

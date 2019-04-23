@@ -5,17 +5,15 @@ module V1
     expose :user
 
     def create
-      if user.save
-        respond_with_resource(user, status: :created, location: :v1_profile)
-      else
-        respond_with_resource_errors(user)
-      end
+      user.save
+
+      respond_with user, location: :v1_profile
     end
 
     private
 
     def user_params
-      jsonapi_params(only: %i[full_name email password])
+      params.require(:user).permit(:full_name, :email, :password)
     end
   end
 end
