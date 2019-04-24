@@ -14,9 +14,9 @@
 
 #### Headers
 
-<pre>Content-Type: application/vnd.api+json
-Accept: application/vnd.api+json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzgxMjk4MDMsInN1YiI6MzUyfQ.6muVDVhyVMtYqWrGs0T4wMMQVnCr-lyWCbnCGjDHh8M</pre>
+<pre>Accept: application/json
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NTYxNzQ5OTUsInN1YiI6NDczfQ.oWGIi9mA7U7EGKIVVJWsnwPLk9yxrwvN5mfgH0hX-fE</pre>
 
 #### Route
 
@@ -29,9 +29,10 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzgxMjk4M
 #### cURL
 
 <pre class="request">curl -g &quot;http://localhost:5000/v1/users/0&quot; -X GET \
-	-H &quot;Content-Type: application/vnd.api+json&quot; \
-	-H &quot;Accept: application/vnd.api+json&quot; \
-	-H &quot;Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzgxMjk4MDMsInN1YiI6MzUyfQ.6muVDVhyVMtYqWrGs0T4wMMQVnCr-lyWCbnCGjDHh8M&quot;</pre>
+	-H &quot;Accept: application/json&quot; \
+	-H &quot;Content-Type: application/json&quot; \
+	-H &quot;Lang: en&quot; \
+	-H &quot;Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NTYxNzQ5OTUsInN1YiI6NDczfQ.oWGIi9mA7U7EGKIVVJWsnwPLk9yxrwvN5mfgH0hX-fE&quot;</pre>
 
 ### Response
 
@@ -46,10 +47,5 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzgxMjk4M
 #### Body
 
 <pre>{
-  "errors": [
-    {
-      "code": "record_not_found",
-      "detail": "Record not found"
-    }
-  ]
+  "error": "not_found"
 }</pre>

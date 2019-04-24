@@ -8,16 +8,16 @@
 
 | Name | Description | Required | Scope |
 |------|-------------|----------|-------|
-| full_name | full name | false | data[attributes] |
-| email | email | true | data[attributes] |
-| password | password | true | data[attributes] |
+| full_name | full name | false | user |
+| email | email | true | user |
+| password | password | true | user |
 
 ### Request
 
 #### Headers
 
-<pre>Content-Type: application/vnd.api+json
-Accept: application/vnd.api+json</pre>
+<pre>Accept: application/json
+Content-Type: application/json</pre>
 
 #### Route
 
@@ -25,19 +25,20 @@ Accept: application/vnd.api+json</pre>
 
 #### Body
 
-<pre>{"data":{"attributes":{"full_name":"Example User","email":"user@example.com","password":"123456"}}}</pre>
+<pre>{"user":{"full_name":"Example User","email":"user@example.com","password":"123456"}}</pre>
 
 #### cURL
 
-<pre class="request">curl &quot;http://localhost:5000/v1/registrations&quot; -d &#39;{&quot;data&quot;:{&quot;attributes&quot;:{&quot;full_name&quot;:&quot;Example User&quot;,&quot;email&quot;:&quot;user@example.com&quot;,&quot;password&quot;:&quot;123456&quot;}}}&#39; -X POST \
-	-H &quot;Content-Type: application/vnd.api+json&quot; \
-	-H &quot;Accept: application/vnd.api+json&quot;</pre>
+<pre class="request">curl &quot;http://localhost:5000/v1/registrations&quot; -d &#39;{&quot;user&quot;:{&quot;full_name&quot;:&quot;Example User&quot;,&quot;email&quot;:&quot;user@example.com&quot;,&quot;password&quot;:&quot;123456&quot;}}&#39; -X POST \
+	-H &quot;Accept: application/json&quot; \
+	-H &quot;Content-Type: application/json&quot; \
+	-H &quot;Lang: en&quot;</pre>
 
 ### Response
 
 #### Headers
 
-<pre>Content-Type: application/vnd.api+json; charset=utf-8</pre>
+<pre>Content-Type: application/json; charset=utf-8</pre>
 
 #### Status
 
@@ -46,12 +47,6 @@ Accept: application/vnd.api+json</pre>
 #### Body
 
 <pre>{
-  "data": {
-    "id": "338",
-    "type": "users",
-    "attributes": {
-      "email": "user@example.com",
-      "full_name": "Example User"
-    }
-  }
+  "email": "user@example.com",
+  "full_name": "Example User"
 }</pre>

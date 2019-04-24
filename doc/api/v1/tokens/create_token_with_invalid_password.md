@@ -8,15 +8,15 @@
 
 | Name | Description | Required | Scope |
 |------|-------------|----------|-------|
-| email | email | true | data[attributes] |
-| password | password | true | data[attributes] |
+| email | email | true | authorization |
+| password | password | true | authorization |
 
 ### Request
 
 #### Headers
 
-<pre>Content-Type: application/vnd.api+json
-Accept: application/vnd.api+json</pre>
+<pre>Accept: application/json
+Content-Type: application/json</pre>
 
 #### Route
 
@@ -24,13 +24,14 @@ Accept: application/vnd.api+json</pre>
 
 #### Body
 
-<pre>{"data":{"attributes":{"email":"user@example.com","password":"invalid"}}}</pre>
+<pre>{"authorization":{"email":"user@example.com","password":"invalid"}}</pre>
 
 #### cURL
 
-<pre class="request">curl &quot;http://localhost:5000/v1/tokens&quot; -d &#39;{&quot;data&quot;:{&quot;attributes&quot;:{&quot;email&quot;:&quot;user@example.com&quot;,&quot;password&quot;:&quot;invalid&quot;}}}&#39; -X POST \
-	-H &quot;Content-Type: application/vnd.api+json&quot; \
-	-H &quot;Accept: application/vnd.api+json&quot;</pre>
+<pre class="request">curl &quot;http://localhost:5000/v1/tokens&quot; -d &#39;{&quot;authorization&quot;:{&quot;email&quot;:&quot;user@example.com&quot;,&quot;password&quot;:&quot;invalid&quot;}}&#39; -X POST \
+	-H &quot;Accept: application/json&quot; \
+	-H &quot;Content-Type: application/json&quot; \
+	-H &quot;Lang: en&quot;</pre>
 
 ### Response
 
@@ -45,10 +46,5 @@ Accept: application/vnd.api+json</pre>
 #### Body
 
 <pre>{
-  "errors": [
-    {
-      "code": "invalid_credentials",
-      "detail": "Invalid credentials"
-    }
-  ]
+  "error": "Invalid credentials"
 }</pre>

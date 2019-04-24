@@ -1,15 +1,15 @@
-# Skeleton for new Rails 5 application for JSON API
+# Skeleton for new Rails 5 application for REST API
 
 [![Build Status](https://semaphoreci.com/api/v1/fs/rails-base-api/branches/master/shields_badge.svg)](https://semaphoreci.com/fs/rails-base-api)
 [![Known Vulnerabilities](https://snyk.io/test/github/fs/rails-base-api/badge.svg)](https://snyk.io/test/github/fs/rails-base-api)
 
-This simple application includes Ruby/Rails technology which we use at Flatstack for new [JSON API](http://jsonapi.org) projects. Application currently based on Rails 5 stable branch and Ruby 2.5.1
+This simple application includes Ruby/Rails technology which we use at Flatstack for new REST API projects. Application currently based on Rails 5 stable branch and Ruby 2.5.1
 
 ## What's included
 
 ### Application gems:
 
-* [active_model_serializers](https://github.com/rails-api/active_model_serializers) - resource serializers for JSON API
+* [active_model_serializers](https://github.com/rails-api/active_model_serializers) - resource serializers
 * [decent_exposure](https://github.com/voxdolo/decent_exposure) for DRY controllers
 * [health_check](https://github.com/ianheggie/health_check) - health check endpoint
 * [interactor](https://github.com/collectiveidea/interactor) – encapsulates business logic
@@ -34,14 +34,13 @@ This simple application includes Ruby/Rails technology which we use at Flatstack
 
 * [factory bot](https://github.com/thoughtbot/factory_bot) - create test data
 * [faker](https://github.com/stympy/faker) - generate fake data
-* [json_matchers](https://github.com/thoughtbot/json_matchers) - validate JSON with JSON Schema
 * [rspec api documentation](https://github.com/zipmark/rspec_api_documentation) - generate pretty API docs
 * [rspec](https://github.com/rspec/rspec) - awesome, readable isolation testing
 * [shoulda matchers](http://github.com/thoughtbot/shoulda-matchers) - frequently needed Rails and RSpec matchers
 
 ### Non standard initializes
 
-* `active_model_serializer.rb` - setup serializers for JSON API
+* `active_model_serializer.rb` - setup serializers for REST API
 * `bullet.rb` - setup Bullet to catch up N+1
 * `cors.rb` - setup whitelist of domains to allow cross-origin resource sharing
 * `health_check.rb` - setup Health Check endpoint
