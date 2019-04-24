@@ -15,7 +15,7 @@ resource "Profiles" do
 
     it_behaves_like "API endpoint with authorization"
 
-    example_request "Retrive Profile" do
+    example_request "Retrieve Profile" do
       expect(response_status).to eq(200)
       expect(json_response_body).to eq(expected_data)
     end
@@ -61,7 +61,9 @@ resource "Profiles" do
         }
       end
 
-      example_request "Update Profile with empty password and invalid email" do
+      example "Update Profile with empty password and invalid email", document: false do
+        do_request
+
         expect(response_status).to eq(422)
         expect(json_response_body).to eq(expected_data)
       end

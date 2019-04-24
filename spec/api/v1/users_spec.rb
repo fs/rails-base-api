@@ -58,7 +58,7 @@ resource "Users" do
 
     it_behaves_like "API endpoint with authorization"
 
-    example_request "Retrive User" do
+    example_request "Retrieve User" do
       expect(response_status).to eq(200)
       expect(json_response_body).to eq(expected_data)
     end
@@ -67,7 +67,9 @@ resource "Users" do
       let(:id) { 0 }
       let(:expected_data) { { "error" => "not_found" } }
 
-      example_request "Retrive User with invalid id" do
+      example "Retrieve User with invalid id", document: false do
+        do_request
+
         expect(response_status).to eq(404)
         expect(json_response_body).to eq(expected_data)
       end

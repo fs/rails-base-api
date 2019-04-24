@@ -36,7 +36,7 @@
       "request_content_type": "application/json",
       "response_status": 201,
       "response_status_text": "Created",
-      "response_body": "{\n  \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NTYxNzY5MDgsInN1YiI6MTIzfQ.LFZQbxA1fEW3Pb0b4y4-7HQsiIA18wYopifdD9Sl2H0\"\n}",
+      "response_body": "{\n  \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NTYxNzgxMDIsInN1YiI6Nn0.cGcPO7iVCsS-T5yqd9HaIpiUG7OzCAUvYZ9OdvOqWeo\"\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },

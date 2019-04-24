@@ -33,7 +33,7 @@
       "request_headers": {
         "Accept": "application/json",
         "Content-Type": "application/json",
-        "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NTYxNzY5MDgsInN1YiI6MTE5fQ.fPvrhbUgSFCjPh03ChQNzaFyZnZkzKMa2g8DlGtgYbM"
+        "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NTYxNzgxMDIsInN1YiI6Mn0.3cD5LbD75cLXlxvks3mPutp4-U0CRsR04YyUo1SvHog"
       },
       "request_query_parameters": {
       },
@@ -45,7 +45,7 @@
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/profile\" -d '{\"user\":{\"full_name\":\"Updated Name\",\"email\":\"user_updated@example.com\",\"password\":\"new_password\"}}' -X PATCH \\\n\t-H \"Accept: application/json\" \\\n\t-H \"Content-Type: application/json\" \\\n\t-H \"Lang: en\" \\\n\t-H \"Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NTYxNzY5MDgsInN1YiI6MTE5fQ.fPvrhbUgSFCjPh03ChQNzaFyZnZkzKMa2g8DlGtgYbM\""
+      "curl": "curl \"http://localhost:5000/v1/profile\" -d '{\"user\":{\"full_name\":\"Updated Name\",\"email\":\"user_updated@example.com\",\"password\":\"new_password\"}}' -X PATCH \\\n\t-H \"Accept: application/json\" \\\n\t-H \"Content-Type: application/json\" \\\n\t-H \"Lang: en\" \\\n\t-H \"Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NTYxNzgxMDIsInN1YiI6Mn0.3cD5LbD75cLXlxvks3mPutp4-U0CRsR04YyUo1SvHog\""
     }
   ]
 }

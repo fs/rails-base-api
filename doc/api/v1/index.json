@@ -5,8 +5,8 @@
       "explanation": null,
       "examples": [
         {
-          "description": "Retrive Profile",
-          "link": "profiles/retrive_profile.json",
+          "description": "Retrieve Profile",
+          "link": "profiles/retrieve_profile.json",
           "groups": "all",
           "route": "/v1/profile",
           "method": "get"
@@ -14,13 +14,6 @@
         {
           "description": "Update Profile",
           "link": "profiles/update_profile.json",
-          "groups": "all",
-          "route": "/v1/profile",
-          "method": "patch"
-        },
-        {
-          "description": "Update Profile with empty password and invalid email",
-          "link": "profiles/update_profile_with_empty_password_and_invalid_email.json",
           "groups": "all",
           "route": "/v1/profile",
           "method": "patch"
@@ -57,13 +50,6 @@
           "groups": "all",
           "route": "/v1/tokens",
           "method": "post"
-        },
-        {
-          "description": "Create Token with invalid password",
-          "link": "tokens/create_token_with_invalid_password.json",
-          "groups": "all",
-          "route": "/v1/tokens",
-          "method": "post"
         }
       ]
     },
@@ -79,15 +65,8 @@
           "method": "get"
         },
         {
-          "description": "Retrive User",
-          "link": "users/retrive_user.json",
-          "groups": "all",
-          "route": "/v1/users/:id",
-          "method": "get"
-        },
-        {
-          "description": "Retrive User with invalid id",
-          "link": "users/retrive_user_with_invalid_id.json",
+          "description": "Retrieve User",
+          "link": "users/retrieve_user.json",
           "groups": "all",
           "route": "/v1/users/:id",
           "method": "get"

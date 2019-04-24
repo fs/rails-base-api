@@ -19,7 +19,7 @@
       "request_headers": {
         "Accept": "application/json",
         "Content-Type": "application/json",
-        "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NTYxNzY5MDgsInN1YiI6MTIxfQ.LEsGovjwHXUbv8rX7jrzPNH5pxhfTgZjvHcNyGMHIwY"
+        "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NTYxNzgxMDIsInN1YiI6NH0.-Bs5h1s6P7TOupbfRr3e57yzBdZhLhQOWJyTk_Ix6No"
       },
       "request_query_parameters": {
       },
@@ -31,7 +31,7 @@
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/profile\" -d '{}' -X DELETE \\\n\t-H \"Accept: application/json\" \\\n\t-H \"Content-Type: application/json\" \\\n\t-H \"Lang: en\" \\\n\t-H \"Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NTYxNzY5MDgsInN1YiI6MTIxfQ.LEsGovjwHXUbv8rX7jrzPNH5pxhfTgZjvHcNyGMHIwY\""
+      "curl": "curl \"http://localhost:5000/v1/profile\" -d '{}' -X DELETE \\\n\t-H \"Accept: application/json\" \\\n\t-H \"Content-Type: application/json\" \\\n\t-H \"Lang: en\" \\\n\t-H \"Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NTYxNzgxMDIsInN1YiI6NH0.-Bs5h1s6P7TOupbfRr3e57yzBdZhLhQOWJyTk_Ix6No\""
     }
   ]
 }

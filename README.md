@@ -52,6 +52,7 @@ This simple application includes Ruby/Rails technology which we use at Flatstack
 * `bin/quality` - runs rubocop, brakeman, rails_best_practices and bundle-audit for the app
 * `bin/ci` - should be used in the CI or locally
 * `bin/server` - to run server locally
+* `bin/doc` - should be used to generate API documentation
 
 ## Quick start
 

@@ -27,7 +27,9 @@ resource "Tokens" do
       let(:password) { "invalid" }
       let(:expected_data) { { "error" => "Invalid credentials" } }
 
-      example_request "Create Token with invalid password" do
+      example "Create Token with invalid password", document: false do
+        do_request
+
         expect(response_status).to eq(422)
         expect(json_response_body).to eq(expected_data)
       end
