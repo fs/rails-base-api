@@ -93,6 +93,9 @@ GEM
     ffi (1.9.25)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
+    haml (5.0.4)
+      temple (>= 0.8.0)
+      tilt
     hashdiff (0.3.7)
     health_check (3.0.0)
       railties (>= 5.0)
@@ -101,6 +104,7 @@ GEM
       concurrent-ruby (~> 1.0)
     interactor (3.1.1)
     jaro_winkler (1.5.1)
+    json (2.2.0)
     jsonapi-renderer (0.2.0)
     jwt (1.5.6)
     kaminari (1.1.1)
@@ -142,6 +146,7 @@ GEM
     msgpack (1.2.4)
     multi_json (1.13.1)
     mustache (1.0.5)
+    mustermann (1.0.3)
     nio4r (2.3.1)
     nokogiri (1.10.3)
       mini_portile2 (~> 2.4.0)
@@ -159,8 +164,14 @@ GEM
     puma (3.12.0)
     rack (2.0.7)
     rack-cors (1.0.2)
+    rack-protection (2.0.5)
+      rack
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
+    raddocs (2.2.0)
+      haml (>= 4.0)
+      json
+      sinatra (~> 2.0)
     rails (5.2.2.1)
       actioncable (= 5.2.2.1)
       actionmailer (= 5.2.2.1)
@@ -242,6 +253,11 @@ GEM
     seedbank (0.4.0)
     shoulda-matchers (3.1.2)
       activesupport (>= 4.0.0)
+    sinatra (2.0.5)
+      mustermann (~> 1.0)
+      rack (~> 2.0)
+      rack-protection (= 2.0.5)
+      tilt (~> 2.0)
     spring (2.0.2)
       activesupport (>= 4.2)
     spring-commands-rspec (1.0.4)
@@ -256,8 +272,10 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
+    temple (0.8.1)
     thor (0.20.3)
     thread_safe (0.3.6)
+    tilt (2.0.9)
     timecop (0.9.1)
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
@@ -296,6 +314,7 @@ DEPENDENCIES
   pry-rails
   puma
   rack-cors
+  raddocs
   rails (= 5.2.2.1)
   rails-erd
   responders

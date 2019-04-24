@@ -1,0 +1,38 @@
+{
+  "resource": "Profiles",
+  "resource_explanation": null,
+  "http_method": "GET",
+  "route": "/v1/profile",
+  "description": "Retrive Profile",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/v1/profile",
+      "request_body": null,
+      "request_headers": {
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NTYxNzY5MDgsInN1YiI6MTE4fQ.Y3qznz8hm2-Vc0hrmuT6KfzWSeyryRcJd918e1AXt6M"
+      },
+      "request_query_parameters": {
+        "{}": null
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"email\": \"john.smith@example.com\",\n  \"full_name\": \"John Smith\"\n}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl -g \"http://localhost:5000/v1/profile\" -X GET \\\n\t-H \"Accept: application/json\" \\\n\t-H \"Content-Type: application/json\" \\\n\t-H \"Lang: en\" \\\n\t-H \"Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NTYxNzY5MDgsInN1YiI6MTE4fQ.Y3qznz8hm2-Vc0hrmuT6KfzWSeyryRcJd918e1AXt6M\""
+    }
+  ]
+}

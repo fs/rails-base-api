@@ -1,0 +1,98 @@
+{
+  "resources": [
+    {
+      "name": "Profiles",
+      "explanation": null,
+      "examples": [
+        {
+          "description": "Retrive Profile",
+          "link": "profiles/retrive_profile.json",
+          "groups": "all",
+          "route": "/v1/profile",
+          "method": "get"
+        },
+        {
+          "description": "Update Profile",
+          "link": "profiles/update_profile.json",
+          "groups": "all",
+          "route": "/v1/profile",
+          "method": "patch"
+        },
+        {
+          "description": "Update Profile with empty password and invalid email",
+          "link": "profiles/update_profile_with_empty_password_and_invalid_email.json",
+          "groups": "all",
+          "route": "/v1/profile",
+          "method": "patch"
+        },
+        {
+          "description": "Delete Profile",
+          "link": "profiles/delete_profile.json",
+          "groups": "all",
+          "route": "/v1/profile",
+          "method": "delete"
+        }
+      ]
+    },
+    {
+      "name": "Registration",
+      "explanation": null,
+      "examples": [
+        {
+          "description": "Create User",
+          "link": "registration/create_user.json",
+          "groups": "all",
+          "route": "/v1/registrations",
+          "method": "post"
+        }
+      ]
+    },
+    {
+      "name": "Tokens",
+      "explanation": null,
+      "examples": [
+        {
+          "description": "Create Token",
+          "link": "tokens/create_token.json",
+          "groups": "all",
+          "route": "/v1/tokens",
+          "method": "post"
+        },
+        {
+          "description": "Create Token with invalid password",
+          "link": "tokens/create_token_with_invalid_password.json",
+          "groups": "all",
+          "route": "/v1/tokens",
+          "method": "post"
+        }
+      ]
+    },
+    {
+      "name": "Users",
+      "explanation": null,
+      "examples": [
+        {
+          "description": "List Users",
+          "link": "users/list_users.json",
+          "groups": "all",
+          "route": "/v1/users",
+          "method": "get"
+        },
+        {
+          "description": "Retrive User",
+          "link": "users/retrive_user.json",
+          "groups": "all",
+          "route": "/v1/users/:id",
+          "method": "get"
+        },
+        {
+          "description": "Retrive User with invalid id",
+          "link": "users/retrive_user_with_invalid_id.json",
+          "groups": "all",
+          "route": "/v1/users/:id",
+          "method": "get"
+        }
+      ]
+    }
+  ]
+}
