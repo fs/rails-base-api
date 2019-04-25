@@ -41,7 +41,7 @@
       "request_content_type": "application/json",
       "response_status": 201,
       "response_status_text": "Created",
-      "response_body": "{\n  \"id\": 5,\n  \"email\": \"user@example.com\",\n  \"full_name\": \"Example User\"\n}",
+      "response_body": "{\n  \"id\": 484,\n  \"email\": \"user@example.com\",\n  \"full_name\": \"Example User\"\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
