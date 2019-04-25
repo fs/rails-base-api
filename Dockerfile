@@ -15,7 +15,7 @@ WORKDIR /app
 ARG BUNDLE_WITHOUT
 ENV BUNDLE_WITHOUT ${BUNDLE_WITHOUT}
 
-ADD Gemfile* /app/
+COPY Gemfile* /app/
 RUN bundle install -j4 --retry 3 \
  # Remove unneeded files (cached *.gem, *.o, *.c)
  && rm -rf /usr/local/bundle/cache/*.gem \
@@ -23,7 +23,7 @@ RUN bundle install -j4 --retry 3 \
  && find /usr/local/bundle/gems/ -name "*.o" -delete
 
 # Add the Rails app
-ADD . /app
+COPY . /app/
 
 # Remove folders not needed in resulting image
 ARG FOLDERS_TO_REMOVE
@@ -49,7 +49,7 @@ USER app
 
 # Copy app with gems from former build stage
 COPY --from=Builder --chown=app:app /usr/local/bundle/ /usr/local/bundle/
-COPY --from=Builder --chown=app:app /app /app
+COPY --from=Builder --chown=app:app /app/ /app/
 
 WORKDIR /app
 
