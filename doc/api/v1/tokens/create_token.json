@@ -1,0 +1,47 @@
+{
+  "resource": "Tokens",
+  "resource_explanation": null,
+  "http_method": "POST",
+  "route": "/v1/tokens",
+  "description": "Create Token",
+  "explanation": null,
+  "parameters": [
+    {
+      "scope": "authorization",
+      "required": true,
+      "name": "email",
+      "description": "email"
+    },
+    {
+      "scope": "authorization",
+      "required": true,
+      "name": "password",
+      "description": "password"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/v1/tokens",
+      "request_body": "{\"authorization\":{\"email\":\"user@example.com\",\"password\":\"123456\"}}",
+      "request_headers": {
+        "Accept": "application/json",
+        "Content-Type": "application/json"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 201,
+      "response_status_text": "Created",
+      "response_body": "{\n  \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NTYyODE1MjgsInN1YiI6ODM5fQ.NQpJC4J4me9sLI9ov_BguI_twslBrxlHnFra8CJlinQ\"\n}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"http://localhost:5000/v1/tokens\" -d '{\"authorization\":{\"email\":\"user@example.com\",\"password\":\"123456\"}}' -X POST \\\n\t-H \"Accept: application/json\" \\\n\t-H \"Content-Type: application/json\" \\\n\t-H \"Lang: en\""
+    }
+  ]
+}

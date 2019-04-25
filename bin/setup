@@ -22,4 +22,9 @@ if [ ! -f .env ]; then
 fi
 
 # Set up database and add any development seed data
-bundle exec rake db:setup
+bundle exec rails db:create
+bundle exec rails db:schema:load
+
+if [ -z "$CI" ]; then
+  bundle exec rails db:seed
+fi

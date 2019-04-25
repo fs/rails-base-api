@@ -1,12 +1,17 @@
 {
   "name": "Rails Base API",
-  "description": "Skeleton for new Rails 4 application for REST API",
+  "description": "Skeleton for new Rails application with REST API",
   "env": {
-    "ALLOW_REQUESTS_FROM": { "required": true },
+    "HOST": { "required": true },
+    "LANG": { "required": true },
+    "CORS_ORIGINS": { "required": true },
     "RACK_ENV": { "required": true },
-    "SECRET_KEY_BASE": { "required": true }
+    "RAILS_ENV": { "required": true },
+    "SECRET_KEY_BASE": { "required": true },
+    "MAILER_SENDER_ADDRESS": { "required": true }
   },
   "addons": [
-    "heroku-postgresql:hobby-dev"
+    "heroku-postgresql",
+    "sendgrid"
   ]
 }

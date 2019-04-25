@@ -1,11 +1,10 @@
 Rails.application.routes.draw do
-  scope defaults: { format: :json } do
-    devise_for :users, only: []
-  end
+  mount Raddocs::App => "/docs"
 
-  namespace :v1, defaults: { format: "json" } do
-    devise_scope :user do
-      post "users/sign_in", to: "sessions#create"
-    end
+  namespace :v1, defaults: { format: :json } do
+    resources :registrations, only: :create
+    resources :tokens, only: :create
+    resource :profile, only: %i[show update destroy]
+    resources :users, only: %i[index show]
   end
 end

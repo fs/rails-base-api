@@ -1,3 +1,1 @@
-ActiveModel::Serializer.configure do |config|
-  config.adapter = :json
-end
+ActiveModelSerializers.config.key_transform = :underscore

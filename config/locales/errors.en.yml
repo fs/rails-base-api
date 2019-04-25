@@ -1,0 +1,8 @@
+en:
+  errors:
+    invalid_credentials: Invalid credentials
+    invalid_record: Invalid record
+    unauthorized: Authorization required
+    record_not_found: Record not found
+    route_not_found: Route not found
+    custom_error: Custom error message

@@ -1,27 +1,75 @@
 {
   "resources": [
     {
-      "name": "Errors",
+      "name": "Profiles",
+      "explanation": null,
       "examples": [
         {
-          "description": "Request to unexisting page",
-          "link": "errors/request_to_unexisting_page.json",
-          "groups": "all"
+          "description": "Retrieve Profile",
+          "link": "profiles/retrieve_profile.json",
+          "groups": "all",
+          "route": "/v1/profile",
+          "method": "get"
+        },
+        {
+          "description": "Update Profile",
+          "link": "profiles/update_profile.json",
+          "groups": "all",
+          "route": "/v1/profile",
+          "method": "patch"
+        },
+        {
+          "description": "Delete Profile",
+          "link": "profiles/delete_profile.json",
+          "groups": "all",
+          "route": "/v1/profile",
+          "method": "delete"
         }
       ]
     },
     {
-      "name": "Sessions",
+      "name": "Registration",
+      "explanation": null,
       "examples": [
         {
-          "description": "Sign in with valid password",
-          "link": "sessions/sign_in_with_valid_password.json",
-          "groups": "all"
+          "description": "Create User",
+          "link": "registration/create_user.json",
+          "groups": "all",
+          "route": "/v1/registrations",
+          "method": "post"
+        }
+      ]
+    },
+    {
+      "name": "Tokens",
+      "explanation": null,
+      "examples": [
+        {
+          "description": "Create Token",
+          "link": "tokens/create_token.json",
+          "groups": "all",
+          "route": "/v1/tokens",
+          "method": "post"
+        }
+      ]
+    },
+    {
+      "name": "Users",
+      "explanation": null,
+      "examples": [
+        {
+          "description": "List Users",
+          "link": "users/list_users.json",
+          "groups": "all",
+          "route": "/v1/users",
+          "method": "get"
         },
         {
-          "description": "Sign in with invalid password",
-          "link": "sessions/sign_in_with_invalid_password.json",
-          "groups": "all"
+          "description": "Retrieve User",
+          "link": "users/retrieve_user.json",
+          "groups": "all",
+          "route": "/v1/users/:id",
+          "method": "get"
         }
       ]
     }

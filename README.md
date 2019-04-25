@@ -1,52 +1,50 @@
-# Skeleton for new Rails 4 application for REST API
+# Skeleton for new Rails 5 application for REST API
 
-[![Code Climate](https://codeclimate.com/github/fs/rails-base-api.png)](https://codeclimate.com/github/fs/rails-base-api)
 [![Build Status](https://semaphoreci.com/api/v1/fs/rails-base-api/branches/master/shields_badge.svg)](https://semaphoreci.com/fs/rails-base-api)
 [![Known Vulnerabilities](https://snyk.io/test/github/fs/rails-base-api/badge.svg)](https://snyk.io/test/github/fs/rails-base-api)
 
-This simple application includes ruby/rails technology which we use at FlatStack for new REST API projects.
-
-Application currently based on Rails 4 stable branch and Ruby 2.3.6
-
-## API
-
-Status of the API could be checked at [http://localhost:5000/docs](http://localhost:5000/docs)
+This simple application includes Ruby/Rails technology which we use at Flatstack for new REST API projects. Application currently based on Rails 5 stable branch and Ruby 2.5.1
 
 ## What's included
 
 ### Application gems:
 
-* [Decent Exposure](https://github.com/voxdolo/decent_exposure) for DRY controllers
-* [Rollbar](https://github.com/rollbar/rollbar-gem) for exception notification
-* [Thin](https://github.com/macournoyer/thin) as rails web server
-* [Kaminari](https://github.com/amatsuda/kaminari) for pagination
-* [Rack CORS](https://github.com/cyu/rack-cors) for [CORS](http://en.wikipedia.org/wiki/Cross-origin_resource_sharing)
+* [active_model_serializers](https://github.com/rails-api/active_model_serializers) - resource serializers
+* [decent_exposure](https://github.com/voxdolo/decent_exposure) for DRY controllers
+* [health_check](https://github.com/ianheggie/health_check) - health check endpoint
+* [interactor](https://github.com/collectiveidea/interactor) – encapsulates business logic
+* [kaminari](https://github.com/amatsuda/kaminari) for pagination
+* [knock](https://github.com/nsarno/knock) – seamless JWT authentication
+* [puma](https://github.com/puma/puma) as Rails web server
+* [rack-cors](https://github.com/cyu/rack-cors) for [CORS](http://en.wikipedia.org/wiki/Cross-origin_resource_sharing)
+* [responders](https://github.com/plataformatec/responders) - DRY controllers
+* [rollbar](https://github.com/rollbar/rollbar-gem) for exception notification
 
 ### Development gems
 
-* [Foreman](https://github.com/ddollar/foreman) for managing development stack with Procfile
-* [Letter Opener](https://github.com/ryanb/letter_opener) for preview mail in the browser instead of sending
-* [Mail Safe](https://github.com/myronmarston/mail_safe) keep ActionMailer emails from escaping into the wild during development
-* [Bullet](https://github.com/flyerhzm/bullet) gem to kill N+1 queries and unused eager loading
-* [Rails Best Practices](https://github.com/railsbp/rails_best_practices) code metric tool
-* [Brakeman](https://github.com/presidentbeef/brakeman) static analysis security vulnerability scanner
-* [Bundler Audit](https://github.com/rubysec/bundler-audit) Patch-level verification for Gems
-* [Spring](https://github.com/rails/spring) for fast Rails actions via pre-loading
+* [brakeman](https://github.com/presidentbeef/brakeman) - static analysis security vulnerability scanner
+* [bullet](https://github.com/flyerhzm/bullet) - kill n+1 queries and unused eager loading
+* [bundler-audit](https://github.com/rubysec/bundler-audit) - patch-level verification for gems
+* [dotenv](https://github.com/bkeepers/dotenv) - load environment variables from `.env`
+* [letter_opener](https://github.com/ryanb/letter_opener) - preview E-Mails in the browser instead of sending
+* [rails-erd](https://github.com/voormedia/rails-erd) - generate a diagram based on application's AR models
+* [seedbank](https://github.com/james2m/seedbank) - seeds on steroids
 
 ### Testing gems
 
-* [Factory Girl](https://github.com/thoughtbot/factory_girl) for easier creation of test data
-* [RSpec](https://github.com/rspec/rspec) for awesome, readable isolation testing
-* [Shoulda Matchers](http://github.com/thoughtbot/shoulda-matchers) for frequently needed Rails and RSpec matchers
-* [Email Spec](https://github.com/bmabey/email-spec) Collection of rspec matchers and cucumber steps for testing emails
-* [Rspec Api Documentation](https://github.com/zipmark/rspec_api_documentation) Generate pretty API docs for your Rails APIs
+* [factory bot](https://github.com/thoughtbot/factory_bot) - create test data
+* [faker](https://github.com/stympy/faker) - generate fake data
+* [rspec api documentation](https://github.com/zipmark/rspec_api_documentation) - generate pretty API docs
+* [rspec](https://github.com/rspec/rspec) - awesome, readable isolation testing
+* [shoulda matchers](http://github.com/thoughtbot/shoulda-matchers) - frequently needed Rails and RSpec matchers
 
-### Initializes
+### Non standard initializes
 
-* `01_config.rb` - shortcut for getting application config with `app_config`
-* `mailer.rb` - setup default hosts for mailer from configuration
-* `requires.rb` - automatically requires everything in lib/ & lib/extensions
-* `rack_cors.rb` - setup whitelist of domains to allow cross-origin resource sharing
+* `active_model_serializer.rb` - setup serializers for REST API
+* `bullet.rb` - setup Bullet to catch up N+1
+* `cors.rb` - setup whitelist of domains to allow cross-origin resource sharing
+* `health_check.rb` - setup Health Check endpoint
+* `rollbar.rb` - setup Rollbar
 
 ### Scripts
 
@@ -54,39 +52,7 @@ Status of the API could be checked at [http://localhost:5000/docs](http://localh
 * `bin/quality` - runs rubocop, brakeman, rails_best_practices and bundle-audit for the app
 * `bin/ci` - should be used in the CI or locally
 * `bin/server` - to run server locally
-
-### Serializers
-
-### PaginatedArraySerializer
-
-Use that serializer if you want to add meta with pagination info on response
-
-```ruby
-def index
-  respond_with(
-    posts,
-    serializer: PaginatedArraySerializer
-  )
-end
-```
-
-The above usage of `PaginatedArraySerializer` will produce the following:
-
-```json
-{
-  "meta": {
-    "pagination": {
-      "total":46,
-      "per_page":2,
-      "page":1
-    }
-  },
-  "posts": [
-    { "title": "Post 1", "body": "Hello!" },
-    { "title": "Post 2", "body": "Goodbye!" }
-  ]
-}
-```
+* `bin/doc` - should be used to generate API documentation
 
 ## Quick start
 
@@ -129,10 +95,6 @@ mv doc/README_TEMPLATE.md README.md
 # update README.md
 git commit -am "Update README.md"
 ```
-
-### Restrict access to documentation
-
-You can enable restrict access to documentation by adding `APITOME_USER` and `APITOME_PASSWORD` environment variables. Can be useful on staging environment.
 
 ## Examples
 
