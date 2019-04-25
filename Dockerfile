@@ -56,9 +56,6 @@ WORKDIR /app
 # Expose Server port
 EXPOSE 3000
 
-# Save timestamp of image building
-RUN date -u > BUILD_TIME
-
 # Set Rails env
 ENV RAILS_LOG_TO_STDOUT true
 
