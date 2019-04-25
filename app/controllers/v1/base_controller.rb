@@ -20,9 +20,7 @@ module V1
     end
 
     def authenticate_user!
-      return if current_user
-
-      render json: { error: "unauthorized" }, status: :unauthorized
+      respond_with_error(:unauthorized) unless current_user
     end
 
     def current_user

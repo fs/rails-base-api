@@ -18,12 +18,12 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/v1/users/495",
+      "request_path": "/v1/users/849",
       "request_body": null,
       "request_headers": {
         "Accept": "application/json",
         "Content-Type": "application/json",
-        "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NTYyNzkxODgsInN1YiI6NDk2fQ.A5EnYIAMPRpxtsoq3hHAxHE5_s2ITaUsP2nnIEFtJHs"
+        "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NTYyODE1MjgsInN1YiI6ODUwfQ.APj5tSYameNRKzKP_If5gW_vq98VTHhasKRY7eQyLLI"
       },
       "request_query_parameters": {
         "{}": null
@@ -31,12 +31,12 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"id\": 495,\n  \"email\": \"john.smith@example.com\",\n  \"full_name\": \"John Smith\"\n}",
+      "response_body": "{\n  \"id\": 849,\n  \"email\": \"john.smith@example.com\",\n  \"full_name\": \"John Smith\"\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl -g \"http://localhost:5000/v1/users/495\" -X GET \\\n\t-H \"Accept: application/json\" \\\n\t-H \"Content-Type: application/json\" \\\n\t-H \"Lang: en\" \\\n\t-H \"Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NTYyNzkxODgsInN1YiI6NDk2fQ.A5EnYIAMPRpxtsoq3hHAxHE5_s2ITaUsP2nnIEFtJHs\""
+      "curl": "curl -g \"http://localhost:5000/v1/users/849\" -X GET \\\n\t-H \"Accept: application/json\" \\\n\t-H \"Content-Type: application/json\" \\\n\t-H \"Lang: en\" \\\n\t-H \"Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NTYyODE1MjgsInN1YiI6ODUwfQ.APj5tSYameNRKzKP_If5gW_vq98VTHhasKRY7eQyLLI\""
     }
   ]
 }

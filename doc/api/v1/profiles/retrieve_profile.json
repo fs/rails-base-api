@@ -19,7 +19,7 @@
       "request_headers": {
         "Accept": "application/json",
         "Content-Type": "application/json",
-        "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NTYyNzkxODgsInN1YiI6NDgwfQ.zHlLzwqCN8DChYU3hEb4hmkCKz0oijfy28XhnG4UPSE"
+        "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NTYyODE1MjgsInN1YiI6ODM0fQ.-NrAGBaudOVe_BZY_HvsLbPVcusVa8WiiJWPz4mz9wI"
       },
       "request_query_parameters": {
         "{}": null
@@ -27,12 +27,12 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"id\": 480,\n  \"email\": \"john.smith@example.com\",\n  \"full_name\": \"John Smith\"\n}",
+      "response_body": "{\n  \"id\": 834,\n  \"email\": \"john.smith@example.com\",\n  \"full_name\": \"John Smith\"\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl -g \"http://localhost:5000/v1/profile\" -X GET \\\n\t-H \"Accept: application/json\" \\\n\t-H \"Content-Type: application/json\" \\\n\t-H \"Lang: en\" \\\n\t-H \"Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NTYyNzkxODgsInN1YiI6NDgwfQ.zHlLzwqCN8DChYU3hEb4hmkCKz0oijfy28XhnG4UPSE\""
+      "curl": "curl -g \"http://localhost:5000/v1/profile\" -X GET \\\n\t-H \"Accept: application/json\" \\\n\t-H \"Content-Type: application/json\" \\\n\t-H \"Lang: en\" \\\n\t-H \"Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NTYyODE1MjgsInN1YiI6ODM0fQ.-NrAGBaudOVe_BZY_HvsLbPVcusVa8WiiJWPz4mz9wI\""
     }
   ]
 }
