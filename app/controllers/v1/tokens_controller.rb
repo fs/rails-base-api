@@ -8,7 +8,7 @@ module V1
       if result.success?
         respond_with result.jwt_token
       else
-        render json: { error: result.message }, status: result.code
+        respond_with_error result.error
       end
     end
 

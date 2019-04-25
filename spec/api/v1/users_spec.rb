@@ -62,7 +62,16 @@ resource "Users" do
 
     context "with invalid id" do
       let(:id) { 0 }
-      let(:expected_data) { { "error" => "not_found" } }
+      let(:expected_data) do
+        {
+          "errors" => [
+            {
+              "code" => "record_not_found",
+              "detail" => "Record not found"
+            }
+          ]
+        }
+      end
 
       example "Retrieve User with invalid id", document: false do
         do_request

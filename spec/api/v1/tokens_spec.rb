@@ -25,7 +25,16 @@ resource "Tokens" do
 
     context "with invalid password" do
       let(:password) { "invalid" }
-      let(:expected_data) { { "error" => "Invalid credentials" } }
+      let(:expected_data) do
+        {
+          "errors" => [
+            {
+              "code" => "invalid_credentials",
+              "detail" => "Invalid credentials"
+            }
+          ]
+        }
+      end
 
       example "Create Token with invalid password", document: false do
         do_request

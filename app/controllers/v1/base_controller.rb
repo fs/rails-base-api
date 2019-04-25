@@ -8,10 +8,16 @@ module V1
     respond_to :json
 
     rescue_from ActiveRecord::RecordNotFound do |_exception|
-      render json: { error: "not_found" }, status: :not_found
+      respond_with_error(:record_not_found)
     end
 
     private
+
+    def respond_with_error(code)
+      Error.new(code: code).tap do |error|
+        render json: error.to_json, status: error.status
+      end
+    end
 
     def authenticate_user!
       return if current_user

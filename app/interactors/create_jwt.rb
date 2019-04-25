@@ -4,7 +4,7 @@ class CreateJwt
   delegate :email, :password, to: :context
 
   def call
-    context.fail!(error) unless authenticated?
+    context.fail!(error: :invalid_credentials) unless authenticated?
     context.jwt_token = jwt_token
   end
 
@@ -20,12 +20,5 @@ class CreateJwt
 
   def user
     @user ||= User.find_by(email: email)
-  end
-
-  def error
-    {
-      code: :unprocessable_entity,
-      message: I18n.t("errors.invalid_credentials")
-    }
   end
 end
