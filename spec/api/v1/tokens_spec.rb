@@ -2,7 +2,6 @@ require "rails_helper"
 
 resource "Tokens" do
   include_context "with API Headers"
-  include_context "with frozen time"
 
   post "/v1/tokens" do
     with_options scope: :authorization do

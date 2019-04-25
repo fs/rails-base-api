@@ -1,4 +1,8 @@
-Dir[Rails.root.join("spec", "support", "helpers", "**", "*.rb")].each { |f| require f }
+module ResponseHelpers
+  def json_response_body
+    JSON.parse(response_body)
+  end
+end
 
 RSpec.configure do |config|
   config.include ResponseHelpers
