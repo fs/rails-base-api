@@ -6,7 +6,7 @@ module V1
       result = CreateJwt.call(authentication_params)
 
       if result.success?
-        render json: { token: result.token }, status: :created
+        respond_with result.jwt_token
       else
         render json: { error: result.message }, status: result.code
       end

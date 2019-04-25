@@ -2,11 +2,10 @@ class CreateJwt
   include Interactor
 
   delegate :email, :password, to: :context
-  delegate :token, to: :jwt_token
 
   def call
     context.fail!(error) unless authenticated?
-    context.token = token
+    context.jwt_token = jwt_token
   end
 
   private
@@ -26,7 +25,7 @@ class CreateJwt
   def error
     {
       code: :unprocessable_entity,
-      message: "Invalid credentials"
+      message: I18n.t("errors.invalid_credentials")
     }
   end
 end

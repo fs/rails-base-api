@@ -1,13 +1,5 @@
 require "rails_helper"
 
-class UserRequest < ActiveModelSerializers::Model
-  attributes :id, :full_name, :email, :password
-end
-
-class UserRequestSerializer < ApplicationSerializer
-  attributes :full_name, :email, :password
-end
-
 resource "Users" do
   include_context "with Authorization header"
 
@@ -20,15 +12,19 @@ resource "Users" do
     let(:expected_data) do
       [
         {
+          "id" => current_user.id,
           "email" => "john.smith@example.com",
           "full_name" => "John Smith"
         }, {
+          "id" => user_1.id,
           "email" => "michael.jordan@example.com",
           "full_name" => "Michael Jordan"
         }, {
+          "id" => user_2.id,
           "email" => "brad.pitt@example.com",
           "full_name" => "Brad Pitt"
         }, {
+          "id" => user_3.id,
           "email" => "steve.jobs@example.com",
           "full_name" => "Steve Jobs"
         }
@@ -51,6 +47,7 @@ resource "Users" do
 
     let(:expected_data) do
       {
+        "id" => user.id,
         "email" => "john.smith@example.com",
         "full_name" => "John Smith"
       }

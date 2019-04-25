@@ -8,6 +8,7 @@ resource "Profiles" do
   get "/v1/profile" do
     let(:expected_data) do
       {
+        "id" => current_user.id,
         "email" => "john.smith@example.com",
         "full_name" => "John Smith"
       }
@@ -36,6 +37,7 @@ resource "Profiles" do
 
     let(:expected_data) do
       {
+        "id" => current_user.id,
         "email" => "user_updated@example.com",
         "full_name" => "Updated Name"
       }
@@ -73,6 +75,7 @@ resource "Profiles" do
   delete "/v1/profile" do
     let(:expected_data) do
       {
+        "id" => current_user.id,
         "email" => "john.smith@example.com",
         "full_name" => "John Smith"
       }

@@ -1,10 +1,8 @@
 class ApiResponder < ActionController::Responder
   def api_behavior
-    if get?
-      display resource
-    elsif post?
+    if post?
       display resource, status: :created
-    elsif put? || patch? || delete?
+    else
       display resource, status: :ok
     end
   end

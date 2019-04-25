@@ -17,7 +17,7 @@ describe CreateJwt do
   it "authenticates user" do
     is_expected.to be_success
 
-    expect(result.token).to be_present
+    expect(result.jwt_token).to be_present
   end
 
   context "when invalid credentials" do
@@ -31,7 +31,7 @@ describe CreateJwt do
     it "does not authenticate user" do
       is_expected.to be_failure
 
-      expect(result.token).to be_nil
+      expect(result.jwt_token).to be_nil
     end
   end
 end

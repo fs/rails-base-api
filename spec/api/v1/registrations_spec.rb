@@ -17,6 +17,7 @@ resource "Registration" do
 
     let(:expected_data) do
       {
+        "id" => user.id,
         "email" => "user@example.com",
         "full_name" => "Example User"
       }
