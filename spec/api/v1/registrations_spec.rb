@@ -10,14 +10,13 @@ resource "Registration" do
       parameter :password, "password", required: true
     end
 
-    let(:user) { User.find_by(email: email) }
     let(:full_name) { "Example User" }
     let(:email) { "user@example.com" }
     let(:password) { "123456" }
 
     let(:expected_data) do
       {
-        "id" => user.id,
+        "id" => User.last.id,
         "email" => "user@example.com",
         "full_name" => "Example User"
       }
