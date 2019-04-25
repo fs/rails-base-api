@@ -33,7 +33,7 @@ class Error
   private
 
   def id
-    ENV.fetch("ACTION_DISPATCH_REQUEST_ID", SecureRandom.uuid)
+    ENV.fetch("ACTION_DISPATCH_REQUEST_ID") { SecureRandom.uuid }
   end
 
   def error

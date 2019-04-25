@@ -1,0 +1,39 @@
+version: '3.4'
+
+services:
+  db:
+    image: postgres:11-alpine
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+    volumes:
+      - db-data:/var/lib/postgresql/data
+
+  app: &app_base
+    image: rails_base_api_development
+    environment:
+      - BUNDLE_WITHOUT
+      - DB_HOST
+      - DB_USER
+      - DB_PASSWORD
+      - PORT
+      - HOST
+      - SECRET_KEY_BASE
+      - CORS_ORIGINS
+      - ASSET_HOST
+      - RACK_ENV
+      - ROLLBAR_ACCESS_TOKEN
+      - MAILER_SENDER_ADDRESS
+    build:
+      context: .
+      args:
+        - ADDITIONAL_PACKAGES=build-base git
+    ports:
+      - "${PORT}"
+    links:
+      - db
+    volumes:
+      - .:/app
+
+volumes:
+  db-data:
