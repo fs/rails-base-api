@@ -34,7 +34,6 @@ group :development, :test do
   gem "brakeman"
   gem "bundler-audit"
   gem "byebug"
-  gem "dotenv-rails"
   gem "pry-rails"
   gem "raddocs"
   gem "rspec-rails"

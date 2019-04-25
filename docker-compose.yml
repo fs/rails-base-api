@@ -10,9 +10,8 @@ services:
       - db-data:/var/lib/postgresql/data
 
   app: &app_base
-    image: rails_base_api_development
+    image: rails_base_api
     environment:
-      - BUNDLE_WITHOUT
       - DB_HOST
       - DB_USER
       - DB_PASSWORD
@@ -28,8 +27,9 @@ services:
       context: .
       args:
         - ADDITIONAL_PACKAGES=build-base git
+        - BUNDLE_WITHOUT="${BUNDLE_WITHOUT}"
     ports:
-      - "${PORT}"
+      - "3000:3000"
     links:
       - db
     volumes:

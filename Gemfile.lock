@@ -74,10 +74,6 @@ GEM
     decent_exposure (3.0.2)
       activesupport (>= 4.0)
     diff-lcs (1.3)
-    dotenv (2.5.0)
-    dotenv-rails (2.5.0)
-      dotenv (= 2.5.0)
-      railties (>= 3.2, < 6.0)
     email_spec (2.2.0)
       htmlentities (~> 4.3.3)
       launchy (~> 2.1)
@@ -301,7 +297,6 @@ DEPENDENCIES
   bundler-audit
   byebug
   decent_exposure
-  dotenv-rails
   email_spec
   factory_bot_rails
   faker
@@ -335,4 +330,4 @@ RUBY VERSION
    ruby 2.5.1p57
 
 BUNDLED WITH
-   1.16.4
+   1.16.6

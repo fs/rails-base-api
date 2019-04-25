@@ -2,15 +2,6 @@
 # Stage: Builder
 FROM ruby:2.5.1-alpine as Builder
 
-ARG FOLDERS_TO_REMOVE
-ARG BUNDLE_WITHOUT
-ARG RAILS_ENV
-
-ENV BUNDLE_WITHOUT ${BUNDLE_WITHOUT}
-ENV RAILS_ENV ${RAILS_ENV}
-ENV SECRET_KEY_BASE ${SECRET_KEY_BASE}
-ENV RAILS_SERVE_STATIC_FILES ${RAILS_SERVE_STATIC_FILES}
-
 RUN apk add --update --no-cache \
     build-base \
     postgresql-dev \
@@ -21,9 +12,11 @@ RUN apk add --update --no-cache \
 WORKDIR /app
 
 # Install gems
+ARG BUNDLE_WITHOUT
+ENV BUNDLE_WITHOUT ${BUNDLE_WITHOUT}
+
 ADD Gemfile* /app/
-RUN bundle config --global frozen 1 \
- && bundle install -j4 --retry 3 \
+RUN bundle install -j4 --retry 3 \
  # Remove unneeded files (cached *.gem, *.o, *.c)
  && rm -rf /usr/local/bundle/cache/*.gem \
  && find /usr/local/bundle/gems/ -name "*.c" -delete \
@@ -33,6 +26,7 @@ RUN bundle config --global frozen 1 \
 ADD . /app
 
 # Remove folders not needed in resulting image
+ARG FOLDERS_TO_REMOVE
 RUN rm -rf $FOLDERS_TO_REMOVE
 
 ###############################
@@ -40,10 +34,8 @@ RUN rm -rf $FOLDERS_TO_REMOVE
 FROM ruby:2.5.1-alpine
 LABEL maintainer="timur.vafin@flatstack.com"
 
-ARG PORT
-ARG ADDITIONAL_PACKAGES
-
 # Add Alpine packages
+ARG ADDITIONAL_PACKAGES
 RUN apk add --update --no-cache \
     postgresql-client \
     imagemagick \
@@ -56,19 +48,19 @@ RUN addgroup -g 1000 -S app && adduser -u 1000 -S app -G app
 USER app
 
 # Copy app with gems from former build stage
-COPY --from=Builder /usr/local/bundle/ /usr/local/bundle/
+COPY --from=Builder --chown=app:app /usr/local/bundle/ /usr/local/bundle/
 COPY --from=Builder --chown=app:app /app /app
-
-# Set Rails env
-ENV RAILS_LOG_TO_STDOUT true
 
 WORKDIR /app
 
 # Expose Server port
-EXPOSE $PORT
+EXPOSE 3000
 
 # Save timestamp of image building
 RUN date -u > BUILD_TIME
+
+# Set Rails env
+ENV RAILS_LOG_TO_STDOUT true
 
 # Start up
 CMD ["bundle", "exec", "rails", "server"]
