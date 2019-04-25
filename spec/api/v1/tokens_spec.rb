@@ -29,8 +29,9 @@ resource "Tokens" do
         {
           "errors" => [
             {
-              "code" => "invalid_credentials",
-              "detail" => "Invalid credentials"
+              "id" => "4eac02e2-6856-449b-bc28-fbf1b32a20f2",
+              "status" => 422,
+              "error" => "Invalid credentials"
             }
           ]
         }

@@ -56,7 +56,10 @@ resource "Profiles" do
 
       let(:expected_data) do
         {
-          "errors" => {
+          "error" => "Invalid record",
+          "id" => "4eac02e2-6856-449b-bc28-fbf1b32a20f2",
+          "status" => 422,
+          "validations" => {
             "email" => ["is invalid"],
             "password" => ["is too short (minimum is 6 characters)"]
           }

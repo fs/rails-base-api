@@ -1,3 +1,5 @@
 class ErrorSerializer < ActiveModel::Serializer::ErrorSerializer
-  attributes :code, :detail
+  include NullAttributesRemover
+
+  attributes :id, :status, :error, :validations
 end

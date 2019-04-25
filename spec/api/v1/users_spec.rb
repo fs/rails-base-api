@@ -66,8 +66,9 @@ resource "Users" do
         {
           "errors" => [
             {
-              "code" => "record_not_found",
-              "detail" => "Record not found"
+              "id" => "4eac02e2-6856-449b-bc28-fbf1b32a20f2",
+              "status" => 404,
+              "error" => "Record not found"
             }
           ]
         }
