@@ -2,6 +2,8 @@ setup:
   addons:
     - plan: heroku-postgresql
       as: DATABASE
+  config:
+    BUNDLE_WITHOUT: development test
 
 build:
   docker:
