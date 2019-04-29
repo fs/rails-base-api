@@ -1,5 +1,8 @@
 # Ignore files not needed when building a Docker image of this project
 
+# Ignore environment file since there are could be some sensitive credentials
+.env
+
 # Ignore the temporary files:
 /tmp/*
 /log/*.log
