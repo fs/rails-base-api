@@ -2,12 +2,12 @@ setup:
   addons:
     - plan: heroku-postgresql
       as: DATABASE
-  config:
-    BUNDLE_WITHOUT: development test
 
 build:
   docker:
     web: Dockerfile
+  config:
+    BUNDLE_WITHOUT: development test
 
 run:
   web: bundle exec puma -C config/puma.rb
