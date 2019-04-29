@@ -79,13 +79,8 @@ bin/setup
 Make sure all test are green
 
 ```bash
-docker-compose run app bin/quality
-```
-
-Run app
-
-```bash
-docker-compose up
+docker-compose exec app bin/rspec
+docker-compose exec app bin/quality
 ```
 
 **Do not forget to update this file!**
@@ -95,10 +90,5 @@ mv doc/README_TEMPLATE.md README.md
 # update README.md
 git commit -am "Update README.md"
 ```
-
-## Examples
-
-Please check how to build API endpoints and test them properly in the
-[examples branch](https://github.com/fs/rails-base-api/tree/examples)
 
 [<img src="http://www.flatstack.com/logo.svg" width="100"/>](http://www.flatstack.com)
