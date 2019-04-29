@@ -4,7 +4,6 @@ resource "Users" do
   include_context "with Authorization header"
 
   get "/v1/users" do
-    let!(:current_user) { create :user, full_name: "John Smith", email: "john.smith@example.com" }
     let!(:user_1) { create :user, full_name: "Michael Jordan", email: "michael.jordan@example.com" }
     let!(:user_2) { create :user, full_name: "Brad Pitt", email: "brad.pitt@example.com" }
     let!(:user_3) { create :user, full_name: "Steve Jobs", email: "steve.jobs@example.com" }
@@ -12,21 +11,24 @@ resource "Users" do
     let(:expected_data) do
       [
         {
-          "id" => current_user.id,
-          "email" => "john.smith@example.com",
-          "full_name" => "John Smith"
-        }, {
           "id" => user_1.id,
           "email" => "michael.jordan@example.com",
           "full_name" => "Michael Jordan"
-        }, {
+        },
+        {
           "id" => user_2.id,
           "email" => "brad.pitt@example.com",
           "full_name" => "Brad Pitt"
-        }, {
+        },
+        {
           "id" => user_3.id,
           "email" => "steve.jobs@example.com",
           "full_name" => "Steve Jobs"
+        },
+        {
+          "id" => current_user.id,
+          "email" => current_user.email,
+          "full_name" => current_user.full_name
         }
       ]
     end

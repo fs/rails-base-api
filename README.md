@@ -1,7 +1,6 @@
 # Skeleton for new Rails 5 application for REST API
 
 [![Build Status](https://semaphoreci.com/api/v1/fs/rails-base-api/branches/master/shields_badge.svg)](https://semaphoreci.com/fs/rails-base-api)
-[![Known Vulnerabilities](https://snyk.io/test/github/fs/rails-base-api/badge.svg)](https://snyk.io/test/github/fs/rails-base-api)
 
 This simple application includes Ruby/Rails technology which we use at Flatstack for new REST API projects. Application currently based on Rails 5 stable branch and Ruby 2.5.1
 
@@ -48,11 +47,11 @@ This simple application includes Ruby/Rails technology which we use at Flatstack
 
 ### Scripts
 
-* `bin/setup` - setup required gems and migrate db if needed
-* `bin/quality` - runs rubocop, brakeman, rails_best_practices and bundle-audit for the app
-* `bin/ci` - should be used in the CI or locally
-* `bin/server` - to run server locally
-* `bin/doc` - should be used to generate API documentation
+* `bin/setup` - build Docker image and prepare DB
+* `docker-compose up --detach` - to run server locally
+* `docker-compose exec app bin/rspec` - runs RSpec tests
+* `docker-compose exec app bin/quality` - runs rubocop, brakeman, rails_best_practices and bundle-audit for the app
+* `docker-compose exec app bin/doc` - should be used to generate API documentation
 
 ## Quick start
 
@@ -79,13 +78,8 @@ bin/setup
 Make sure all test are green
 
 ```bash
-bin/ci
-```
-
-Run app
-
-```bash
-bin/server
+docker-compose exec app bin/rspec
+docker-compose exec app bin/quality
 ```
 
 **Do not forget to update this file!**
@@ -95,10 +89,5 @@ mv doc/README_TEMPLATE.md README.md
 # update README.md
 git commit -am "Update README.md"
 ```
-
-## Examples
-
-Please check how to build API endpoints and test them properly in the
-[examples branch](https://github.com/fs/rails-base-api/tree/examples)
 
 [<img src="http://www.flatstack.com/logo.svg" width="100"/>](http://www.flatstack.com)

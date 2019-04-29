@@ -1,7 +1,7 @@
 module V1
   class UsersController < V1::BaseController
     expose :user
-    expose :users, -> { User.all }
+    expose :users, -> { User.all.order(:created_at) }
 
     def index
       respond_with users
