@@ -14,11 +14,11 @@ if [ ! -f .env ]; then
 fi
 
 # Build Docker image
-docker-compose build
+docker-compose up --detach
 
 # Set up database and add any development seed data
-docker-compose run app bin/rails db:create db:schema:load
+docker-compose exec app bin/rails db:create db:schema:load
 
 if [ -z "$CI" ]; then
-  docker-compose run app bin/rails db:seed
+  docker-compose exec app bin/rails db:seed
 fi

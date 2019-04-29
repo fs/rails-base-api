@@ -1,10 +1,9 @@
-version: '3.4'
+version: "3.4"
 
 services:
   db:
     image: postgres:11-alpine
     environment:
-      - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=password
     volumes:
       - db-data:/var/lib/postgresql/data
@@ -12,9 +11,7 @@ services:
   app: &app_base
     image: rails_base_api
     environment:
-      - DB_HOST
-      - DB_USER
-      - DB_PASSWORD
+      - DATABASE_URL=postgres://postgres:password@db
       - PORT
       - HOST
       - SECRET_KEY_BASE
