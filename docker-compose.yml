@@ -30,7 +30,10 @@ services:
     links:
       - db
     volumes:
+      - ruby-bundle:/usr/local/bundle
       - .:/app
 
+
 volumes:
+  ruby-bundle:
   db-data:
