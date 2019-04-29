@@ -54,9 +54,9 @@ COPY --from=Builder --chown=app:app /app/ /app/
 WORKDIR /app
 
 # Add a script to be executed every time the container starts.
-COPY --chown=app:app bin/entrypoint /usr/bin/
-RUN chmod +x /usr/bin/entrypoint
-ENTRYPOINT ["entrypoint"]
+COPY --chown=app:app bin/docker-entrypoint /usr/bin/
+RUN chmod +x /usr/bin/docker-entrypoint
+ENTRYPOINT ["docker-entrypoint"]
 
 # Expose Server port
 EXPOSE 3000
