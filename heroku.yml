@@ -2,6 +2,8 @@ setup:
   addons:
     - plan: heroku-postgresql
       as: DATABASE
+    - plan: sendgrid
+      as: EMAIL
 
 build:
   docker:
@@ -10,4 +12,11 @@ build:
     BUNDLE_WITHOUT: development test
 
 run:
+  config:
+    HOST: example.com
+    CORS_ORIGINS: *
+    RACK_ENV: production
+    SECRET_KEY_BASE: ed56f32251436815d43f0727c4b4020f25f72653feddeaedac20ca6f124608a7
+    MAILER_SENDER_ADDRESS: noreply@example.com
+
   web: bundle exec puma -C config/puma.rb

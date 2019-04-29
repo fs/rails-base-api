@@ -1,6 +1,7 @@
 {
   "name": "Rails Base API",
   "description": "Skeleton for new Rails application with REST API",
+  "stack": "container",
   "env": {
     "HOST": { "required": true },
     "LANG": { "required": true },
