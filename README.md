@@ -1,7 +1,6 @@
 # Skeleton for new Rails 5 application for REST API
 
 [![Build Status](https://semaphoreci.com/api/v1/fs/rails-base-api/branches/master/shields_badge.svg)](https://semaphoreci.com/fs/rails-base-api)
-[![Known Vulnerabilities](https://snyk.io/test/github/fs/rails-base-api/badge.svg)](https://snyk.io/test/github/fs/rails-base-api)
 
 This simple application includes Ruby/Rails technology which we use at Flatstack for new REST API projects. Application currently based on Rails 5 stable branch and Ruby 2.5.1
 
