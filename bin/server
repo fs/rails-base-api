@@ -1,3 +1,5 @@
 #!/usr/bin/env sh
 
-bin/rails server --port 5000 --binding lvh.me
+set -e
+
+docker-compose up

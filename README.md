@@ -48,11 +48,11 @@ This simple application includes Ruby/Rails technology which we use at Flatstack
 
 ### Scripts
 
-* `bin/setup` - setup required gems and migrate db if needed
-* `bin/quality` - runs rubocop, brakeman, rails_best_practices and bundle-audit for the app
-* `bin/ci` - should be used in the CI or locally
-* `bin/server` - to run server locally
-* `bin/doc` - should be used to generate API documentation
+* `bin/setup` - build Docker image and prepare DB
+* `docker-compose up` - to run server locally
+* `docker-compose run app bin/rspec` - runs RSpec tests
+* `docker-compose run app bin/quality` - runs rubocop, brakeman, rails_best_practices and bundle-audit for the app
+* `docker-compose run app bin/doc` - should be used to generate API documentation
 
 ## Quick start
 
@@ -79,13 +79,13 @@ bin/setup
 Make sure all test are green
 
 ```bash
-bin/ci
+docker-compose run app bin/quality
 ```
 
 Run app
 
 ```bash
-bin/server
+docker-compose up
 ```
 
 **Do not forget to update this file!**

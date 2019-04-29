@@ -5,26 +5,20 @@ set -e
 # Setup specific Bundler options if this is CI
 if [ "$CI" ]; then
   BUNDLER_ARGS="--without development staging production"
+  RACK_ENV="test"
 fi
-
-# Make sure we have Bundler installed
-gem install bundler --conservative
-
-# Set up Ruby dependencies via Bundler into .bundle folder
-rm -f .bundle/config
-
-bundle check --path .bundle > /dev/null 2>&1 ||
-  bundle install --path=.bundle $BUNDLER_ARGS
 
 # Set up configurable environment variables
 if [ ! -f .env ]; then
   cp .env.example .env
 fi
 
+# Build Docker image
+docker-compose build
+
 # Set up database and add any development seed data
-bundle exec rails db:create
-bundle exec rails db:schema:load
+docker-compose run app bin/rails db:create db:schema:load
 
 if [ -z "$CI" ]; then
-  bundle exec rails db:seed
+  docker-compose run app bin/rails db:seed
 fi
