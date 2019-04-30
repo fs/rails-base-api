@@ -14,14 +14,16 @@
 
 1. Clone this repo `git clone git@github.com:account/repo.git`
 2. Run setup script `bin/setup`
+3. Run specs `bin/ci`
+3. Run server `bin/server`
 
 ## Scripts
 
 * `bin/setup` - build Docker image and prepare DB
 * `docker-compose up --detach` - to run server locally
 * `docker-compose exec app bin/rspec` - runs RSpec tests
-* `docker-compose exec app bin/quality` - runs rubocop, brakeman, rails_best_practices and bundle-audit for the app
-* `docker-compose exec app bin/doc` - should be used to generate API documentation
+* `docker-compose exec app bin/quality` - runs rubocop, brakeman, and bundle-audit
+* `docker-compose exec app bin/doc` - generates API documentation
 
 
 ## Documentation & Examples
