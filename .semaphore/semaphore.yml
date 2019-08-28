@@ -20,21 +20,20 @@ fail_fast:
 blocks:
   - name: Build
     task:
-      env_vars:
-        - name: BUNDLE_WITHOUT
-          value: development staging production
-        - name: DOCKER_REPO
-          value: flatstack/rails_base_api
       secrets:
         - name: docker-secrets
+
       prologue:
         commands:
           # Setup dynamic environment variables b/c they do not support via env_vars yet
+          - export BUNDLE_WITHOUT="development staging production"
+          - export DOCKER_REPO="flatstack/rails_base_api"
           - export CACHE_IMAGE="${DOCKER_REPO}:${SEMAPHORE_GIT_BRANCH}"
           - export WORKFLOW_CACHE_IMAGE="${CACHE_IMAGE}-${SEMAPHORE_WORKFLOW_ID}"
 
           # Authenticate with DockerHub
           - echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
+
       jobs:
       - name: Docker build
         commands:
@@ -62,6 +61,8 @@ blocks:
       prologue:
         commands:
           # Setup dynamic environment variables b/c they do not support via env_vars yet
+          - export BUNDLE_WITHOUT="development staging production"
+          - export DOCKER_REPO="flatstack/rails_base_api"
           - export CACHE_IMAGE="${DOCKER_REPO}:${SEMAPHORE_GIT_BRANCH}"
           - export WORKFLOW_CACHE_IMAGE="${CACHE_IMAGE}-${SEMAPHORE_WORKFLOW_ID}"
 
