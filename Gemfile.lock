@@ -62,7 +62,7 @@ GEM
     bundler-audit (0.6.0)
       bundler (~> 1.2)
       thor (~> 0.18)
-    byebug (10.0.2)
+    byebug (11.0.1)
     case_transform (0.2)
       activesupport
     choice (0.2.0)
