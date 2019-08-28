@@ -61,6 +61,10 @@ blocks:
 
       prologue:
         commands:
+          # Setup dynamic environment variables b/c they do not support via env_vars yet
+          - export CACHE_IMAGE="${DOCKER_REPO}:${SEMAPHORE_GIT_BRANCH}"
+          - export WORKFLOW_CACHE_IMAGE="${CACHE_IMAGE}-${SEMAPHORE_WORKFLOW_ID}"
+
           - checkout
 
           # Authenticate with DockerHub
