@@ -24,3 +24,26 @@ blocks:
           - docker-compose build
           - docker tag rails_base_api:latest "flatstack/rails_base_api:${SEMAPHORE_WORKFLOW_ID}"
           - docker push "flatstack/rails_base_api:${SEMAPHORE_WORKFLOW_ID}"
+
+  - name: Run & Test Docker image
+    task:
+      secrets:
+        - name: docker-secrets
+      prologue:
+        commands:
+          # Authenticate with Docker Hub
+          - echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
+          - checkout
+          - docker pull "flatstack/rails_base_api:${SEMAPHORE_WORKFLOW_ID}"
+          - docker tag "flatstack/rails_base_api:${SEMAPHORE_WORKFLOW_ID}" rails_base_api:latest
+          - docker-compose up -d
+      jobs:
+      - name: Check Running Images
+        commands:
+          - docker ps
+      - name: Run RSpec
+        commands:
+          - docker-compose exec app bin/rspec spec
+      - name: Run Quality
+        commands:
+          - docker-compose exec app bin/quality
