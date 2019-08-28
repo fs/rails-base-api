@@ -78,7 +78,7 @@ blocks:
           # Fix Semaphore permissions bug
           - sudo chown 1000:1000 -R ./
 
-          # Run setup dotenv and run container
+          # Setup dotenv and run container
           - cp .env.example .env
           - docker-compose up --detach
 
