@@ -12,8 +12,15 @@ blocks:
       env_vars:
         - name: BUNDLE_WITHOUT
           value: development staging production
+      secrets:
+        - name: docker-secrets
+      prologue:
+        commands:
+          - echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
       jobs:
       - name: Docker build
         commands:
           - checkout
           - docker-compose build
+          - docker tag rails_base_api:latest "flatstack/rails_base_api:$SEMAPHORE_WORKFLOW_ID
+          - docker push "flatstack/rails_base_api:$SEMAPHORE_WORKFLOW_ID
