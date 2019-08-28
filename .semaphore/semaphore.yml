@@ -76,8 +76,8 @@ blocks:
           - docker tag "${WORKFLOW_CACHE_IMAGE}" rails_base_api:latest
 
           # Fix Semaphore permissions bug
-          - mkdir -p log tmp
-          - chmod 777 log tmp
+          # - mkdir -p log tmp
+          # - chmod 777 log tmp
 
           # Run setup dotenv and run container
           - cp .env.example .env
