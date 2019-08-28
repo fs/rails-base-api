@@ -23,6 +23,12 @@ blocks:
       env_vars:
         - name: BUNDLE_WITHOUT
           value: development staging production
+        - name: DOCKER_REPO
+          value: flatstack/rails_base_api
+        - name: CACHE_IMAGE
+          value: "${DOCKER_REPO}:${SEMAPHORE_GIT_BRANCH}"
+        - name: WORKFLOW_CACHE_IMAGE
+          value: "${CACHE_IMAGE}-${SEMAPHORE_WORKFLOW_ID}"
       secrets:
         - name: docker-secrets
       prologue:
@@ -34,19 +40,19 @@ blocks:
         commands:
           - checkout
 
-          # Try to pull build image for this branch
-          - docker pull "flatstack/rails_base_api:${SEMAPHORE_GIT_BRANCH}" || true
+          # Try to pull image for this branch
+          - docker pull "${CACHE_IMAGE}" || true
 
           # Build image
           - docker-compose build
 
           # Push image to DockerHub for the next tasks
-          - docker tag rails_base_api:latest "flatstack/rails_base_api:${SEMAPHORE_GIT_BRANCH}-${SEMAPHORE_WORKFLOW_ID}"
-          - docker push "flatstack/rails_base_api:${SEMAPHORE_GIT_BRANCH}-${SEMAPHORE_WORKFLOW_ID}"
+          - docker tag rails_base_api:latest "${WORKFLOW_CACHE_IMAGE}"
+          - docker push "${WORKFLOW_CACHE_IMAGE}"
 
           # Push images for the next builds
-          - docker tag rails_base_api:latest "flatstack/rails_base_api:${SEMAPHORE_GIT_BRANCH}"
-          - docker push "flatstack/rails_base_api:${SEMAPHORE_GIT_BRANCH}"
+          - docker tag rails_base_api:latest "${CACHE_IMAGE}"
+          - docker push "${CACHE_IMAGE}"
 
   - name: Run
     task:
@@ -61,8 +67,8 @@ blocks:
           - echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
 
           # Pull image build on previous task
-          - docker pull "flatstack/rails_base_api:${SEMAPHORE_GIT_BRANCH}-${SEMAPHORE_WORKFLOW_ID}"
-          - docker tag "flatstack/rails_base_api:${SEMAPHORE_GIT_BRANCH}-${SEMAPHORE_WORKFLOW_ID}" rails_base_api:latest
+          - docker pull "${WORKFLOW_CACHE_IMAGE}"
+          - docker tag "${WORKFLOW_CACHE_IMAGE}" rails_base_api:latest
 
           # Fix Semaphore permissions bug
           - mkdir -p log tmp

@@ -22,6 +22,8 @@ services:
       - MAILER_SENDER_ADDRESS
     build:
       context: .
+      cache_from:
+        - ${CACHE_IMAGE}
       args:
         - ADDITIONAL_PACKAGES=build-base git
         - BUNDLE_WITHOUT="${BUNDLE_WITHOUT}"
