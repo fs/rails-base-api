@@ -6,6 +6,14 @@ agent:
     type: e1-standard-8
     os_image: ubuntu1804
 
+auto_cancel:
+  queued:
+    when: "true"
+
+fail_fast:
+  stop:
+    when: "true"
+
 blocks:
   - name: Build
     task:
@@ -42,6 +50,8 @@ blocks:
           - docker tag "flatstack/rails_base_api:${SEMAPHORE_WORKFLOW_ID}" rails_base_api:latest
           # Run setup dotenv and run container
           - cp .env.example .env
+          - mkdir log tmp
+          - chmod 777 log tmp
           - docker-compose up --detach
           # Setup database
           - docker-compose exec app bin/rails db:create db:schema:load
