@@ -1,14 +1,17 @@
-# Run CI/CD jobs in Docker images:
-# https://docs.semaphoreci.com/article/127-custom-ci-cd-environment-with-docker
 version: v1.0
 name: Rails Base API
+
 agent:
   machine:
     type: e1-standard-8
     os_image: ubuntu1804
+
 blocks:
   - name: Build
     task:
+      env_vars:
+        - name: BUNDLE_WITHOUT
+          value: development staging production
       jobs:
       - name: Docker build
         commands:
