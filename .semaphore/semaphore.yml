@@ -34,9 +34,13 @@ blocks:
           # Authenticate with Docker Hub
           - echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
           - checkout
+          # Pull image build on previous task
           - docker pull "flatstack/rails_base_api:${SEMAPHORE_WORKFLOW_ID}"
           - docker tag "flatstack/rails_base_api:${SEMAPHORE_WORKFLOW_ID}" rails_base_api:latest
-          - docker-compose up -d
+          - docker-compose up --detach
+          # Setup dotenv and database
+          - cp .env.example .env
+          docker-compose exec app bin/rails db:create db:schema:load
       jobs:
       - name: Check Running Images
         commands:
