@@ -75,11 +75,13 @@ blocks:
           - docker pull "${WORKFLOW_CACHE_IMAGE}"
           - docker tag "${WORKFLOW_CACHE_IMAGE}" rails_base_api:latest
 
+          # Setup dotenv
+          - cp .env.example .env
+
           # Fix Semaphore permissions bug
           - sudo chown 1000:1000 -R ./
 
-          # Setup dotenv and run container
-          - cp .env.example .env
+          # Run container
           - docker-compose up --detach
 
           # Setup database
