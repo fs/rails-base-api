@@ -50,7 +50,7 @@ blocks:
           - docker tag "flatstack/rails_base_api:${SEMAPHORE_WORKFLOW_ID}" rails_base_api:latest
           # Run setup dotenv and run container
           - cp .env.example .env
-          - mkdir log tmp
+          - mkdir -p log tmp
           - chmod 777 log tmp
           - docker-compose up --detach
           # Setup database
