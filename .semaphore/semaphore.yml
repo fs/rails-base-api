@@ -16,12 +16,15 @@ blocks:
         - name: docker-secrets
       prologue:
         commands:
+          # Authenticate with Docker Hub
           - echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
       jobs:
       - name: Docker build
         commands:
+          # Build image
           - checkout
           - docker-compose build
+          # Push image to DokerHub
           - docker tag rails_base_api:latest "flatstack/rails_base_api:${SEMAPHORE_WORKFLOW_ID}"
           - docker push "flatstack/rails_base_api:${SEMAPHORE_WORKFLOW_ID}"
 
@@ -37,10 +40,11 @@ blocks:
           # Pull image build on previous task
           - docker pull "flatstack/rails_base_api:${SEMAPHORE_WORKFLOW_ID}"
           - docker tag "flatstack/rails_base_api:${SEMAPHORE_WORKFLOW_ID}" rails_base_api:latest
-          - docker-compose up --detach
-          # Setup dotenv and database
+          # Run setup dotenv and run container
           - cp .env.example .env
-          docker-compose exec app bin/rails db:create db:schema:load
+          - docker-compose up --detach
+          # Setup database
+          - docker-compose exec app bin/rails db:create db:schema:load
       jobs:
       - name: Check Running Images
         commands:
