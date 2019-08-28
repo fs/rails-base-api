@@ -4,7 +4,8 @@ version: v1.0
 name: Rails Base API
 agent:
   machine:
-    type: e1-standard-2
+    type: e1-standard-8
+    os_image: ubuntu1804
 blocks:
   - name: Build
     task:
