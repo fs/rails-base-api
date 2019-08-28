@@ -1,0 +1,15 @@
+# Run CI/CD jobs in Docker images:
+# https://docs.semaphoreci.com/article/127-custom-ci-cd-environment-with-docker
+version: v1.0
+name: Rails Base API
+agent:
+  machine:
+    type: e1-standard-2
+blocks:
+  - name: Build
+    task:
+      jobs:
+      - name: Docker build
+        commands:
+          - checkout
+          - docker-compose build
