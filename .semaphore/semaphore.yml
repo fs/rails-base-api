@@ -22,5 +22,5 @@ blocks:
         commands:
           - checkout
           - docker-compose build
-          - docker tag rails_base_api:latest "flatstack/rails_base_api:$SEMAPHORE_WORKFLOW_ID
-          - docker push "flatstack/rails_base_api:$SEMAPHORE_WORKFLOW_ID
+          - docker tag rails_base_api:latest "flatstack/rails_base_api:${SEMAPHORE_WORKFLOW_ID}"
+          - docker push "flatstack/rails_base_api:${SEMAPHORE_WORKFLOW_ID}"
