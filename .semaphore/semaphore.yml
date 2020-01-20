@@ -1,0 +1,101 @@
+version: v1.0
+name: Rails Base API
+
+agent:
+  machine:
+    type: e1-standard-4
+    os_image: ubuntu1804
+
+execution_time_limit:
+  hours: 1
+
+auto_cancel:
+  queued:
+    when: "true"
+
+fail_fast:
+  stop:
+    when: "true"
+
+blocks:
+  - name: Build
+    task:
+      secrets:
+        - name: docker-secrets
+
+      prologue:
+        commands:
+          # Setup dynamic environment variables b/c they do not support via env_vars yet
+          - export BUNDLE_WITHOUT="development staging production"
+          - export DOCKER_REPO="flatstack/rails_base_api"
+          - export CACHE_IMAGE="${DOCKER_REPO}:${SEMAPHORE_GIT_BRANCH}"
+          - export WORKFLOW_CACHE_IMAGE="${CACHE_IMAGE}-${SEMAPHORE_WORKFLOW_ID}"
+
+          # Authenticate with DockerHub
+          - echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
+
+      jobs:
+      - name: Docker build
+        commands:
+          - checkout
+
+          # Try to pull image for this branch
+          - docker pull "${CACHE_IMAGE}" || true
+
+          # Build image
+          - docker-compose build
+
+          # Push image to DockerHub for the next tasks
+          - docker tag rails_base_api:latest "${WORKFLOW_CACHE_IMAGE}"
+          - docker push "${WORKFLOW_CACHE_IMAGE}"
+
+          # Push images for the next builds
+          - docker tag rails_base_api:latest "${CACHE_IMAGE}"
+          - docker push "${CACHE_IMAGE}"
+
+  - name: Run
+    task:
+      secrets:
+        - name: docker-secrets
+
+      prologue:
+        commands:
+          # Setup dynamic environment variables b/c they do not support via env_vars yet
+          - export BUNDLE_WITHOUT="development staging production"
+          - export DOCKER_REPO="flatstack/rails_base_api"
+          - export CACHE_IMAGE="${DOCKER_REPO}:${SEMAPHORE_GIT_BRANCH}"
+          - export WORKFLOW_CACHE_IMAGE="${CACHE_IMAGE}-${SEMAPHORE_WORKFLOW_ID}"
+
+          - checkout
+
+          # Authenticate with DockerHub
+          - echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
+
+          # Pull image build on previous task
+          - docker pull "${WORKFLOW_CACHE_IMAGE}"
+          - docker tag "${WORKFLOW_CACHE_IMAGE}" rails_base_api:latest
+
+          # Setup dotenv
+          - cp .env.example .env
+
+          # Fix Semaphore permissions bug
+          - sudo chown 1000:1000 -R ./
+
+          # Run container
+          - docker-compose up --detach
+
+          # Setup database
+          - docker-compose exec app bin/rails db:create db:schema:load
+
+      jobs:
+      - name: Check Running Images
+        commands:
+          - docker ps
+
+      - name: Run RSpec
+        commands:
+          - docker-compose exec app bin/rspec spec
+
+      - name: Run Quality
+        commands:
+          - docker-compose exec app bin/quality
